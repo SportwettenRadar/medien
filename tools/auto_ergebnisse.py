@@ -150,6 +150,16 @@ def gleich(a, b):
     return a["einzelspiele"] == {"tipps": b["einzelspiele"]["tipps"], "treffer": b["einzelspiele"]["treffer"]}
 
 
+def ergaenze(alt, neu):
+    """Fehlende Felder (z. B. gewinn) aus den Bot-Daten ergänzen, nie vorhandene überschreiben."""
+    geaendert = False
+    for k in ("gewinn", "verlustserie", "rueckgang", "besterTag", "schlechtesterTag"):
+        if k in neu["live"] and k not in alt["live"]:
+            alt["live"][k] = neu["live"][k]
+            geaendert = True
+    return geaendert
+
+
 def schreibe_homepage(hp, monate, wochen, hinweis):
     p = os.path.join(hp, "trackrecord-daten.js")
     js = open(p, encoding="utf-8").read()
@@ -233,7 +243,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--medien", required=True)
     ap.add_argument("--homepage", required=True)
-    ap.add_argument("--modus", choices=["woche", "monat"], default="woche")
+    ap.add_argument("--modus", choices=["tag", "woche", "monat"], default="woche")
     ap.add_argument("--trocken", action="store_true")
     a = ap.parse_args()
     res = {"status": "ok", "fehler": [], "aenderungen": [], "grafiken": []}
@@ -250,6 +260,8 @@ def main():
         alt = monate.get(m["monat"])
         if alt and not gleich(alt, m):
             res["fehler"].append(f"Monat {m['monat']}: Bot-Zahlen weichen von der Homepage ab (Homepage {alt['live']}, Bot {m['live']})")
+        elif alt and ergaenze(alt, m):
+            res["aenderungen"].append(f"Monat {m['monat']} ergänzt")
         elif not alt:
             monate[m["monat"]] = homepage_eintrag(m)
             res["aenderungen"].append(f"Monat {m['monat']} neu")
@@ -257,6 +269,8 @@ def main():
         alt = wochen.get(w["von"])
         if alt and not gleich(alt, w):
             res["fehler"].append(f"Woche {w['von']}: Bot-Zahlen weichen von der Homepage ab")
+        elif alt and ergaenze(alt, w):
+            res["aenderungen"].append(f"Woche {w['von']}–{w['bis']} ergänzt")
         elif not alt:
             wochen[w["von"]] = homepage_eintrag(w)
             res["aenderungen"].append(f"Woche {w['von']}–{w['bis']} neu")
@@ -268,12 +282,24 @@ def main():
 
     if not a.trocken and res["aenderungen"]:
         schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"])
+        ix = os.path.join(a.homepage, "index.html")
+        h = open(ix, encoding="utf-8").read()
+        h = re.sub(r"trackrecord-daten\.js\?v=[0-9a-z]+", "trackrecord-daten.js?v=" + dt.datetime.now().strftime("%Y%m%d%H%M"), h)
+        open(ix, "w", encoding="utf-8").write(h)
         gen = os.path.join(os.path.dirname(os.path.abspath(__file__)), "seiten_generator.py")
         subprocess.run([sys.executable, gen, a.homepage], check=True, capture_output=True)
 
     # Grafik für X: neueste Woche bzw. neuester Monat
     ziel_dir = os.path.join(a.medien, "x")
     os.makedirs(ziel_dir, exist_ok=True)
+    if a.modus == "tag" and data.get("tage"):
+        t = max(data["tage"], key=lambda x: x["datum"])
+        wt = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"][d(t["datum"]).weekday()]
+        z = os.path.join(ziel_dir, f"{t['datum']}_tagesbilanz.png")
+        if not a.trocken:
+            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage)
+        res["grafiken"].append({"art": "tag", "datei": os.path.relpath(z, a.medien), "datum": t["datum"],
+                                "live": t["live"], "einzelspiele": t["einzelspiele"], "rueckrechnung": bool(t.get("rueckrechnung"))})
     if a.modus == "woche" and data.get("wochen"):
         w = max(data["wochen"], key=lambda x: x["von"])
         z = os.path.join(ziel_dir, f"{w['bis']}_wochenbilanz.png")
