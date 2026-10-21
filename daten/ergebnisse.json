@@ -1,0 +1,278 @@
+{
+ "version": 1,
+ "stand": "2026-10-21T07:32:09+02:00",
+ "tage": [
+  {
+   "datum": "2026-10-05",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 0,
+    "treffer": 0,
+    "rendite": 0.0,
+    "gewinn": 0.0
+   },
+   "einzelspiele": {
+    "tipps": 0,
+    "treffer": 0
+   }
+  },
+  {
+   "datum": "2026-10-06",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 0,
+    "treffer": 0,
+    "rendite": 0.0,
+    "gewinn": 0.0
+   },
+   "einzelspiele": {
+    "tipps": 2,
+    "treffer": 1
+   }
+  },
+  {
+   "datum": "2026-10-07",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 0,
+    "treffer": 0,
+    "rendite": 0.0,
+    "gewinn": 0.0
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 5
+   }
+  },
+  {
+   "datum": "2026-10-08",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 0,
+    "treffer": 0,
+    "rendite": 0.0,
+    "gewinn": 0.0
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 4
+   }
+  },
+  {
+   "datum": "2026-10-09",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 8,
+    "treffer": 4,
+    "rendite": -21.3,
+    "gewinn": -1.7
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 4
+   }
+  },
+  {
+   "datum": "2026-10-10",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 18,
+    "treffer": 13,
+    "rendite": 13.8,
+    "gewinn": 2.5
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 4
+   }
+  },
+  {
+   "datum": "2026-10-11",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 16,
+    "treffer": 12,
+    "rendite": 17.4,
+    "gewinn": 2.8
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 4
+   }
+  },
+  {
+   "datum": "2026-10-12",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 1,
+    "treffer": 0,
+    "rendite": -100.0,
+    "gewinn": -1.0
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 5
+   }
+  },
+  {
+   "datum": "2026-10-13",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 8,
+    "treffer": 7,
+    "rendite": 38.5,
+    "gewinn": 3.1
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 1
+   }
+  },
+  {
+   "datum": "2026-10-14",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 2,
+    "treffer": 0,
+    "rendite": -100.0,
+    "gewinn": -2.0
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 4
+   }
+  },
+  {
+   "datum": "2026-10-15",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 13,
+    "treffer": 8,
+    "rendite": -1.9,
+    "gewinn": -0.2
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 5
+   }
+  },
+  {
+   "datum": "2026-10-16",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 10,
+    "treffer": 7,
+    "rendite": 10.4,
+    "gewinn": 1.0
+   },
+   "einzelspiele": {
+    "tipps": 4,
+    "treffer": 3
+   }
+  },
+  {
+   "datum": "2026-10-17",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 26,
+    "treffer": 14,
+    "rendite": -14.7,
+    "gewinn": -3.8
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 5
+   }
+  },
+  {
+   "datum": "2026-10-18",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 15,
+    "treffer": 6,
+    "rendite": -36.7,
+    "gewinn": -5.5
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 4
+   }
+  },
+  {
+   "datum": "2026-10-19",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 5,
+    "treffer": 3,
+    "rendite": -6.6,
+    "gewinn": -0.3
+   },
+   "einzelspiele": {
+    "tipps": 4,
+    "treffer": 4
+   }
+  }
+ ],
+ "wochen": [
+  {
+   "von": "2026-10-05",
+   "bis": "2026-10-11",
+   "monat": "2026-10",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 42,
+    "treffer": 29,
+    "rendite": 8.5,
+    "gewinn": 3.6,
+    "verlustserie": 3,
+    "rueckgang": -3.3,
+    "besterTag": 2.8,
+    "schlechtesterTag": -1.7
+   },
+   "einzelspiele": {
+    "tipps": 27,
+    "treffer": 22
+   }
+  },
+  {
+   "von": "2026-10-12",
+   "bis": "2026-10-18",
+   "monat": "2026-10",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 75,
+    "treffer": 42,
+    "rendite": -11.3,
+    "gewinn": -8.4,
+    "verlustserie": 5,
+    "rueckgang": -11.1,
+    "besterTag": 3.1,
+    "schlechtesterTag": -5.5
+   },
+   "einzelspiele": {
+    "tipps": 34,
+    "treffer": 27
+   }
+  }
+ ],
+ "monate": [
+  {
+   "monat": "2026-09",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 104,
+    "treffer": 73,
+    "rendite": 12.2,
+    "gewinn": 12.7,
+    "verlustserie": 3,
+    "rueckgang": -5.0,
+    "besterTag": 4.1,
+    "schlechtesterTag": -2.7
+   },
+   "einzelspiele": {
+    "tipps": 49,
+    "treffer": 39
+   }
+  }
+ ]
+}
