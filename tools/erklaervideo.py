@@ -6,6 +6,7 @@ Spec: {"titel": ..., "folien": [{"typ": "titel|text|liste|ende", "dauer": s, ...
 Erzeugt Folien als PNG (Playwright, Schriften der Homepage), setzt sie mit Überblendung
 und einer Fortschrittsleiste zu einem MP4 (1920x1080, 30 fps, ohne Ton) zusammen.
 Zusätzlich: Vorschaubild 1280x720 (<out>_thumb.png).
+Mit --hoch: 1080x1920 (YouTube Short), kürzere Folien, Abschluss mit Hinweis auf das ganze Video.
 """
 import argparse, json, os, subprocess, tempfile, html
 
@@ -50,6 +51,22 @@ li b{color:#fff;font-weight:600}
 """
 
 
+CSS_HOCH = """
+.top{left:80px;top:150px}
+.foot{left:80px;right:80px;bottom:150px;flex-direction:column;gap:10px}
+.main{left:80px;right:80px;transform:translateY(-50%)}
+.eb{font-size:34px}
+h1{font-size:112px}
+h1.k{font-size:84px}
+.sub{font-size:46px}
+li{font-size:46px}
+.end .row{flex-direction:column;gap:6px;font-size:46px}
+.end .row span{width:auto}
+.end .hint{font-size:28px;line-height:1.5}
+"""
+HOCH = False
+
+
 def esc(s):
     return html.escape(s).replace("[[", "<em>").replace("]]", "</em>").replace("**", "")
 
@@ -63,7 +80,7 @@ def folie_html(f, logo):
                 f'<h1>{esc(f["text"]).replace(chr(10),"<br>")}</h1><div class="bar"></div></div>')
     elif t == "text":
         body = (f'<div class="main"><div class="eb">{esc(f.get("eyebrow",""))}</div>'
-                f'<h1 class="k">{esc(f["text"]).replace(chr(10),"<br>")}</h1>'
+                f'<h1 class="k">{esc(f["text"]).replace(chr(10)," " if HOCH else "<br>")}</h1>'
                 + (f'<div class="sub">{esc(f["sub"])}</div>' if f.get("sub") else "") + '</div>')
     elif t == "liste":
         items = "".join(
@@ -77,7 +94,7 @@ def folie_html(f, logo):
                 '<div class="row"><span>Warteliste</span><b>Telegram-Bot @KILivewetten_bot</b></div>'
                 '<div class="row"><span>Ergebnisse</span><b>t.me/sportwettenradar</b></div>'
                 '<div class="row"><span>Trackrecord</span><b>sportwetten-radar.net</b></div></div>'
-                '<div class="hint">Links in der Beschreibung · 18+ · Glücksspiel kann süchtig machen · check-dein-spiel.de</div></div>')
+                + ('<div class="hint">Ganzes Video auf unserem Kanal · 18+ · Glücksspiel kann süchtig machen · check-dein-spiel.de</div></div>' if HOCH else '<div class="hint">Links in der Beschreibung · 18+ · Glücksspiel kann süchtig machen · check-dein-spiel.de</div></div>'))
         foot = ""
     else:
         raise ValueError(t)
@@ -88,7 +105,7 @@ def render(spec, homepage, tmp):
     from playwright.sync_api import sync_playwright
     fonts = "file://" + os.path.abspath(os.path.join(homepage, "assets/fonts"))
     logo = "file://" + os.path.abspath(os.path.join(homepage, "logo-icon.png"))
-    css = CSS.replace("FONTS", fonts).replace("WPX", str(W)).replace("HPX", str(H))
+    css = CSS.replace("FONTS", fonts).replace("WPX", str(W)).replace("HPX", str(H)) + (CSS_HOCH if HOCH else "")
     pngs = []
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path="/opt/pw-browsers/chromium")
@@ -98,7 +115,7 @@ def render(spec, homepage, tmp):
             open(hp, "w", encoding="utf-8").write(f"<html><head><meta charset=utf-8><style>{css}</style></head><body>{folie_html(f, logo)}</body></html>")
             pg.goto("file://" + hp); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
             ub = pg.evaluate("(()=>{const m=document.querySelector('.main');const r=m.getBoundingClientRect();return [Math.round(r.top),Math.round(r.bottom),m.scrollWidth>m.clientWidth+2]})()")
-            if ub[0] < 170 or ub[1] > 990 or ub[2]:
+            if ub[0] < (260 if HOCH else 170) or ub[1] > H - (260 if HOCH else 90) or ub[2]:
                 print(f"WARNUNG Folie {n}: Platz {ub}")
             path = os.path.join(tmp, f"f{n:02d}.png")
             pg.screenshot(path=path)
@@ -108,7 +125,7 @@ def render(spec, homepage, tmp):
 
 
 def baue(spec, pngs, out):
-    d = [float(f["dauer"]) for f in spec["folien"]]
+    d = [float(f["dauer"]) * (0.85 if HOCH else 1) for f in spec["folien"]]
     total = sum(d) - FADE * (len(d) - 1)
     cmd = ["ffmpeg", "-y", "-v", "error"]
     for p, du in zip(pngs, d):
@@ -150,7 +167,11 @@ if __name__ == "__main__":
     a.add_argument("--homepage", required=True)
     a.add_argument("--out", required=True)
     a.add_argument("--nur-folien", action="store_true")
+    a.add_argument("--hoch", action="store_true")
     x = a.parse_args()
+    if x.hoch:
+        HOCH = True
+        W, H = 1080, 1920
     spec = json.load(open(x.spec, encoding="utf-8"))
     tmp = tempfile.mkdtemp()
     pngs = render(spec, x.homepage, tmp)
@@ -158,5 +179,6 @@ if __name__ == "__main__":
         print("\n".join(pngs))
     else:
         dauer = baue(spec, pngs, x.out)
-        thumb(spec, x.homepage, x.out.rsplit(".", 1)[0] + "_thumb.png")
+        if not HOCH:
+            thumb(spec, x.homepage, x.out.rsplit(".", 1)[0] + "_thumb.png")
         print(f"ok {x.out} {dauer:.1f}s")
