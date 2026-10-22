@@ -11,3 +11,9 @@
 - [x] ins Repo gepusht
 - [x] in Metricool eingeplant 22.10. (IDs 402879793, 402880033 … 402881688; mit Vorschaubild, Kanal am 22.10. bestätigt)
 - [ ] Monatsbericht-Video 01.11. (Erinnerung 01.11. 11:30 gesetzt, trig_01XSXVnj97p8jixSRAhNG2mD)
+
+## 23.10. Umbau Eröffnung (Freigabe Daniel)
+- Alle Videos starten mit Hook-Folie (typ "hook", 2,6 s, großer Satz, Zoom). Gilt auch für alle künftigen Videos inkl. Monatsbericht.
+- Neue Dateien: youtube/erklaer/out_v2 (16:9), youtube/shorts2_v2 (neue Shorts), youtube/alt_v2 (ältere Shorts mit vorangestelltem Hook, tools/hook_vor_short.py)
+- Alle 58 eingeplanten YouTube-Posts in Metricool auf die neuen Dateien umgestellt (Termine unverändert)
+- Sendeplan: tools/sendeplan.md
