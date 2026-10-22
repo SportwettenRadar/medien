@@ -101,6 +101,7 @@ def page(path, title, desc, eyebrow, h1, inner, ld=None):
 """ + foot + """
 
 <script src="start.js"></script>
+<script src="menu.js?v=2"></script>
 </body>
 </html>
 """)
