@@ -8,6 +8,6 @@
 
 ## Status
 - [x] 23 Videos gebaut
-- [ ] ins Repo gepusht
-- [ ] in Metricool eingeplant (IDs unten)
-- [ ] Monatsbericht-Video 01.11.
+- [x] ins Repo gepusht
+- [x] in Metricool eingeplant 22.10. (IDs 402879793, 402880033 … 402881688; mit Vorschaubild, Kanal am 22.10. bestätigt)
+- [ ] Monatsbericht-Video 01.11. (Erinnerung 01.11. 11:30 gesetzt, trig_01XSXVnj97p8jixSRAhNG2mD)
