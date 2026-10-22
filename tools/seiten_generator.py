@@ -314,13 +314,130 @@ WISSEN = [
   <a href="tel:08001372700">0800 1 37 27 00</a> und auf <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.
   Mehr im <a href="risikohinweis.html">Risikohinweis</a>.</p>
 """),
+    ("sportwetten-telegram.html",
+     "Sportwetten auf Telegram: Live-Wetten-Analyse per Bot — Sportwetten Radar",
+     "Wie funktionieren Sportwetten-Tipps auf Telegram? Bot, Kanal und Gruppe im Vergleich, worauf du achten solltest und wie Sportwetten Radar Live-Wetten per Telegram meldet.",
+     "Telegram", "Sportwetten auf Telegram",
+     """
+  <p>Telegram ist für Sportwetten-Analysen besonders verbreitet. Der Grund ist einfach: Live-Wetten leben
+  von Sekunden. Eine Meldung muss sofort auf dem Handy ankommen, ohne dass ein Algorithmus sie
+  verzögert oder ausblendet. Telegram stellt Nachrichten aus Kanälen und von Bots direkt zu.</p>
+
+  <h2><span class="num">01</span>Kanal, Gruppe oder Bot – der Unterschied</h2>
+  <ul>
+    <li><strong>Kanal:</strong> Nur der Betreiber schreibt, alle anderen lesen. Gut für Meldungen und Ergebnisse.</li>
+    <li><strong>Gruppe:</strong> Alle Mitglieder können schreiben. Lebendig, aber oft unübersichtlich – und ein
+    beliebter Ort für Werbung und unseriöse Angebote.</li>
+    <li><strong>Bot:</strong> Ein automatisches Programm, mit dem du persönlich chattest. Er kann dich zum Beispiel
+    für ein Angebot freischalten, dir dein Abo anzeigen oder deine Kündigung entgegennehmen.</li>
+  </ul>
+
+  <h2><span class="num">02</span>So funktioniert Sportwetten Radar auf Telegram</h2>
+  <ul>
+    <li><strong>Der Bot</strong> (<a href="https://t.me/KILivewetten_bot" target="_blank" rel="noopener">@KILivewetten_bot</a>)
+    ist dein Zugang: Warteliste, Buchung, Abo-Übersicht und Kündigung laufen über ihn.</li>
+    <li><strong>Der Mitgliederkanal</strong> meldet Live-Wetten in Echtzeit, sobald die Analyse eines laufenden
+    Spiels eine Gelegenheit zeigt, dazu bis zu 5 Einzelspiele pro Tag.</li>
+    <li><strong>Der öffentliche Ergebnis-Kanal</strong>
+    (<a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">t.me/sportwettenradar</a>) zeigt kostenlos
+    jede Live-Wette nach ihrer Auswertung, die Einzelspiele des Tages sowie Tages-, Wochen- und Monatsbilanzen.
+    So kannst du prüfen, wie es wirklich läuft, bevor du dich entscheidest.</li>
+  </ul>
+
+  <h2><span class="num">03</span>Worauf du bei Telegram-Tipps achten solltest</h2>
+  <p>Auf Telegram gibt es viele Wett-Kanäle – leider auch viele, die mit „sicheren Tipps“ oder angeblich
+  manipulierten Spielen werben. Seriöse Anbieter nennen einen Betreiber mit Impressum, zeigen alle Ergebnisse
+  inklusive Verlusten und versprechen keine Gewinne. Eine ausführliche Checkliste findest du unter
+  <a href="seriose-tippgeber-erkennen.html">Seriöse Tippgeber erkennen</a>.</p>
+
+  <h2><span class="num">04</span>Unsere Zahlen</h2>
+  <p>Alle Ergebnisse stehen im <a href="index.html#trackrecord">Trackrecord</a> und in den
+  <a href="monatsberichte.html">Monatsberichten</a>, auch die schwachen Wochen. Wie wir Rendite rechnen, erklären wir unter
+  <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
+""", "2026-10-22"),
+    ("seriose-tippgeber-erkennen.html",
+     "Telegram-Tippgruppen: So erkennst du seriöse Tippgeber — Sportwetten Radar",
+     "Sind Wett-Tipps auf Telegram seriös? Checkliste mit 8 Merkmalen und den typischen Warnzeichen unseriöser Tippgruppen – von Gewinngarantien bis Krypto-Zahlung.",
+     "Wissen", "Seriöse Tippgeber erkennen",
+     """
+  <p>Tippgruppen und Wett-Kanäle gibt es auf Telegram zu Tausenden. Einige arbeiten ordentlich, viele nicht.
+  Verbraucherschützer und Medien berichten immer wieder über Abzocke mit „sicheren Tipps“. Mit diesen
+  Merkmalen trennst du seriöse von unseriösen Angeboten.</p>
+
+  <h2><span class="num">01</span>8 Merkmale seriöser Tippgeber</h2>
+  <ul>
+    <li><strong>Erkennbarer Betreiber:</strong> Impressum mit ladungsfähiger Anschrift, Datenschutzerklärung und AGB.</li>
+    <li><strong>Alle Ergebnisse, dauerhaft:</strong> Gewinne und Verluste bleiben sichtbar. Nichts wird gelöscht oder im Nachhinein geschönt.</li>
+    <li><strong>Rendite statt nur Trefferquote:</strong> Eine hohe Trefferquote allein sagt wenig – entscheidend ist, was bei gleichem Einsatz übrig bleibt (<a href="rendite-erklaert.html">Rendite erklärt</a>).</li>
+    <li><strong>Verlustserien werden genannt:</strong> Wer offenlegt, wie tief es zwischendurch ging, ist ehrlich (<a href="verlustserien.html">Verlustserien</a>).</li>
+    <li><strong>Keine Gewinngarantie:</strong> Sportwetten sind mit einem Verlustrisiko verbunden. Wer etwas anderes verspricht, lügt.</li>
+    <li><strong>Prüfbar vor dem Kauf:</strong> Ergebnisse lassen sich kostenlos verfolgen, bevor Geld fließt.</li>
+    <li><strong>Normale Zahlungswege:</strong> Zahlung über bekannte Anbieter mit Beleg, keine Überweisung an Privatpersonen oder in Kryptowährung.</li>
+    <li><strong>Einfache Kündigung:</strong> Klare Laufzeiten und ein Kündigungsweg, der ohne Hürden funktioniert.</li>
+  </ul>
+
+  <h2><span class="num">02</span>Typische Warnzeichen</h2>
+  <ul>
+    <li>„100 % sicher“, „Fixed Matches“, „garantierter Gewinn“ oder „Verluste zurückholen“</li>
+    <li>Screenshots von Wettscheinen mit hohen Gewinnen, aber keine vollständige Bilanz</li>
+    <li>Zeitdruck: „Nur heute“, „Letzte Plätze“, „Jetzt oder nie“</li>
+    <li>Zahlung per Krypto, Gutscheinkarte oder an private Konten</li>
+    <li>Hauptgeschäft sind Bonuscodes von Wettanbietern statt eigener Analysen</li>
+    <li>Kein Impressum, nur ein anonymer Telegram-Name</li>
+  </ul>
+
+  <h2><span class="num">03</span>Wie wir es halten</h2>
+  <p>Sportwetten Radar nennt einen Betreiber im <a href="impressum.html">Impressum</a>, veröffentlicht jede Live-Wette
+  nach ihrer Auswertung kostenlos im <a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal</a>
+  und zeigt alle Monate im <a href="monatsberichte.html">Trackrecord</a>. Wir vermitteln keine Wetten, geben keine
+  Gewinngarantie und arbeiten nicht mit Bonuscodes von Wettanbietern. Bezahlt wird über Stripe mit Beleg.</p>
+""", "2026-10-22"),
+    ("live-wetten-analyse.html",
+     "Live-Wetten-Analyse im Fußball: Was Spieldaten verraten — Sportwetten Radar",
+     "Wie funktioniert eine Live-Wetten-Analyse im Fußball? Welche Spieldaten zählen, warum die Quote dem Spielverlauf hinterherhinken kann und wo die Grenzen liegen.",
+     "Wissen", "Live-Wetten-Analyse im Fußball",
+     """
+  <p>Bei Wetten vor dem Anpfiff zählt vor allem, was man über beide Mannschaften weiß. Bei Live-Wetten kommt
+  etwas Entscheidendes dazu: das, was gerade auf dem Platz passiert. Eine Live-Analyse versucht, aus den
+  laufenden Spieldaten zu erkennen, ob die aktuelle Quote das Spielgeschehen richtig abbildet.</p>
+
+  <h2><span class="num">01</span>Welche Daten zählen</h2>
+  <ul>
+    <li><strong>Spielstand und Spielminute:</strong> Die Grundlage jeder Live-Quote.</li>
+    <li><strong>Torschüsse und Schüsse aufs Tor:</strong> Zeigen, wie viel tatsächlich passiert.</li>
+    <li><strong>Gefährliche Angriffe und Ecken:</strong> Geben Hinweise auf Druckphasen.</li>
+    <li><strong>Quotenverlauf:</strong> Zeigt, wie der Wettmarkt das Spiel gerade einschätzt.</li>
+    <li><strong>Ballbesitz:</strong> Wird oft überschätzt. Viel Ballbesitz ohne Abschlüsse sagt wenig.</li>
+  </ul>
+
+  <h2><span class="num">02</span>Warum Markt und Spielverlauf auseinanderlaufen können</h2>
+  <p>Live-Quoten reagieren stark auf Spielstand und verbleibende Zeit. Ob eine Mannschaft gerade Druck macht
+  und Chancen herausspielt, fließt nicht immer sofort ein. In solchen Momenten kann die Quote vom tatsächlichen
+  Spielgeschehen abweichen. Eine datenbasierte Analyse sucht genau diese Momente.</p>
+
+  <h2><span class="num">03</span>Die Grenzen</h2>
+  <ul>
+    <li>Statistik beschreibt Wahrscheinlichkeiten, keine Gewissheiten. Auch eine gute Analyse liegt oft daneben.</li>
+    <li>Live-Daten kommen mit kurzer Verzögerung, und Buchmacher setzen Märkte nach Toren oder Karten für einige Minuten aus.</li>
+    <li>Deine Quote beim Buchmacher kann leicht von der Quote zum Zeitpunkt der Analyse abweichen.</li>
+    <li>Ob sich eine Methode lohnt, zeigt nur eine lange, vollständige Bilanz – nicht ein einzelner Tag.</li>
+  </ul>
+
+  <h2><span class="num">04</span>Wie Sportwetten Radar arbeitet</h2>
+  <p>Sportwetten Radar wertet laufende Spiele in Echtzeit aus und meldet per <a href="sportwetten-telegram.html">Telegram</a>
+  eine Live-Wette, wenn die Daten eine auffällige Abweichung zeigen. Die genaue Methodik ist unser Betriebsgeheimnis,
+  die Ergebnisse sind es nicht: Sie stehen vollständig im <a href="index.html#trackrecord">Trackrecord</a> und im
+  kostenlosen <a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal</a>.</p>
+""", "2026-10-22"),
 ]
 
 
 def wissen_pages(today):
     out = []
-    for path, title, desc, eb, h1, inner in WISSEN:
-        out.append((page(path, title, desc, eb, h1, inner, article_ld(title, desc, path, WISSEN_DATUM)), WISSEN_DATUM))
+    for e in WISSEN:
+        path, title, desc, eb, h1, inner = e[:6]
+        datum = e[6] if len(e) > 6 else WISSEN_DATUM
+        out.append((page(path, title, desc, eb, h1, inner, article_ld(title, desc, path, datum)), datum))
     return out
 
 
