@@ -1,0 +1,12 @@
+{
+ "titel": "Sportwetten Radar in 60 Sekunden: Live-Wetten-Analyse für Fußball per Telegram",
+ "thumb": {"eyebrow": "In 60 Sekunden", "text": "Was ist\n[[Sportwetten Radar]]?"},
+ "folien": [
+  {"typ": "titel", "dauer": 4.5, "eyebrow": "Sportwetten Radar in 60 Sekunden", "text": "Live-Wetten-Analyse\nfür Fußball. [[Per Telegram.]]"},
+  {"typ": "text", "dauer": 8.5, "eyebrow": "Das Prinzip", "text": "Wir werten laufende Spiele\nin Echtzeit aus.", "sub": "Druckphasen, Torchancen, Quoten. Zeigen die Zahlen eine Gelegenheit, die der Wettmarkt noch nicht abbildet, bekommst du eine Live-Wette per Telegram."},
+  {"typ": "liste", "dauer": 9.5, "eyebrow": "Zwei Angebote", "text": "Ein Prinzip.", "punkte": ["<b>Live-Wetten:</b> Meldung während des Spiels, sobald die Analyse eine auffällige Abweichung zeigt.", "<b>Einzelspiele zum Kombinieren:</b> bis zu 5 pro Tag. Einzeln spielen oder selbst kombinieren, du entscheidest."]},
+  {"typ": "text", "dauer": 8.5, "eyebrow": "Offen gerechnet", "text": "Jede verschickte Wette zählt.\nAuch die verlorenen.", "sub": "Alle Ergebnisse stehen öffentlich im Telegram-Kanal. Der Trackrecord auf der Homepage zeigt jeden Monat und jede Woche, ungefiltert."},
+  {"typ": "text", "dauer": 8.0, "eyebrow": "Was wir nicht versprechen", "text": "Keine sicheren Tipps.\nKeine Gewinngarantie.", "sub": "Auch bei hoher Trefferquote gibt es Verlustserien. Die Entscheidung bleibt bei dir. Setze nie mehr ein, als du bereit bist zu verlieren."},
+  {"typ": "ende", "dauer": 9.0}
+ ]
+}
