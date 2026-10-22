@@ -1,0 +1,41 @@
+{
+ "titel": "Häufige Fragen zu Sportwetten Radar: Laufzeit, Kündigung, Daten",
+ "thumb": {
+  "eyebrow": "Kurz beantwortet",
+  "text": "[[Häufige Fragen]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "So arbeitet Sportwetten Radar",
+   "text": "[[Häufige Fragen]]"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "Zum Angebot",
+   "text": "Kurz beantwortet",
+   "punkte": [
+    "<b>Vermittelt ihr Wetten?</b> Nein. Wir analysieren, du entscheidest.",
+    "<b>Brauche ich eine App?</b> Nein, nur Telegram.",
+    "<b>Gibt es eine Gewinngarantie?</b> Nein, die gibt es nirgends."
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "Zu Vertrag und Daten",
+   "text": "Fair geregelt",
+   "punkte": [
+    "<b>Kündigen:</b> im Bot mit /kuendigen, über „Vertrag kündigen“ auf der Homepage oder per E-Mail.",
+    "<b>Laufzeiten</b> und Bedingungen stehen in den AGB.",
+    "<b>Daten:</b> nur, was für den Dienst nötig ist. Details in der Datenschutzerklärung."
+   ]
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

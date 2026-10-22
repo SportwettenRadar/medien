@@ -1,0 +1,44 @@
+{
+ "titel": "Start am 8. Januar 2027: So kommst du auf die Warteliste",
+ "thumb": {
+  "eyebrow": "Start am 8. Januar 2027",
+  "text": "So kommst du auf\ndie [[Warteliste]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Start am 8. Januar 2027",
+   "text": "So kommst du auf\ndie [[Warteliste]]"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "In drei Schritten",
+   "text": "30 Sekunden, kostenlos",
+   "punkte": [
+    "<b>Telegram-Bot öffnen:</b> @KILivewetten_bot (Link in der Beschreibung).",
+    "Auf <b>„Starten“</b> tippen.",
+    "<b>/eintragen</b> senden. Fertig."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Was dann passiert",
+   "text": "Wir melden uns\nzum Start.",
+   "sub": "Bis dahin kannst du im Ergebnis-Kanal jede Wette verfolgen und dir selbst ein Bild machen. Austragen geht jederzeit."
+  },
+  {
+   "typ": "text",
+   "dauer": 7.5,
+   "eyebrow": "Pakete und Einführungsangebot",
+   "text": "Alle Details auf\nsportwetten-radar.net",
+   "sub": "Dort findest du Laufzeiten, Bedingungen und AGB."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

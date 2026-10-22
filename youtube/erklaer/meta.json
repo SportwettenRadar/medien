@@ -1,0 +1,324 @@
+[
+ {
+  "nr": 1,
+  "slug": "Was_ist_eine_Live_Wette",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-10-25T12:00:00",
+  "titel": "Was ist eine Live-Wette? Der Ablauf in 60 Sekunden einfach erklärt",
+  "lead": "Eine Live-Wette platzierst du, während das Spiel läuft. Die Quoten ändern sich mit jeder Minute, jedem Angriff und jedem Tor. Hier der Ablauf in 60 Sekunden.",
+  "tags": [
+   "Live-Wette",
+   "Live-Wetten erklärt",
+   "Sportwetten Grundlagen"
+  ],
+  "name": "01_Was_ist_eine_Live_Wette"
+ },
+ {
+  "nr": 2,
+  "slug": "Ueber_Unter_2_5_Tore",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-10-29T12:00:00",
+  "titel": "Über/Unter 2,5 Tore erklärt: So funktioniert die beliebteste Torwette",
+  "lead": "Über 2,5 oder Unter 2,5 Tore: Was bedeutet die halbe Zahl, wann gewinnt welche Seite und warum ist das live besonders spannend?",
+  "tags": [
+   "Über Unter 2,5",
+   "Torwette",
+   "Over Under erklärt"
+  ],
+  "name": "02_Ueber_Unter_2_5_Tore"
+ },
+ {
+  "nr": 3,
+  "slug": "Quote_ist_nicht_Wahrscheinlichkeit",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-10-26T12:00:00",
+  "titel": "Quote richtig lesen: Was eine Quote von 1,60 wirklich bedeutet",
+  "lead": "Eine Quote ist keine Vorhersage, sondern ein Preis. So rechnest du sie in eine Wahrscheinlichkeit um und erkennst, was der Buchmacher daran verdient.",
+  "tags": [
+   "Quoten verstehen",
+   "Quote Wahrscheinlichkeit",
+   "Wettquoten erklärt"
+  ],
+  "name": "03_Quote_ist_nicht_Wahrscheinlichkeit"
+ },
+ {
+  "nr": 4,
+  "slug": "Rendite_statt_Trefferquote",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-10-27T12:00:00",
+  "titel": "Rendite statt Trefferquote: Warum 70 % Treffer trotzdem Verlust sein können",
+  "lead": "Eine hohe Trefferquote klingt gut, sagt aber allein wenig. Erst zusammen mit den Quoten zeigt die Rendite, ob unterm Strich etwas übrig bleibt. Ein Rechenbeispiel.",
+  "tags": [
+   "Rendite Sportwetten",
+   "Trefferquote",
+   "Yield erklärt"
+  ],
+  "name": "04_Rendite_statt_Trefferquote"
+ },
+ {
+  "nr": 5,
+  "slug": "Einsaetze_statt_Euro",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-10-30T12:00:00",
+  "titel": "Warum wir in Einsätzen rechnen und nicht in Euro",
+  "lead": "+3,2 Einsätze statt +320 Euro: Warum seriöse Auswertungen in Einsätzen rechnen und was die Zahl für dich bedeutet.",
+  "tags": [
+   "Einsätze Sportwetten",
+   "Einheiten",
+   "Bankroll"
+  ],
+  "name": "05_Einsaetze_statt_Euro"
+ },
+ {
+  "nr": 6,
+  "slug": "Varianz_Verlustserien",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-10-28T12:00:00",
+  "titel": "Varianz einfach erklärt: Warum Verlustserien auch bei guten Systemen kommen",
+  "lead": "Auch bei einer hohen Trefferquote sind mehrere Fehlschläge in Folge normal. Warum das Mathematik ist und kein Zeichen, dass etwas kaputt ist.",
+  "tags": [
+   "Varianz",
+   "Verlustserie",
+   "Sportwetten Statistik"
+  ],
+  "name": "06_Varianz_Verlustserien"
+ },
+ {
+  "nr": 7,
+  "slug": "Einzelwette_oder_Kombi",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-10-31T12:00:00",
+  "titel": "Einzelwette oder Kombiwette? Was das Risiko wirklich ausmacht",
+  "lead": "Kombiwetten locken mit hohen Quoten, aber jede zusätzliche Auswahl muss ebenfalls treffen. Was das für deine Chancen bedeutet.",
+  "tags": [
+   "Kombiwette",
+   "Einzelwette",
+   "Kombi Risiko"
+  ],
+  "name": "07_Einzelwette_oder_Kombi"
+ },
+ {
+  "nr": 8,
+  "slug": "Erwartungswert",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-11-01T12:00:00",
+  "titel": "Erwartungswert einfach erklärt: Was eine gute Wette ausmacht",
+  "lead": "Eine gute Wette ist nicht die, die gewinnt, sondern die, bei der der Preis stimmt. Der Erwartungswert in 60 Sekunden.",
+  "tags": [
+   "Erwartungswert",
+   "Value Bet",
+   "Sportwetten Mathematik"
+  ],
+  "name": "08_Erwartungswert"
+ },
+ {
+  "nr": 9,
+  "slug": "5_Mythen",
+  "pl": "Sportwetten verstehen",
+  "termin": "2026-11-02T19:30:00",
+  "titel": "5 Mythen über Sportwetten und was wirklich dahintersteckt",
+  "lead": "Sichere Tipps, Verluste zurückholen, Bauchgefühl: Fünf verbreitete Irrtümer über Sportwetten im Faktencheck.",
+  "tags": [
+   "Sportwetten Mythen",
+   "sichere Tipps",
+   "Sportwetten Irrtümer"
+  ],
+  "name": "09_5_Mythen"
+ },
+ {
+  "nr": 10,
+  "slug": "Sportwetten_Radar_in_60_Sekunden",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-10-24T12:00:00",
+  "titel": "Sportwetten Radar in 60 Sekunden: Live-Wetten-Analyse für Fußball per Telegram",
+  "lead": "Was ist Sportwetten Radar? Wir werten laufende Fußballspiele in Echtzeit aus und schicken eine Live-Wette per Telegram, wenn die Zahlen eine Gelegenheit zeigen. Jedes Ergebnis ist öffentlich, auch die verlorenen.",
+  "tags": [
+   "Sportwetten Radar",
+   "Live-Wetten Telegram",
+   "Fußball Analyse"
+  ],
+  "name": "10_Sportwetten_Radar_in_60_Sekunden"
+ },
+ {
+  "nr": 11,
+  "slug": "Wie_ein_Live_Signal_entsteht",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-10-31T19:30:00",
+  "titel": "Wie entsteht eine Live-Wette bei Sportwetten Radar? Das Prinzip",
+  "lead": "Von der Spielminute bis zur Telegram-Nachricht: das Prinzip hinter unseren Live-Wetten. Die genaue Methodik bleibt unser Betriebsgeheimnis.",
+  "tags": [
+   "Live-Wetten Analyse",
+   "Spieldaten",
+   "Sportwetten Radar"
+  ],
+  "name": "11_Wie_ein_Live_Signal_entsteht"
+ },
+ {
+  "nr": 12,
+  "slug": "Ein_Spieltag_mit_uns",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-10-27T19:30:00",
+  "titel": "Ein Spieltag mit Sportwetten Radar: vom Signal bis zum Ergebnis",
+  "lead": "So sieht ein Spieltag mit uns aus: Einzelspiele vor dem Anpfiff, Live-Wetten während der Spiele, Auswertung danach. Alles per Telegram.",
+  "tags": [
+   "Sportwetten Telegram",
+   "Spieltag",
+   "Live-Wetten Ablauf"
+  ],
+  "name": "12_Ein_Spieltag_mit_uns"
+ },
+ {
+  "nr": 13,
+  "slug": "Die_zwei_Bausteine",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-10-29T19:30:00",
+  "titel": "Live-Wetten und Einzelspiele zum Kombinieren: die zwei Bausteine",
+  "lead": "Sportwetten Radar besteht aus zwei Teilen: Live-Wetten während des Spiels und bis zu 5 Einzelspiele pro Tag. Was der Unterschied ist und wie wir beide auswerten.",
+  "tags": [
+   "Live-Wetten",
+   "Einzelspiele",
+   "Sportwetten Radar"
+  ],
+  "name": "13_Die_zwei_Bausteine"
+ },
+ {
+  "nr": 14,
+  "slug": "Der_Ergebnis_Kanal",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-10-24T19:30:00",
+  "titel": "Unser Ergebnis-Kanal auf Telegram: Jedes Ergebnis ist öffentlich",
+  "lead": "Jede Live-Wette und jedes Einzelspiel landet nach der Auswertung öffentlich in unserem Telegram-Kanal. Auch die verlorenen. Kostenlos, ohne Anmeldung.",
+  "tags": [
+   "Ergebnisse Telegram",
+   "Sportwetten Ergebnisse",
+   "Trackrecord"
+  ],
+  "name": "14_Der_Ergebnis_Kanal"
+ },
+ {
+  "nr": 15,
+  "slug": "Trackrecord_lesen",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-10-26T19:30:00",
+  "titel": "Trackrecord richtig lesen: verschickt oder zurückgerechnet?",
+  "lead": "Was in unserem Trackrecord steht, woher die Zahlen kommen und warum wir zwischen tatsächlich verschickten Wetten und der Rückrechnung klar trennen.",
+  "tags": [
+   "Trackrecord",
+   "Sportwetten Bilanz",
+   "Rückrechnung"
+  ],
+  "name": "15_Trackrecord_lesen"
+ },
+ {
+  "nr": 16,
+  "slug": "Saisonkalender",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-11-03T12:00:00",
+  "titel": "Wann ist im Fußball am meisten los? Der Saisonkalender für Live-Wetten",
+  "lead": "Fußball hat Saison. Wann fast alle Ligen gleichzeitig spielen, wann Pause ist und warum es im Sommer kaum Live-Wetten gibt.",
+  "tags": [
+   "Fußball Saison",
+   "Länderspielpause",
+   "Live-Wetten Saison"
+  ],
+  "name": "16_Saisonkalender"
+ },
+ {
+  "nr": 17,
+  "slug": "Fuer_wen_wir_passen",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-10-30T19:30:00",
+  "titel": "Für wen Sportwetten Radar passt und für wen nicht",
+  "lead": "Ehrlich gesagt: Sportwetten Radar ist nicht für jeden. Für wen das Angebot gedacht ist und wem wir ausdrücklich abraten.",
+  "tags": [
+   "Sportwetten Radar",
+   "Sportwetten seriös",
+   "Für wen"
+  ],
+  "name": "17_Fuer_wen_wir_passen"
+ },
+ {
+  "nr": 18,
+  "slug": "Warteliste_Start_8_Januar",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-11-03T19:30:00",
+  "titel": "Start am 8. Januar 2027: So kommst du auf die Warteliste",
+  "lead": "Sportwetten Radar startet am 8. Januar 2027. So trägst du dich in 30 Sekunden auf die Warteliste ein. Alle Details zu Paketen und Einführungsangebot findest du auf der Homepage.",
+  "tags": [
+   "Warteliste",
+   "Sportwetten Radar Start",
+   "Telegram Bot"
+  ],
+  "name": "18_Warteliste_Start_8_Januar"
+ },
+ {
+  "nr": 19,
+  "slug": "Haeufige_Fragen",
+  "pl": "So arbeitet Sportwetten Radar",
+  "termin": "2026-11-04T19:30:00",
+  "titel": "Häufige Fragen zu Sportwetten Radar: Laufzeit, Kündigung, Daten",
+  "lead": "Brauche ich ein Konto? Wie kündige ich? Was passiert mit meinen Daten? Die häufigsten Fragen kurz beantwortet. Alle Details stehen auf der Homepage.",
+  "tags": [
+   "FAQ",
+   "Kündigung",
+   "Sportwetten Radar"
+  ],
+  "name": "19_Haeufige_Fragen"
+ },
+ {
+  "nr": 20,
+  "slug": "Serioese_Tippgeber_erkennen",
+  "pl": "Verantwortungsvoll wetten",
+  "termin": "2026-10-25T19:30:00",
+  "titel": "Seriöse Tippgeber erkennen: 6 Warnsignale, bei denen du abspringen solltest",
+  "lead": "Luxusautos, sichere Tipps, nur Gewinne: Woran du unseriöse Tippgeber und Wett-Anbieter erkennst und welche Fragen du vor jedem Abo stellen solltest.",
+  "tags": [
+   "Tippgeber seriös",
+   "Sportwetten Abzocke",
+   "Warnsignale"
+  ],
+  "name": "20_Serioese_Tippgeber_erkennen"
+ },
+ {
+  "nr": 21,
+  "slug": "Gleicher_Einsatz",
+  "pl": "Verantwortungsvoll wetten",
+  "termin": "2026-10-28T19:30:00",
+  "titel": "Gleicher Einsatz, immer: Warum du Verluste nie zurückholen solltest",
+  "lead": "Nach einem Verlust den Einsatz erhöhen, um ihn zurückzuholen, ist der häufigste und teuerste Fehler bei Sportwetten. Warum gleicher Einsatz die wichtigste Regel ist.",
+  "tags": [
+   "Einsatz",
+   "Verluste jagen",
+   "verantwortungsvoll wetten"
+  ],
+  "name": "21_Gleicher_Einsatz"
+ },
+ {
+  "nr": 22,
+  "slug": "Budget_festlegen",
+  "pl": "Verantwortungsvoll wetten",
+  "termin": "2026-11-02T12:00:00",
+  "titel": "Budget festlegen, bevor du wettest: drei einfache Regeln",
+  "lead": "Wer ohne Budget wettet, entscheidet im falschen Moment. Drei einfache Regeln, mit denen du die Kontrolle behältst.",
+  "tags": [
+   "Budget Sportwetten",
+   "Bankroll Management",
+   "verantwortungsvoll wetten"
+  ],
+  "name": "22_Budget_festlegen"
+ },
+ {
+  "nr": 23,
+  "slug": "Warnsignale_und_Hilfe",
+  "pl": "Verantwortungsvoll wetten",
+  "termin": "2026-11-04T12:00:00",
+  "titel": "Wann aus Spaß ein Problem wird: Warnsignale und wo es Hilfe gibt",
+  "lead": "Glücksspiel kann süchtig machen. Woran du erkennst, dass Wetten zum Problem wird, und wo du kostenlos und anonym Hilfe bekommst.",
+  "tags": [
+   "Spielsucht",
+   "Hilfe Glücksspiel",
+   "check dein spiel"
+  ],
+  "name": "23_Warnsignale_und_Hilfe"
+ }
+]

@@ -1,0 +1,47 @@
+{
+ "titel": "Erwartungswert einfach erklärt: Was eine gute Wette ausmacht",
+ "thumb": {
+  "eyebrow": "Einfach erklärt",
+  "text": "Der [[Erwartungswert]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "Der [[Erwartungswert]]"
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Die Idee",
+   "text": "Was bringt eine Wette\nim Durchschnitt?",
+   "sub": "Nicht eine einzelne Wette zählt, sondern was herauskäme, wenn du dieselbe Situation sehr oft spielen würdest."
+  },
+  {
+   "typ": "text",
+   "dauer": 9,
+   "eyebrow": "Beispiel",
+   "text": "Quote 2,00.\nEchte Chance 55 %.",
+   "sub": "Pro Einsatz: 55 % × 1 Gewinn − 45 % × 1 Verlust = +0,10. Der Preis unterschätzt die Chance, der Erwartungswert ist positiv."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Das Gegenbeispiel",
+   "text": "Quote 2,00.\nEchte Chance 45 %.",
+   "sub": "45 % − 55 % = −0,10 pro Einsatz. Auch wenn diese Wette einmal gewinnt, ist sie auf Dauer ein Verlustgeschäft."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Die ehrliche Grenze",
+   "text": "Die echte Chance kennt\nniemand genau.",
+   "sub": "Man kann sie nur schätzen. Deshalb gibt es keine sicheren Tipps, und deshalb zeigen wir jedes Ergebnis."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

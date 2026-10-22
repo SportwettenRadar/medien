@@ -1,0 +1,44 @@
+{
+ "titel": "Wie entsteht eine Live-Wette bei Sportwetten Radar? Das Prinzip",
+ "thumb": {
+  "eyebrow": "Das Prinzip",
+  "text": "Wie entsteht\neine [[Live-Wette]]?"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "So arbeitet Sportwetten Radar",
+   "text": "Wie entsteht\neine [[Live-Wette]]?"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "In drei Schritten",
+   "text": "Vom Spiel zur Nachricht",
+   "punkte": [
+    "<b>Beobachten:</b> Laufende Spiele werden fortlaufend ausgewertet, mit öffentlich zugänglichen Spiel- und Marktdaten.",
+    "<b>Vergleichen:</b> Passt die Quote noch zu dem, was auf dem Platz passiert?",
+    "<b>Melden:</b> Nur bei einer auffälligen Abweichung kommt eine Live-Wette per Telegram."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Lieber seltener",
+   "text": "Keine Nachricht\nohne klare Datenlage.",
+   "sub": "An manchen Tagen gibt es mehrere Live-Wetten, an anderen keine. Wir melden uns lieber seltener als ständig mit dünner Grundlage."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Was wir nicht verraten",
+   "text": "Die Methodik bleibt\nunser Betriebsgeheimnis.",
+   "sub": "Was du bekommst, ist das Ergebnis, nachvollziehbar aufbereitet. Und jede verschickte Wette fließt in die Auswertung ein."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

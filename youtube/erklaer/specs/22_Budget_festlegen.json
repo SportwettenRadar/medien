@@ -1,0 +1,44 @@
+{
+ "titel": "Budget festlegen, bevor du wettest: drei einfache Regeln",
+ "thumb": {
+  "eyebrow": "Vorher festlegen",
+  "text": "Erst das [[Budget]].\nDann die Wette."
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Verantwortungsvoll wetten",
+   "text": "Erst das [[Budget]].\nDann die Wette."
+  },
+  {
+   "typ": "liste",
+   "dauer": 12,
+   "eyebrow": "Drei Regeln",
+   "text": "Bevor du anfängst",
+   "punkte": [
+    "<b>Monatsbudget festlegen:</b> nur Geld, dessen Verlust dir nicht wehtut.",
+    "<b>Einsatz pro Wette fix:</b> ein kleiner, gleicher Anteil, z. B. 2–5 % des Budgets.",
+    "<b>Budget weg = Pause</b> bis zum nächsten Monat. Kein Nachschießen."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Hilfreich",
+   "text": "Einzahlungslimit beim\nWettanbieter setzen.",
+   "sub": "Legale Anbieter in Deutschland müssen Limits anbieten. Setze sie, bevor du sie brauchst."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Ehrlich",
+   "text": "Wetten ist Unterhaltung\nmit Risiko.",
+   "sub": "Kein Einkommen und keine Geldanlage."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

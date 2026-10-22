@@ -1,0 +1,44 @@
+{
+ "titel": "Gleicher Einsatz, immer: Warum du Verluste nie zurückholen solltest",
+ "thumb": {
+  "eyebrow": "Regel Nr. 1",
+  "text": "[[Gleicher Einsatz.]]\nImmer."
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Verantwortungsvoll wetten",
+   "text": "[[Gleicher Einsatz.]]\nImmer."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Der Fehler",
+   "text": "Nach einem Verlust\nden Einsatz verdoppeln.",
+   "sub": "Die Idee: Die nächste Wette holt alles zurück. Die Realität: Eine weitere Niederlage, und der Verlust ist doppelt so groß."
+  },
+  {
+   "typ": "liste",
+   "dauer": 10.5,
+   "eyebrow": "Beispiel",
+   "text": "Verdoppeln nach Verlust",
+   "punkte": [
+    "Start mit <b>10 €</b>, verloren.",
+    "Dann <b>20 €</b>, verloren. Dann <b>40 €</b>, verloren.",
+    "Nach drei Fehlern: <b>70 € weg</b> statt 30 €."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Die Regel",
+   "text": "Jede Wette gleich groß.\nEgal, was vorher war.",
+   "sub": "So bleiben Verlustserien verkraftbar. Und so rechnen wir auch unsere Rendite."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

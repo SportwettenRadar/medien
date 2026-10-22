@@ -1,0 +1,43 @@
+{
+ "titel": "Live-Wetten und Einzelspiele zum Kombinieren: die zwei Bausteine",
+ "thumb": {
+  "eyebrow": "Unser Angebot",
+  "text": "Zwei Bausteine.\n[[Ein Prinzip.]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "So arbeitet Sportwetten Radar",
+   "text": "Zwei Bausteine.\n[[Ein Prinzip.]]"
+  },
+  {
+   "typ": "text",
+   "dauer": 8.5,
+   "eyebrow": "Baustein 1 · Kernangebot",
+   "text": "Live-Wetten",
+   "sub": "Fortlaufende Beobachtung laufender Spiele. Meldung, sobald die Analyse eine auffällige Abweichung zwischen Spielverlauf und Markteinschätzung zeigt."
+  },
+  {
+   "typ": "text",
+   "dauer": 8.5,
+   "eyebrow": "Baustein 2 · Täglich",
+   "text": "Einzelspiele zum Kombinieren",
+   "sub": "Bis zu 5 ausgewählte Einzelspiele pro Tag. Ob du sie einzeln spielst oder selbst kombinierst, entscheidest du."
+  },
+  {
+   "typ": "liste",
+   "dauer": 9.5,
+   "eyebrow": "So werten wir aus",
+   "text": "Unterschiedlich, aus gutem Grund",
+   "punkte": [
+    "<b>Live-Wetten:</b> Trefferquote und Rendite bei gleichem Einsatz.",
+    "<b>Einzelspiele:</b> nur Trefferquote. Deinen Schein stellst du selbst zusammen, eine einheitliche Quote gibt es nicht."
+   ]
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "titel": "Seriöse Tippgeber erkennen: 6 Warnsignale, bei denen du abspringen solltest",
+ "thumb": {
+  "eyebrow": "Warnsignale",
+  "text": "Unseriöse Tippgeber\n[[erkennen]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Verantwortungsvoll wetten",
+   "text": "Unseriöse Tippgeber\n[[erkennen]]"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "Warnsignale 1 bis 3",
+   "text": "Finger weg, wenn",
+   "punkte": [
+    "<b>„Sichere Tipps“</b> oder Gewinngarantien versprochen werden.",
+    "<b>Nur Gewinne</b> gezeigt werden, nie Verluste.",
+    "Mit <b>Geld, Autos, Luxus</b> geworben wird."
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "Warnsignale 4 bis 6",
+   "text": "Ebenso kritisch",
+   "punkte": [
+    "Ergebnisse <b>nachträglich gelöscht</b> oder geändert werden.",
+    "<b>Druck</b> gemacht wird: „Nur noch heute!“",
+    "Du über <b>Links zu Wettanbietern</b> gelockt wirst, an denen jemand mitverdient."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Die wichtigste Frage",
+   "text": "Kann ich jedes Ergebnis\nselbst nachprüfen?",
+   "sub": "Wenn nicht: weitergehen."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

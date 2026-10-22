@@ -1,0 +1,51 @@
+{
+ "titel": "Einzelwette oder Kombiwette? Was das Risiko wirklich ausmacht",
+ "thumb": {
+  "eyebrow": "Risiko verstehen",
+  "text": "Einzel oder\n[[Kombi]]?"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "Einzelwette oder\n[[Kombi]]?"
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Die Kombi",
+   "text": "Alle Tipps müssen treffen.",
+   "sub": "Die Quoten werden multipliziert. Das sieht verlockend aus, aber schon ein Fehler macht den ganzen Schein wertlos."
+  },
+  {
+   "typ": "liste",
+   "dauer": 10.5,
+   "eyebrow": "Rechenbeispiel",
+   "text": "Jeder Tipp mit 70 % Chance",
+   "punkte": [
+    "<b>1 Tipp:</b> 70 % Chance",
+    "<b>3 Tipps kombiniert:</b> 0,7 × 0,7 × 0,7 ≈ 34 %",
+    "<b>5 Tipps kombiniert:</b> nur noch etwa 17 %"
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Und die Marge",
+   "text": "Sie wird mit jeder Auswahl\nmitmultipliziert.",
+   "sub": "Je mehr Spiele auf einem Schein, desto größer der Vorteil des Wettanbieters."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Bei uns",
+   "text": "Einzelspiele.\nDu entscheidest.",
+   "sub": "Wir schicken bis zu 5 Einzelspiele pro Tag. Ob du sie einzeln spielst oder kombinierst, liegt bei dir."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

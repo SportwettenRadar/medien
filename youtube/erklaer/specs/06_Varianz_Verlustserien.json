@@ -1,0 +1,51 @@
+{
+ "titel": "Varianz einfach erklärt: Warum Verlustserien auch bei guten Systemen kommen",
+ "thumb": {
+  "eyebrow": "Statistik",
+  "text": "Warum [[Verlustserien]]\nnormal sind"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "Warum [[Verlustserien]]\nnormal sind"
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Ein Münzwurf",
+   "text": "Fünfmal Kopf in Folge?\nPassiert öfter, als man denkt.",
+   "sub": "Bei 100 Würfen ist eine Serie von 5 oder mehr gleichen Ergebnissen sehr wahrscheinlich. Zufall verteilt sich nicht gleichmäßig."
+  },
+  {
+   "typ": "text",
+   "dauer": 8.5,
+   "eyebrow": "Bei Wetten genauso",
+   "text": "Auch 70 % Trefferquote\nbringen Fehlserien.",
+   "sub": "Über einige Hundert Wetten sind 3 oder 4 Fehlschläge hintereinander ganz normal. Das ist Varianz, kein Fehler im System."
+  },
+  {
+   "typ": "liste",
+   "dauer": 10,
+   "eyebrow": "Was hilft",
+   "text": "Richtig mit Serien umgehen",
+   "punkte": [
+    "<b>Gleicher Einsatz</b>, auch nach Verlusten.",
+    "<b>Nicht nachlegen</b>, um Verluste zurückzuholen.",
+    "Ergebnisse über <b>Monate</b> bewerten, nicht über Tage."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Unsere Zahlen",
+   "text": "Längste Verlustserie\nund größter Rückgang.",
+   "sub": "Beides weisen wir in jedem Monatsbericht aus. Damit du weißt, worauf du dich einlässt."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "titel": "Quote richtig lesen: Was eine Quote von 1,60 wirklich bedeutet",
+ "thumb": {
+  "eyebrow": "Quoten verstehen",
+  "text": "Was bedeutet\neine [[1,60]]?"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "Was bedeutet\neine Quote von [[1,60]]?"
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Die Umrechnung",
+   "text": "1 geteilt durch die Quote.",
+   "sub": "1 ÷ 1,60 = 0,625. Der Markt schätzt die Chance also auf rund 62,5 %. Bei einer 2,00 wären es 50 %, bei einer 4,00 nur 25 %."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Der Haken",
+   "text": "Die Prozente ergeben\nmehr als 100.",
+   "sub": "Rechnest du alle Ausgänge eines Spiels um, kommst du auf etwa 104 bis 108 %. Der Überschuss ist die Marge des Wettanbieters."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Was das für dich heißt",
+   "text": "Eine niedrige Quote\nist kein sicherer Tipp.",
+   "sub": "Auch eine 1,30 verliert statistisch etwa jedes vierte Mal. Entscheidend ist, ob die echte Chance höher ist als die, die der Preis unterstellt."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Unser Ansatz",
+   "text": "Wir suchen Abweichungen\nzwischen Spiel und Preis.",
+   "sub": "Keine Garantie, sondern eine statistische Einschätzung. Das Ergebnis jeder Wette ist öffentlich."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

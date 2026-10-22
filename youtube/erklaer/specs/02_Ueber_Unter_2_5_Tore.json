@@ -1,0 +1,51 @@
+{
+ "titel": "Über/Unter 2,5 Tore erklärt: So funktioniert die beliebteste Torwette",
+ "thumb": {
+  "eyebrow": "Einfach erklärt",
+  "text": "Über/Unter\n[[2,5 Tore]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "Über/Unter\n[[2,5 Tore]]"
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Die Frage",
+   "text": "Fallen im Spiel mehr\noder weniger Tore?",
+   "sub": "Es zählt nicht, wer gewinnt, sondern nur die Summe der Tore beider Mannschaften."
+  },
+  {
+   "typ": "liste",
+   "dauer": 10,
+   "eyebrow": "Die Grenze 2,5",
+   "text": "Warum die halbe Zahl?",
+   "punkte": [
+    "<b>Über 2,5</b> gewinnt ab 3 Toren: 2:1, 3:0, 2:2 …",
+    "<b>Unter 2,5</b> gewinnt bei höchstens 2 Toren: 0:0, 1:0, 1:1 …",
+    "Durch die halbe Zahl gibt es <b>kein Unentschieden</b> bei der Wette."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Live wird es interessant",
+   "text": "Die Grenze wandert\nmit dem Spiel.",
+   "sub": "Steht es nach 60 Minuten 1:1, bieten Wettanbieter oft Über/Unter 3,5 an. Die Quote hängt dann davon ab, wie viel Zeit bleibt und wie das Spiel läuft."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Unser Fokus",
+   "text": "Torwetten live,\nauf Basis von Spieldaten.",
+   "sub": "Unsere Live-Wetten sind Über/Unter-Wetten. Jede einzelne steht öffentlich im Ergebnis-Kanal."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

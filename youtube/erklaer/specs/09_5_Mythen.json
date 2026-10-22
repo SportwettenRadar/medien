@@ -1,0 +1,47 @@
+{
+ "titel": "5 Mythen über Sportwetten und was wirklich dahintersteckt",
+ "thumb": {
+  "eyebrow": "Faktencheck",
+  "text": "5 [[Mythen]] über\nSportwetten"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Faktencheck",
+   "text": "5 [[Mythen]] über\nSportwetten"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "Mythos 1 bis 3",
+   "text": "Klingt gut, stimmt nicht",
+   "punkte": [
+    "<b>„Es gibt sichere Tipps.“</b> Nein. Jede Wette kann verlieren.",
+    "<b>„Nach drei Verlusten muss ein Gewinn kommen.“</b> Nein. Jede Wette ist neu.",
+    "<b>„Verluste holt man mit höherem Einsatz zurück.“</b> So entstehen die größten Verluste."
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 9.5,
+   "eyebrow": "Mythos 4 und 5",
+   "text": "Auch das stimmt nicht",
+   "punkte": [
+    "<b>„Hohe Trefferquote heißt Gewinn.“</b> Ohne Quoten sagt sie wenig.",
+    "<b>„Wer viel Fußball schaut, schlägt den Markt.“</b> Der Markt sieht dieselben Spiele."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Was stattdessen zählt",
+   "text": "Gleicher Einsatz, Geduld,\nehrliche Zahlen.",
+   "sub": "Und ein Budget, das du verlieren kannst, ohne dass es wehtut."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

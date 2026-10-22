@@ -1,0 +1,51 @@
+{
+ "titel": "Was ist eine Live-Wette? Der Ablauf in 60 Sekunden einfach erklärt",
+ "thumb": {
+  "eyebrow": "Einfach erklärt",
+  "text": "Was ist eine\n[[Live-Wette]]?"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "Was ist eine\n[[Live-Wette]]?"
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Der Unterschied",
+   "text": "Du wettest, während\ndas Spiel läuft.",
+   "sub": "Bei einer normalen Wette steht alles vor dem Anpfiff fest. Bei einer Live-Wette setzt du mitten im Spiel, zum aktuellen Spielstand und zur aktuellen Quote."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Die Quote bewegt sich",
+   "text": "Jede Minute ändert\ndie Einschätzung.",
+   "sub": "Tore, Druckphasen, Platzverweise, ablaufende Zeit: Der Wettmarkt passt die Quoten laufend an. Manchmal schneller, manchmal langsamer als das Spiel."
+  },
+  {
+   "typ": "liste",
+   "dauer": 10,
+   "eyebrow": "Typische Live-Wetten",
+   "text": "Was gewettet wird",
+   "punkte": [
+    "<b>Über/Unter Tore:</b> Fallen mehr oder weniger Tore als eine Grenze, z. B. 2,5?",
+    "<b>Nächstes Tor:</b> Welche Mannschaft trifft als Nächste?",
+    "<b>Ergebnis ab jetzt:</b> Wer gewinnt den Rest des Spiels?"
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 7.5,
+   "eyebrow": "Wichtig",
+   "text": "Schnell heißt nicht sicher.",
+   "sub": "Live-Wetten verleiten zu spontanen Entscheidungen. Lege vorher fest, wie viel du einsetzt, und bleib dabei."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

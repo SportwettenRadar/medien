@@ -1,0 +1,51 @@
+{
+ "titel": "Warum wir in Einsätzen rechnen und nicht in Euro",
+ "thumb": {
+  "eyebrow": "Einfach erklärt",
+  "text": "Einsätze\nstatt [[Euro]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "Warum Einsätze\nstatt [[Euro]]?"
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Ein Einsatz",
+   "text": "Immer derselbe Betrag\npro Wette.",
+   "sub": "Ob du 2 € oder 20 € setzt, entscheidest du selbst. In der Auswertung zählt jede Wette gleich: als 1 Einsatz."
+  },
+  {
+   "typ": "liste",
+   "dauer": 10,
+   "eyebrow": "So liest du die Zahl",
+   "text": "Was +2,5 Einsätze heißt",
+   "punkte": [
+    "Bei <b>5 €</b> pro Wette wären das +12,50 €.",
+    "Bei <b>20 €</b> pro Wette wären das +50 €.",
+    "Bei <b>−2,5 Einsätzen</b> gilt dasselbe als Verlust."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Warum das fairer ist",
+   "text": "Euro-Beträge lassen sich\nleicht aufblasen.",
+   "sub": "Große Summen beeindrucken, sagen aber nichts über die Qualität. Einsätze machen Ergebnisse vergleichbar, egal, wie viel jemand setzt."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Unsere Regel",
+   "text": "Wir nennen keine Beträge.",
+   "sub": "Du wählst deinen Einsatz selbst. Setze nur Geld ein, das du verlieren kannst."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

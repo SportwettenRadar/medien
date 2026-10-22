@@ -1,0 +1,41 @@
+{
+ "titel": "Für wen Sportwetten Radar passt und für wen nicht",
+ "thumb": {
+  "eyebrow": "Ehrlich gesagt",
+  "text": "Für wen wir\n[[nicht]] passen"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "So arbeitet Sportwetten Radar",
+   "text": "Für wen wir passen.\nUnd für wen [[nicht]]."
+  },
+  {
+   "typ": "liste",
+   "dauer": 10.5,
+   "eyebrow": "Passt zu dir, wenn",
+   "text": "Du so denkst",
+   "punkte": [
+    "Du willst <b>Zahlen statt Bauchgefühl</b>.",
+    "Du setzt <b>immer gleich viel</b> und denkst in Monaten, nicht in Tagen.",
+    "Du willst <b>jedes Ergebnis nachprüfen</b> können."
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 10.5,
+   "eyebrow": "Passt nicht, wenn",
+   "text": "Lass es lieber",
+   "punkte": [
+    "Du suchst <b>schnelles Geld</b> oder sichere Tipps.",
+    "Du willst <b>Verluste zurückholen</b>.",
+    "Du setzt Geld ein, das du <b>zum Leben brauchst</b>. Hilfe: check-dein-spiel.de"
+   ]
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

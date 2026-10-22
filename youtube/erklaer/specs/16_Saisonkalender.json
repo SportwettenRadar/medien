@@ -1,0 +1,44 @@
+{
+ "titel": "Wann ist im Fußball am meisten los? Der Saisonkalender für Live-Wetten",
+ "thumb": {
+  "eyebrow": "Saisonkalender",
+  "text": "Wann ist\n[[am meisten los]]?"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "So arbeitet Sportwetten Radar",
+   "text": "Wann ist im Fußball\n[[am meisten los]]?"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "Das Jahr im Überblick",
+   "text": "Hochsaison und Pausen",
+   "punkte": [
+    "<b>Februar bis Mai</b> und <b>September bis November:</b> fast alle Ligen spielen gleichzeitig.",
+    "<b>Dezember und Januar:</b> Winterpausen in vielen Ligen.",
+    "<b>Juni und Juli:</b> Europa pausiert, nur vereinzelt Live-Wetten."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8.5,
+   "eyebrow": "Länderspielpausen 2026/27",
+   "text": "9.–17.11. · 22.–30.3.\n7.–15.6.",
+   "sub": "In diesen Wochen ruhen die Vereinsligen. Weniger Spiele heißt weniger Live-Wetten."
+  },
+  {
+   "typ": "text",
+   "dauer": 7.5,
+   "eyebrow": "Unsere Regel",
+   "text": "Wir verschicken nur,\nwas die Daten hergeben.",
+   "sub": "Den kompletten Saisonkalender findest du auf sportwetten-radar.net."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

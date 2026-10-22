@@ -1,0 +1,45 @@
+{
+ "titel": "Wann aus Spaß ein Problem wird: Warnsignale und wo es Hilfe gibt",
+ "thumb": {
+  "eyebrow": "Ehrlich hinschauen",
+  "text": "Wann wird Wetten\nzum [[Problem]]?"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Verantwortungsvoll wetten",
+   "text": "Wann wird Wetten\nzum [[Problem]]?"
+  },
+  {
+   "typ": "liste",
+   "dauer": 12,
+   "eyebrow": "Warnsignale",
+   "text": "Ehrlich hinschauen",
+   "punkte": [
+    "Du setzt <b>mehr</b>, als du dir vorgenommen hast.",
+    "Du versuchst, <b>Verluste zurückzuholen</b>.",
+    "Du <b>verheimlichst</b> deine Wetten oder leihst dir Geld dafür.",
+    "Du denkst <b>ständig</b> ans Wetten, auch wenn kein Spiel läuft."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 9,
+   "eyebrow": "Hilfe, kostenlos und anonym",
+   "text": "0800 1 37 27 00",
+   "sub": "Beratungstelefon der Bundeszentrale für gesundheitliche Aufklärung. Online: check-dein-spiel.de"
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Unsere Haltung",
+   "text": "Lieber eine Pause\nals ein Problem.",
+   "sub": "Sportwetten Radar richtet sich nur an Erwachsene. Wette nie mit Geld, das du brauchst."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

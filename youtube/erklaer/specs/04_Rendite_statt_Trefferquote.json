@@ -1,0 +1,47 @@
+{
+ "titel": "Rendite statt Trefferquote: Warum 70 % Treffer trotzdem Verlust sein können",
+ "thumb": {
+  "eyebrow": "Rechenbeispiel",
+  "text": "70 % Treffer.\nTrotzdem [[Verlust]]?"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "Sportwetten verstehen",
+   "text": "70 % Treffer.\nTrotzdem [[Verlust]]?"
+  },
+  {
+   "typ": "text",
+   "dauer": 8.5,
+   "eyebrow": "Rechenbeispiel",
+   "text": "10 Wetten zur Quote 1,35.\n7 gewonnen, 3 verloren.",
+   "sub": "Jede Wette mit 1 Einsatz. Gewinn aus 7 Treffern: 7 × 0,35 = 2,45 Einsätze. Verlust aus 3 Fehlern: 3 Einsätze."
+  },
+  {
+   "typ": "text",
+   "dauer": 7.5,
+   "eyebrow": "Ergebnis",
+   "text": "Unterm Strich:\n−0,55 Einsätze.",
+   "sub": "Rendite: −0,55 ÷ 10 = −5,5 %. Trotz 70 % Trefferquote ein Minus."
+  },
+  {
+   "typ": "text",
+   "dauer": 8.5,
+   "eyebrow": "Die Rendite",
+   "text": "Gewinn geteilt durch\nalle Einsätze.",
+   "sub": "Sie zeigt, wie sich alle Wetten mit gleichem Einsatz entwickelt hätten. Deshalb weisen wir bei Live-Wetten immer die Rendite aus, nicht nur die Trefferquote."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Achte darauf",
+   "text": "Wer nur Trefferquoten zeigt,\nzeigt die halbe Wahrheit.",
+   "sub": "Seriös ist: alle Wetten, alle Quoten, alle Verluste."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

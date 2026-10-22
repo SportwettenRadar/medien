@@ -1,0 +1,44 @@
+{
+ "titel": "Unser Ergebnis-Kanal auf Telegram: Jedes Ergebnis ist öffentlich",
+ "thumb": {
+  "eyebrow": "Kostenlos",
+  "text": "Jedes Ergebnis.\n[[Öffentlich.]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "So arbeitet Sportwetten Radar",
+   "text": "Jedes Ergebnis.\n[[Öffentlich.]]"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11,
+   "eyebrow": "Im Ergebnis-Kanal",
+   "text": "Was du dort siehst",
+   "punkte": [
+    "<b>Jede Live-Wette</b> nach der Auswertung, auch die verlorenen.",
+    "<b>Die Einzelspiele</b> gebündelt, wenn alle Tipps ausgewertet sind.",
+    "<b>Tages-, Wochen- und Monatsbilanz</b> mit Trefferquote und Rendite."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Warum öffentlich",
+   "text": "Vertrauen entsteht\ndurch Nachprüfbarkeit.",
+   "sub": "Wer nur Gewinne zeigt, versteckt etwas. Bei uns kann jeder jedes Ergebnis nachlesen, bevor er sich entscheidet."
+  },
+  {
+   "typ": "text",
+   "dauer": 7,
+   "eyebrow": "Kostenlos",
+   "text": "Ohne Abo. Ohne Anmeldung.",
+   "sub": "Einfach den Kanal in Telegram öffnen: t.me/sportwettenradar"
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

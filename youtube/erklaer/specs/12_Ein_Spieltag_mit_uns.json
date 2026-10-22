@@ -1,0 +1,44 @@
+{
+ "titel": "Ein Spieltag mit Sportwetten Radar: vom Signal bis zum Ergebnis",
+ "thumb": {
+  "eyebrow": "So läuft es ab",
+  "text": "Ein Spieltag\n[[mit uns]]"
+ },
+ "folien": [
+  {
+   "typ": "titel",
+   "dauer": 4.5,
+   "eyebrow": "So arbeitet Sportwetten Radar",
+   "text": "Ein Spieltag\n[[mit uns]]"
+  },
+  {
+   "typ": "liste",
+   "dauer": 11.5,
+   "eyebrow": "Der Ablauf",
+   "text": "Vom Morgen bis zum Abend",
+   "punkte": [
+    "<b>Vor den Spielen:</b> bis zu 5 Einzelspiele zum Kombinieren.",
+    "<b>Während der Spiele:</b> Live-Wetten, sobald die Daten eine Gelegenheit zeigen.",
+    "<b>Nach den Spielen:</b> Auswertung jeder Wette, öffentlich im Ergebnis-Kanal."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Alles in Telegram",
+   "text": "Keine App, kein Konto\nbei uns.",
+   "sub": "Die Nachrichten kommen direkt aufs Handy. Wo und ob du wettest, entscheidest du selbst. Wir vermitteln keine Wetten."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Am nächsten Morgen",
+   "text": "Tagesbilanz für alle.",
+   "sub": "Jeden Morgen steht die Bilanz des Vortags im Ergebnis-Kanal, montags die Woche, am 1. der Monatsbericht."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}
