@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Verantwortungsvoll wetten",
-   "text": "Wann wird Wetten\nzum [[Problem]]?"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "[[4 Zeichen]], dass Wetten\nzum Problem wird."
   },
   {
    "typ": "liste",

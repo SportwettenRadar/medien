@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Sportwetten verstehen",
-   "text": "Warum [[Verlustserien]]\nnormal sind"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "5 Verluste in Folge.\n[[System kaputt?]]"
   },
   {
    "typ": "text",

@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "So arbeitet Sportwetten Radar",
-   "text": "[[Häufige Fragen]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Kündigen mit [[einem Befehl.]]\nSo einfach."
   },
   {
    "typ": "liste",

@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Sportwetten verstehen",
-   "text": "Über/Unter\n[[2,5 Tore]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "2,5 Tore? Es gibt doch\n[[keine halben Tore.]]"
   },
   {
    "typ": "text",

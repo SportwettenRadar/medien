@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "So arbeitet Sportwetten Radar",
-   "text": "Ein Spieltag\n[[mit uns]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Ein Spieltag.\n[[Jede Wette öffentlich.]]"
   },
   {
    "typ": "liste",

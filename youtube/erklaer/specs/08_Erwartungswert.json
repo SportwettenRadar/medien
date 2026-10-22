@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Sportwetten verstehen",
-   "text": "Der [[Erwartungswert]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Diese Wette gewinnt –\n[[und ist trotzdem schlecht.]]"
   },
   {
    "typ": "text",

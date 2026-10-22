@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "So arbeitet Sportwetten Radar",
-   "text": "Trackrecord\n[[richtig lesen]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Vorsicht bei Trackrecords,\ndie [[nur gewinnen.]]"
   },
   {
    "typ": "liste",

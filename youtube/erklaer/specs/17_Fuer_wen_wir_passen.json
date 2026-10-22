@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "So arbeitet Sportwetten Radar",
-   "text": "Für wen wir passen.\nUnd für wen [[nicht]]."
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Abonniere uns [[nicht]],\nwenn …"
   },
   {
    "typ": "liste",

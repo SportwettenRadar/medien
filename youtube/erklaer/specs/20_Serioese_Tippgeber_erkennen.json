@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Verantwortungsvoll wetten",
-   "text": "Unseriöse Tippgeber\n[[erkennen]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Luxusauto im Profil?\n[[Finger weg.]]"
   },
   {
    "typ": "liste",

@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Verantwortungsvoll wetten",
-   "text": "[[Gleicher Einsatz.]]\nImmer."
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Verdoppeln nach Verlust:\n[[der teuerste Fehler.]]"
   },
   {
    "typ": "text",

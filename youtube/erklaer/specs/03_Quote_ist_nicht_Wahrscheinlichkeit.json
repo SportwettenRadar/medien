@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Sportwetten verstehen",
-   "text": "Was bedeutet\neine Quote von [[1,60]]?"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Eine [[1,60]] verliert öfter,\nals du denkst."
   },
   {
    "typ": "text",

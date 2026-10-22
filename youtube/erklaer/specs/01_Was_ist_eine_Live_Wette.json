@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Sportwetten verstehen",
-   "text": "Was ist eine\n[[Live-Wette]]?"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Die Quote ändert sich\n[[jede Minute.]] Warum?"
   },
   {
    "typ": "text",

@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "So arbeitet Sportwetten Radar",
-   "text": "Jedes Ergebnis.\n[[Öffentlich.]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Ein Tippgeber,\nder seine [[Verluste]] zeigt?"
   },
   {
    "typ": "liste",

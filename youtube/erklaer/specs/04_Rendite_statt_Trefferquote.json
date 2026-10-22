@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Sportwetten verstehen",
-   "text": "70 % Treffer.\nTrotzdem [[Verlust]]?"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "70 % Treffer.\n[[Trotzdem Minus.]]"
   },
   {
    "typ": "text",

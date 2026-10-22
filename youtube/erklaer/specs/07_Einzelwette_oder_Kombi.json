@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Sportwetten verstehen",
-   "text": "Einzelwette oder\n[[Kombi]]?"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "5 Tipps mit je 70 %:\n[[nur 17 % Chance.]]"
   },
   {
    "typ": "text",

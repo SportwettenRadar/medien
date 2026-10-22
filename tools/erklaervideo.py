@@ -43,6 +43,9 @@ li{display:flex;gap:28px;align-items:flex-start;font-size:42px;line-height:1.35;
 li i{flex:none;font-style:normal;font-family:M;font-weight:500;font-size:30px;color:#0a131d;background:#2edb99;
  width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px}
 li b{color:#fff;font-weight:600}
+.hook{position:absolute;left:120px;right:120px;top:50%;transform:translateY(-50%);text-align:center}
+.hook h1{font-size:132px;line-height:1.04}
+.hook .bar{margin:44px auto 0;width:180px}
 .end .rows{margin-top:46px;display:grid;gap:22px}
 .end .row{display:flex;gap:30px;align-items:baseline;font-size:42px}
 .end .row span{font-family:M;font-size:28px;color:#6f8399;width:290px;flex:none;text-transform:uppercase;letter-spacing:.08em}
@@ -63,6 +66,8 @@ li{font-size:46px}
 .end .row{flex-direction:column;gap:6px;font-size:46px}
 .end .row span{width:auto}
 .end .hint{font-size:28px;line-height:1.5}
+.hook{left:70px;right:70px}
+.hook h1{font-size:124px}
 """
 HOCH = False
 
@@ -75,7 +80,9 @@ def folie_html(f, logo):
     top = f'<div class="top"><img src="{logo}"><span>Sportwetten <b>Radar</b></span></div>'
     foot = '<div class="foot"><span>18+ · Keine Gewinngarantie</span><span>sportwetten-radar.net</span></div>'
     t = f["typ"]
-    if t == "titel":
+    if t == "hook":
+        body = (f'<div class="main hook"><h1>{esc(f["text"]).replace(chr(10),"<br>")}</h1><div class="bar"></div></div>')
+    elif t == "titel":
         body = (f'<div class="main"><div class="eb">{esc(f.get("eyebrow",""))}</div>'
                 f'<h1>{esc(f["text"]).replace(chr(10),"<br>")}</h1><div class="bar"></div></div>')
     elif t == "text":
@@ -131,6 +138,10 @@ def baue(spec, pngs, out):
     for p, du in zip(pngs, d):
         cmd += ["-loop", "1", "-t", str(du), "-framerate", "30", "-i", p]
     fl, last, off = [], "[0:v]", 0.0
+    if spec["folien"][0]["typ"] == "hook":
+        n0 = int(d[0] * 30) + 2
+        fl.append(f"[0:v]scale={W*2}:{H*2},zoompan=z='1+0.07*on/{n0}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s={W}x{H}:fps=30,setsar=1[z0]")
+        last = "[z0]"
     for i in range(1, len(pngs)):
         off += d[i - 1] - FADE
         fl.append(f"{last}[{i}:v]xfade=transition=fade:duration={FADE}:offset={off:.3f}[x{i}]")
@@ -139,7 +150,7 @@ def baue(spec, pngs, out):
     fl.append(f"color=c=0x2edb99:s={W}x10:r=30:d={total:.3f}[pb]")
     fl.append(f"[bg][pb]overlay=x='-w+w*t/{total:.3f}':y=H-10:shortest=1,format=yuv420p[v]")
     cmd += ["-filter_complex", ";".join(fl), "-map", "[v]", "-r", "30", "-c:v", "libx264",
-            "-preset", "slow", "-crf", "20", "-movflags", "+faststart", out]
+            "-preset", "medium", "-crf", "20", "-movflags", "+faststart", out]
     subprocess.run(cmd, check=True)
     return total
 

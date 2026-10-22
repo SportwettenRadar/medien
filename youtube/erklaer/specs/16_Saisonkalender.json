@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "So arbeitet Sportwetten Radar",
-   "text": "Wann ist im Fußball\n[[am meisten los]]?"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Im Juli gibt es fast\n[[keine Live-Wetten.]] Warum?"
   },
   {
    "typ": "liste",

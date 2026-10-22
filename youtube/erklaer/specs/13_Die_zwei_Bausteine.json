@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "So arbeitet Sportwetten Radar",
-   "text": "Zwei Bausteine.\n[[Ein Prinzip.]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Live oder vor dem Anpfiff?\n[[Wir machen beides.]]"
   },
   {
    "typ": "text",

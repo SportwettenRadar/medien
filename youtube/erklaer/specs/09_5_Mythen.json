@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Faktencheck",
-   "text": "5 [[Mythen]] über\nSportwetten"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Glaubst du einen\ndieser [[5 Mythen]]?"
   },
   {
    "typ": "liste",

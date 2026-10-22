@@ -6,10 +6,9 @@
  },
  "folien": [
   {
-   "typ": "titel",
-   "dauer": 4.5,
-   "eyebrow": "Start am 8. Januar 2027",
-   "text": "So kommst du auf\ndie [[Warteliste]]"
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Start am [[8. Januar.]]\nSo bist du dabei."
   },
   {
    "typ": "liste",
