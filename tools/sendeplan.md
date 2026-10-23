@@ -155,3 +155,22 @@ Täglich zusätzlich: X-Tagesbilanz ca. 10:30 (Automatik), montags Wochenbilanz,
 
 **So 29.11.**
 - 12:30 · X · Noch 40 Tage bis zum Start am 8. Januar 2027 auf Telegram.
+
+## X-Videos (ab 23.10., Mo/Mi/Fr 19:00, Short + Link-Antwort mit ?start=x)
+- Mo 26.10. 19:00 · Wir zeigen jede Wette. Auch die verlorenen.
+- Mi 28.10. 19:00 · Ein Tippgeber, der seine Verluste zeigt?
+- Fr 30.10. 19:00 · Luxusauto im Profil? Finger weg.
+- Mo 02.11. 19:00 · Vorsicht bei Trackrecords, die nur gewinnen.
+- Mi 04.11. 19:00 · 70 % Treffer. Trotzdem Minus.
+- Fr 06.11. 19:00 · Ein Spieltag. Jede Wette öffentlich.
+- Mo 09.11. 19:00 · 2,5 Tore? Es gibt doch keine halben Tore.
+- Mi 11.11. 19:00 · Live oder vor dem Anpfiff? Wir machen beides.
+- Fr 13.11. 19:00 · „+500 € Gewinn“ sagt gar nichts.
+- Mo 16.11. 19:00 · 5 Tipps mit je 70 %: nur 17 % Chance.
+- Mi 18.11. 19:00 · Wann schicken wir eine Live-Wette?
+- Fr 20.11. 19:00 · Diese Wette gewinnt – und ist trotzdem schlecht.
+- Mo 23.11. 19:00 · Glaubst du einen dieser 5 Mythen?
+- Mi 25.11. 19:00 · Start am 8. Januar. So bist du dabei.
+- Fr 27.11. 19:00 · 4 Zeichen, dass Wetten zum Problem wird.
+
+Tagesbilanz X (Automatik) seit 23.10.: Antwort nur noch „Jede Wette einzeln: t.me/sportwettenradar“.
