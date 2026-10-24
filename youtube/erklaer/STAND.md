@@ -17,3 +17,9 @@
 - Neue Dateien: youtube/erklaer/out_v2 (16:9), youtube/shorts2_v2 (neue Shorts), youtube/alt_v2 (ältere Shorts mit vorangestelltem Hook, tools/hook_vor_short.py)
 - Alle 58 eingeplanten YouTube-Posts in Metricool auf die neuen Dateien umgestellt (Termine unverändert)
 - Sendeplan: tools/sendeplan.md
+
+## 24.10. Playlists + Shorts-Vorschaubild
+- Alle 21 Erklärvideos 25.10.–04.11. in Metricool mit Playlist versehen (über Metricool-Weboberfläche im Browser, Daniel eingeloggt). API zeigt youtubeData.playlistId: Sportwetten verstehen = PLGJDnNMLqxao, So arbeitet Sportwetten Radar = PLC9BzoTSUGzI, Verantwortungsvoll wetten = PLC6BZPnzm6hU, Ergebnisse und Monatsberichte = noch unbekannt. Ob die API playlistId beim Schreiben annimmt: ungetestet (Feldnamen playlist/playlists/playlistName werden verworfen).
+- ACHTUNG: API-Updates an diesen 16:9-Posts nur mit playlistId im youtubeData, sonst geht die Playlist verloren.
+- Alle 35 Shorts 25.10.–28.11.: videoCoverMilliseconds 1200 (Hook-Folie als Vorschaubild). Prüfung 25.10. 18:45 (trig_015Fcuu2WAifiCZPdNfKPYrR).
+- Monatsbericht 01.11.: Playlist "Ergebnisse und Monatsberichte" im Browser setzen.
