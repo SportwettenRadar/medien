@@ -37,7 +37,7 @@
 - Erinnerung 16.11.: X ab 20.11. und Shorts ab 29.11. nachfüllen
 
 ## Automatik (läuft seit 21.10.2026)
-- Datenquelle ergebnisse.json im Repo sportwettenradar/medien (daten/), schreibt der Bot (Code 3) täglich 10:00, Einträge nie nachträglich geändert, Rückrechnung bis 11.10.
+- Datenquelle ergebnisse.json im Repo sportwettenradar/medien (daten/), schreibt der Bot (Code 3) täglich 8:10 (seit 26.10.; vorher 10:00), Einträge nie nachträglich geändert, Rückrechnung bis 11.10.
 - Skripte: medien/tools/auto_ergebnisse.py (Prüfung, Trackrecord, Monatsseiten, X-Grafik; Modi tag/woche/monat), seiten_generator.py, erklaervideo.py, ABLAUF.md
 - Geplante Aufgaben: täglich 10:20 Tagesbilanz X; Mo 10:50 Woche (Homepage + X); am 1. 10:55 Monat (Homepage + Google-Seite + X); Push-Meldung an Daniel. Link-Antworten mit ?start=x
 - Veröffentlichung ohne Vorab-Freigabe, wenn Check passt; bei Abweichung stoppen und melden
@@ -52,3 +52,10 @@
 ## Kennzahlen
 - Wichtigste bis Januar: Abonnenten Ergebnis-Kanal pro Woche
 - Herkunft je Quelle (Starts, Wartelisten-Einträge, später Käufe); Kosten pro Wartelisten-Eintrag; Kosten pro zahlendem Kunde (Ziel < 30 €); Verweildauer der Kunden (> 2–3 Monate nötig)
+
+## Live-Regeln ab 25.10.2026, 08:00 (Variante B, Stand Bot-Chat 26.10.)
+- Signale nur bis Minute 75 (vorher 78); keine Punktehürde mehr. Bedingung: Spieldruck (mind. 50 % der Schüsse und Ecken beider Teams, mind. 0,17 Aktionen/Minute). Quotenfenster 1,55–1,70 und Weißliste unverändert.
+- Ligen: Eerste Divisie (NL) neu auf der Weißliste, Superliga Dänemark nur unter Beobachtung.
+- Stichtag-Regel: bereits veröffentlichte Tage und Zahlen bleiben unverändert; Rückrechnung je Tag mit den damals gültigen Regeln. Neue Regeln sind Rückrechnung, Prüfung mit echten Daten am 15.11. Keine neuen Renditezahlen oder Gewinnversprechen auf die Homepage.
+- Begriff überall "Einsätze", nie "Einheiten".
+- Bot 2610a (26.10.): Monatsbericht in beiden Kanälen zusätzlich mit "Gewinn/Verlust in Einsätzen"; neu Wochenbericht im Mitgliederkanal, montags 8:00 (Tagesübersicht, Einsätze, Verlustserie, Rückgang). Wochenbilanz im Ergebnis-Kanal unverändert.
