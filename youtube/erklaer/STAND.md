@@ -23,3 +23,4 @@
 - ACHTUNG: API-Updates an diesen 16:9-Posts nur mit playlistId im youtubeData, sonst geht die Playlist verloren.
 - Alle 35 Shorts 25.10.–28.11.: videoCoverMilliseconds 1200 (Hook-Folie als Vorschaubild). Prüfung 25.10. 18:45 (trig_015Fcuu2WAifiCZPdNfKPYrR).
 - Monatsbericht 01.11.: Playlist "Ergebnisse und Monatsberichte" im Browser setzen.
+- 26.10.: Test bestanden – Short 25.10. veröffentlicht, Hook-Folie erscheint als Vorschaubild (Daniel geprüft). Playlists auf YouTube korrekt befüllt.
