@@ -189,7 +189,7 @@ def grafik(b, titel, kicker, ziel, hp):
     G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
     f = "file://" + os.path.join(os.path.abspath(hp), "assets/fonts/")
     logo = "file://" + os.path.join(os.path.abspath(hp), "assets/logo-icon.png")
-    rr = '<div class="rr">* Rückrechnung mit den aktuellen Einstellungen</div>' if b.get("rueckrechnung") else ""
+    rr = '<div class="rr">* Rückrechnung mit den Einstellungen vom 11.10.2026</div>' if b.get("rueckrechnung") else ""
     html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{{font-family:B;font-weight:800;src:url({f}baloo-2-latin-800-normal.woff2)}}
 @font-face{{font-family:B;font-weight:700;src:url({f}baloo-2-latin-700-normal.woff2)}}
