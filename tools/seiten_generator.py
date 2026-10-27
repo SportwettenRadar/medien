@@ -227,14 +227,15 @@ WISSEN = [
   <p>Jede Quote enthält eine Wahrscheinlichkeit: 1 geteilt durch die Quote. Eine Quote von 1,60 entspricht
   rund 62,5 %. Wer auf Dauer mit Quote 1,60 nicht verlieren will, muss also mehr als 62,5 % seiner Wetten
   treffen. Eine hohe Trefferquote allein bedeutet deshalb noch keinen Gewinn. Entscheidend ist das
-  Verhältnis von Trefferquote und Quote. Mehr dazu unter <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
+  Verhältnis von Trefferquote und Quote. Mehr dazu unter <a href="rendite-erklaert.html">Rendite erklärt</a> und
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a></p>
 
   <h2><span class="num">04</span>Was Sportwetten Radar macht</h2>
   <p>Sportwetten Radar wertet laufende Spiele in Echtzeit aus und meldet per Telegram eine Live-Wette,
   sobald die Spieldaten eine Gelegenheit zeigen, die der Wettmarkt noch nicht abbildet. Wir vermitteln
   keine Wetten und nennen keine Einsätze. Die Entscheidung bleibt bei dir. Wie es bisher gelaufen ist,
   steht im <a href="index.html#trackrecord">Trackrecord</a> und in den <a href="monatsberichte.html">Monatsberichten</a>.</p>
-"""),
+""", "2026-10-27"),
     ("rendite-erklaert.html",
      "Rendite bei Sportwetten erklärt: Trefferquote, Quote und Einsätze — Sportwetten Radar",
      "Wie berechnet man die Rendite bei Sportwetten? Warum reicht die Trefferquote allein nicht? Mit Rechenbeispiel und Erklärung, was „Einsätze“ bedeuten.",
@@ -266,7 +267,8 @@ WISSEN = [
   <h2><span class="num">04</span>Warum die Trefferquote nicht reicht</h2>
   <p>Ab welcher Trefferquote du im Plus bist, hängt von der Quote ab: bei 1,60 ab 62,5 %, bei 1,80
   ab 55,6 %, bei 1,40 erst ab 71,4 %. Wer eine hohe Trefferquote mit niedrigen Quoten erreicht, kann
-  trotzdem verlieren. Deshalb zeigen wir für Live-Wetten immer beides: Trefferquote und Rendite.
+  trotzdem verlieren (wie eine Quote in eine Wahrscheinlichkeit übersetzt wird, steht unter
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten immer beides: Trefferquote und Rendite.
   Für <a href="index.html#produkt">Einzelspiele zum Kombinieren</a> zeigen wir nur die Trefferquote, weil
   jeder seinen Wettschein selbst zusammenstellt und es keine einheitliche Quote gibt.</p>
 
@@ -275,7 +277,7 @@ WISSEN = [
   mit gleichem Einsatz mitgespielt wurde. Deine Quote beim Buchmacher kann leicht von der Quote zum
   Zeitpunkt unserer Analyse abweichen. Und auch ein starker Zeitraum schützt nicht vor schwachen Wochen,
   siehe <a href="verlustserien.html">Verlustserien</a>.</p>
-"""),
+""", "2026-10-27"),
     ("verlustserien.html",
      "Verlustserien bei Sportwetten: Warum sie normal sind — Sportwetten Radar",
      "Wie wahrscheinlich sind mehrere Fehlschläge in Folge, selbst bei hoher Trefferquote? Verlustserien mit Zahlen erklärt, plus warum ein fester Einsatz wichtig ist.",
@@ -430,6 +432,87 @@ WISSEN = [
   die Ergebnisse sind es nicht: Sie stehen vollständig im <a href="index.html#trackrecord">Trackrecord</a> und im
   kostenlosen <a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal</a>.</p>
 """, "2026-10-22"),
+    ("quote-1-70-bedeutung.html",
+     "Was bedeutet Quote 1,70? Wahrscheinlichkeit und Gewinn erklärt — Sportwetten Radar",
+     "Was sagt eine Quote von 1,70 über die Wahrscheinlichkeit aus? Ab welcher Trefferquote lohnt sie sich? Mit Rechenbeispiel, Tabelle und Erklärung der Buchmacher-Marge.",
+     "Wissen", "Was bedeutet Quote 1,70?",
+     """
+  <p>Eine Quote von 1,70 sieht harmlos aus. Dahinter steckt aber eine klare Aussage: Der Markt hält das
+  Ereignis für ziemlich wahrscheinlich, zahlt aber nur einen kleinen Aufschlag. Hier erklären wir, was die
+  Zahl bedeutet und wie du sie selbst nachrechnest.</p>
+
+  <h2><span class="num">01</span>Was du bei Quote 1,70 bekommst</h2>
+  <p>Die Quote ist der Faktor, mit dem dein Einsatz multipliziert wird, wenn die Wette getroffen wird.
+  Bei 1 Einsatz und Quote 1,70 bekommst du 1,70 Einsätze zurück. Davon ist 1 Einsatz dein eigener, der
+  Gewinn beträgt also 0,70 Einsätze. Geht die Wette verloren, ist der ganze Einsatz weg. Ein Treffer
+  gleicht deshalb nur 0,70 eines Fehlschlags aus.</p>
+
+  <h2><span class="num">02</span>Welche Wahrscheinlichkeit steckt drin?</h2>
+  <p>Die in der Quote enthaltene Wahrscheinlichkeit ist 1 geteilt durch die Quote:
+  1 ÷ 1,70 = 0,588, also rund 58,8 %. Das ist zugleich die Trefferquote, die du auf Dauer mindestens
+  brauchst, um mit dieser Quote nicht zu verlieren.</p>
+  <table class="kv">
+    <tr><th>Quote 1,40</th><td>71,4 %</td></tr>
+    <tr><th>Quote 1,55</th><td>64,5 %</td></tr>
+    <tr><th>Quote 1,70</th><td>58,8 %</td></tr>
+    <tr><th>Quote 2,00</th><td>50,0 %</td></tr>
+    <tr><th>Quote 2,50</th><td>40,0 %</td></tr>
+  </table>
+  <p class="wissen-note">Die Tabelle zeigt die Mindest-Trefferquote ohne Gewinn und Verlust, gerechnet als 1 ÷ Quote.</p>
+
+  <h2><span class="num">03</span>Rechenbeispiel: 10 Wetten zu Quote 1,70</h2>
+  <ul>
+    <li>6 Treffer bringen je 0,70 Einsätze Gewinn: zusammen +4,2 Einsätze. 4 Fehlschläge kosten −4,0 Einsätze.
+    Ergebnis: +0,2 Einsätze, also eine Rendite von +2 %.</li>
+    <li>Mit 5 Treffern: +3,5 Einsätze minus 5,0 Einsätze, Ergebnis −1,5 Einsätze, also −15 %.</li>
+  </ul>
+  <p>Schon 6 statt 5 Treffer von zehn entscheidet zwischen einem kleinen Plus und einem deutlichen Minus.
+  Bei so knapper Marge zählt jede einzelne Wette. Wie wir daraus die Rendite rechnen, steht unter
+  <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
+
+  <h2><span class="num">04</span>Die Quote ist nicht die ganze Wahrheit</h2>
+  <p>Buchmacher verdienen an der Marge: Die Wahrscheinlichkeiten aller möglichen Ausgänge ergeben zusammen mehr als
+  100 %. Ein Beispiel mit angenommenen Quoten: Über 2,5 Tore zu 1,70 und Unter 2,5 Tore zu 2,10.
+  Dann ergibt 58,8 % + 47,6 % zusammen 106,4 %. Die Marge liegt hier bei rund 6,4 %. Die „faire“ Wahrscheinlichkeit
+  für Über liegt damit eher bei rund 55 %, nicht bei 58,8 %. Du brauchst also eine bessere Einschätzung als
+  die des Marktes, nicht nur eine gute.</p>
+
+  <h2><span class="num">05</span>Was das für Live-Wetten bedeutet</h2>
+  <p>Live ändert sich die Quote mit Spielstand und Spielzeit. Eine Quote von 1,70 kann in Minute 60 etwas ganz anderes bedeuten
+  als vor dem Anpfiff. Wie das bei Über/Unter aussieht, steht unter
+  <a href="live-wetten-ueber-unter.html">Live-Wetten auf Über/Unter Tore</a>. Und auch bei einer Trefferquote von rund 59 %
+  gehen vier von zehn Wetten verloren, oft mehrere hintereinander (<a href="verlustserien.html">Verlustserien</a>).
+  Setze deshalb nie mehr, als du bereit bist zu verlieren.</p>
+
+  <h2><span class="num">06</span>Das Video dazu</h2>
+  <div class="yt-embed" data-yt="75tMIKqfsJc">
+    <button type="button" class="yt-load" aria-label="Video von YouTube laden">▶ Video laden: Quote richtig lesen</button>
+    <p class="wissen-note">Mit dem Klick lädst du das Video von YouTube (Google). Dabei werden Daten an YouTube übertragen.
+    Mehr dazu in der <a href="datenschutz.html#youtube">Datenschutzerklärung</a>.</p>
+  </div>
+  <style>
+    .yt-embed { margin-top: 16px; }
+    .yt-embed .yt-load { display: block; width: 100%; aspect-ratio: 16 / 9; background: #0a1620; color: #fff; border: 1px solid var(--line); border-radius: 12px; font: inherit; font-size: 16px; cursor: pointer; }
+    .yt-embed .yt-load:hover, .yt-embed .yt-load:focus-visible { border-color: var(--accent); }
+    .yt-embed iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 12px; }
+  </style>
+  <script>
+  (function () {
+    document.querySelectorAll(".yt-embed").forEach(function (box) {
+      var btn = box.querySelector(".yt-load");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + box.getAttribute("data-yt") + "?autoplay=1&rel=0";
+        f.title = "Quote richtig lesen: Was eine Quote von 1,60 wirklich bedeutet";
+        f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        f.allowFullscreen = true;
+        btn.replaceWith(f);
+      });
+    });
+  })();
+  </script>
+""", "2026-10-27"),
 ]
 
 
