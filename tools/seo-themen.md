@@ -4,7 +4,7 @@ Reihenfolge laut Auftrag. Erledigt = auf der Homepage veröffentlicht.
 
 | Nr | Thema | Seite | Status |
 |---|---|---|---|
-| 1 | Was bedeutet Quote 1,70? | quote-1-70-bedeutung.html | Vorschau 27.10. bei Daniel, Freigabe offen |
+| 1 | Was bedeutet Quote 1,70? | quote-1-70-bedeutung.html | veröffentlicht 27.10.2026, Indexierung bei Daniel offen |
 | 2 | Was ist Über 1,5 Tore? | | offen |
 | 3 | Lohnen sich Live-Wetten? | | offen |
 | 4 | Wie viele Tore fallen in der 2. Halbzeit? | | offen |
