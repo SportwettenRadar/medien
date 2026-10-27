@@ -101,7 +101,7 @@ def page(path, title, desc, eyebrow, h1, inner, ld=None):
 """ + foot + """
 
 <script src="start.js"></script>
-<script src="menu.js?v=2"></script>
+<script src="menu.js?v=3"></script>
 </body>
 </html>
 """)
@@ -516,6 +516,37 @@ WISSEN = [
 ]
 
 
+# Wissen-Übersicht: max. 6 Kategorien (Footer + Menü zeigen nur diese). Neue Wissensseiten NUR hier einsortieren,
+# nie als neuen Footer-Eintrag. Reihenfolge je Kategorie = Reihenfolge auf der Seite.
+WISSEN_KAT = [
+    ("quoten", "Quoten & Rendite", "Wie du eine Quote liest und wie Rendite und Trefferquote zusammenhängen.",
+     ["quote-1-70-bedeutung.html", "rendite-erklaert.html"]),
+    ("live", "Live-Wetten verstehen", "Wie Live-Wetten und Über/Unter funktionieren und was Spieldaten verraten.",
+     ["live-wetten-ueber-unter.html", "live-wetten-analyse.html"]),
+    ("risiko", "Risiko & Verantwortung", "Verlustserien, Einsatz und der verantwortungsvolle Umgang mit Sportwetten.",
+     ["verlustserien.html"]),
+    ("serioes", "Seriosität & Telegram", "Woran du seriöse Angebote erkennst und wie Wett-Analysen auf Telegram funktionieren.",
+     ["seriose-tippgeber-erkennen.html", "sportwetten-telegram.html"]),
+    ("ergebnisse", "Monatsberichte", "Alle Ergebnisse, auch die schwachen, dauerhaft einsehbar.",
+     ["monatsberichte.html"]),
+]
+
+
+def wissen_hub():
+    info = {e[0]: (e[4], e[2]) for e in WISSEN}
+    info["monatsberichte.html"] = ("Alle Monatsberichte", "Live-Wetten mit Trefferquote, Rendite und Verlustserien, Einzelspiele mit Trefferquote.")
+    teile = ["\n  <p>Alle Erklärseiten von Sportwetten Radar, nach Themen sortiert. Neue Seiten kommen in die passende Kategorie.</p>\n"]
+    for i, (kid, name, kdesc, pages) in enumerate(WISSEN_KAT, 1):
+        items = "\n".join(f'    <li><a href="{p}">{info[p][0]}</a><br><span class="wissen-note">{info[p][1]}</span></li>' for p in pages)
+        teile.append(f'  <h2 id="{kid}"><span class="num">{i:02d}</span>{name.replace("&", "&amp;")}</h2>\n  <p>{kdesc}</p>\n  <ul>\n{items}\n  </ul>\n')
+    t = "Wissen: Sportwetten verständlich erklärt — Sportwetten Radar"
+    d = "Erklärseiten zu Quoten, Rendite, Live-Wetten, Verlustserien und seriösen Anbietern. Alle Themen von Sportwetten Radar auf einen Blick."
+    return page("wissen.html", t, d, "Wissen", "Wissen", "".join(teile), article_ld(t, d, "wissen.html", WISSEN_DATUM_HUB)), WISSEN_DATUM_HUB
+
+
+WISSEN_DATUM_HUB = "2026-10-27"
+
+
 def wissen_pages(today):
     out = []
     for e in WISSEN:
@@ -541,6 +572,6 @@ def sitemap(extra):
 if __name__ == "__main__":
     today = datetime.date.today().isoformat()
     months = load_months()
-    made = month_pages(months) + wissen_pages(today)
+    made = month_pages(months) + wissen_pages(today) + [wissen_hub()]
     sitemap(made)
     print("\n".join(p for p, _ in made))
