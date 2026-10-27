@@ -160,7 +160,7 @@ def month_pages(months):
   <p>Rendite und Einsätze gelten, wenn jede Live-Wette mit demselben Einsatz gespielt worden wäre
   (1 Einsatz = dein Grundeinsatz pro Wette). Wie wir rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
-  {'<p class="wissen-note">* Rückrechnung mit den aktuellen Einstellungen.</p>' if rr else ''}
+  {('<p class="wissen-note">' + m.get("rueckrechnungText", "* Rückrechnung mit den Einstellungen vom 11.10.2026") + '.</p>') if rr else ''}
 
   <h2><span class="num">02</span>Einzelspiele zum Kombinieren</h2>
   <table class="kv">
