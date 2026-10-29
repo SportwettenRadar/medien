@@ -1,12 +1,12 @@
 {
  "version": 1,
- "stand": "2026-10-28T11:05:57+01:00",
+ "stand": "2026-10-29T08:10:09+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
    "spieltag": 7,
    "stand": {
-    "datum": "2026-10-28",
+    "datum": "2026-10-29",
     "spieltage": 7,
     "spiele": 63
    },
@@ -26,7 +26,7 @@
    "liga": "2. Bundesliga",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-10-28",
+    "datum": "2026-10-29",
     "spieltage": 9,
     "spiele": 81
    },
@@ -71,10 +71,30 @@
    "spiele_heute": []
   },
   {
+   "liga": "Premier League",
+   "spieltag": 8,
+   "stand": {
+    "datum": "2026-10-29",
+    "spieltage": 8,
+    "spiele": 80
+   },
+   "kennzahlen": {
+    "tore_schnitt": {
+     "wert": 2.77,
+     "spiele": 80
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.5,
+     "spiele": 80
+    }
+   },
+   "spiele_heute": []
+  },
+  {
    "liga": "La Liga",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-10-28",
+    "datum": "2026-10-29",
     "spieltage": 10,
     "spiele": 99
    },
@@ -178,9 +198,9 @@
    "liga": "Serie A",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-10-28",
+    "datum": "2026-10-29",
     "spieltage": 9,
-    "spiele": 83
+    "spiele": 88
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -228,38 +248,23 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.12,
-     "spiele": 83
+     "wert": 3.11,
+     "spiele": 88
     },
     "ueber_2_5_anteil": {
-     "wert": 0.6,
-     "spiele": 83
+     "wert": 0.59,
+     "spiele": 88
     }
    },
    "spiele_heute": [
     {
-     "heim": "AC Milan",
-     "gast": "Bologna",
+     "heim": "Frosinone",
+     "gast": "Lecce",
      "anstoss": "18:30"
     },
     {
-     "heim": "Parma",
-     "gast": "Udinese",
-     "anstoss": "18:30"
-    },
-    {
-     "heim": "Venezia",
-     "gast": "Inter",
-     "anstoss": "18:30"
-    },
-    {
-     "heim": "Genoa",
-     "gast": "Juventus",
-     "anstoss": "20:45"
-    },
-    {
-     "heim": "Monza",
-     "gast": "Napoli",
+     "heim": "Fiorentina",
+     "gast": "Atalanta",
      "anstoss": "20:45"
     }
    ]
@@ -268,7 +273,7 @@
    "liga": "Ligue 1",
    "spieltag": 8,
    "stand": {
-    "datum": "2026-10-28",
+    "datum": "2026-10-29",
     "spieltage": 8,
     "spiele": 72
    },
