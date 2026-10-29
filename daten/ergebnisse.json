@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-10-28T08:10:01+01:00",
+ "stand": "2026-10-29T08:10:02+01:00",
  "tage": [
   {
    "datum": "2026-10-05",
@@ -322,6 +322,20 @@
    "einzelspiele": {
     "tipps": 5,
     "treffer": 3
+   }
+  },
+  {
+   "datum": "2026-10-28",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 8,
+    "treffer": 5,
+    "rendite": -2.6,
+    "gewinn": -0.2
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 4
    }
   }
  ],
