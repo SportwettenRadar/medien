@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-10-28T10:30:35+01:00",
+ "stand": "2026-10-29T08:34:18+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -2837,6 +2837,149 @@
    "quote": 1.57,
    "ergebnis": "gewonnen",
    "endstand": "1:3"
+  },
+  {
+   "id": "2026-10-28-001",
+   "datum": "2026-10-28",
+   "art": "einzel",
+   "heim": "Dynamo Dresden",
+   "gast": "FC Schalke 04",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-10-28-002",
+   "datum": "2026-10-28",
+   "art": "einzel",
+   "heim": "AC Milan",
+   "gast": "Bologna",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:4"
+  },
+  {
+   "id": "2026-10-28-003",
+   "datum": "2026-10-28",
+   "art": "einzel",
+   "heim": "Sparta Rotterdam",
+   "gast": "Fortuna Sittard",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-10-28-004",
+   "datum": "2026-10-28",
+   "art": "einzel",
+   "heim": "ST Johnstone",
+   "gast": "Motherwell",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-10-28-005",
+   "datum": "2026-10-28",
+   "art": "einzel",
+   "heim": "Santos",
+   "gast": "Palmeiras",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-10-28-006",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Venezia",
+   "gast": "Inter",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-10-28-007",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Carrarese",
+   "gast": "Arezzo",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-10-28-008",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Juve Stabia",
+   "gast": "Hellas Verona",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-10-28-009",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Fulham",
+   "gast": "Crystal Palace",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-10-28-010",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Sunderland",
+   "gast": "Brentford",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-10-28-011",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Hannover 96",
+   "gast": "1. FC Kaiserslautern",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-10-28-012",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Holstein Kiel",
+   "gast": "1899 Hoffenheim",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.6,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-10-28-013",
+   "datum": "2026-10-28",
+   "art": "live",
+   "heim": "Liverpool",
+   "gast": "Chelsea",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
   }
  ]
 }
