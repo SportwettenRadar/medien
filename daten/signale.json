@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-10-29T08:34:18+01:00",
+ "stand": "2026-10-30T08:35:13+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -2980,6 +2980,83 @@
    "quote": 1.55,
    "ergebnis": "verloren",
    "endstand": "1:1"
+  },
+  {
+   "id": "2026-10-29-001",
+   "datum": "2026-10-29",
+   "art": "einzel",
+   "heim": "Al Khaleej Saihat",
+   "gast": "Al-Hazm",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "4:2"
+  },
+  {
+   "id": "2026-10-29-002",
+   "datum": "2026-10-29",
+   "art": "einzel",
+   "heim": "Austria Wien W",
+   "gast": "Juventus W",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:4"
+  },
+  {
+   "id": "2026-10-29-003",
+   "datum": "2026-10-29",
+   "art": "einzel",
+   "heim": "Club Deportivo Los Chankas",
+   "gast": "Cusco",
+   "markt": "X2",
+   "quote": 1.36,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-10-29-004",
+   "datum": "2026-10-29",
+   "art": "einzel",
+   "heim": "Fiorentina",
+   "gast": "Atalanta",
+   "markt": "1X",
+   "quote": 1.36,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-10-29-005",
+   "datum": "2026-10-29",
+   "art": "einzel",
+   "heim": "Atletico-MG",
+   "gast": "Cruzeiro",
+   "markt": "X2",
+   "quote": 1.5,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-10-29-006",
+   "datum": "2026-10-29",
+   "art": "live",
+   "heim": "Al Khaleej Saihat",
+   "gast": "Al-Hazm",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "4:2"
+  },
+  {
+   "id": "2026-10-29-007",
+   "datum": "2026-10-29",
+   "art": "live",
+   "heim": "Everton",
+   "gast": "Newcastle",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.7,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
   }
  ]
 }
