@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-10-30T08:35:13+01:00",
+ "stand": "2026-10-31T08:36:01+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -3057,6 +3057,138 @@
    "quote": 1.7,
    "ergebnis": "gewonnen",
    "endstand": "3:1"
+  },
+  {
+   "id": "2026-10-30-001",
+   "datum": "2026-10-30",
+   "art": "einzel",
+   "heim": "Al Diriyah",
+   "gast": "NEOM",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-10-30-002",
+   "datum": "2026-10-30",
+   "art": "einzel",
+   "heim": "NK Slaven Belupo",
+   "gast": "Istra 1961",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-10-30-003",
+   "datum": "2026-10-30",
+   "art": "einzel",
+   "heim": "Arminia Bielefeld",
+   "gast": "Eintracht Braunschweig",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-10-30-004",
+   "datum": "2026-10-30",
+   "art": "einzel",
+   "heim": "Marumo Gallants",
+   "gast": "Siwelele",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-10-30-005",
+   "datum": "2026-10-30",
+   "art": "einzel",
+   "heim": "Nice",
+   "gast": "Rennes",
+   "markt": "X2",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "5:2"
+  },
+  {
+   "id": "2026-10-30-006",
+   "datum": "2026-10-30",
+   "art": "live",
+   "heim": "Cracovia Krakow",
+   "gast": "Motor Lublin",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-10-30-007",
+   "datum": "2026-10-30",
+   "art": "live",
+   "heim": "Helmond Sport",
+   "gast": "FC Eindhoven",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-10-30-008",
+   "datum": "2026-10-30",
+   "art": "live",
+   "heim": "Grenoble",
+   "gast": "Dijon",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.6,
+   "ergebnis": "gewonnen",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-10-30-009",
+   "datum": "2026-10-30",
+   "art": "live",
+   "heim": "Waalwijk",
+   "gast": "Almere City FC",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-10-30-010",
+   "datum": "2026-10-30",
+   "art": "live",
+   "heim": "Gornik Zabrze",
+   "gast": "Legia Warszawa",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.6,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-10-30-011",
+   "datum": "2026-10-30",
+   "art": "live",
+   "heim": "SV Elversberg",
+   "gast": "FSV Mainz 05",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "4:1"
+  },
+  {
+   "id": "2026-10-30-012",
+   "datum": "2026-10-30",
+   "art": "live",
+   "heim": "Villarreal",
+   "gast": "Espanyol",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
   }
  ]
 }
