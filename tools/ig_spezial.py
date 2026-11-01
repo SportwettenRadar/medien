@@ -189,6 +189,7 @@ def render_cards(outdir):
 
 # ---------- Reels ----------
 IG_EDITS = {
+    30: lambda sp: _oasis(sp),
     26: lambda sp: _marge(sp),
     27: lambda sp: _clv(sp),
 }
@@ -210,7 +211,20 @@ def _clv(sp):
             f["sub"] = "Wer die Schlussquote regelmäßig schlägt, kauft im Schnitt zu besseren Preisen, auch wenn kurzfristig Verluste stehen. Rechenbeispiel."
 
 
-def render_reels(outdir):
+def _oasis(sp):
+    """Instagram-Fassung: nur geprüfte Fakten (Verbraucherzentrale/Regierungspräsidium), kein Betrag zum Einzahlungslimit."""
+    for f in sp["folien"]:
+        if f.get("eyebrow") == "Dauer und Aufhebung":
+            f["punkte"] = ["Selbstsperre: ohne Angabe <b>ein Jahr</b>. Kürzer ist möglich, aber <b>nicht unter drei Monaten</b>.",
+                           "Fremdsperre durch Dritte: mindestens <b>ein Jahr</b>.",
+                           "Aufheben geht nur auf <b>schriftlichen Antrag</b>, sonst bleibt die Sperre bestehen."]
+        if f.get("eyebrow") == "Das Einzahlungslimit":
+            f["eyebrow"] = "Eigene Limits"
+            f["text"] = "Du kannst bei jedem\nAnbieter eigene Limits setzen."
+            f["sub"] = "Zusätzlich zur Sperre. Am besten vorher, bevor es eng wird."
+
+
+def render_reels(outdir, nums=(25, 26, 27, 28)):
     sys.path.insert(0, HERE)
     import erklaervideo as E
     E.HOCH = True
@@ -228,7 +242,7 @@ def render_reels(outdir):
 
     E.folie_html = fh
     os.makedirs(outdir, exist_ok=True)
-    for nr in (25, 26, 27, 28):
+    for nr in nums:
         src = glob.glob(os.path.join(SPECS, f"{nr}_*.json"))[0]
         sp = json.load(open(src, encoding="utf-8"))
         if nr in IG_EDITS:
@@ -245,4 +259,4 @@ if __name__ == "__main__":
     if mode == "karten":
         render_cards(outdir)
     elif mode == "reels":
-        render_reels(outdir)
+        render_reels(outdir, tuple(int(x) for x in sys.argv[3:]) or (25, 26, 27, 28))
