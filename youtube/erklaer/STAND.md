@@ -27,3 +27,5 @@
 
 - 01.11.: Monatsbericht Oktober veröffentlicht (Y-_C0GysC_M), Playlist von Daniel in Studio gesetzt. Künftige Monatsberichte: playlistId PLLLK7PIctfk0 in youtubeData mitgeben.
 - Video 15 "Trackrecord richtig lesen" (g0mjY48saHM, 26.10. veröffentlicht) enthält "Jeder Monat. Jede Woche."; korrigierte Fassung out_v2/15_Trackrecord_lesen_v3.mp4 gebaut, Austausch wartet auf Daniels Ja (alt in Studio löschen).
+- 01.11. getestet: Metricool-API übernimmt playlistId beim Anlegen/Aktualisieren NICHT (wird verworfen). Playlist immer manuell: in Metricool-Weboberfläche vor Veröffentlichung oder in YouTube Studio danach.
+- Video 15 neu: Metricool-ID 413289860, 02.11. 16:00, Playlist "So arbeitet Sportwetten Radar" noch manuell zu setzen; altes Video g0mjY48saHM löscht Daniel in Studio.
