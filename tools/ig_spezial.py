@@ -214,7 +214,7 @@ def _clv(sp):
 def _oasis(sp):
     """Instagram-Fassung: nur geprüfte Fakten (Verbraucherzentrale/Regierungspräsidium), kein Betrag zum Einzahlungslimit."""
     for f in sp["folien"]:
-        if f.get("eyebrow") == "Dauer und Aufhebung":
+        if f.get("text") == "Dauer und Aufhebung":
             f["punkte"] = ["Selbstsperre: ohne Angabe <b>ein Jahr</b>. Kürzer ist möglich, aber <b>nicht unter drei Monaten</b>.",
                            "Fremdsperre durch Dritte: mindestens <b>ein Jahr</b>.",
                            "Aufheben geht nur auf <b>schriftlichen Antrag</b>, sonst bleibt die Sperre bestehen."]
