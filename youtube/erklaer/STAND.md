@@ -10,7 +10,7 @@
 - [x] 23 Videos gebaut
 - [x] ins Repo gepusht
 - [x] in Metricool eingeplant 22.10. (IDs 402879793, 402880033 … 402881688; mit Vorschaubild, Kanal am 22.10. bestätigt)
-- [ ] Monatsbericht-Video 01.11. (Erinnerung 01.11. 11:30 gesetzt, trig_01XSXVnj97p8jixSRAhNG2mD)
+- [x] Monatsbericht-Video Oktober gebaut (specs/24, out_v2/24_Monatsbericht_2026_10.mp4 + _thumb.png), 01.11. 19:30 in Metricool eingeplant (ID 412807439). Playlist "Ergebnisse und Monatsberichte" fehlt noch: Daniel setzt sie in YouTube Studio / Metricool-Weboberfläche.
 
 ## 23.10. Umbau Eröffnung (Freigabe Daniel)
 - Alle Videos starten mit Hook-Folie (typ "hook", 2,6 s, großer Satz, Zoom). Gilt auch für alle künftigen Videos inkl. Monatsbericht.
