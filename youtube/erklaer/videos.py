@@ -167,7 +167,7 @@ V = [
   thumb=dict(eyebrow="Ehrlich gerechnet", text="Trackrecord\n[[richtig lesen]]"),
   folien=[
    dict(typ="titel", dauer=4.5, eyebrow="So arbeitet Sportwetten Radar", text="Trackrecord\n[[richtig lesen]]"),
-   dict(typ="liste", dauer=11, eyebrow="Was drinsteht", text="Jeder Monat. Jede Woche.", punkte=["<b>Trefferquote</b> und <b>Rendite</b> der Live-Wetten","<b>Längste Verlustserie</b> und <b>größter Rückgang</b>","<b>Bester</b> und <b>schlechtester Tag</b>"]),
+   dict(typ="liste", dauer=11, eyebrow="Was drinsteht", text="Jeder Monat. Jedes Jahr.", punkte=["<b>Trefferquote</b> und <b>Rendite</b> der Live-Wetten","<b>Längste Verlustserie</b> und <b>größter Rückgang</b>","<b>Bester</b> und <b>schlechtester Tag</b>"]),
    dict(typ="liste", dauer=10.5, eyebrow="Zwei Arten von Zahlen", text="Wir trennen sauber", punkte=["<b>Verschickt:</b> Wetten, die tatsächlich per Telegram rausgingen. Seit 11. Oktober 2026.","<b>Rückrechnung:</b> wie die aktuellen Einstellungen in früheren Spielen entschieden hätten. Immer als solche gekennzeichnet."]),
    dict(typ="text", dauer=7, eyebrow="Unsere Regel", text="Nichts wird nachträglich\ngeändert oder aussortiert.", sub="Auch schwache Monate bleiben dauerhaft auf der Homepage sichtbar."),
    dict(typ="ende", dauer=8)]),

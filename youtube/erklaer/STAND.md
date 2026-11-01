@@ -19,8 +19,11 @@
 - Sendeplan: tools/sendeplan.md
 
 ## 24.10. Playlists + Shorts-Vorschaubild
-- Alle 21 Erklärvideos 25.10.–04.11. in Metricool mit Playlist versehen (über Metricool-Weboberfläche im Browser, Daniel eingeloggt). API zeigt youtubeData.playlistId: Sportwetten verstehen = PLGJDnNMLqxao, So arbeitet Sportwetten Radar = PLC9BzoTSUGzI, Verantwortungsvoll wetten = PLC6BZPnzm6hU, Ergebnisse und Monatsberichte = noch unbekannt. Ob die API playlistId beim Schreiben annimmt: ungetestet (Feldnamen playlist/playlists/playlistName werden verworfen).
+- Alle 21 Erklärvideos 25.10.–04.11. in Metricool mit Playlist versehen (über Metricool-Weboberfläche im Browser, Daniel eingeloggt). API zeigt youtubeData.playlistId: Sportwetten verstehen = PLGJDnNMLqxao, So arbeitet Sportwetten Radar = PLC9BzoTSUGzI, Verantwortungsvoll wetten = PLC6BZPnzm6hU, Ergebnisse und Monatsberichte = PLLLK7PIctfk0 (von Daniel 01.11.). Ob die API playlistId beim Schreiben annimmt: ungetestet (Feldnamen playlist/playlists/playlistName werden verworfen).
 - ACHTUNG: API-Updates an diesen 16:9-Posts nur mit playlistId im youtubeData, sonst geht die Playlist verloren.
 - Alle 35 Shorts 25.10.–28.11.: videoCoverMilliseconds 1200 (Hook-Folie als Vorschaubild). Prüfung 25.10. 18:45 (trig_015Fcuu2WAifiCZPdNfKPYrR).
 - Monatsbericht 01.11.: Playlist "Ergebnisse und Monatsberichte" im Browser setzen.
 - 26.10.: Test bestanden – Short 25.10. veröffentlicht, Hook-Folie erscheint als Vorschaubild (Daniel geprüft). Playlists auf YouTube korrekt befüllt.
+
+- 01.11.: Monatsbericht Oktober veröffentlicht (Y-_C0GysC_M), Playlist von Daniel in Studio gesetzt. Künftige Monatsberichte: playlistId PLLLK7PIctfk0 in youtubeData mitgeben.
+- Video 15 "Trackrecord richtig lesen" (g0mjY48saHM, 26.10. veröffentlicht) enthält "Jeder Monat. Jede Woche."; korrigierte Fassung out_v2/15_Trackrecord_lesen_v3.mp4 gebaut, Austausch wartet auf Daniels Ja (alt in Studio löschen).
