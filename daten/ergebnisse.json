@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-10-31T08:10:02+01:00",
+ "stand": "2026-11-01T08:10:02+01:00",
  "tage": [
   {
    "datum": "2026-10-05",
@@ -365,6 +365,20 @@
     "tipps": 5,
     "treffer": 3
    }
+  },
+  {
+   "datum": "2026-10-31",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 29,
+    "treffer": 14,
+    "rendite": -24.2,
+    "gewinn": -7.0
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 3
+   }
   }
  ],
  "wochen": [
@@ -446,6 +460,24 @@
    "einzelspiele": {
     "tipps": 49,
     "treffer": 39
+   }
+  },
+  {
+   "monat": "2026-10",
+   "rueckrechnung": true,
+   "live": {
+    "wetten": 247,
+    "treffer": 154,
+    "rendite": -1.8,
+    "gewinn": -4.5,
+    "verlustserie": 5,
+    "rueckgang": -12.3,
+    "besterTag": 3.1,
+    "schlechtesterTag": -7.0
+   },
+   "einzelspiele": {
+    "tipps": 141,
+    "treffer": 111
    }
   }
  ]
