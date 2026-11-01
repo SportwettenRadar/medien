@@ -173,7 +173,7 @@ def month_pages(months):
   <h2><span class="num">03</span>Einordnung</h2>
   <p>Ein einzelner Monat sagt wenig. Gute und schwache Monate wechseln sich ab, und auch bei hoher
   Trefferquote sind mehrere Fehlschläge in Folge normal (siehe <a href="verlustserien.html">Verlustserien</a>).
-  Den Verlauf aller Monate und Wochen findest du im <a href="index.html#trackrecord">Trackrecord</a>.</p>
+  Den Verlauf aller Monate und das laufende Jahr findest du im <a href="index.html#trackrecord">Trackrecord</a>.</p>
 
   <p class="wissen-pager">{' · '.join(nachbarn)}</p>
 """
@@ -355,7 +355,7 @@ WISSEN = [
 
   <h2><span class="num">04</span>Unsere Zahlen</h2>
   <p>Alle Ergebnisse stehen im <a href="index.html#trackrecord">Trackrecord</a> und in den
-  <a href="monatsberichte.html">Monatsberichten</a>, auch die schwachen Wochen. Wie wir Rendite rechnen, erklären wir unter
+  <a href="monatsberichte.html">Monatsberichten</a>, auch die schwachen Monate. Wie wir Rendite rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
 """, "2026-10-22"),
     ("seriose-tippgeber-erkennen.html",
