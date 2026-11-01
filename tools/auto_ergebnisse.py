@@ -122,6 +122,12 @@ def js_block(o, ind="  "):
     return "\n".join(ind + z for z in s.splitlines())
 
 
+# Eigene Fußnote für Monate mit mehreren Regelständen (sonst Standardtext "Einstellungen vom 11.10.2026").
+RR_TEXTE = {
+    "2026-10": "* 01.–10.10. rückgerechnet mit den Einstellungen vom 11.10.2026 · ab 11.10. tatsächlich verschickt · ab 25.10. nach den neuen Regeln (Variante B)",
+}
+
+
 def homepage_eintrag(b, mit_monat=True):
     L, E = b["live"], b["einzelspiele"]
     live = {"wetten": L["wetten"], "treffer": L["treffer"], "rendite": L["rendite"]}
@@ -135,6 +141,8 @@ def homepage_eintrag(b, mit_monat=True):
         e["von"], e["bis"] = b["von"], b["bis"]
     if b.get("rueckrechnung"):
         e["rueckrechnung"] = True
+        if b.get("monat") in RR_TEXTE:
+            e["rueckrechnungText"] = RR_TEXTE[b["monat"]]
     e["live"] = live
     e["einzelspiele"] = {"tipps": E["tipps"], "treffer": E["treffer"]}
     return e
@@ -189,7 +197,8 @@ def grafik(b, titel, kicker, ziel, hp):
     G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
     f = "file://" + os.path.join(os.path.abspath(hp), "assets/fonts/")
     logo = "file://" + os.path.join(os.path.abspath(hp), "assets/logo-icon.png")
-    rr = '<div class="rr">* Rückrechnung mit den Einstellungen vom 11.10.2026</div>' if b.get("rueckrechnung") else ""
+    rr_text = RR_TEXTE.get(b.get("monat"), "* Rückrechnung mit den Einstellungen vom 11.10.2026")
+    rr = f'<div class="rr">{rr_text}</div>' if b.get("rueckrechnung") else ""
     html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{{font-family:B;font-weight:800;src:url({f}baloo-2-latin-800-normal.woff2)}}
 @font-face{{font-family:B;font-weight:700;src:url({f}baloo-2-latin-700-normal.woff2)}}
