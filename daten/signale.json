@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-10-31T08:36:01+01:00",
+ "stand": "2026-11-01T08:36:55+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -3189,6 +3189,380 @@
    "quote": 1.57,
    "ergebnis": "verloren",
    "endstand": "0:1"
+  },
+  {
+   "id": "2026-10-31-001",
+   "datum": "2026-10-31",
+   "art": "einzel",
+   "heim": "Vanspor FK",
+   "gast": "Sarıyer",
+   "markt": "Gast trifft",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-10-31-002",
+   "datum": "2026-10-31",
+   "art": "einzel",
+   "heim": "Erzurumspor FK",
+   "gast": "Çorum FK",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-10-31-003",
+   "datum": "2026-10-31",
+   "art": "einzel",
+   "heim": "Amarante",
+   "gast": "FC Porto B",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-10-31-004",
+   "datum": "2026-10-31",
+   "art": "einzel",
+   "heim": "Lincoln",
+   "gast": "Birmingham",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-10-31-005",
+   "datum": "2026-10-31",
+   "art": "einzel",
+   "heim": "MVV",
+   "gast": "VVV Venlo",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-10-31-006",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Vissel Kobe",
+   "gast": "Nagoya Grampus",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-10-31-007",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Kashiwa Reysol",
+   "gast": "Urawa",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "4:0"
+  },
+  {
+   "id": "2026-10-31-008",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Erzurumspor FK",
+   "gast": "Çorum FK",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-10-31-009",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "SV Darmstadt 98",
+   "gast": "1. FC Magdeburg",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-10-31-010",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Kocaelispor",
+   "gast": "Rizespor",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.6,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-10-31-011",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Annecy",
+   "gast": "Montpellier",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "0:3"
+  },
+  {
+   "id": "2026-10-31-012",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Levante",
+   "gast": "Atletico Madrid",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-10-31-013",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Fatih Karagümrük",
+   "gast": "Pendikspor",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-10-31-014",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Al Taawon",
+   "gast": "Al-Ettifaq",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-10-31-015",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Sudtirol",
+   "gast": "Cesena",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-10-31-016",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Slovácko",
+   "gast": "Teplice",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-10-31-017",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Norrby IF",
+   "gast": "IFK Varnamo",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.6,
+   "ergebnis": "gewonnen",
+   "endstand": "0:3"
+  },
+  {
+   "id": "2026-10-31-018",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Al-Sailiya",
+   "gast": "Lusail City",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-10-31-019",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Werder Bremen",
+   "gast": "1899 Hoffenheim",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-10-31-020",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Burnley",
+   "gast": "Portsmouth",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-10-31-021",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "West Ham",
+   "gast": "West Brom",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-10-31-022",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Wolves",
+   "gast": "Cardiff",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "3:0"
+  },
+  {
+   "id": "2026-10-31-023",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Falkenbergs FF",
+   "gast": "Sandviken",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-10-31-024",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Manisa F.K.",
+   "gast": "Batman Petrolspor",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-10-31-025",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Udinese",
+   "gast": "AS Roma",
+   "markt": "Über 5,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "2:5"
+  },
+  {
+   "id": "2026-10-31-026",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Standard Liege",
+   "gast": "Kortrijk",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-10-31-027",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Heerenveen",
+   "gast": "NEC Nijmegen",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-10-31-028",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Botafogo SP",
+   "gast": "Sport Recife",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-10-31-029",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Guingamp",
+   "gast": "Saint Etienne",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "3:0"
+  },
+  {
+   "id": "2026-10-31-030",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Karlsruher SC",
+   "gast": "1. FC Heidenheim",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-10-31-031",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "AC Milan",
+   "gast": "Inter",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-10-31-032",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Ajax",
+   "gast": "AZ Alkmaar",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-10-31-033",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Deportivo Recoleta",
+   "gast": "Sportivo Ameliano",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.61,
+   "ergebnis": "verloren",
+   "endstand": "3:0"
+  },
+  {
+   "id": "2026-10-31-034",
+   "datum": "2026-10-31",
+   "art": "live",
+   "heim": "Vila Nova",
+   "gast": "Juventude",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
   }
  ]
 }
