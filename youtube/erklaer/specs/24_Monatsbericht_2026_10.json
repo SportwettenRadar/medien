@@ -1,0 +1,15 @@
+{
+ "titel": "Monatsbericht Oktober 2026: alle Live-Wetten, Gewinne und Verluste",
+ "thumb": {"eyebrow": "Monatsbericht", "text": "Oktober 2026:\n[[−1,8 %]] Rendite"},
+ "folien": [
+  {"typ": "hook", "dauer": 2.6, "text": "Oktober: [[−1,8 %]] Rendite.\nUngefiltert."},
+  {"typ": "titel", "dauer": 5, "eyebrow": "Sportwetten Radar", "text": "Monatsbericht\n[[Oktober 2026]]"},
+  {"typ": "liste", "dauer": 12, "eyebrow": "Live-Wetten", "text": "Die Zahlen im Oktober",
+   "punkte": ["<b>247 Live-Wetten</b>, davon 154 Treffer.", "Trefferquote: <b>62,3 %</b>.", "Rendite: <b>−1,8 %</b>, Gewinn: <b>−4,5 Einsätze</b>."]},
+  {"typ": "liste", "dauer": 12, "eyebrow": "Risiko", "text": "Was es gekostet hat",
+   "punkte": ["Längste Verlustserie: <b>5 in Folge</b>.", "Größter Rückgang: <b>−12,3 Einsätze</b>.", "Bester Tag <b>+3,1</b>, schlechtester Tag <b>−7,0 Einsätze</b>."]},
+  {"typ": "text", "dauer": 8, "eyebrow": "Einzelspiele zum Kombinieren", "text": "Trefferquote 78,7 %", "sub": "111 von 141 Tipps waren richtig."},
+  {"typ": "text", "dauer": 10, "eyebrow": "Wichtiger Hinweis", "text": "Nicht alles war\nschon im Versand.", "sub": "Verschickt seit dem 11.10. Der Zeitraum davor ist rückgerechnet und so gekennzeichnet. Ab 25.10. gelten die neuen Regeln."},
+  {"typ": "ende", "dauer": 8}
+ ]
+}
