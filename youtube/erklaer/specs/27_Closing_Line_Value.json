@@ -1,0 +1,56 @@
+{
+ "titel": "Closing Line Value: Warum die Schlussquote ehrlicher ist als ein Ergebnis",
+ "thumb": {
+  "eyebrow": "Wetten prüfen",
+  "text": "[[Closing Line]]\nValue erklärt"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Du hast gewonnen.\n[[Aber war es gut?]]"
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Wetten prüfen",
+   "text": "[[Closing Line]]\nValue erklärt"
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Das Problem",
+   "text": "Ein Ergebnis misst\nviel Glück.",
+   "sub": "Eine gute Wette kann verlieren, eine schlechte gewinnen. Bei wenigen Wetten sagt das Ergebnis fast nichts über die Qualität."
+  },
+  {
+   "typ": "liste",
+   "dauer": 16,
+   "eyebrow": "Die Idee",
+   "text": "Gegen die Schlussquote messen",
+   "punkte": [
+    "Die Schlussquote kurz vor Anpfiff gilt als beste Schätzung des Marktes.",
+    "Wer vorher zu <b>2,00</b> bekam und der Markt schloss bei <b>1,80</b>, hatte den besseren Preis.",
+    "Der Vorsprung: 2,00 geteilt durch 1,80 minus 1 = <b>+11,1 %</b>."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Warum das hilft",
+   "text": "Qualität sieht man früher\nals Gewinn.",
+   "sub": "Wer die Schlussquote regelmäßig schlägt, hat über viele Wetten meist einen Vorteil, auch wenn kurzfristig Verluste stehen."
+  },
+  {
+   "typ": "text",
+   "dauer": 13,
+   "eyebrow": "Die Grenze, vor allem live",
+   "text": "Live gibt es keine\nechte Schlussquote.",
+   "sub": "Preise ändern sich laufend, der Vergleichswert ist unklar. Deshalb braucht es dort andere Prüfungen und sehr viele Wetten. Das Prinzip ist ein Hinweis, kein Beweis."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

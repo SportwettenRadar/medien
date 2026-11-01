@@ -1,0 +1,60 @@
+{
+ "titel": "Wie viele Wetten braucht ein Trackrecord, damit er etwas aussagt?",
+ "thumb": {
+  "eyebrow": "Zahlen ehrlich lesen",
+  "text": "Wie viele Wetten\nbraucht ein [[Trackrecord]]?"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "154 von 247.\n[[Wie sicher ist das?]]"
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Zahlen ehrlich lesen",
+   "text": "Wie viele Wetten\nbraucht ein [[Trackrecord]]?"
+  },
+  {
+   "typ": "liste",
+   "dauer": 17,
+   "eyebrow": "Unser Beispiel: Oktober 2026",
+   "text": "Eine Trefferquote hat eine Streuung",
+   "punkte": [
+    "154 Treffer bei 247 Live-Wetten: <b>62,3 %</b>.",
+    "Statistisch liegt der wahre Wert grob zwischen <b>56,3 % und 68,4 %</b> (95 %-Intervall).",
+    "Stand Oktober, enthält rückgerechnete Wetten bis 10.10."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 10,
+   "eyebrow": "Die Rechnung dahinter",
+   "text": "±6 Prozentpunkte",
+   "sub": "Standardfehler = Wurzel aus (p × (1 − p) geteilt durch n). Hier etwa 3,1 Punkte, mal 1,96."
+  },
+  {
+   "typ": "liste",
+   "dauer": 15,
+   "eyebrow": "Wie viel ist genug?",
+   "text": "Wetten für ±3 Punkte",
+   "punkte": [
+    "Bei etwa 62 % Trefferquote braucht man rund <b>1.000 Wetten</b>.",
+    "Bei 100 Wetten sind es noch etwa ±10 Punkte.",
+    "Je kleiner der Unterschied, desto mehr Wetten."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 13,
+   "eyebrow": "Für die Rendite gilt mehr",
+   "text": "Die Rendite streut stärker.",
+   "sub": "Weil Quoten unterschiedlich sind, braucht eine stabile Aussage zur Rendite noch mehr Wetten. Ein Monat ist kein Beweis."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

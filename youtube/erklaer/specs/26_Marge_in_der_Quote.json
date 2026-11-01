@@ -1,0 +1,60 @@
+{
+ "titel": "Die Marge in der Quote: So rechnest du sie selbst heraus",
+ "thumb": {
+  "eyebrow": "Quoten, genauer",
+  "text": "Wie viel Marge\nsteckt in [[1,90]]?"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Zwei Quoten von 1,90.\n[[Zusammen 105 %.]]"
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Quoten, genauer",
+   "text": "Wie viel Marge\nsteckt in [[1,90]]?"
+  },
+  {
+   "typ": "liste",
+   "dauer": 16,
+   "eyebrow": "Schritt 1",
+   "text": "Quote in Wahrscheinlichkeit",
+   "punkte": [
+    "Implizite Wahrscheinlichkeit = 1 geteilt durch Quote.",
+    "Über 1,90 und Unter 1,90: je <b>52,63 %</b>.",
+    "Zusammen <b>105,26 %</b>. Alles über 100 % ist die Marge."
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 16,
+   "eyebrow": "Schritt 2",
+   "text": "Marge herausrechnen",
+   "punkte": [
+    "Beispiel: Über 1,80 und Unter 2,00 ergibt 55,56 % + 50 % = <b>105,56 %</b>.",
+    "Jede Seite durch die Summe teilen: Über <b>52,63 %</b>, Unter <b>47,37 %</b>.",
+    "Faire Quoten ohne Marge: Über <b>1,90</b>, Unter <b>2,11</b>."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 9,
+   "eyebrow": "Folge für die Trefferquote",
+   "text": "Bei 1,90 brauchst du\n52,6 % für Null.",
+   "sub": "Das ist die Hürde nur durch die Quote, bevor irgendeine Analyse zählt."
+  },
+  {
+   "typ": "text",
+   "dauer": 11,
+   "eyebrow": "Bei Kombis wird es mehr",
+   "text": "Zwei Beine à 1,90 ergeben 3,61.",
+   "sub": "Break-even: 27,7 % statt fairer 25 %. Die Marge wächst grob auf 10,8 %. Rechenbeispiel."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

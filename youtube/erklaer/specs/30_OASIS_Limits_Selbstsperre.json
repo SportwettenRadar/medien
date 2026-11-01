@@ -1,0 +1,60 @@
+{
+ "titel": "Limits und Selbstsperre: Was die Sperrdatei OASIS ist und wie sie wirkt",
+ "thumb": {
+  "eyebrow": "Verantwortungsvoll wetten",
+  "text": "Limits und\n[[Selbstsperre]]: OASIS"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Eine Sperre, die\n[[jeder Anbieter]] kennt."
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Verantwortungsvoll wetten",
+   "text": "Limits und\n[[Selbstsperre]]: OASIS"
+  },
+  {
+   "typ": "liste",
+   "dauer": 16,
+   "eyebrow": "Was OASIS ist",
+   "text": "Das bundesweite Sperrsystem",
+   "punkte": [
+    "Spielersperrsystem nach dem Glücksspielstaatsvertrag 2021, Anträge beim <b>Regierungspräsidium Darmstadt</b>.",
+    "Anbieter müssen gesperrte Personen ausschließen, unter anderem bei <b>Sportwetten</b>, Online-Casino und Spielhallen.",
+    "Die Sperre gilt dann für alle teilnehmenden Anbieter, nicht nur für einen."
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 16,
+   "eyebrow": "Wie lange",
+   "text": "Dauer und Aufhebung",
+   "punkte": [
+    "Selbstsperre: grundsätzlich <b>ein Jahr</b>. Eine kürzere Mindestdauer ist möglich, aber <b>nicht unter drei Monaten</b>.",
+    "Fremdsperre durch Dritte: immer <b>ein Jahr</b>.",
+    "Aufheben geht erst nach Ablauf und nur auf <b>schriftlichen Antrag</b>."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Das Einzahlungslimit",
+   "text": "Grundsätzlich 1.000 €\npro Monat.",
+   "sub": "Das Limit gilt anbieterübergreifend und kann nur unter engen Bedingungen abweichen. Zusätzlich kannst du bei jedem Anbieter eigene, niedrigere Limits setzen."
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Wann es sich lohnt",
+   "text": "Limits setzen, bevor\nes eng wird.",
+   "sub": "Wer merkt, dass er Verluste zurückholen will oder mehr setzt als geplant, sollte eine Pause einlegen. Hilfe, kostenlos und anonym: check-dein-spiel.de, 0800 1 37 27 00."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

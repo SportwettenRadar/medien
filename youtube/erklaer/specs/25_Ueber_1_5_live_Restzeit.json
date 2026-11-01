@@ -1,0 +1,67 @@
+{
+ "titel": "Über 1,5 Tore live: Warum die Restzeit den Preis bestimmt",
+ "thumb": {
+  "eyebrow": "Live-Wetten, genauer",
+  "text": "Über 1,5 live:\n[[Die Restzeit]] zählt"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Dieselbe Wette.\n[[Vier Preise.]]"
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Live-Wetten, genauer",
+   "text": "Über 1,5 live:\n[[Die Restzeit]] zählt"
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Das Modell",
+   "text": "Tore als Zufallsprozess",
+   "sub": "Vereinfachung: Tore fallen mit gleichbleibender Rate (Poisson). Annahme im Beispiel: 2,7 Tore pro 90 Minuten, also 0,03 pro Minute."
+  },
+  {
+   "typ": "liste",
+   "dauer": 16,
+   "eyebrow": "Rechenbeispiel, 0:0",
+   "text": "Chance auf mindestens 2 weitere Tore",
+   "punkte": [
+    "Minute 30 (60 min Rest): <b>53,7 %</b>, faire Quote 1,86",
+    "Minute 60 (30 min Rest): <b>22,8 %</b>, faire Quote 4,40",
+    "Minute 80 (10 min Rest): <b>3,7 %</b>, faire Quote 27,1"
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 14,
+   "eyebrow": "Gleiche Zeit, anderer Spielstand",
+   "text": "Minute 60: 0:0 gegen 1:0",
+   "punkte": [
+    "Bei 0:0 braucht Über 1,5 noch <b>zwei</b> Tore: 22,8 %.",
+    "Bei 1:0 reicht <b>ein</b> Tor: 59,3 %, faire Quote 1,69.",
+    "Der Spielstand ändert den Preis stärker als die Uhr."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Wo das Modell hinkt",
+   "text": "Die Rate ist nicht konstant.",
+   "sub": "Zum Spielende steigt sie leicht, nach Führung, Rückstand oder Platzverweis ändert sie sich. Das Beispiel zeigt die Logik, nicht den echten Preis."
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Merke",
+   "text": "Weniger Zeit heißt nicht\nsicherer, nur billiger.",
+   "sub": "Eine Quote ist nur so gut wie die Schätzung der Restzeit-Rate dahinter. Rechenbeispiel, keine Empfehlung."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}

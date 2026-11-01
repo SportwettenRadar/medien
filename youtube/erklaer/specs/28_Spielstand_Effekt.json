@@ -1,0 +1,60 @@
+{
+ "titel": "Spielstand-Effekt: Warum Teams in Führung anders spielen",
+ "thumb": {
+  "eyebrow": "Live-Modelle",
+  "text": "Der [[Spielstand]]\nverändert das Spiel"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Nach dem 1:0\nspielt niemand mehr gleich."
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Live-Modelle",
+   "text": "Der [[Spielstand]]\nverändert das Spiel"
+  },
+  {
+   "typ": "liste",
+   "dauer": 16,
+   "eyebrow": "Was sich ändert",
+   "text": "Führung und Rückstand",
+   "punkte": [
+    "Führende Teams verteidigen tendenziell tiefer und suchen Konter.",
+    "Zurückliegende Teams gehen Risiko, die Räume hinten werden größer.",
+    "Auswechslungen und Platzverweise verschieben das nochmals."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Folge für Modelle",
+   "text": "Tore pro Minute sind\nnicht konstant.",
+   "sub": "Wer nur die durchschnittliche Torrate pro Minute nimmt, ignoriert, wer führt. Deshalb ist die Rechnung aus dem Über-1,5-Video eine Vereinfachung."
+  },
+  {
+   "typ": "liste",
+   "dauer": 15,
+   "eyebrow": "Beispiel für die Wirkung",
+   "text": "Gleiche Statistik, anderer Wert",
+   "punkte": [
+    "Viele Schüsse beim Rückstand bedeuten oft Druck, den man nicht überbewerten sollte.",
+    "Wenige Schüsse bei Führung können Absicht sein, nicht Schwäche.",
+    "Zahlen brauchen den Kontext des Spielstands."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 10,
+   "eyebrow": "Merke",
+   "text": "Erst der Kontext macht\naus Daten ein Signal.",
+   "sub": "Eine Zahl ohne Spielstand, Zeit und Spielverlauf kann in die Irre führen."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}
