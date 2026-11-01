@@ -121,6 +121,7 @@ def render(spec, homepage, tmp):
             hp = os.path.join(tmp, f"f{n:02d}.html")
             open(hp, "w", encoding="utf-8").write(f"<html><head><meta charset=utf-8><style>{css}</style></head><body>{folie_html(f, logo)}</body></html>")
             pg.goto("file://" + hp); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
+            pg.evaluate("Promise.all([...document.images].map(i=>i.complete?1:new Promise(r=>{i.onload=i.onerror=r})))")
             ub = pg.evaluate("(()=>{const m=document.querySelector('.main');const r=m.getBoundingClientRect();return [Math.round(r.top),Math.round(r.bottom),m.scrollWidth>m.clientWidth+2]})()")
             if ub[0] < (260 if HOCH else 170) or ub[1] > H - (260 if HOCH else 90) or ub[2]:
                 print(f"WARNUNG Folie {n}: Platz {ub}")

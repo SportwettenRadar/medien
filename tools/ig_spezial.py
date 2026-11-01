@@ -224,7 +224,7 @@ def render_reels(outdir):
                     '<h1 class="k">Zahlen statt <em>Bauchgefühl</em>.</h1>'
                     '<div class="hint">Rechenbeispiel, keine Empfehlung · 18+ · Keine Gewinngarantie · Glücksspiel kann süchtig machen · check-dein-spiel.de</div></div>')
             return top + body
-        return orig(f, logo).replace("sportwetten-radar.net", "@sportwetten_radar")
+        return orig(f, logo).replace("<span>sportwetten-radar.net</span>", "<span>@sportwetten_radar</span>")
 
     E.folie_html = fh
     os.makedirs(outdir, exist_ok=True)
