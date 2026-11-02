@@ -70,6 +70,24 @@ def pruefe(data):
     tage = {t["datum"]: t for t in data.get("tage", [])}
     for t in tage.values():
         pruefe_block("Tag " + t["datum"], t, fehler)
+    prev = None
+    for t in sorted(data.get("tage", []), key=lambda x: x["datum"]):
+        z = seit_start(t)
+        if z is None:
+            continue
+        n = "Tag " + t["datum"] + " seitStart"
+        if not all(isinstance(z.get(k), (int, float)) for k in ("wetten", "treffer", "rendite", "gewinn")):
+            fehler.append(n + ": Felder fehlen")
+            prev = None
+            continue
+        if z["wetten"] and abs(z["gewinn"] / z["wetten"] * 100 - z["rendite"]) > 0.15:
+            fehler.append(n + f": Rendite {z['rendite']} passt nicht zu Gewinn/Wetten")
+        if prev is not None and isinstance(t.get("live", {}).get("gewinn"), (int, float)):
+            if abs((z["gewinn"] - prev["gewinn"]) - t["live"]["gewinn"]) > TOL:
+                fehler.append(n + f": Änderung seit Start {z['gewinn'] - prev['gewinn']:.1f} ≠ Tagesgewinn {t['live']['gewinn']}")
+            if z["wetten"] - prev["wetten"] != t["live"]["wetten"]:
+                fehler.append(n + ": Wetten seit Start passen nicht zur Summe der Tage")
+        prev = z
     for w in data.get("wochen", []):
         n = f"Woche {w.get('von')}–{w.get('bis')}"
         try:
@@ -110,7 +128,7 @@ def pruefe(data):
 # ---------------------------------------------------------------- Homepage-Daten
 def lade_homepage(hp):
     out = subprocess.run(["node", "-e",
-        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||''}))",
+        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||'',t:window.TRACKRECORD_TAGE||[],s:window.TRACKRECORD_START||null}))",
         os.path.abspath(os.path.join(hp, "trackrecord-daten.js"))], capture_output=True, text=True, check=True).stdout
     return json.loads(out)
 
@@ -122,10 +140,15 @@ def js_block(o, ind="  "):
     return "\n".join(ind + z for z in s.splitlines())
 
 
-# Eigene Fußnote für Monate mit mehreren Regelständen (sonst Standardtext "Einstellungen vom 11.10.2026").
-RR_TEXTE = {
-    "2026-10": "* 01.–10.10. rückgerechnet mit den Einstellungen vom 11.10.2026 · ab 11.10. tatsächlich verschickt · ab 25.10. nach den neuen Regeln (Variante B)",
-}
+# Die eine Fußnote (Daniel, 02.11.2026). Sie erscheint nur, wo Tage vor dem 11.10.2026 enthalten sind
+# (Erkennung ausschließlich über das Feld "rueckrechnung" in ergebnisse.json, das Feld selbst wird nie angezeigt).
+FUSSNOTE = "* Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet."
+PFLICHT = "Alle Zahlen gelten bei gleichem Einsatz auf jede Live-Wette. Verlustserien gehören dazu."
+
+
+def seit_start(t):
+    """Block "seit Start" eines Tages (Feldname im erweiterten JSON: seitStart)."""
+    return t.get("seitStart") or t.get("seit_start") or t.get("seitstart")
 
 
 def homepage_eintrag(b, mit_monat=True):
@@ -141,8 +164,6 @@ def homepage_eintrag(b, mit_monat=True):
         e["von"], e["bis"] = b["von"], b["bis"]
     if b.get("rueckrechnung"):
         e["rueckrechnung"] = True
-        if b.get("monat") in RR_TEXTE:
-            e["rueckrechnungText"] = RR_TEXTE[b["monat"]]
     e["live"] = live
     e["einzelspiele"] = {"tipps": E["tipps"], "treffer": E["treffer"]}
     return e
@@ -168,7 +189,20 @@ def ergaenze(alt, neu):
     return geaendert
 
 
-def schreibe_homepage(hp, monate, wochen, hinweis):
+def baue_tage(data):
+    """Kurve (kumulierte Einsätze je Tag seit Start) und Stand "seit Start" aus ergebnisse.json.
+    Gibt (None, None) zurück, solange das erweiterte JSON (Tage ab 01.09. mit seitStart) fehlt."""
+    tl = sorted(data.get("tage", []), key=lambda x: x["datum"])
+    if not tl or not all(isinstance(seit_start(t), dict) and isinstance(seit_start(t).get("gewinn"), (int, float)) for t in tl):
+        return None, None
+    kurve = [{"d": t["datum"], "g": round(seit_start(t)["gewinn"], 1), "rr": bool(t.get("rueckrechnung"))} for t in tl]
+    z = seit_start(tl[-1])
+    start = {"stand": tl[-1]["datum"], "wetten": z["wetten"], "treffer": z["treffer"],
+             "gewinn": round(z["gewinn"], 1), "rendite": z["rendite"], "rueckrechnung": any(t.get("rueckrechnung") for t in tl)}
+    return kurve, start
+
+
+def schreibe_homepage(hp, monate, wochen, hinweis, tage=None, start=None):
     p = os.path.join(hp, "trackrecord-daten.js")
     js = open(p, encoding="utf-8").read()
     m = re.search(r"^window\.TRACKRECORD = \[", js, flags=re.M)
@@ -181,54 +215,69 @@ def schreibe_homepage(hp, monate, wochen, hinweis):
     neu = (kopf + "window.TRACKRECORD = [\n\n" + mon + "\n\n];\n\n" + wochen_kommentar +
            "window.TRACKRECORD_WOCHEN = [\n" + wo + "\n];\n\n"
            "/* Hinweis, wenn für einen Monat keine Wochenwerte angezeigt werden können. */\n"
-           "window.TRACKRECORD_WOCHEN_HINWEIS = " + json.dumps(hinweis, ensure_ascii=False) + ";\n")
+           "window.TRACKRECORD_WOCHEN_HINWEIS = " + json.dumps(hinweis, ensure_ascii=False) + ";\n\n"
+           "/* Kurve: kumulierte Einsätze je Tag seit Start (d = Datum, g = Stand am Tagesende, rr = nur Logik für Fußnote/Hinterlegung).\n"
+           "   Wird von tools/auto_ergebnisse.py aus ergebnisse.json geschrieben, nicht von Hand ändern. */\n"
+           "window.TRACKRECORD_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (tage or [])) + "\n];\n\n"
+           "/* Stand seit Start (Kennzahlen über der Kurve). */\n"
+           "window.TRACKRECORD_START = " + json.dumps(start, ensure_ascii=False) + ";\n")
     open(p, "w", encoding="utf-8").write(neu)
 
 
 # ---------------------------------------------------------------- Grafik für X
-def ampel(r):
-    return "#2ee6a6" if r >= 3 else "#f2c94c" if r > -3 else "#ef6a5c"
-
-
-def grafik(b, titel, kicker, ziel, hp):
-    L, E = b["live"], b["einzelspiele"]
+def zeilen(L, klein=False):
+    """Kennzahlen jeweils in eigener Zeile, Einsätze zuerst."""
     q = L["treffer"] / L["wetten"] * 100 if L["wetten"] else 0
-    eq = E["treffer"] / E["tipps"] * 100 if E["tipps"] else 0
     G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
+    c = "z s" if klein else "z"
+    return (f'<div class="{c} lead"><b>{signed(G)}</b> Einsätze</div>'
+            f'<div class="{c}"><b>{L["wetten"]}</b> Wetten</div>'
+            f'<div class="{c}"><b>{L["treffer"]}</b> Treffer ({de(q)} %)</div>'
+            f'<div class="{c}">Rendite <b>{signed(L["rendite"])} %</b></div>')
+
+
+def grafik(b, titel, kicker, ziel, hp, start=None):
+    L, E = b["live"], b["einzelspiele"]
+    eq = E["treffer"] / E["tipps"] * 100 if E["tipps"] else 0
     f = "file://" + os.path.join(os.path.abspath(hp), "assets/fonts/")
     logo = "file://" + os.path.join(os.path.abspath(hp), "assets/logo-icon.png")
-    rr_text = RR_TEXTE.get(b.get("monat"), "* Rückrechnung mit den Einstellungen vom 11.10.2026")
-    rr = f'<div class="rr">{rr_text}</div>' if b.get("rueckrechnung") else ""
+    mit_fuss = bool(b.get("rueckrechnung")) or start is not None  # "seit Start" enthält immer die Tage vor dem 11.10.
+    fuss = f'<div class="rr">{FUSSNOTE}</div>' if mit_fuss else ""
+    stern_live = "*" if b.get("rueckrechnung") else ""
+    stern_seit = "*" if start is not None else ""
+    seit = ""
+    if start:
+        seit = (f'<div class="card"><div class="ct">Seit Start</div>{zeilen(start, klein=True)}</div>')
+    einzel = (f'<div class="card"><div class="ct">Einzelspiele zum Kombinieren</div>'
+              f'<div class="z s"><b>{E["treffer"]}</b> von {E["tipps"]} Tipps getroffen ({de(eq)} %)</div></div>') if E["tipps"] else ""
     html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{{font-family:B;font-weight:800;src:url({f}baloo-2-latin-800-normal.woff2)}}
 @font-face{{font-family:B;font-weight:700;src:url({f}baloo-2-latin-700-normal.woff2)}}
 @font-face{{font-family:I;font-weight:500;src:url({f}inter-latin-500-normal.woff2)}}
+@font-face{{font-family:I;font-weight:700;src:url({f}inter-latin-700-normal.woff2)}}
 @font-face{{font-family:M;font-weight:500;src:url({f}ibm-plex-mono-latin-500-normal.woff2)}}
 *{{margin:0;box-sizing:border-box}}
-body{{width:1080px;height:1350px;background:#0a1620;color:#eef4f8;font-family:I;padding:80px 84px;position:relative;
+body{{width:1080px;height:1350px;background:#0a1620;color:#eef4f8;font-family:I;padding:70px 84px;position:relative;
 background-image:linear-gradient(#0f2232 1px,transparent 1px),linear-gradient(90deg,#0f2232 1px,transparent 1px);background-size:120px 120px}}
 .top{{display:flex;align-items:center;gap:18px;font-family:B;font-weight:700;font-size:38px}}
 .top img{{width:64px;height:64px}} .top span{{color:#2ee6a6}}
-.k{{font-family:M;font-size:24px;letter-spacing:.14em;color:#2ee6a6;text-transform:uppercase;margin-top:90px}}
-h1{{font-family:B;font-weight:800;font-size:96px;line-height:1.02;margin-top:14px}}
-.card{{background:#0f1f30;border:1px solid #1e3448;border-radius:22px;padding:40px 44px;margin-top:48px}}
-.ct{{font-family:M;font-size:22px;letter-spacing:.12em;color:#86a0b4;text-transform:uppercase}}
-.row{{display:flex;gap:40px;margin-top:22px}} .row>div{{flex:1}}
-.l{{font-family:M;font-size:22px;color:#86a0b4}} .v{{font-family:B;font-weight:800;font-size:76px;line-height:1.05;white-space:nowrap}}
-.v small{{font-size:30px;color:#86a0b4;margin-left:6px}} .s{{font-size:22px;color:#4d6478;margin-top:2px}}
-.rr{{font-size:20px;color:#4d6478;margin-top:22px}}
-.foot{{position:absolute;left:84px;right:84px;bottom:70px;display:flex;justify-content:space-between;font-family:M;font-size:22px;color:#4d6478}}
+.k{{font-family:M;font-size:24px;letter-spacing:.14em;color:#2ee6a6;text-transform:uppercase;margin-top:50px}}
+h1{{font-family:B;font-weight:800;font-size:88px;line-height:1.02;margin-top:10px}}
+.card{{background:#0f1f30;border:1px solid #1e3448;border-radius:22px;padding:26px 44px;margin-top:24px}}
+.ct{{font-family:M;font-size:22px;letter-spacing:.12em;color:#86a0b4;text-transform:uppercase;margin-bottom:12px}}
+.z{{font-size:38px;line-height:1.3;color:#86a0b4;font-variant-numeric:tabular-nums}} .z b{{color:#eef4f8;font-weight:700}}
+.z.lead{{font-family:B;font-weight:800;font-size:76px;line-height:1.1;color:#eef4f8}} .z.lead b{{color:#eef4f8;font-weight:800}}
+.z.s{{font-size:31px}} .z.s.lead{{font-size:52px}}
+.rr{{font-size:21px;color:#86a0b4;margin-top:18px}}
+.pf{{font-size:21px;color:#4d6478;margin-top:20px;line-height:1.35}}
+.foot{{position:absolute;left:84px;right:84px;bottom:56px;display:flex;justify-content:space-between;font-family:M;font-size:22px;color:#4d6478}}
 </style></head><body>
 <div class="top"><img src="{logo}"><div>Sportwetten <span>Radar</span></div></div>
 <div class="k">{kicker}</div><h1>{titel}</h1>
-<div class="card"><div class="ct">Live-Wetten</div><div class="row">
-<div><div class="l">Trefferquote</div><div class="v">{de(q)}<small>%</small></div><div class="s">{L['treffer']} von {L['wetten']}</div></div>
-<div><div class="l">Rendite</div><div class="v" style="color:{ampel(L['rendite'])}">{signed(L['rendite'])}<small>%</small></div></div>
-<div><div class="l">Gewinn</div><div class="v" style="color:{ampel(L['rendite'])}">{signed(G)}<small>Einsätze</small></div></div>
-</div>{rr}</div>
-<div class="card"><div class="ct">Einzelspiele zum Kombinieren</div><div class="row">
-<div><div class="l">Trefferquote</div><div class="v">{de(eq)}<small>%</small></div><div class="s">{E['treffer']} von {E['tipps']} Tipps</div></div>
-</div></div>
+<div class="card"><div class="ct">Live-Wetten</div>{zeilen(L).replace('</b> Einsätze', '</b> Einsätze' + stern_live, 1)}</div>
+{seit.replace('Einsätze</div>', 'Einsätze' + stern_seit + '</div>', 1) if seit else ''}
+{einzel}
+<div class="pf">{fuss}{'<br>' if fuss else ''}{PFLICHT}</div>
 <div class="foot"><span>18+ · Keine Gewinngarantie</span><span>sportwetten-radar.net</span></div>
 </body></html>"""
     tmp = ziel + ".html"
@@ -284,13 +333,19 @@ def main():
             wochen[w["von"]] = homepage_eintrag(w)
             res["aenderungen"].append(f"Woche {w['von']}–{w['bis']} neu")
 
+    kurve, start = baue_tage(data)
+    if kurve is not None and (kurve != hp["t"] or start != hp["s"]):
+        res["aenderungen"].append("Kurve seit Start aktualisiert")
+    if kurve is None:
+        kurve, start = hp["t"], hp["s"]
+
     if res["fehler"]:
         res["status"] = "stopp"
         print(json.dumps(res, ensure_ascii=False, indent=2))
         return 2
 
     if not a.trocken and res["aenderungen"]:
-        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"])
+        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"], kurve, start)
         ix = os.path.join(a.homepage, "index.html")
         h = open(ix, encoding="utf-8").read()
         h = re.sub(r"trackrecord-daten\.js\?v=[0-9a-z]+", "trackrecord-daten.js?v=" + dt.datetime.now().strftime("%Y%m%d%H%M"), h)
@@ -306,7 +361,7 @@ def main():
         wt = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"][d(t["datum"]).weekday()]
         z = os.path.join(ziel_dir, f"{t['datum']}_tagesbilanz.png")
         if not a.trocken:
-            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage)
+            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, start=seit_start(t))
         res["grafiken"].append({"art": "tag", "datei": os.path.relpath(z, a.medien), "datum": t["datum"],
                                 "live": t["live"], "einzelspiele": t["einzelspiele"], "rueckrechnung": bool(t.get("rueckrechnung"))})
     if a.modus == "woche" and data.get("wochen"):

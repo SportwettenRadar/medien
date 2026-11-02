@@ -122,6 +122,22 @@ def article_ld(title, desc, path, date):
                           "logo": {"@type": "ImageObject", "url": BASE + "assets/logo-icon.png"}}}
 
 
+FUSSNOTE = "* Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet."
+
+
+def tr_block(monat=None, fallback=""):
+    """Gleiche Darstellung wie auf der Startseite (Kennzahlen, Linie, Monatstabelle), gerendert von trackrecord.js."""
+    idx = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
+    v1 = re.search(r"trackrecord-daten\.js\?v=([0-9a-z]+)", idx)
+    v2 = re.search(r"trackrecord\.js\?v=([0-9a-z]+)", idx)
+    attr = f' data-tr-monat="{monat}"' if monat else ""
+    return f"""<div class="trk" data-tr{attr}>
+    <div data-tr-body><noscript>{fallback}</noscript></div>
+  </div>
+  <script src="trackrecord-daten.js?v={v1.group(1) if v1 else '1'}"></script>
+  <script src="trackrecord.js?v={v2.group(1) if v2 else '1'}"></script>"""
+
+
 def month_pages(months):
     paths = []
     for i, m in enumerate(months):
@@ -131,8 +147,6 @@ def month_pages(months):
         G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
         name = mname(m["monat"])
         path = f"monatsbericht-{m['monat']}.html"
-        rr = m.get("rueckrechnung")
-        star = "*" if rr else ""
         title = f"Monatsbericht {name}: Live-Wetten und Einzelspiele — Sportwetten Radar"
         desc = (f"Ergebnisse {name}: {L['wetten']} Live-Wetten, Trefferquote {de(q)} %, Rendite {signed(L['rendite'])} %, "
                 f"längste Verlustserie {L['verlustserie']}. Einzelspiele: {E['treffer']} von {E['tipps']} getroffen.")
@@ -146,21 +160,22 @@ def month_pages(months):
   <p>Am 1. jedes Monats veröffentlichen wir den Monatsbericht für den Vormonat. Hier stehen alle Zahlen für
   {name} — auch die unangenehmen. Nichts wird im Nachhinein aussortiert.</p>
 
-  <h2><span class="num">01</span>Live-Wetten{star}</h2>
+  {tr_block(m["monat"])}
+
+  <h2><span class="num">01</span>Live-Wetten im Detail</h2>
   <table class="kv">
-    <tr><th>Live-Wetten</th><td>{L['wetten']}</td></tr>
+    <tr><th>Einsätze</th><td>{signed(G)}</td></tr>
+    <tr><th>Wetten</th><td>{L['wetten']}</td></tr>
     <tr><th>Treffer</th><td>{L['treffer']} ({de(q)} %)</td></tr>
     <tr><th>Rendite</th><td>{signed(L['rendite'])} %</td></tr>
-    <tr><th>Gewinn bzw. Verlust</th><td>{signed(G)} Einsätze</td></tr>
     <tr><th>Längste Verlustserie</th><td>{L['verlustserie']} in Folge</td></tr>
     <tr><th>Größter Rückgang</th><td>{signed(L['rueckgang'])} Einsätze</td></tr>
     <tr><th>Bester Tag</th><td>{signed(L['besterTag'])} Einsätze</td></tr>
     <tr><th>Schlechtester Tag</th><td>{signed(L['schlechtesterTag'])} Einsätze</td></tr>
   </table>
-  <p>Rendite und Einsätze gelten, wenn jede Live-Wette mit demselben Einsatz gespielt worden wäre
-  (1 Einsatz = dein Grundeinsatz pro Wette). Wie wir rechnen, erklären wir unter
+  <p>Alle Zahlen gelten bei gleichem Einsatz auf jede Live-Wette (1 Einsatz = dein Grundeinsatz pro Wette).
+  Verlustserien gehören dazu. Wie wir rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
-  {('<p class="wissen-note">' + m.get("rueckrechnungText", "* Rückrechnung mit den Einstellungen vom 11.10.2026") + '.</p>') if rr else ''}
 
   <h2><span class="num">02</span>Einzelspiele zum Kombinieren</h2>
   <table class="kv">
@@ -182,15 +197,16 @@ def month_pages(months):
         paths.append((page(path, title, desc, "Monatsbericht", name, inner, article_ld(title, desc, path, pub)), pub))
     # Übersicht
     rows = "\n".join(
-        f'    <tr><th><a href="monatsbericht-{m["monat"]}.html">{mname(m["monat"])}</a></th>'
-        f'<td>{m["live"]["wetten"]} Live-Wetten · {signed(m["live"]["rendite"])} %</td></tr>'
+        f'    <tr><td><a href="monatsbericht-{m["monat"]}.html">{mname(m["monat"])}{"*" if m.get("rueckrechnung") else ""}</a></td>'
+        f'<td>{signed(m["live"].get("gewinn", round(m["live"]["rendite"] * m["live"]["wetten"]) / 100))}</td>'
+        f'<td>{m["live"]["wetten"]}</td><td>{m["live"]["treffer"]}</td><td>{signed(m["live"]["rendite"])} %</td></tr>'
         for m in reversed(months))
+    fn = f"<p>{FUSSNOTE}</p>" if any(m.get("rueckrechnung") for m in months) else ""
+    fallback = ('<table class="kv"><tr><th>Monat</th><th>Einsätze</th><th>Wetten</th><th>Treffer</th><th>Rendite</th></tr>' + rows + "</table>" + fn)
     inner = f"""
   <p>Jeden Monat veröffentlichen wir am 1. die Ergebnisse des Vormonats. Alle Berichte bleiben dauerhaft
   einsehbar — die starken wie die schwachen.</p>
-  <table class="kv">
-{rows}
-  </table>
+  {tr_block(None, fallback)}
 """
     t = "Alle Monatsberichte — Sportwetten Radar"
     d = "Alle Monatsberichte von Sportwetten Radar: Live-Wetten mit Trefferquote, Rendite und Verlustserien, Einzelspiele mit Trefferquote."
