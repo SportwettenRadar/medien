@@ -24,7 +24,7 @@ Bisher gibt es auf Instagram und TikTok keine Ergebnis-Beiträge. Die Regeln gel
 - Erledigt 02.11. (Daniel ok): Video 15 neu gerendert (Folie "Testphase", `out_v2/15_Trackrecord_lesen_v4.mp4`, Short `shorts2_v2/Short_15_Trackrecord_lesen_v2.mp4`) und in den Beiträgen 02.11. 16:00 (YouTube), 18:00 (YouTube Short), 19:00 (X) getauscht. Homepage (`trackrecord.js`, `trackrecord-daten.js`) und Generatoren (`seiten_generator.py`, `auto_ergebnisse.py`) auf die Fußnote "Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet." umgestellt, Cache-Version angehoben.
 - TikTok: gleiche Regeln wie Instagram (Daniel, 02.11.).
 
-## Kennzahl-Reihenfolge (Entscheidung Daniel, 02.11. 14:39) und offene Klärung
+## Kennzahl-Reihenfolge (Entscheidung Daniel, 02.11. 14:39; am 15:48 bestätigt: "gilt überall")
 Wenn Kennzahlen gezeigt werden, jede in eigener Zeile, in dieser Reihenfolge (Beispielwerte Stand 31.10., "seit Start" ab 01.09.; aktuelle Werte aus `ergebnisse.json`):
 ```
 351 Wetten
@@ -32,6 +32,6 @@ Wenn Kennzahlen gezeigt werden, jede in eigener Zeile, in dieser Reihenfolge (Be
 +8,2 Einsätze
 Rendite +2,3 %
 ```
-- Gilt für Telegram, Homepage, YouTube, X und jede Stelle, an der Kennzahlen erscheinen. Sie ersetzt die frühere Reihenfolge (Einsätze zuerst).
+- Feste Vorgabe für alle künftigen Ergebnis-Beiträge und jede Stelle, an der Kennzahlen erscheinen (Telegram, Homepage, YouTube, X; Instagram/TikTok nur, falls dort später doch Kennzahlen kommen, siehe nächste Zeile). Sie ersetzt die frühere Reihenfolge (Einsätze zuerst).
 - ENTSCHIEDEN (Daniel, 02.11. 14:41): Auf Instagram/TikTok keine Kennzahlen; die drei Beispielkarten (Tagesauswertung, Wochenrückblick, Monatsbericht) werden so gepostet.
 - ENTSCHIEDEN (Daniel, 02.11. 14:41): Die Verlaufslinie (Gesamtverlauf) wird auf Instagram weggelassen.
