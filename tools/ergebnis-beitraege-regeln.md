@@ -14,14 +14,15 @@ Bisher gibt es auf Instagram und TikTok keine Ergebnis-Beiträge. Die Regeln gel
 - Wochenrückblick: eine Zeile je Wochentag, ein Punkt je Eintrag (grün gewonnen, grau verloren), keine Summen.
 - Monatsbericht: Text-Karte ohne Zahlen: alle Auswertungen im Ergebnis-Kanal, nichts nachträglich geändert, kleine Stichprobe; Link in der Bio.
 - Generator der Beispiele: `tools/ig_ergebnis_beispiele.py` (Karten 1080x1350, Schrift/Logo wie `ig_spezial.py`).
-- Ob dieselben Regeln für TikTok gelten, ist nicht ausdrücklich bestätigt; Annahme: ja, gleiche Clips.
+- Dieselben Regeln gelten für TikTok (bestätigt 02.11.).
 
 ## Bestehende Planung (erledigt am 02.11.)
 - YouTube Short 02.11. 18:00 und YouTube Video 02.11. 16:00: Titel, Beschreibung, Tags auf "Testphase oder live: so liest du unseren Trackrecord" umgestellt (Video 26.10. bleibt, war veröffentlicht).
 - X-Video 02.11. 19:00: Text auf "Testphase (bis 10.10.) und Livebetrieb" umgestellt.
 - Instagram Sa 21.11. 12:30 "Was ist eine Rückrechnung?" ersetzt durch Karussell "Regression zur Mitte" (Daniel ok, 02.11. 14:36).
 - Metricool 03.–10.11. geprüft, kein weiterer Treffer. Ab 11.11. nur lokale Pläne abgeglichen (Abruf zu groß).
-- Offen: Erklärvideo `15_Trackrecord_lesen` zeigt "Rückrechnung" noch auf einer Folie (nur per Neurendern änderbar); Homepage-Generator (`seiten_generator.py`) nennt die Fußnote "* Rückrechnung mit den aktuellen Einstellungen". Änderung nur auf Anweisung.
+- Erledigt 02.11. (Daniel ok): Video 15 neu gerendert (Folie "Testphase", `out_v2/15_Trackrecord_lesen_v4.mp4`, Short `shorts2_v2/Short_15_Trackrecord_lesen_v2.mp4`) und in den Beiträgen 02.11. 16:00 (YouTube), 18:00 (YouTube Short), 19:00 (X) getauscht. Homepage (`trackrecord.js`, `trackrecord-daten.js`) und Generatoren (`seiten_generator.py`, `auto_ergebnisse.py`) auf die Fußnote "Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet." umgestellt, Cache-Version angehoben.
+- TikTok: gleiche Regeln wie Instagram (Daniel, 02.11.).
 
 ## Kennzahl-Reihenfolge (Entscheidung Daniel, 02.11. 14:39) und offene Klärung
 Wenn Kennzahlen gezeigt werden, jede in eigener Zeile, in dieser Reihenfolge (Beispielwerte Stand 31.10., "seit Start" ab 01.09.; aktuelle Werte aus `ergebnisse.json`):
