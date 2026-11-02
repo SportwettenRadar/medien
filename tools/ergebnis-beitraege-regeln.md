@@ -1,6 +1,6 @@
 # Ergebnis-Beiträge Instagram (und TikTok): feste Vorgabe (Entscheidung Daniel, 02.11.2026, überarbeitet 14:36)
 
-Bisher gibt es auf Instagram und TikTok keine Ergebnis-Beiträge. Die Regeln gelten ab dem ersten Ergebnis-Post (geplant in 1–2 Wochen). Daniel, 02.11. 14:36: Rendite und sonstige Kennzahlen werden weggelassen, damit alles Instagram-konform ist, und das ist KEINE Ausnahmeregelung. Damit bleiben die bisherigen Instagram-Regeln (`instagram-neukonto-regeln.md`) unverändert in Kraft; die Kennzahl-Variante vom 02.11. 14:31 (Einsätze, Wetten, Treffer %, Rendite %) ist zurückgenommen.
+Die Ergebnis-Beiträge starten ab Di 03.11.2026 (vorgezogen auf Daniels Entscheidung vom 02.11. 21:36; zuvor geplant 14.11.) auf Instagram, TikTok und YouTube (Short). Die Regeln gelten ab dem ersten Post. Daniel, 02.11. 14:36: Rendite und sonstige Kennzahlen werden weggelassen, damit alles Instagram-konform ist, und das ist KEINE Ausnahmeregelung. Damit bleiben die bisherigen Instagram-Regeln (`instagram-neukonto-regeln.md`) unverändert in Kraft; die Kennzahl-Variante vom 02.11. 14:31 (Einsätze, Wetten, Treffer %, Rendite %) ist zurückgenommen.
 
 ## Regeln
 1. Das Wort "zurückgerechnet" bzw. "Rückrechnung" kommt nirgends vor. Zeiträume vor dem 11.10.2026 (Testphase) werden nicht als eigene Bilanz gezeigt; sollte eine "seit Start"-Angabe je vorkommen, steht EINE Fußnote: "Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet."
@@ -35,3 +35,12 @@ Rendite +2,3 %
 - Feste Vorgabe für alle künftigen Ergebnis-Beiträge und jede Stelle, an der Kennzahlen erscheinen (Telegram, Homepage, YouTube, X; Instagram/TikTok nur, falls dort später doch Kennzahlen kommen, siehe nächste Zeile). Sie ersetzt die frühere Reihenfolge (Einsätze zuerst).
 - ENTSCHIEDEN (Daniel, 02.11. 14:41): Auf Instagram/TikTok keine Kennzahlen; die drei Beispielkarten (Tagesauswertung, Wochenrückblick, Monatsbericht) werden so gepostet.
 - ENTSCHIEDEN (Daniel, 02.11. 14:41): Die Verlaufslinie (Gesamtverlauf) wird auf Instagram weggelassen.
+
+## Produktion ab 03.11.2026 (Entscheidung Daniel, 02.11. 22:09, voll automatisch)
+- Täglich 10:00 (gleiche Zeit auf Instagram, TikTok, YouTube): Auswertung des Vortages. Instagram: Karussell + Stories; TikTok: Reel; YouTube: Short (gleicher Clip).
+- Mo zusätzlich 12:30 Wochenauswertung (Instagram Karussell + Story), am 1. des Monats 14:00 Monatsbericht (Instagram Karussell + Story).
+- Layout (freigegeben 02.11.): Tabelle Nr., Spiel, Markt, Quote, Haken grün / graues Kreuz (nie rot), 12 Zeilen je Karte; Einzelspiele (max. 5) als eigene Karte im selben Karussell; Hinweiskarte "So lesen". Woche/Monat: Punkte je Eintrag (Live und Einzelspiele getrennt), keine Zahlen. Keine Kennzahlen, keine Prozente, keine Summen, keine Kurve (Daniel, 02.11.: auch "13 von 24" nur nach 4 Wochen ohne Warnung testen).
+- Reel: bis 24 Live-Einträge in Tabellenfolien (8 je Folie, chronologisch), darüber Hinweis auf das Karussell; Einzelspiele eigene Folie; Endscreen "Link in der Bio".
+- Hinweise auf Kanal/Warteliste: nur "Alle Auswertungen im Ergebnis-Kanal. Link in der Bio." Warteliste nie in Beiträgen, nur auf der Zielseite hinter der Bio. Bezahlte Reichweite (Anzeigen) zurückgestellt, bis die Meta-Regeln für Wett-Werbung geklärt sind.
+- Technik: `tools/ig_tagesbeitraege.py` (Modi tag/woche/monat, liest `daten/signale.json`, Ausgabe `ergebnis/<datum>/<modus>/`, manifest.json mit Texten). Geplante Aufgabe "Ergebnis-Beiträge Instagram, TikTok, YouTube (täglich 10:00)" läuft 09:22, baut, pusht, plant über Metricool ein, prüft. Bei fehlenden/unvollständigen Daten wird nichts eingeplant und Daniel benachrichtigt.
+- Beispiel-Generatoren: `ig_ergebnis_*.py`; Beispielgrafiken in `instagram_ergebnis_beispiele/`.
