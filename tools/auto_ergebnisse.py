@@ -142,7 +142,14 @@ def js_block(o, ind="  "):
 
 # Die eine Fußnote (Daniel, 02.11.2026). Sie erscheint nur, wo Tage vor dem 11.10.2026 enthalten sind
 # (Erkennung ausschließlich über das Feld "rueckrechnung" in ergebnisse.json, das Feld selbst wird nie angezeigt).
-FUSSNOTE = "* Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet."
+def fussnote(data, von=None, bis=None):
+    """Die eine Fußnote, mit Zeitraum aus den Tagen mit rueckrechnung=true (nur Logik, das Feld wird nie angezeigt)."""
+    tl = [t["datum"] for t in data.get("tage", []) if t.get("rueckrechnung") and (von is None or von <= t["datum"] <= bis)]
+    if not tl:
+        return None
+    a, b = min(tl), max(tl)
+    f = lambda x: f"{x[8:10]}.{x[5:7]}."
+    return f"* {f(a)}–{f(b)}: Testphase, mit den heutigen Regeln berechnet."
 PFLICHT = "Alle Zahlen gelten bei gleichem Einsatz auf jede Live-Wette. Verlustserien gehören dazu."
 
 
@@ -236,15 +243,14 @@ def zeilen(L, klein=False):
             f'<div class="{c}">Rendite <b>{signed(L["rendite"])} %</b></div>')
 
 
-def grafik(b, titel, kicker, ziel, hp, start=None):
+def grafik(b, titel, kicker, ziel, hp, start=None, fuss_text=None):
     L, E = b["live"], b["einzelspiele"]
     eq = E["treffer"] / E["tipps"] * 100 if E["tipps"] else 0
     f = "file://" + os.path.join(os.path.abspath(hp), "assets/fonts/")
     logo = "file://" + os.path.join(os.path.abspath(hp), "assets/logo-icon.png")
-    mit_fuss = bool(b.get("rueckrechnung")) or start is not None  # "seit Start" enthält immer die Tage vor dem 11.10.
-    fuss = f'<div class="rr">{FUSSNOTE}</div>' if mit_fuss else ""
-    stern_live = "*" if b.get("rueckrechnung") else ""
-    stern_seit = "*" if start is not None else ""
+    fuss = f'<div class="rr">{fuss_text}</div>' if fuss_text else ""
+    stern_live = "*" if (fuss_text and b.get("rueckrechnung")) else ""
+    stern_seit = "*" if (fuss_text and start is not None) else ""
     seit = ""
     if start:
         seit = (f'<div class="card"><div class="ct">Seit Start</div>{zeilen(start, klein=True)}</div>')
@@ -361,14 +367,14 @@ def main():
         wt = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"][d(t["datum"]).weekday()]
         z = os.path.join(ziel_dir, f"{t['datum']}_tagesbilanz.png")
         if not a.trocken:
-            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, start=seit_start(t))
+            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, start=seit_start(t), fuss_text=fussnote(data))
         res["grafiken"].append({"art": "tag", "datei": os.path.relpath(z, a.medien), "datum": t["datum"],
                                 "live": t["live"], "einzelspiele": t["einzelspiele"], "rueckrechnung": bool(t.get("rueckrechnung"))})
     if a.modus == "woche" and data.get("wochen"):
         w = max(data["wochen"], key=lambda x: x["von"])
         z = os.path.join(ziel_dir, f"{w['bis']}_wochenbilanz.png")
         if not a.trocken:
-            grafik(w, f"{kurz(w['von'])}–{kurz(w['bis'])}", "Wochenbilanz", z, a.homepage)
+            grafik(w, f"{kurz(w['von'])}–{kurz(w['bis'])}", "Wochenbilanz", z, a.homepage, fuss_text=fussnote(data, w["von"], w["bis"]))
         res["grafiken"].append({"art": "woche", "datei": os.path.relpath(z, a.medien), "von": w["von"], "bis": w["bis"],
                                 "live": w["live"], "einzelspiele": w["einzelspiele"], "rueckrechnung": bool(w.get("rueckrechnung"))})
     if a.modus == "monat" and data.get("monate"):
@@ -376,7 +382,7 @@ def main():
         y, mo = map(int, m["monat"].split("-"))
         z = os.path.join(ziel_dir, f"{m['monat']}_monatsbericht.png")
         if not a.trocken:
-            grafik(m, f"{MONATE[mo - 1]} {y}", "Monatsbericht", z, a.homepage)
+            grafik(m, f"{MONATE[mo - 1]} {y}", "Monatsbericht", z, a.homepage, fuss_text=fussnote(data, m["monat"] + "-01", m["monat"] + "-31"))
         res["grafiken"].append({"art": "monat", "datei": os.path.relpath(z, a.medien), "monat": m["monat"],
                                 "live": m["live"], "einzelspiele": m["einzelspiele"], "rueckrechnung": bool(m.get("rueckrechnung"))})
     print(json.dumps(res, ensure_ascii=False, indent=2))

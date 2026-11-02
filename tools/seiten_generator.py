@@ -122,7 +122,7 @@ def article_ld(title, desc, path, date):
                           "logo": {"@type": "ImageObject", "url": BASE + "assets/logo-icon.png"}}}
 
 
-FUSSNOTE = "* Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet."
+FUSSNOTE = "* 01.09.–10.10.: Testphase, mit den heutigen Regeln berechnet."
 
 
 def tr_block(monat=None, fallback=""):
