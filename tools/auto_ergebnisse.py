@@ -226,13 +226,13 @@ def schreibe_homepage(hp, monate, wochen, hinweis, tage=None, start=None):
 
 # ---------------------------------------------------------------- Grafik für X
 def zeilen(L, klein=False):
-    """Kennzahlen jeweils in eigener Zeile, Einsätze zuerst."""
+    """Kennzahlen jeweils in eigener Zeile. Reihenfolge (Daniel, 02.11.2026): Wetten, Treffer, Einsätze, Rendite."""
     q = L["treffer"] / L["wetten"] * 100 if L["wetten"] else 0
     G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
     c = "z s" if klein else "z"
-    return (f'<div class="{c} lead"><b>{signed(G)}</b> Einsätze</div>'
-            f'<div class="{c}"><b>{L["wetten"]}</b> Wetten</div>'
+    return (f'<div class="{c}"><b>{L["wetten"]}</b> Wetten</div>'
             f'<div class="{c}"><b>{L["treffer"]}</b> Treffer ({de(q)} %)</div>'
+            f'<div class="{c} lead"><b>{signed(G)}</b> Einsätze</div>'
             f'<div class="{c}">Rendite <b>{signed(L["rendite"])} %</b></div>')
 
 

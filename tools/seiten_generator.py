@@ -164,9 +164,9 @@ def month_pages(months):
 
   <h2><span class="num">01</span>Live-Wetten im Detail</h2>
   <table class="kv">
-    <tr><th>Einsätze</th><td>{signed(G)}</td></tr>
     <tr><th>Wetten</th><td>{L['wetten']}</td></tr>
     <tr><th>Treffer</th><td>{L['treffer']} ({de(q)} %)</td></tr>
+    <tr><th>Einsätze</th><td>{signed(G)}</td></tr>
     <tr><th>Rendite</th><td>{signed(L['rendite'])} %</td></tr>
     <tr><th>Längste Verlustserie</th><td>{L['verlustserie']} in Folge</td></tr>
     <tr><th>Größter Rückgang</th><td>{signed(L['rueckgang'])} Einsätze</td></tr>
@@ -198,11 +198,11 @@ def month_pages(months):
     # Übersicht
     rows = "\n".join(
         f'    <tr><td><a href="monatsbericht-{m["monat"]}.html">{mname(m["monat"])}{"*" if m.get("rueckrechnung") else ""}</a></td>'
-        f'<td>{signed(m["live"].get("gewinn", round(m["live"]["rendite"] * m["live"]["wetten"]) / 100))}</td>'
-        f'<td>{m["live"]["wetten"]}</td><td>{m["live"]["treffer"]}</td><td>{signed(m["live"]["rendite"])} %</td></tr>'
+        f'<td>{m["live"]["wetten"]}</td><td>{m["live"]["treffer"]}</td>'
+        f'<td>{signed(m["live"].get("gewinn", round(m["live"]["rendite"] * m["live"]["wetten"]) / 100))}</td><td>{signed(m["live"]["rendite"])} %</td></tr>'
         for m in reversed(months))
     fn = f"<p>{FUSSNOTE}</p>" if any(m.get("rueckrechnung") for m in months) else ""
-    fallback = ('<table class="kv"><tr><th>Monat</th><th>Einsätze</th><th>Wetten</th><th>Treffer</th><th>Rendite</th></tr>' + rows + "</table>" + fn)
+    fallback = ('<table class="kv"><tr><th>Monat</th><th>Wetten</th><th>Treffer</th><th>Einsätze</th><th>Rendite</th></tr>' + rows + "</table>" + fn)
     inner = f"""
   <p>Jeden Monat veröffentlichen wir am 1. die Ergebnisse des Vormonats. Alle Berichte bleiben dauerhaft
   einsehbar — die starken wie die schwachen.</p>
