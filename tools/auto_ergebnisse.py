@@ -370,7 +370,7 @@ def main():
         wt = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"][d(t["datum"]).weekday()]
         z = os.path.join(ziel_dir, f"{t['datum']}_tagesbilanz.png")
         if not a.trocken:
-            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, start=seit_start(t), fuss_text=fussnote(data))
+            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, start=seit_start(t), fuss_text=(fussnote(data) if (seit_start(t) or t.get("rueckrechnung")) else None))
         res["grafiken"].append({"art": "tag", "datei": os.path.relpath(z, a.medien), "datum": t["datum"],
                                 "live": t["live"], "einzelspiele": t["einzelspiele"], "rueckrechnung": bool(t.get("rueckrechnung"))})
     if a.modus == "woche" and data.get("wochen"):
