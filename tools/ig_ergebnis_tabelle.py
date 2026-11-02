@@ -25,7 +25,10 @@ EX="""
 .tr b{font-family:M;font-weight:500;font-size:26px;width:100px;text-align:right}
 .tr u{text-decoration:none;width:44px;height:44px;margin-left:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:B;font-weight:800;font-size:28px}
 .tr u.w{background:#2edb99;color:#0a1620}.tr u.l{background:#26364a;color:#c9d6e3;border:2px solid #3a4f68}
-.tr.e{height:84px}.tr.e div{font-size:30px}
+.big .th{font-size:24px;padding:0 30px 12px}.big .th span:nth-child(1){width:64px}.big .th span:nth-child(3){width:140px}.big .th span:nth-child(4){width:120px}.big .th span:nth-child(5){width:90px}
+.big .tr{height:104px;margin-top:10px;border-radius:24px;padding:0 30px;font-size:34px}.big .tr em{font-size:28px;width:64px}.big .tr span{font-size:28px;width:130px}
+.big .tr b{font-size:34px;width:120px}.big .tr u{width:56px;height:56px;font-size:38px;margin-left:30px}
+.big .leg{margin-top:24px;font-size:28px}.big .leg u{width:36px;height:36px;font-size:22px}.big .note{font-size:32px;margin-top:24px}
 .leg{display:flex;gap:34px;margin-top:20px;font-size:25px;color:#a9b8c8;align-items:center}
 .leg u{display:inline-flex;width:30px;height:30px;border-radius:50%;text-decoration:none;align-items:center;justify-content:center;font-size:19px;font-weight:800;margin-right:10px;background:#2edb99;color:#0a1620}.leg u.l{background:#26364a;color:#c9d6e3;border:2px solid #3a4f68}
 .note{font-size:30px;line-height:1.4;color:#a9b8c8;margin-top:30px}
@@ -39,7 +42,7 @@ def page(eb,inner):
       f'<div class="eb">{eb}</div>'+inner+'<div class="foot"><span>18+ · Keine Gewinngarantie</span><span>@sportwetten_radar</span></div>')
 cards=[("tabelle_live_1",page("Live-Wetten · Samstag 14.11. · 1–12",'<div class="tb">'+HEAD+rows(LIVE[:12])+LEG+'</div>')),
        ("tabelle_live_2",page("Live-Wetten · Samstag 14.11. · 13–24",'<div class="tb">'+HEAD+rows(LIVE[12:],12)+LEG+'</div>')),
-       ("tabelle_einzelspiele",page("Einzelspiele · Samstag 14.11.",'<div class="tb">'+HEAD+rows(EINZ,0,"e")+LEG+
+       ("tabelle_einzelspiele",page("Einzelspiele · Samstag 14.11.",'<div class="tb big">'+HEAD+rows(EINZ,0,"e")+LEG+
         '<div class="note">Bis zu fünf ausgewählte Einzelspiele vor Anpfiff. Ob einzeln oder selbst kombiniert, entscheidet jeder selbst.</div></div>'))]
 css=s.CSS.replace("FONTS","file://"+os.path.join(s.HOME,"assets/fonts"))+X.EXTRA+EX
 logo="file://"+os.path.join(s.HOME,"logo-icon.png")

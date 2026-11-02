@@ -18,6 +18,11 @@ EX="""
 .m .dt i{width:24px;height:24px}.m .dt{gap:7px}.m .wr b{width:190px}
 .leg{display:flex;gap:34px;margin-top:22px;font-size:26px;color:#a9b8c8;align-items:center}
 .leg i{display:inline-block;width:26px;height:26px;border-radius:50%;background:#2edb99;margin-right:12px;vertical-align:-4px}.leg i.l{background:#26364a;border:2px solid #3a4f68}
+.big .wr{padding:20px 28px;margin-top:10px;border-radius:24px}
+.big .wr b{font-size:36px;width:170px;line-height:40px}.big .wr b small{font-size:22px;line-height:26px;margin-top:2px}
+.big .wr{align-items:center}.big .dt{gap:16px;align-items:center}.big .dt i{width:42px;height:42px}
+.big.m .dt{gap:10px}.big.m .dt i{width:36px;height:36px}.big.m .wr{padding:34px 28px}
+.big.w2 .wr{padding:13px 28px;margin-top:8px}.big .leg{margin-top:22px;font-size:28px}.big .note{font-size:32px;margin-top:22px}
 .note{font-size:30px;line-height:1.4;color:#a9b8c8;margin-top:26px}
 """
 LEG='<div class="leg"><span><i></i>gewonnen</span><span><i class="l"></i>verloren</span></div>'
@@ -27,12 +32,12 @@ def page(eb,inner,cls=""):
       f'<div class="eb">{eb}</div><div class="tb {cls}">{inner}</div><div class="foot"><span>18+ · Keine Gewinngarantie</span><span>@sportwetten_radar</span></div>')
 days=[("Mo","09.11.",3),("Di","10.11.",2),("Mi","11.11.",4),("Do","12.11.",3),("Fr","13.11.",5),("Sa","14.11.",26),("So","15.11.",9)]
 w1=page("Woche 09.–15.11. · Live-Wetten","".join(row(d,dt,dots(n)) for d,dt,n in days)+LEG)
-w2=page("Woche 09.–15.11. · Einzelspiele","".join(row(d,dt,dots(5)) for d,dt,n in days)+LEG+'<div class="note">Bis zu fünf ausgewählte Einzelspiele pro Tag.</div>')
+w2=page("Woche 09.–15.11. · Einzelspiele","".join(row(d,dt,dots(5)) for d,dt,n in days)+LEG,"big w2")
 w3=page("Wochenrückblick","<h1 style='font-family:B;font-weight:800;font-size:70px;line-height:1.05'>Gute und schwache Tage stehen nebeneinander.</h1>"
   '<div class="p">Jeder Eintrag der Woche wird ausgewertet, nichts wird nachträglich geändert. Die Einzelergebnisse aller Tage stehen im Ergebnis-Kanal, Link in der Bio.</div>')
 wk=[("KW 41","05.–11.10.",41),("KW 42","12.–18.10.",38),("KW 43","19.–25.10.",55),("KW 44","26.10.–01.11.",47)]
 m1=page("Monatsbericht · Oktober · Live-Wetten","".join(row(a,b,dots(n)) for a,b,n in wk)+LEG,"m")
-m2=page("Monatsbericht · Oktober · Einzelspiele","".join(row(a,b,dots(25)) for a,b,n in wk)+LEG+'<div class="note">Bis zu fünf ausgewählte Einzelspiele pro Spieltag.</div>',"m")
+m2=page("Monatsbericht · Oktober · Einzelspiele","".join(row(a,b,dots(25)) for a,b,n in wk)+LEG+'<div class="note">Bis zu fünf ausgewählte Einzelspiele pro Spieltag.</div>',"m big")
 m3=page("Monatsbericht · Oktober","<h1 style='font-family:B;font-weight:800;font-size:70px;line-height:1.05'>Ein Monat. Jeder Tag öffentlich.</h1>"
   '<div class="p">Alle Auswertungen des Monats stehen im Ergebnis-Kanal, die starken Tage wie die schwachen. Nichts wird nachträglich geändert oder gelöscht.</div>'
   '<div class="p">Ein einzelner Monat ist eine kleine Stichprobe und sagt wenig über den nächsten. Link in der Bio.</div>')
