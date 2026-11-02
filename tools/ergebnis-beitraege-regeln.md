@@ -32,5 +32,5 @@ Wenn Kennzahlen gezeigt werden, jede in eigener Zeile, in dieser Reihenfolge (Be
 Rendite +2,3 %
 ```
 - Gilt für Telegram, Homepage, YouTube, X und jede Stelle, an der Kennzahlen erscheinen. Sie ersetzt die frühere Reihenfolge (Einsätze zuerst).
-- OFFEN: Für Instagram/TikTok hatte Daniel um 14:36 gesagt, Rendite und sonstige Zahlen wegzulassen (keine Ausnahme). Ob die Kennzahlzeilen dort trotzdem kommen sollen, ist nicht entschieden; bis dahin gilt: auf Instagram/TikTok keine Kennzahlen.
-- OFFEN: Gesamtverlauf als Linie mit Nullmarke ("0 Einsätze") auf Instagram, Beispiel `bsp_verlauf.png`. Claudes Einschätzung: kein Beleg für Zulässigkeit, Risikoklasse wie Rendite/Einsatz-Gewinn (Hauptverdacht für Sperre 19.10.). Entscheidung Daniel offen.
+- ENTSCHIEDEN (Daniel, 02.11. 14:41): Auf Instagram/TikTok keine Kennzahlen; die drei Beispielkarten (Tagesauswertung, Wochenrückblick, Monatsbericht) werden so gepostet.
+- ENTSCHIEDEN (Daniel, 02.11. 14:41): Die Verlaufslinie (Gesamtverlauf) wird auf Instagram weggelassen.
