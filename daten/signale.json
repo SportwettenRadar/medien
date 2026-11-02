@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-01T08:36:55+01:00",
+ "stand": "2026-11-02T08:42:35+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -3563,6 +3563,171 @@
    "quote": 1.55,
    "ergebnis": "gewonnen",
    "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-01-001",
+   "datum": "2026-11-01",
+   "art": "einzel",
+   "heim": "İstanbulspor",
+   "gast": "Mardin 1969",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-01-002",
+   "datum": "2026-11-01",
+   "art": "einzel",
+   "heim": "IMT Novi Beograd",
+   "gast": "Cukaricki",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-01-003",
+   "datum": "2026-11-01",
+   "art": "einzel",
+   "heim": "Getafe",
+   "gast": "Sevilla",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-01-004",
+   "datum": "2026-11-01",
+   "art": "einzel",
+   "heim": "Progreso",
+   "gast": "Defensor Sporting",
+   "markt": "X2",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-01-005",
+   "datum": "2026-11-01",
+   "art": "einzel",
+   "heim": "Lazio",
+   "gast": "Cagliari",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-01-006",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Sivasspor",
+   "gast": "Boluspor",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-01-007",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Mlada Boleslav",
+   "gast": "Hradec Králové",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-01-008",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Varbergs BoIS FC",
+   "gast": "Ljungskile SK",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.61,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-01-009",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Iğdır FK",
+   "gast": "Antalyaspor",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.7,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-01-010",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Hellas Verona",
+   "gast": "Carrarese",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "3:0"
+  },
+  {
+   "id": "2026-11-01-011",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Bohemians 1905",
+   "gast": "Sparta Praha",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-01-012",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Lecce",
+   "gast": "Genoa",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-01-013",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Elche",
+   "gast": "Valencia",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-01-014",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Juventus",
+   "gast": "Napoli",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-01-015",
+   "datum": "2026-11-01",
+   "art": "live",
+   "heim": "Cerro Porteno",
+   "gast": "Olimpia",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.68,
+   "ergebnis": "verloren",
+   "endstand": "0:2"
   }
  ]
 }
