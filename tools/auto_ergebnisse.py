@@ -124,7 +124,7 @@ def js_block(o, ind="  "):
 
 # Eigene Fußnote für Monate mit mehreren Regelständen (sonst Standardtext "Einstellungen vom 11.10.2026").
 RR_TEXTE = {
-    "2026-10": "* 01.–10.10. rückgerechnet mit den Einstellungen vom 11.10.2026 · ab 11.10. tatsächlich verschickt · ab 25.10. nach den neuen Regeln (Variante B)",
+    "2026-10": "* Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet. · ab 11.10. tatsächlich verschickt · ab 25.10. nach den neuen Regeln (Variante B)",
 }
 
 
@@ -197,7 +197,7 @@ def grafik(b, titel, kicker, ziel, hp):
     G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
     f = "file://" + os.path.join(os.path.abspath(hp), "assets/fonts/")
     logo = "file://" + os.path.join(os.path.abspath(hp), "assets/logo-icon.png")
-    rr_text = RR_TEXTE.get(b.get("monat"), "* Rückrechnung mit den Einstellungen vom 11.10.2026")
+    rr_text = RR_TEXTE.get(b.get("monat"), "* Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet.")
     rr = f'<div class="rr">{rr_text}</div>' if b.get("rueckrechnung") else ""
     html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{{font-family:B;font-weight:800;src:url({f}baloo-2-latin-800-normal.woff2)}}
