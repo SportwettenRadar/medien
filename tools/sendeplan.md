@@ -19,7 +19,7 @@ Täglich zusätzlich: X-Tagesbilanz ca. 10:30 (Automatik), montags Wochenbilanz,
 **Mo 26.10.**
 - 12:00 · YouTube Video · Quote richtig lesen: Was eine Quote von 1,60 wirklich bedeutet
 - 18:00 · YouTube Short · Sportwetten Radar in 60 Sekunden: Live-Wetten-Analyse für Fußball per Telegram
-- 19:30 · YouTube Video · Trackrecord richtig lesen: verschickt oder zurückgerechnet? (bereits veröffentlicht, bleibt stehen; Video am 02.11. 16:00 erneut als "Testphase oder live: so liest du unseren Trackrecord" eingeplant)
+- 19:30 · YouTube Video · Trackrecord richtig lesen (altes Video, von Daniel am 02.11. gelöscht; neu am 02.11. 16:00 als "Testphase oder live: so liest du unseren Trackrecord")
 
 **Di 27.10.**
 - 12:00 · YouTube Video · Rendite statt Trefferquote: Warum 70 % Treffer trotzdem Verlust sein können
@@ -56,7 +56,7 @@ Täglich zusätzlich: X-Tagesbilanz ca. 10:30 (Automatik), montags Wochenbilanz,
 
 **Mo 02.11.**
 - 12:00 · YouTube Video · Budget festlegen, bevor du wettest: drei einfache Regeln
-- 18:00 · YouTube Short · Testphase oder live: so liest du unseren Trackrecord (umbenannt 02.11., früher "verschickt oder zurückgerechnet")
+- 18:00 · YouTube Short · Testphase oder live: so liest du unseren Trackrecord (umbenannt 02.11.)
 - 19:30 · YouTube Video · 5 Mythen über Sportwetten und was wirklich dahintersteckt
 
 **Di 03.11.**
