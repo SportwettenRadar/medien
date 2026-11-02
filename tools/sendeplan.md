@@ -19,7 +19,7 @@ Täglich zusätzlich: X-Tagesbilanz ca. 10:30 (Automatik), montags Wochenbilanz,
 **Mo 26.10.**
 - 12:00 · YouTube Video · Quote richtig lesen: Was eine Quote von 1,60 wirklich bedeutet
 - 18:00 · YouTube Short · Sportwetten Radar in 60 Sekunden: Live-Wetten-Analyse für Fußball per Telegram
-- 19:30 · YouTube Video · Trackrecord richtig lesen: verschickt oder zurückgerechnet?
+- 19:30 · YouTube Video · Trackrecord richtig lesen: verschickt oder zurückgerechnet? (bereits veröffentlicht, bleibt stehen; Video am 02.11. 16:00 erneut als "Testphase oder live: so liest du unseren Trackrecord" eingeplant)
 
 **Di 27.10.**
 - 12:00 · YouTube Video · Rendite statt Trefferquote: Warum 70 % Treffer trotzdem Verlust sein können
@@ -56,7 +56,7 @@ Täglich zusätzlich: X-Tagesbilanz ca. 10:30 (Automatik), montags Wochenbilanz,
 
 **Mo 02.11.**
 - 12:00 · YouTube Video · Budget festlegen, bevor du wettest: drei einfache Regeln
-- 18:00 · YouTube Short · Trackrecord richtig lesen: verschickt oder zurückgerechnet?
+- 18:00 · YouTube Short · Testphase oder live: so liest du unseren Trackrecord (umbenannt 02.11., früher "verschickt oder zurückgerechnet")
 - 19:30 · YouTube Video · 5 Mythen über Sportwetten und was wirklich dahintersteckt
 
 **Di 03.11.**
@@ -160,7 +160,7 @@ Täglich zusätzlich: X-Tagesbilanz ca. 10:30 (Automatik), montags Wochenbilanz,
 - Mo 26.10. 19:00 · Wir zeigen jede Wette. Auch die verlorenen.
 - Mi 28.10. 19:00 · Ein Tippgeber, der seine Verluste zeigt?
 - Fr 30.10. 19:00 · Luxusauto im Profil? Finger weg.
-- Mo 02.11. 19:00 · Vorsicht bei Trackrecords, die nur gewinnen.
+- Mo 02.11. 19:00 · Vorsicht bei Trackrecords, die nur gewinnen. (Text 02.11. angepasst: "Testphase (bis 10.10.) und Livebetrieb" statt "Rückrechnung")
 - Mi 04.11. 19:00 · 70 % Treffer. Trotzdem Minus.
 - Fr 06.11. 19:00 · Ein Spieltag. Jede Wette öffentlich.
 - Mo 09.11. 19:00 · 2,5 Tore? Es gibt doch keine halben Tore.
