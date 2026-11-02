@@ -1,143 +1,14 @@
 {
  "version": 1,
- "stand": "2026-11-01T09:41:54+01:00",
+ "stand": "2026-11-02T08:10:12+01:00",
  "ligen": [
-  {
-   "liga": "Bundesliga",
-   "spieltag": 8,
-   "stand": {
-    "datum": "2026-11-01",
-    "spieltage": 8,
-    "spiele": 70
-   },
-   "kennzahlen": {
-    "heim_immer_getroffen": [
-     {
-      "team": "FC Augsburg",
-      "heimspiele": 5
-     }
-    ],
-    "tore_schnitt": {
-     "wert": 3.51,
-     "spiele": 70
-    },
-    "ueber_2_5_anteil": {
-     "wert": 0.7,
-     "spiele": 70
-    }
-   },
-   "spiele_heute": [
-    {
-     "heim": "Union Berlin",
-     "gast": "1. FC Köln",
-     "anstoss": "15:30"
-    },
-    {
-     "heim": "Eintracht Frankfurt",
-     "gast": "Hamburger SV",
-     "anstoss": "17:30"
-    }
-   ]
-  },
-  {
-   "liga": "2. Bundesliga",
-   "spieltag": 10,
-   "stand": {
-    "datum": "2026-11-01",
-    "spieltage": 10,
-    "spiele": 87
-   },
-   "kennzahlen": {
-    "heim_ungeschlagen": [
-     {
-      "team": "1. FC Heidenheim",
-      "heimspiele": 5,
-      "siege": 3,
-      "remis": 2,
-      "niederlagen": 0
-     },
-     {
-      "team": "Arminia Bielefeld",
-      "heimspiele": 5,
-      "siege": 3,
-      "remis": 2,
-      "niederlagen": 0
-     },
-     {
-      "team": "Holstein Kiel",
-      "heimspiele": 5,
-      "siege": 1,
-      "remis": 4,
-      "niederlagen": 0
-     },
-     {
-      "team": "VfL Wolfsburg",
-      "heimspiele": 5,
-      "siege": 3,
-      "remis": 2,
-      "niederlagen": 0
-     }
-    ],
-    "auswaerts_immer_getroffen": [
-     {
-      "team": "1. FC Heidenheim",
-      "auswaertsspiele": 5
-     }
-    ],
-    "heim_immer_getroffen": [
-     {
-      "team": "1. FC Magdeburg",
-      "heimspiele": 5
-     },
-     {
-      "team": "Arminia Bielefeld",
-      "heimspiele": 5
-     },
-     {
-      "team": "Energie Cottbus",
-      "heimspiele": 5
-     }
-    ],
-    "zu_null_serie": [
-     {
-      "team": "Hertha BSC",
-      "serie": 3
-     }
-    ],
-    "tore_schnitt": {
-     "wert": 3.01,
-     "spiele": 87
-    },
-    "ueber_2_5_anteil": {
-     "wert": 0.56,
-     "spiele": 87
-    }
-   },
-   "spiele_heute": [
-    {
-     "heim": "FC St. Pauli",
-     "gast": "1. FC Nürnberg",
-     "anstoss": "13:30"
-    },
-    {
-     "heim": "Hannover 96",
-     "gast": "Dynamo Dresden",
-     "anstoss": "13:30"
-    },
-    {
-     "heim": "SpVgg Greuther Fürth",
-     "gast": "Holstein Kiel",
-     "anstoss": "13:30"
-    }
-   ]
-  },
   {
    "liga": "Premier League",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-11-01",
+    "datum": "2026-11-02",
     "spieltage": 9,
-    "spiele": 88
+    "spiele": 89
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -157,24 +28,28 @@
     ],
     "zu_null_serie": [
      {
+      "team": "Arsenal",
+      "serie": 3
+     },
+     {
       "team": "Bournemouth",
       "serie": 3
      }
     ],
     "tore_schnitt": {
-     "wert": 2.74,
-     "spiele": 88
+     "wert": 2.72,
+     "spiele": 89
     },
     "ueber_2_5_anteil": {
-     "wert": 0.48,
-     "spiele": 88
+     "wert": 0.47,
+     "spiele": 89
     }
    },
    "spiele_heute": [
     {
-     "heim": "Liverpool",
-     "gast": "Arsenal",
-     "anstoss": "17:30"
+     "heim": "Newcastle",
+     "gast": "Everton",
+     "anstoss": "21:00"
     }
    ]
   },
@@ -182,31 +57,24 @@
    "liga": "La Liga",
    "spieltag": 11,
    "stand": {
-    "datum": "2026-11-01",
+    "datum": "2026-11-02",
     "spieltage": 11,
-    "spiele": 104
+    "spiele": 108
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
+     {
+      "team": "Getafe",
+      "heimspiele": 6,
+      "siege": 3,
+      "remis": 3,
+      "niederlagen": 0
+     },
      {
       "team": "Atletico Madrid",
       "heimspiele": 5,
       "siege": 4,
       "remis": 1,
-      "niederlagen": 0
-     },
-     {
-      "team": "Getafe",
-      "heimspiele": 5,
-      "siege": 2,
-      "remis": 3,
-      "niederlagen": 0
-     },
-     {
-      "team": "Racing Santander",
-      "heimspiele": 5,
-      "siege": 3,
-      "remis": 2,
       "niederlagen": 0
      },
      {
@@ -223,15 +91,15 @@
       "auswaertsspiele": 6
      },
      {
+      "team": "Sevilla",
+      "auswaertsspiele": 6
+     },
+     {
       "team": "Barcelona",
       "auswaertsspiele": 5
      },
      {
       "team": "Rayo Vallecano",
-      "auswaertsspiele": 5
-     },
-     {
-      "team": "Sevilla",
       "auswaertsspiele": 5
      }
     ],
@@ -241,19 +109,15 @@
       "heimspiele": 6
      },
      {
+      "team": "Getafe",
+      "heimspiele": 6
+     },
+     {
       "team": "Real Betis",
       "heimspiele": 6
      },
      {
       "team": "Atletico Madrid",
-      "heimspiele": 5
-     },
-     {
-      "team": "Getafe",
-      "heimspiele": 5
-     },
-     {
-      "team": "Racing Santander",
       "heimspiele": 5
      },
      {
@@ -269,40 +133,21 @@
      {
       "team": "Atletico Madrid",
       "serie": 3
-     },
-     {
-      "team": "Elche",
-      "serie": 3
      }
     ],
     "tore_schnitt": {
-     "wert": 3.02,
-     "spiele": 104
+     "wert": 3.01,
+     "spiele": 108
     },
     "ueber_2_5_anteil": {
      "wert": 0.57,
-     "spiele": 104
+     "spiele": 108
     }
    },
    "spiele_heute": [
     {
-     "heim": "Getafe",
-     "gast": "Sevilla",
-     "anstoss": "14:00"
-    },
-    {
-     "heim": "Racing Santander",
-     "gast": "Real Madrid",
-     "anstoss": "16:15"
-    },
-    {
-     "heim": "Elche",
-     "gast": "Valencia",
-     "anstoss": "18:30"
-    },
-    {
-     "heim": "Athletic Club",
-     "gast": "Real Sociedad",
+     "heim": "Deportivo La Coruna",
+     "gast": "Osasuna",
      "anstoss": "21:00"
     }
    ]
@@ -311,9 +156,9 @@
    "liga": "Serie A",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-11-01",
+    "datum": "2026-11-02",
     "spieltage": 10,
-    "spiele": 93
+    "spiele": 98
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -329,6 +174,13 @@
       "heimspiele": 5,
       "siege": 5,
       "remis": 0,
+      "niederlagen": 0
+     },
+     {
+      "team": "Lazio",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
       "niederlagen": 0
      }
     ],
@@ -366,41 +218,30 @@
      {
       "team": "Inter",
       "heimspiele": 5
+     },
+     {
+      "team": "Lazio",
+      "heimspiele": 5
      }
     ],
     "tore_schnitt": {
-     "wert": 3.2,
-     "spiele": 93
+     "wert": 3.15,
+     "spiele": 98
     },
     "ueber_2_5_anteil": {
-     "wert": 0.61,
-     "spiele": 93
+     "wert": 0.6,
+     "spiele": 98
     }
    },
    "spiele_heute": [
     {
-     "heim": "Como",
-     "gast": "Venezia",
-     "anstoss": "12:30"
+     "heim": "Sassuolo",
+     "gast": "Fiorentina",
+     "anstoss": "18:30"
     },
     {
-     "heim": "Frosinone",
-     "gast": "Torino",
-     "anstoss": "15:00"
-    },
-    {
-     "heim": "Lazio",
-     "gast": "Cagliari",
-     "anstoss": "15:00"
-    },
-    {
-     "heim": "Lecce",
-     "gast": "Genoa",
-     "anstoss": "18:00"
-    },
-    {
-     "heim": "Juventus",
-     "gast": "Napoli",
+     "heim": "Atalanta",
+     "gast": "Parma",
      "anstoss": "20:45"
     }
    ]
@@ -409,9 +250,9 @@
    "liga": "Ligue 1",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-11-01",
+    "datum": "2026-11-02",
     "spieltage": 9,
-    "spiele": 76
+    "spiele": 80
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -423,10 +264,24 @@
       "niederlagen": 0
      },
      {
+      "team": "Lyon",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     },
+     {
       "team": "Nice",
       "heimspiele": 5,
       "siege": 3,
       "remis": 2,
+      "niederlagen": 0
+     },
+     {
+      "team": "Paris FC",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
       "niederlagen": 0
      },
      {
@@ -441,11 +296,23 @@
      {
       "team": "Paris Saint Germain",
       "auswaertsspiele": 6
+     },
+     {
+      "team": "Auxerre",
+      "auswaertsspiele": 5
      }
     ],
     "heim_immer_getroffen": [
      {
       "team": "Lille",
+      "heimspiele": 5
+     },
+     {
+      "team": "Lyon",
+      "heimspiele": 5
+     },
+     {
+      "team": "Marseille",
       "heimspiele": 5
      },
      {
@@ -460,33 +327,18 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.03,
-     "spiele": 76
+     "wert": 3.05,
+     "spiele": 80
     },
     "ueber_2_5_anteil": {
-     "wert": 0.61,
-     "spiele": 76
+     "wert": 0.6,
+     "spiele": 80
     }
    },
    "spiele_heute": [
     {
-     "heim": "Strasbourg",
-     "gast": "Auxerre",
-     "anstoss": "15:00"
-    },
-    {
-     "heim": "Lyon",
-     "gast": "Angers",
-     "anstoss": "17:15"
-    },
-    {
-     "heim": "Paris FC",
-     "gast": "Monaco",
-     "anstoss": "17:15"
-    },
-    {
-     "heim": "Marseille",
-     "gast": "Toulouse",
+     "heim": "Lorient",
+     "gast": "Stade Brestois 29",
      "anstoss": "20:45"
     }
    ]
@@ -495,7 +347,7 @@
    "liga": "Champions League",
    "spieltag": 3,
    "stand": {
-    "datum": "2026-11-01",
+    "datum": "2026-11-02",
     "spieltage": 3,
     "spiele": 144
    },
@@ -526,6 +378,72 @@
     "ueber_2_5_anteil": {
      "wert": 0.6,
      "spiele": 144
+    }
+   },
+   "spiele_heute": []
+  },
+  {
+   "liga": "Europa League",
+   "spieltag": 3,
+   "stand": {
+    "datum": "2026-11-02",
+    "spieltage": 3,
+    "spiele": 134
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "Ferencvarosi TC",
+      "heimspiele": 6,
+      "siege": 5,
+      "remis": 1,
+      "niederlagen": 0
+     },
+     {
+      "team": "Beşiktaş",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     }
+    ],
+    "auswaerts_immer_getroffen": [
+     {
+      "team": "Benfica",
+      "auswaertsspiele": 5
+     },
+     {
+      "team": "Ferencvarosi TC",
+      "auswaertsspiele": 5
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "Ferencvarosi TC",
+      "heimspiele": 6
+     },
+     {
+      "team": "Beşiktaş",
+      "heimspiele": 5
+     }
+    ],
+    "zu_null_serie": [
+     {
+      "team": "Qarabag",
+      "serie": 4
+     },
+     {
+      "team": "Bayer Leverkusen",
+      "serie": 3
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 2.86,
+     "spiele": 134
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.6,
+     "spiele": 134
     }
    },
    "spiele_heute": []
