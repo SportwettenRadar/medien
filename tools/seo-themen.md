@@ -6,7 +6,7 @@ Reihenfolge laut Auftrag. Erledigt = auf der Homepage veröffentlicht.
 |---|---|---|---|
 | 1 | Was bedeutet Quote 1,70? | quote-1-70-bedeutung.html | veröffentlicht 27.10.2026, Indexierung bei Daniel offen |
 | 2 | Was ist Über 1,5 Tore? | ueber-1-5-tore.html | veröffentlicht 02.11.2026, Indexierung beantragt 02.11., Video 11.11. nach Veröffentlichung einbetten |
-| 3 | Lohnen sich Live-Wetten? | | offen |
+| 3 | Lohnen sich Live-Wetten? | lohnen-sich-live-wetten.html | veröffentlicht 03.11.2026, Indexierung bei Daniel offen, Video 18.11. nach Veröffentlichung einbetten |
 | 4 | Wie viele Tore fallen in der 2. Halbzeit? | | offen |
 | 5 | Einzelwette oder Kombiwette? | | offen |
 | 6 | Erwartungswert bei Sportwetten | | offen |

@@ -581,6 +581,72 @@ WISSEN = [
   Das Beispiel hier ist ein Rechenbeispiel, keine Empfehlung. Wetten kann Geld kosten. Hilfe bei Spielproblemen:
   <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
 """, "2026-11-02"),
+    ("lohnen-sich-live-wetten.html",
+     "Lohnen sich Live-Wetten? Chancen und Risiken ehrlich erklärt — Sportwetten Radar",
+     "Lohnen sich Live-Wetten wirklich? Was für Live-Wetten spricht, was dagegen, warum die Marge und der Zufall oft stärker sind als die Trefferquote, und worauf du achten solltest.",
+     "Wissen", "Lohnen sich Live-Wetten?",
+     """
+  <p>Die ehrliche Antwort vorweg: Für die meisten Wettenden lohnen sich Live-Wetten nicht. Das liegt nicht an
+  „Live“, sondern an der Marge des Anbieters, an der Ungewissheit und an der Disziplin, die es braucht.
+  Hier erklären wir, was für Live-Wetten spricht, was dagegen, und woran du eine ehrliche Bilanz erkennst.</p>
+
+  <h2><span class="num">01</span>Was für Live-Wetten spricht</h2>
+  <ul>
+    <li>Du siehst das Spiel, bevor du wettest: Tempo, Chancen, Druck. Vor dem Anpfiff gibt es nur Erwartungen.</li>
+    <li>Quoten reagieren auf Stand und Spielzeit, nicht immer auf alles, was auf dem Platz passiert. Daten über den
+    Spielverlauf können deshalb eine Abweichung zeigen (mehr dazu unter
+    <a href="live-wetten-analyse.html">Live-Wetten und Spieldaten</a>).</li>
+    <li>Wetten wie <a href="ueber-1-5-tore.html">Über 1,5 Tore</a> lassen sich in der Restzeit genauer einschätzen
+    als vor dem Spiel.</li>
+  </ul>
+
+  <h2><span class="num">02</span>Was dagegen spricht</h2>
+  <ul>
+    <li><strong>Marge:</strong> In jeder Quote steckt ein Aufschlag. Zwei Quoten von 1,90 ergeben zusammen 105,3 %.
+    Diesen Aufschlag musst du auf Dauer erst einmal ausgleichen, bevor etwas übrig bleibt.</li>
+    <li><strong>Tempo:</strong> Live fällt die Entscheidung in Sekunden. Das begünstigt Bauchentscheidungen und
+    Nachsetzen nach Verlusten.</li>
+    <li><strong>Verzögerung und Sperren:</strong> Nach einem Tor, einer Roten Karte oder einem Videobeweis setzen
+    Anbieter den Markt für einige Minuten aus. Deine Quote kann sich zwischen Entscheidung und Abgabe verändern.</li>
+    <li><strong>Viele Wetten in kurzer Zeit:</strong> Je mehr du wettest, desto mehr Marge zahlst du, und desto
+    größer wird der Einsatz insgesamt.</li>
+  </ul>
+
+  <h2><span class="num">03</span>Rechenbeispiel: Wie knapp es ist</h2>
+  <p>Angenommen, du spielst 100 Wetten mit gleichem Einsatz zur Quote 1,80. Dann brauchst du auf Dauer eine
+  Trefferquote von mehr als 55,6 % (1 ÷ 1,80), um nicht zu verlieren:</p>
+  <ul>
+    <li>55 Treffer: 55 × 0,80 = +44 Einsätze, 45 Fehlschläge = −45 Einsätze, Ergebnis −1 Einsatz, also −1 %.</li>
+    <li>56 Treffer: 56 × 0,80 = +44,8 Einsätze, 44 Fehlschläge = −44 Einsätze, Ergebnis +0,8 Einsätze, also +0,8 %.</li>
+  </ul>
+  <p>Ein einziger Treffer entscheidet hier zwischen Minus und Plus. Wie das Verhältnis von Quote und Trefferquote
+  funktioniert, steht unter <a href="rendite-erklaert.html">Rendite erklärt</a> und
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a></p>
+
+  <h2><span class="num">04</span>Der Zufall ist lauter als du denkst</h2>
+  <p>Bei 100 Wetten zur Quote 1,80 und einer „wahren“ Trefferquote von 55,6 % schwankt die Zahl der Treffer
+  typischerweise um etwa ±5. Jeder Treffer mehr oder weniger verschiebt das Ergebnis um 1,8 Einsätze. Das
+  ergibt allein durch Zufall eine Schwankung von rund ±9 Prozentpunkten bei der Rendite. Ein guter oder
+  schlechter Monat sagt deshalb wenig aus. Erst eine lange, vollständige Bilanz zeigt, ob eine Methode trägt
+  (<a href="verlustserien.html">Verlustserien</a> gehören dazu).</p>
+
+  <h2><span class="num">05</span>Woran du eine ehrliche Bilanz erkennst</h2>
+  <ul>
+    <li>Alle Wetten sind enthalten, auch die verlorenen. Nichts wird nachträglich gelöscht.</li>
+    <li>Die Rendite wird zusammen mit der Trefferquote gezeigt, nicht nur die Trefferquote.</li>
+    <li>Der Zeitraum ist klar, und es wird gesagt, welche Zahlen später mit heutigen Regeln berechnet wurden.</li>
+    <li>Es gibt keine Gewinnversprechen. Mehr dazu unter
+    <a href="seriose-tippgeber-erkennen.html">Seriöse Tippgeber erkennen</a>.</li>
+  </ul>
+
+  <h2><span class="num">06</span>Unser Ansatz</h2>
+  <p>Sportwetten Radar wertet laufende Spiele aus und zeigt, welche Live-Wetten dabei auffallen. Wir vermitteln
+  keine Wetten und nennen keine Einsätze. Wie es bisher lief, steht im
+  <a href="index.html#trackrecord">Trackrecord</a> und in den <a href="monatsberichte.html">Monatsberichten</a>,
+  mit den schwachen Phasen. Das ist kein Versprechen für die Zukunft. Wetten kann Geld kosten. Setze nie mehr, als du
+  bereit bist zu verlieren. Hilfe bei Spielproblemen:
+  <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
+""", "2026-11-03"),
 ]
 
 
@@ -590,7 +656,7 @@ WISSEN_KAT = [
     ("quoten", "Quoten & Rendite", "Wie du eine Quote liest und wie Rendite und Trefferquote zusammenhängen.",
      ["quote-1-70-bedeutung.html", "rendite-erklaert.html"]),
     ("live", "Live-Wetten verstehen", "Wie Live-Wetten und Über/Unter funktionieren und was Spieldaten verraten.",
-     ["live-wetten-ueber-unter.html", "ueber-1-5-tore.html", "live-wetten-analyse.html"]),
+     ["live-wetten-ueber-unter.html", "ueber-1-5-tore.html", "lohnen-sich-live-wetten.html", "live-wetten-analyse.html"]),
     ("risiko", "Risiko & Verantwortung", "Verlustserien, Einsatz und der verantwortungsvolle Umgang mit Sportwetten.",
      ["verlustserien.html"]),
     ("serioes", "Seriosität & Telegram", "Woran du seriöse Angebote erkennst und wie Wett-Analysen auf Telegram funktionieren.",
@@ -612,7 +678,7 @@ def wissen_hub():
     return page("wissen.html", t, d, "Wissen", "Wissen", "".join(teile), article_ld(t, d, "wissen.html", WISSEN_DATUM_HUB)), WISSEN_DATUM_HUB
 
 
-WISSEN_DATUM_HUB = "2026-11-02"
+WISSEN_DATUM_HUB = "2026-11-03"
 
 
 def wissen_pages(today):
