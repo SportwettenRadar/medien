@@ -9,7 +9,7 @@
   {"typ": "liste", "dauer": 12, "eyebrow": "Risiko", "text": "Was es gekostet hat",
    "punkte": ["Längste Verlustserie: <b>5 in Folge</b>.", "Größter Rückgang: <b>−12,3 Einsätze</b>.", "Bester Tag <b>+3,1</b>, schlechtester Tag <b>−7,0 Einsätze</b>."]},
   {"typ": "text", "dauer": 8, "eyebrow": "Einzelspiele zum Kombinieren", "text": "Trefferquote 78,7 %", "sub": "111 von 141 Tipps waren richtig."},
-  {"typ": "text", "dauer": 10, "eyebrow": "Wichtiger Hinweis", "text": "Nicht alles war\nschon im Versand.", "sub": "Verschickt seit dem 11.10. Der Zeitraum davor ist rückgerechnet und so gekennzeichnet. Ab 25.10. gelten die neuen Regeln."},
+  {"typ": "text", "dauer": 10, "eyebrow": "Wichtiger Hinweis", "text": "Nicht alles war\nschon im Versand.", "sub": "Verschickt seit dem 11.10. Der Zeitraum davor war Testphase, mit den heutigen Regeln berechnet. Ab 25.10. gelten die neuen Regeln."},
   {"typ": "ende", "dauer": 8}
  ]
 }
