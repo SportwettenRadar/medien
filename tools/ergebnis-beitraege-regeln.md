@@ -22,3 +22,15 @@ Bisher gibt es auf Instagram und TikTok keine Ergebnis-Beiträge. Die Regeln gel
 - Instagram Sa 21.11. 12:30 "Was ist eine Rückrechnung?" ersetzt durch Karussell "Regression zur Mitte" (Daniel ok, 02.11. 14:36).
 - Metricool 03.–10.11. geprüft, kein weiterer Treffer. Ab 11.11. nur lokale Pläne abgeglichen (Abruf zu groß).
 - Offen: Erklärvideo `15_Trackrecord_lesen` zeigt "Rückrechnung" noch auf einer Folie (nur per Neurendern änderbar); Homepage-Generator (`seiten_generator.py`) nennt die Fußnote "* Rückrechnung mit den aktuellen Einstellungen". Änderung nur auf Anweisung.
+
+## Kennzahl-Reihenfolge (Entscheidung Daniel, 02.11. 14:39) und offene Klärung
+Wenn Kennzahlen gezeigt werden, jede in eigener Zeile, in dieser Reihenfolge (Beispielwerte Stand 31.10., "seit Start" ab 01.09.; aktuelle Werte aus `ergebnisse.json`):
+```
+351 Wetten
+227 Treffer (64,7 %)
++8,2 Einsätze
+Rendite +2,3 %
+```
+- Gilt für Telegram, Homepage, YouTube, X und jede Stelle, an der Kennzahlen erscheinen. Sie ersetzt die frühere Reihenfolge (Einsätze zuerst).
+- OFFEN: Für Instagram/TikTok hatte Daniel um 14:36 gesagt, Rendite und sonstige Zahlen wegzulassen (keine Ausnahme). Ob die Kennzahlzeilen dort trotzdem kommen sollen, ist nicht entschieden; bis dahin gilt: auf Instagram/TikTok keine Kennzahlen.
+- OFFEN: Gesamtverlauf als Linie mit Nullmarke ("0 Einsätze") auf Instagram, Beispiel `bsp_verlauf.png`. Claudes Einschätzung: kein Beleg für Zulässigkeit, Risikoklasse wie Rendite/Einsatz-Gewinn (Hauptverdacht für Sperre 19.10.). Entscheidung Daniel offen.
