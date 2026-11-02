@@ -160,6 +160,18 @@ DECKS = {
         ("panel", "Hilfe",
          "Kostenlos und anonym: check-dein-spiel.de und 0800 1 37 27 00 (BZgA). Quellen: Verbraucherzentrale (EVZ), Regierungspräsidium Darmstadt."),
     ]),
+    "regression": deck("regression", "Statistik, genauer", "Regression zur Mitte: Warum ein Hoch selten bleibt", [
+        ("panel", "Das Beispiel",
+         "Rechenbeispiel: Ein Stürmer trifft in 10 Spielen 8-mal. Nach der Qualität seiner Chancen waren nur 4,5 Tore zu erwarten."),
+        ("list", "Wie ungewöhnlich ist das?", [
+            "Erwartet: <b>0,45</b> Tore pro Spiel, getroffen: <b>0,80</b>.",
+            "Chance auf mindestens 8 Tore bei im Schnitt 4,5 erwarteten: <b>8,7 %</b> (Poisson-Modell).",
+            "Selten, aber über viele Spieler und Spiele kommt es ständig vor."]),
+        ("panel", "Was daraus folgt",
+         "Bleibt die Chancenqualität gleich, liegt die Erwartung für die nächsten 10 Spiele bei <b>4,5 Toren</b>, nicht bei 8. Ein Teil des Hochs war Glück, und Glück wiederholt sich nicht. Das ist Regression zur Mitte."),
+        ("panel", "Grenze des Modells",
+         "Ändern sich Rolle, Mitspieler oder Gegner, ändert sich auch die Erwartung. Das Beispiel zeigt die Logik, nicht die Zukunft eines Spielers.", ABS),
+    ]),
 }
 
 
