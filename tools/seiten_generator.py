@@ -529,6 +529,58 @@ WISSEN = [
   })();
   </script>
 """, "2026-10-27"),
+    ("ueber-1-5-tore.html",
+     "Was ist Über 1,5 Tore? Wette, Quote und Live-Chancen erklärt — Sportwetten Radar",
+     "Was bedeutet Über 1,5 Tore, wie wahrscheinlich ist es vor dem Anpfiff und wie ändern sich die Chancen live mit Spielstand und Minute? Mit Rechenbeispiel und Tabelle.",
+     "Wissen", "Was ist Über 1,5 Tore?",
+     """
+  <p>„Über 1,5 Tore“ gehört zu den einfachsten Wetten im Fußball. Die Quote ist meist niedrig, und genau das
+  wird oft unterschätzt. Hier erklären wir, was die Wette bedeutet, welche Chance dahintersteckt und warum
+  sich der Preis live mit jeder Minute ändert.</p>
+
+  <h2><span class="num">01</span>Was bedeutet Über 1,5 Tore?</h2>
+  <p>Du gewinnst, wenn in der regulären Spielzeit mindestens zwei Tore fallen, egal bei welchem Team. Bei
+  0:0 oder 1:0 verlierst du, bei 1:1, 2:0 oder 3:2 gewinnst du. „Unter 1,5 Tore“ ist das Gegenstück: höchstens
+  ein Tor. Die halbe Zahl sorgt dafür, dass es kein Unentschieden gibt. Die Grundlagen zu Über/Unter stehen unter
+  <a href="live-wetten-ueber-unter.html">Live-Wetten auf Über/Unter Tore</a>.</p>
+
+  <h2><span class="num">02</span>Wie wahrscheinlich ist das vor dem Anpfiff?</h2>
+  <p>Ein einfaches Rechenmodell dafür ist die Poisson-Verteilung. Angenommen, in einem Spiel fallen im Schnitt
+  2,7 Tore pro 90 Minuten. Dann liegt die Chance auf mindestens zwei Tore bei rund 75,1 %. Eine Quote ohne
+  Aufschlag wäre damit etwa 1,33 (1 ÷ 0,751). Wie du eine Quote in eine Wahrscheinlichkeit übersetzt, steht unter
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a></p>
+
+  <h2><span class="num">03</span>Wie ändert sich die Chance live?</h2>
+  <p>Mit jeder Minute ohne Tor bleibt weniger Zeit. Dasselbe Rechenbeispiel (2,7 Tore pro 90 Minuten) für die
+  Restzeit, die „faire“ Quote ist wieder 1 ÷ Chance:</p>
+  <table class="kv">
+    <tr><th>Stand und Minute</th><td>Chance auf Über 1,5</td><td>faire Quote</td></tr>
+    <tr><th>0:0, Minute 30</th><td>53,7 %</td><td>1,86</td></tr>
+    <tr><th>0:0, Minute 60</th><td>22,8 %</td><td>4,39</td></tr>
+    <tr><th>0:0, Minute 80</th><td>3,7 %</td><td>27,0</td></tr>
+    <tr><th>1:0, Minute 30</th><td>83,5 %</td><td>1,20</td></tr>
+    <tr><th>1:0, Minute 60</th><td>59,3 %</td><td>1,69</td></tr>
+    <tr><th>1:0, Minute 80</th><td>25,9 %</td><td>3,86</td></tr>
+  </table>
+  <p class="wissen-note">Rechenbeispiel mit konstanter Torrate. Echte Quoten enthalten zusätzlich die Marge des Anbieters.</p>
+  <p>Beim Stand 1:0 reicht ein weiteres Tor, bei 0:0 braucht es zwei. Deshalb liegen die Chancen so weit auseinander.
+  Eine Wette auf Über 1,5 bei 0:0 in Minute 60 ist nicht „fast dieselbe“ wie vor dem Anpfiff, sie ist etwas ganz anderes.</p>
+
+  <h2><span class="num">04</span>Was das Modell nicht kann</h2>
+  <ul>
+    <li>Die Torrate ist in Wirklichkeit nicht konstant: Nach Rückständen, Karten oder Wechseln ändert sich das Spiel.</li>
+    <li>Jedes Spiel hat eine eigene erwartbare Torzahl. Die 2,7 sind nur ein Beispiel.</li>
+    <li>Niedrige Quoten brauchen hohe Trefferquoten: Bei Quote 1,33 musst du auf Dauer mehr als 75 % treffen, um nicht zu verlieren.
+    Mehr dazu unter <a href="rendite-erklaert.html">Rendite erklärt</a>.</li>
+    <li>Auch eine wahrscheinliche Wette geht manchmal verloren, oft mehrere hintereinander (<a href="verlustserien.html">Verlustserien</a>).</li>
+  </ul>
+
+  <h2><span class="num">05</span>Was Sportwetten Radar daraus macht</h2>
+  <p>Wir vergleichen den Spielverlauf mit der Einschätzung des Marktes und zeigen, welche Live-Wetten dabei auffallen.
+  Alle Ergebnisse stehen im <a href="index.html#trackrecord">Trackrecord</a>, die schwachen eingeschlossen.
+  Das Beispiel hier ist ein Rechenbeispiel, keine Empfehlung. Wetten kann Geld kosten. Hilfe bei Spielproblemen:
+  <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
+""", "2026-11-02"),
 ]
 
 
@@ -538,7 +590,7 @@ WISSEN_KAT = [
     ("quoten", "Quoten & Rendite", "Wie du eine Quote liest und wie Rendite und Trefferquote zusammenhängen.",
      ["quote-1-70-bedeutung.html", "rendite-erklaert.html"]),
     ("live", "Live-Wetten verstehen", "Wie Live-Wetten und Über/Unter funktionieren und was Spieldaten verraten.",
-     ["live-wetten-ueber-unter.html", "live-wetten-analyse.html"]),
+     ["live-wetten-ueber-unter.html", "ueber-1-5-tore.html", "live-wetten-analyse.html"]),
     ("risiko", "Risiko & Verantwortung", "Verlustserien, Einsatz und der verantwortungsvolle Umgang mit Sportwetten.",
      ["verlustserien.html"]),
     ("serioes", "Seriosität & Telegram", "Woran du seriöse Angebote erkennst und wie Wett-Analysen auf Telegram funktionieren.",
@@ -560,7 +612,7 @@ def wissen_hub():
     return page("wissen.html", t, d, "Wissen", "Wissen", "".join(teile), article_ld(t, d, "wissen.html", WISSEN_DATUM_HUB)), WISSEN_DATUM_HUB
 
 
-WISSEN_DATUM_HUB = "2026-10-27"
+WISSEN_DATUM_HUB = "2026-11-02"
 
 
 def wissen_pages(today):
