@@ -147,6 +147,9 @@ def fussnote(data, von=None, bis=None):
     tl = [t["datum"] for t in data.get("tage", []) if t.get("rueckrechnung") and (von is None or von <= t["datum"] <= bis)]
     if not tl:
         return None
+    im_zeitraum = [t for t in data.get("tage", []) if von is None or von <= t["datum"] <= bis]
+    if len(tl) == len(im_zeitraum):  # komplett Testphase (z. B. September): Zeitraum der ganzen Testphase nennen
+        tl = [t["datum"] for t in data.get("tage", []) if t.get("rueckrechnung")]
     a, b = min(tl), max(tl)
     f = lambda x: f"{x[8:10]}.{x[5:7]}."
     return f"* {f(a)}–{f(b)}: Testphase, mit den heutigen Regeln berechnet."
