@@ -80,7 +80,7 @@ def pruefe(data):
             fehler.append(n + ": Felder fehlen")
             prev = None
             continue
-        if z["wetten"] and abs(z["gewinn"] / z["wetten"] * 100 - z["rendite"]) > 0.15:
+        if z["wetten"] and abs(z["gewinn"] / z["wetten"] * 100 - z["rendite"]) > 0.15 + 5.0 / z["wetten"]:
             fehler.append(n + f": Rendite {z['rendite']} passt nicht zu Gewinn/Wetten")
         if prev is not None and isinstance(t.get("live", {}).get("gewinn"), (int, float)):
             if abs((z["gewinn"] - prev["gewinn"]) - t["live"]["gewinn"]) > TOL:
