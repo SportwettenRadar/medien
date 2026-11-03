@@ -1,0 +1,60 @@
+{
+ "titel": "Spielerfehlschluss: Warum nach vier Verlusten nichts „fällig“ ist",
+ "thumb": {
+  "eyebrow": "Denkfehler erkennen",
+  "text": "Nach der Serie ist\nnichts [[fällig]]"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Vier Verluste.\n[[Jetzt muss es klappen?]]"
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Denkfehler erkennen",
+   "text": "Nach der Serie ist\nnichts [[fällig]]"
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Der Fehlschluss",
+   "text": "Das Spiel hat\nkein Gedächtnis.",
+   "sub": "Nach vier Verlusten in Folge ist die nächste Wette nicht „dran“. Ihre Chance hängt nur von Quote und Spielsituation ab, nicht von der Serie davor."
+  },
+  {
+   "typ": "liste",
+   "dauer": 17,
+   "eyebrow": "Die Rechnung",
+   "text": "Serien sind normal",
+   "punkte": [
+    "Bei 60 % Trefferquote verliert eine Wette mit 40 %.",
+    "Vier Verluste in Folge: 0,4 hoch 4, also <b>2,6 %</b> für genau diese vier Wetten.",
+    "Über 100 Wetten gibt es aber mit rund <b>80 %</b> mindestens eine solche Serie."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 12,
+   "eyebrow": "Gesetz der großen Zahlen",
+   "text": "Es gleicht nichts aus.\nEs verdünnt.",
+   "sub": "Ein Rückstand wird nicht aufgeholt, sondern mit mehr Wetten relativ kleiner. Auf einen Rückstand folgt kein Gegenstück, nur der normale Durchschnitt."
+  },
+  {
+   "typ": "liste",
+   "dauer": 14,
+   "eyebrow": "Was daraus folgt",
+   "text": "Entscheidend ist die Regel",
+   "punkte": [
+    "Den Einsatz nach Verlusten nicht erhöhen.",
+    "Jede Wette einzeln nach festen Kriterien bewerten.",
+    "Die Serie sagt nichts über die nächste Wette. Rendite über viele Wetten zählt."
+   ]
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}
