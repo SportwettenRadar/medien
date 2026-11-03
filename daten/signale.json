@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-02T08:42:35+01:00",
+ "stand": "2026-11-03T08:51:15+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -3728,6 +3728,105 @@
    "quote": 1.68,
    "ergebnis": "verloren",
    "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-02-001",
+   "datum": "2026-11-02",
+   "art": "einzel",
+   "heim": "FC Voluntari",
+   "gast": "Farul Constanta",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-02-002",
+   "datum": "2026-11-02",
+   "art": "einzel",
+   "heim": "Zaglebie Lubin",
+   "gast": "Korona Kielce",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-02-003",
+   "datum": "2026-11-02",
+   "art": "einzel",
+   "heim": "Valladolid",
+   "gast": "Leganes",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "4:3"
+  },
+  {
+   "id": "2026-11-02-004",
+   "datum": "2026-11-02",
+   "art": "einzel",
+   "heim": "Mjallby AIF",
+   "gast": "Kalmar FF",
+   "markt": "Heim trifft",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-02-005",
+   "datum": "2026-11-02",
+   "art": "einzel",
+   "heim": "Lorient",
+   "gast": "Stade Brestois 29",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-02-006",
+   "datum": "2026-11-02",
+   "art": "live",
+   "heim": "Zaglebie Lubin",
+   "gast": "Korona Kielce",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-02-007",
+   "datum": "2026-11-02",
+   "art": "live",
+   "heim": "Osters IF",
+   "gast": "Helsingborg",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "3:0"
+  },
+  {
+   "id": "2026-11-02-008",
+   "datum": "2026-11-02",
+   "art": "live",
+   "heim": "Landskrona BoIS",
+   "gast": "Orebro SK",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-02-009",
+   "datum": "2026-11-02",
+   "art": "live",
+   "heim": "Reims",
+   "gast": "Sochaux",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "2:0"
   }
  ]
 }
