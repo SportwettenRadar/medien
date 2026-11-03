@@ -101,6 +101,32 @@ def skal(seiten, ns):
     return res
 
 
+EX3 = """
+body>div:not(.story) .tb{left:56px;right:56px}
+body>div:not(.story) .th{font-size:22px;padding:0 24px 8px}
+body>div:not(.story) .th span:nth-child(1){width:56px}body>div:not(.story) .th span:nth-child(3){width:166px}body>div:not(.story) .th span:nth-child(4){width:120px}body>div:not(.story) .th span:nth-child(5){width:84px}
+body>div:not(.story) .tr,body>div:not(.story) .big .tr{margin-top:8px;border-radius:22px;padding:0 24px}
+body>div:not(.story) .tr em,body>div:not(.story) .big .tr em{width:56px}
+body>div:not(.story) .tr div{white-space:normal;line-height:1.1;overflow:hidden}
+body>div:not(.story) .tr span,body>div:not(.story) .big .tr span{width:166px}
+body>div:not(.story) .tr b,body>div:not(.story) .big .tr b{width:120px}
+body>div:not(.story) .tr u,body>div:not(.story) .big .tr u{margin-left:20px}
+"""
+
+
+def skal_k(seiten, ns):
+    res = []
+    for h, n in zip(seiten, ns):
+        hh = min(108, 700 / n - 8); f = hh / 90; g = min(f, 1.15)
+        st = (f"<style>body>div:not(.story) .tr,body>div:not(.story) .big .tr{{height:{hh:.0f}px;font-size:{31*f:.0f}px}}"
+              f"body>div:not(.story) .tr span,body>div:not(.story) .big .tr span{{font-size:{27*g:.0f}px}}"
+              f"body>div:not(.story) .tr b,body>div:not(.story) .big .tr b{{font-size:{33*g:.0f}px}}"
+              f"body>div:not(.story) .tr em,body>div:not(.story) .big .tr em{{font-size:{26*g:.0f}px}}"
+              f"body>div:not(.story) .tr u,body>div:not(.story) .big .tr u{{width:{54*g:.0f}px;height:{54*g:.0f}px;font-size:{34*g:.0f}px}}</style>")
+        res.append(h.replace('<div class="">', '<div class="">' + st, 1))
+    return res
+
+
 def page(eb, inner, story=False):
     return (f'<div class="{"story" if story else ""}">' + s.RINGS + '<div class="top"><img src="LOGO"><span>Sportwetten Radar</span></div>'
             f'<div class="eb">{eb}</div>{inner}<div class="foot"><span>18+ · Keine Gewinngarantie</span><span>@sportwetten_radar</span></div></div>')
@@ -162,10 +188,10 @@ def reel(live, einzel, titel_tag, out):
     E.HOCH = True; E.W, E.H = 1080, 1920
     orig = E.folie_html
     E.CSS_HOCH += """
-.rt{display:grid;gap:12px;margin-top:30px}.rr{display:flex;align-items:center;gap:18px;background:#0f1d2c;border:2px solid #1b2c40;border-radius:22px;padding:14px 24px;min-height:96px}
-.rr em{font-style:normal;font-family:M;font-size:26px;color:#6f8399;width:52px;flex:none}.rr div{flex:1;font-size:32px;line-height:1.15;color:#eef3f8}
-.rr small{display:block;font-family:M;font-size:23px;color:#8aa0b5;margin-top:3px}.rr b{font-family:M;font-weight:500;font-size:30px;color:#eef3f8}
-.rr u{text-decoration:none;flex:none;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:B;font-weight:800;font-size:34px;margin-left:10px}
+.rt{display:grid;gap:12px;margin-top:30px}.rr{display:flex;align-items:center;gap:20px;background:#0f1d2c;border:2px solid #1b2c40;border-radius:24px;padding:14px 26px;min-height:120px}
+.rr em{font-style:normal;font-family:M;font-size:26px;color:#6f8399;width:52px;flex:none}.rr div{flex:1;font-size:37px;line-height:1.15;color:#eef3f8}
+.rr small{display:block;font-family:M;font-size:27px;color:#8aa0b5;margin-top:3px}.rr b{font-family:M;font-weight:500;font-size:36px;color:#eef3f8}
+.rr u{text-decoration:none;flex:none;width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:B;font-weight:800;font-size:40px;margin-left:10px}
 .rr u.w{background:#2edb99;color:#0a1620}.rr u.l{background:#26364a;color:#c9d6e3;border:2px solid #3a4f68}
 .rn{font-size:30px;color:#a9b8c8;margin-top:22px}
 """
@@ -204,7 +230,7 @@ def main():
     a = ap.parse_args()
     sig, stand = lade(a.medien); os.makedirs(a.out, exist_ok=True)
     heute = D(a.datum)
-    css = s.CSS.replace("FONTS", "file://" + os.path.join(s.HOME, "assets/fonts")) + C.BASE + C.TAB + C.WOCHE + EXTRA + EX2
+    css = s.CSS.replace("FONTS", "file://" + os.path.join(s.HOME, "assets/fonts")) + C.BASE + C.TAB + C.WOCHE + EXTRA + EX2 + EX3
     man = {"modus": a.modus, "datum": a.datum, "stand": stand, "status": "ok", "fehler": []}
     if a.modus == "tag":
         tag = heute - dt.timedelta(days=1)
@@ -216,8 +242,12 @@ def main():
         lr, er = [zeile(x) for x in live], [zeile(x) for x in ein]
         wt = f"{WK[tag.weekday()]} {dm(tag)}"; HW = "Alle Auswertungen im Ergebnis-Kanal. Link in der Bio."
         ks, ss = [], []
-        if lr: ks += tabellen(f"Live-Wetten · {wt}", lr)
-        if er: ks.append(einzel_seite(f"Einzelspiele · {wt}", er))
+        nk = []
+        if lr:
+            ks += tabellen(f"Live-Wetten · {wt}", lr, k0_max=STORY_MAX); nk += [len(lr[i:i + STORY_MAX]) for i in range(0, len(lr), STORY_MAX)]
+        if er: ks.append(einzel_seite(f"Einzelspiele · {wt}", er)); nk.append(len(er))
+        nh = len(ks) - len(nk)
+        ks = skal_k(ks, nk)
         ks.append(hinweis_seite("So lesen", "Gewonnen und verloren stehen nebeneinander.",
                   ["Jeder Eintrag wird ausgewertet, auch die verlorenen. Nichts wird nachträglich geändert.",
                    "Ein einzelner Tag sagt wenig. Die komplette Auswertung steht im Ergebnis-Kanal, Link in der Bio."]))

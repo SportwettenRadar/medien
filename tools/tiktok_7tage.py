@@ -16,9 +16,18 @@ import ig_tagesbeitraege as T
 D = T.D; WK = T.WK; dm = T.dm
 
 
-def punkte(ergs):
+def punkte_einzel(ergs):
+    """Einzelspiele (max. 5): eine Kapsel über die volle Breite, 5 gleich breite Plätze, Punkte links beginnend."""
     if not ergs: return '<span class="none">keine Einträge</span>'
-    return "".join(f'<i class="{"w" if e == "gewonnen" else "l"}"></i>' for e in ergs)
+    return '<div class="ez">' + "".join(f'<span><i class="{"w" if e == "gewonnen" else "l"}"></i></span>' for e in ergs) + '</div>'
+
+
+def punkte(ergs):
+    """Punkte chronologisch, 10 je Zeile, je 5 in einer Kapsel (Variante C, Freigabe Daniel 03.11.)."""
+    if not ergs: return '<span class="none">keine Einträge</span>'
+    def pt(e): return f'<i class="{"w" if e == "gewonnen" else "l"}"></i>'
+    zeilen = [ergs[i:i + 10] for i in range(0, len(ergs), 10)]
+    return "".join('<div class="ln">' + "".join(f'<div class="gp">{"".join(pt(e) for e in z[i:i + 5])}</div>' for i in range(0, len(z), 5)) + '</div>' for z in zeilen)
 
 
 def reel(tage, out):
@@ -26,10 +35,14 @@ def reel(tage, out):
     E.HOCH = True; E.W, E.H = 1080, 1920
     orig = E.folie_html
     E.CSS_HOCH += """
-.dr{display:grid;gap:16px;margin-top:34px}.dd{display:flex;align-items:center;gap:24px;background:#0f1d2c;border:2px solid #1b2c40;border-radius:22px;padding:16px 24px;min-height:86px}
-.dd b{font-family:M;font-weight:500;font-size:28px;color:#eef3f8;width:210px;flex:none;line-height:1.2}.dd b small{display:block;font-size:22px;color:#6f8399}
-.dd .pt{display:flex;flex-wrap:wrap;gap:9px;flex:1}.dd i{width:30px;height:30px;border-radius:50%;display:block}
+.dr{display:grid;margin-top:30px}.dd{display:flex;align-items:center;gap:22px;background:#0f1d2c;border:2px solid #1b2c40;border-radius:22px;padding:14px 22px;margin-bottom:12px}
+.dd b{font-family:M;font-weight:500;font-size:28px;color:#eef3f8;width:180px;flex:none;line-height:1.25}.dd b small{display:block;font-size:22px;color:#6f8399}
+.dd .pt{flex:1;display:flex;flex-direction:column}.ln{display:flex;margin:6px 0}
+.gp{display:flex;gap:7px;background:#0b1623;border:2px solid #1f3248;border-radius:30px;padding:6px 10px;margin-right:14px}
+.dd i{display:block;border-radius:50%;flex:none;width:44px;height:44px}
 .dd i.w{background:#2edb99}.dd i.l{background:#26364a;border:2px solid #3a4f68;box-sizing:border-box}
+.ez{display:flex;width:100%;background:#0b1623;border:2px solid #1f3248;border-radius:44px;padding:8px 0}
+.ez span{flex:1 1 0;display:flex;justify-content:center;max-width:20%}.ez{justify-content:flex-start}.dd .ez i{width:54px;height:54px}
 .dd .none{font-size:24px;color:#6f8399}
 .lg{display:flex;gap:34px;margin-top:26px;font-size:26px;color:#a9b8c8}.lg span{display:flex;align-items:center;gap:12px}
 .lg i{width:26px;height:26px;border-radius:50%;display:block}.lg i.w{background:#2edb99}.lg i.l{background:#26364a;border:2px solid #3a4f68;box-sizing:border-box}
@@ -37,7 +50,7 @@ def reel(tage, out):
     def fh(f, logo):
         top = f'<div class="top"><img src="{logo}"><span>Sportwetten <b>Radar</b></span></div>'
         if f["typ"] == "dots":
-            r = "".join(f'<div class="dd"><b>{l}<small>{sb}</small></b><div class="pt">{punkte(ds)}</div></div>' for l, sb, ds in f["rows"])
+            r = "".join(f'<div class="dd"><b>{l}<small>{sb}</small></b><div class="pt">{(punkte_einzel if sb == "Einzel" else punkte)(ds)}</div></div>' for l, sb, ds in f["rows"])
             leg = '<div class="lg"><span><i class="w"></i>gewonnen</span><span><i class="l"></i>verloren</span></div>'
             return (top + f'<div class="main"><div class="eb">{f["eyebrow"]}</div><div class="dr">{r}</div>{leg}</div>'
                     '<div class="foot"><span>18+ · Keine Gewinngarantie</span><span>@sportwetten_radar</span></div>')
