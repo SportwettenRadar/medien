@@ -69,6 +69,38 @@ EXTRA = """
 """
 
 
+# Story-Layout groß (Freigabe Daniel 03.11.2026): bisheriges Layout, vergrößert, max. 8 Zeilen je Story-Seite
+STORY_MAX = 8
+EX2 = """
+.story .tb{left:56px;right:56px;top:392px}
+.story .th{font-size:24px;padding:0 24px 10px}
+.story .th span:nth-child(1){width:56px}.story .th span:nth-child(3){width:172px}.story .th span:nth-child(4){width:124px}.story .th span:nth-child(5){width:84px}
+.story .tr,.story .big .tr{height:108px;margin-top:9px;border-radius:24px;padding:0 24px;font-size:33px}
+.story .tr em,.story .big .tr em{font-size:27px;width:56px}
+.story .tr div{white-space:normal;line-height:1.1;overflow:hidden}
+.story .tr span,.story .big .tr span{font-size:28px;width:172px}
+.story .tr b,.story .big .tr b{font-size:36px;width:124px}
+.story .tr u,.story .big .tr u{width:62px;height:62px;margin-left:22px;font-size:40px}
+.story .leg,.story .big .leg{margin-top:26px;font-size:29px}
+.story .leg u,.story .big .leg u{width:38px;height:38px;font-size:24px}
+.story .nl,.story .big .note{font-size:32px;line-height:1.35;margin-top:26px}
+.story .big .note{margin-top:18px}
+"""
+
+
+def skal(seiten, ns):
+    """Zeilenhöhe/Schrift je Story-Seite nach Zeilenzahl (4 Zeilen größer, 8 Zeilen kleinste Stufe)."""
+    res = []
+    for h, n in zip(seiten, ns):
+        hh = min(132, 1000 / n - 9); f = hh / 108; g = min(f, 1.15); k = min(f, 1.2)
+        st = (f"<style>.story .tr,.story .big .tr{{height:{hh:.0f}px}}.story .tr div{{font-size:{33*f:.0f}px}}"
+              f".story .tr span,.story .big .tr span{{font-size:{28*g:.0f}px}}.story .tr b,.story .big .tr b{{font-size:{36*g:.0f}px}}"
+              f".story .tr em,.story .big .tr em{{font-size:{27*g:.0f}px}}"
+              f".story .tr u,.story .big .tr u{{width:{62*k:.0f}px;height:{62*k:.0f}px;font-size:{40*k:.0f}px}}</style>")
+        res.append(h.replace('<div class="story">', '<div class="story">' + st, 1))
+    return res
+
+
 def page(eb, inner, story=False):
     return (f'<div class="{"story" if story else ""}">' + s.RINGS + '<div class="top"><img src="LOGO"><span>Sportwetten Radar</span></div>'
             f'<div class="eb">{eb}</div>{inner}<div class="foot"><span>18+ · Keine Gewinngarantie</span><span>@sportwetten_radar</span></div></div>')
@@ -172,7 +204,7 @@ def main():
     a = ap.parse_args()
     sig, stand = lade(a.medien); os.makedirs(a.out, exist_ok=True)
     heute = D(a.datum)
-    css = s.CSS.replace("FONTS", "file://" + os.path.join(s.HOME, "assets/fonts")) + C.BASE + C.TAB + C.WOCHE + EXTRA
+    css = s.CSS.replace("FONTS", "file://" + os.path.join(s.HOME, "assets/fonts")) + C.BASE + C.TAB + C.WOCHE + EXTRA + EX2
     man = {"modus": a.modus, "datum": a.datum, "stand": stand, "status": "ok", "fehler": []}
     if a.modus == "tag":
         tag = heute - dt.timedelta(days=1)
@@ -189,8 +221,12 @@ def main():
         ks.append(hinweis_seite("So lesen", "Gewonnen und verloren stehen nebeneinander.",
                   ["Jeder Eintrag wird ausgewertet, auch die verlorenen. Nichts wird nachträglich geändert.",
                    "Ein einzelner Tag sagt wenig. Die komplette Auswertung steht im Ergebnis-Kanal, Link in der Bio."]))
-        if lr: ss += tabellen(f"Live-Wetten · {wt}", lr, story=True, hinweis=None if er else HW)
-        if er: ss.append(einzel_seite(f"Einzelspiele · {wt}", er, story=True, hinweis=HW))
+        ns = []
+        if lr:
+            sl = tabellen(f"Live-Wetten · {wt}", lr, k0_max=STORY_MAX, story=True, hinweis=None if er else HW)
+            ss += sl; ns += [len(lr[i:i + STORY_MAX]) for i in range(0, len(lr), STORY_MAX)]
+        if er: ss.append(einzel_seite(f"Einzelspiele · {wt}", er, story=True, hinweis=HW)); ns.append(len(er))
+        ss = skal(ss, ns)
         man["karussell"] = render_html(ks, css, 1350, a.out, "k"); man["stories"] = render_html(ss, css, 1920, a.out, "s")
         if not a.ohne_reel and (lr or er):
             man["reel_sekunden"] = round(reel(lr, er, WT[tag.weekday()], os.path.join(a.out, "reel.mp4")), 1); man["reel"] = "reel.mp4"
