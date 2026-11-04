@@ -11,7 +11,7 @@ Datenquelle: `daten/ergebnisse.json` (schreibt der Bot nach jedem Post im Ergebn
    - Grafik in `x/` im Medien-Repo committen und pushen.
    - X-Post über Metricool einplanen (sofort bzw. nächste volle Viertelstunde), Bild-URL:
      `https://raw.githubusercontent.com/sportwettenradar/medien/main/<datei>`
-   - Text: nackte Zahlen, kein Gewinnversprechen, kein Buchmacher-Link, Zeilenformat (jede Kennzahl eigene Zeile: Wetten, Treffer, Einsätze, Rendite), Fußnote nur wo Tage vor dem 11.10.2026 enthalten sind („* Sept.–10.10.: Testphase, mit den heutigen Regeln berechnet.“; Erkennung über das Feld `rueckrechnung`, das Wort nie anzeigen), „18+ · Keine Gewinngarantie“, Link zur Homepage.
+   - Text: nackte Zahlen, kein Gewinnversprechen, kein Buchmacher-Link, Zeilenformat (jede Kennzahl eigene Zeile: Wetten, Treffer, Einsätze, Rendite), Fußnote nur wo Tage vor dem 11.10.2026 enthalten sind („* Sept.–10.10.: Testphase, mit den Regeln vom 11.10.2026 berechnet.“; Erkennung über das Feld `rueckrechnung`, das Wort nie anzeigen), „18+ · Keine Gewinngarantie“, Link zur Homepage.
 5. Kurze Meldung an Daniel, was veröffentlicht wurde.
 
 ## Prüfungen im Skript

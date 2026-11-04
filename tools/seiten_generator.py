@@ -122,7 +122,7 @@ def article_ld(title, desc, path, date):
                           "logo": {"@type": "ImageObject", "url": BASE + "assets/logo-icon.png"}}}
 
 
-FUSSNOTE = "* 01.09.–10.10.: Testphase, mit den heutigen Regeln berechnet."
+FUSSNOTE = "* 01.09.–10.10.: Testphase, mit den Regeln vom 11.10.2026 berechnet."
 
 
 def tr_block(monat=None, fallback=""):
@@ -634,7 +634,7 @@ WISSEN = [
   <ul>
     <li>Alle Wetten sind enthalten, auch die verlorenen. Nichts wird nachträglich gelöscht.</li>
     <li>Die Rendite wird zusammen mit der Trefferquote gezeigt, nicht nur die Trefferquote.</li>
-    <li>Der Zeitraum ist klar, und es wird gesagt, welche Zahlen später mit heutigen Regeln berechnet wurden.</li>
+    <li>Der Zeitraum ist klar, und es wird gesagt, welche Zahlen nachträglich nach den Regeln vom 11.10.2026 berechnet wurden.</li>
     <li>Es gibt keine Gewinnversprechen. Mehr dazu unter
     <a href="seriose-tippgeber-erkennen.html">Seriöse Tippgeber erkennen</a>.</li>
   </ul>

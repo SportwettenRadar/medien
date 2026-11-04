@@ -152,7 +152,7 @@ def fussnote(data, von=None, bis=None):
         tl = [t["datum"] for t in data.get("tage", []) if t.get("rueckrechnung")]
     a, b = min(tl), max(tl)
     f = lambda x: f"{x[8:10]}.{x[5:7]}."
-    return f"* {f(a)}–{f(b)}: Testphase, mit den heutigen Regeln berechnet."
+    return f"* {f(a)}–{f(b)}: Testphase, mit den Regeln vom 11.10.2026 berechnet."
 PFLICHT = "Alle Zahlen gelten bei gleichem Einsatz auf jede Live-Wette. Verlustserien gehören dazu."
 
 
