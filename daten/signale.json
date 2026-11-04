@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-03T08:51:15+01:00",
+ "stand": "2026-11-04T08:58:11+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -3827,6 +3827,105 @@
    "quote": 1.55,
    "ergebnis": "verloren",
    "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-03-001",
+   "datum": "2026-11-03",
+   "art": "einzel",
+   "heim": "Wigan",
+   "gast": "Mansfield Town",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-03-002",
+   "datum": "2026-11-03",
+   "art": "einzel",
+   "heim": "Charlton",
+   "gast": "Bolton",
+   "markt": "1X",
+   "quote": 1.36,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-03-003",
+   "datum": "2026-11-03",
+   "art": "einzel",
+   "heim": "Portsmouth",
+   "gast": "Swansea",
+   "markt": "X2",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-03-004",
+   "datum": "2026-11-03",
+   "art": "einzel",
+   "heim": "Birmingham",
+   "gast": "Millwall",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "3:0"
+  },
+  {
+   "id": "2026-11-03-005",
+   "datum": "2026-11-03",
+   "art": "einzel",
+   "heim": "Feyenoord",
+   "gast": "Inter",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:3"
+  },
+  {
+   "id": "2026-11-03-006",
+   "datum": "2026-11-03",
+   "art": "live",
+   "heim": "Blackburn",
+   "gast": "Stoke City",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-03-007",
+   "datum": "2026-11-03",
+   "art": "live",
+   "heim": "2 de Mayo",
+   "gast": "Sportivo Trinidense",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-03-008",
+   "datum": "2026-11-03",
+   "art": "live",
+   "heim": "Manchester United",
+   "gast": "AS Roma",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-11-03-009",
+   "datum": "2026-11-03",
+   "art": "live",
+   "heim": "Deportivo Pereira",
+   "gast": "Deportes Tolima",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "verloren",
+   "endstand": "1:3"
   }
  ]
 }
