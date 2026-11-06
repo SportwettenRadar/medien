@@ -11,6 +11,9 @@ Commit/Push und das Einplanen in Metricool übernimmt die Claude-Sitzung.
 import argparse, datetime as dt, json, os, re, subprocess, sys
 
 TOL = 0.15  # Toleranz Gewinn vs. Rendite x Wetten / 100 (Rundung)
+JAHR_MIN_WETTEN = 100  # Einsätze und Rendite werden je Kalenderjahr erst ab dieser Zahl gewerteter Live-Wetten ausgewiesen
+HINWEIS_JAHR = ("Einsätze und Rendite weisen wir je Kalenderjahr aus, sobald 100 Live-Wetten vorliegen. "
+                "Für Tage, Wochen und Monate nicht, weil kurze Zeiträume stark vom Zufall abhängen.")
 MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August",
           "September", "Oktober", "November", "Dezember"]
 
@@ -25,6 +28,56 @@ def de(n, k=1):
 
 def signed(n, k=1):
     return ("+" if n > 0 else "−" if n < 0 else "") + de(n, k)
+
+
+# ---------------------------------------------------------------- Durchschnittsquote
+# Ø-Quote = Durchschnitt der Quoten ALLER gesetzten Live-Wetten des Zeitraums (nicht nur der gewonnenen).
+# Quelle in dieser Reihenfolge: (1) Feld live.quote in ergebnisse.json (vom Bot), (2) Einzelquoten in daten/signale.json,
+# aber nur, wenn dort alle Wetten des Zeitraums vorliegen (Anzahl stimmt mit ergebnisse.json überein). Sonst None (nicht anzeigen).
+_SIG = {}
+
+
+def lade_signale(medien):
+    p = os.path.join(medien, "daten/signale.json")
+    _SIG.clear()
+    if not os.path.exists(p):
+        return
+    for x in json.load(open(p, encoding="utf-8")).get("signale", []):
+        if x.get("art") == "live" and x.get("ergebnis") in ("gewonnen", "verloren") and isinstance(x.get("quote"), (int, float)):
+            _SIG.setdefault(x["datum"], []).append(x["quote"])
+
+
+def quote_tag(t):
+    q = t.get("live", {}).get("quote")
+    if isinstance(q, (int, float)):
+        return q, t["live"]["wetten"]
+    qs = _SIG.get(t["datum"], [])
+    if t["live"]["wetten"] == 0:
+        return None, 0
+    if len(qs) == t["live"]["wetten"]:
+        return sum(qs) / len(qs), len(qs)
+    return None, t["live"]["wetten"]
+
+
+def quote_zeitraum(data, von, bis):
+    """Gewichteter Durchschnitt über alle Tage von..bis (ISO-Strings); None, wenn für einen Tag mit Wetten die Quote fehlt."""
+    n = 0
+    summe = 0.0
+    for t in data.get("tage", []):
+        if von <= t["datum"] <= bis and t["live"]["wetten"] > 0:
+            q, w = quote_tag(t)
+            if q is None:
+                return None
+            summe += q * w
+            n += w
+    return round(summe / n, 2) if n else None
+
+
+def quote_block(data, b, von, bis):
+    q = b.get("live", {}).get("quote")
+    if isinstance(q, (int, float)):
+        return round(q, 2)
+    return quote_zeitraum(data, von, bis)
 
 
 def mehrheitsmonat(von):
@@ -128,7 +181,7 @@ def pruefe(data):
 # ---------------------------------------------------------------- Homepage-Daten
 def lade_homepage(hp):
     out = subprocess.run(["node", "-e",
-        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||'',t:window.TRACKRECORD_TAGE||[],s:window.TRACKRECORD_START||null}))",
+        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||'',t:window.TRACKRECORD_TAGE||[],j:window.TRACKRECORD_JAHRE||[]}))",
         os.path.abspath(os.path.join(hp, "trackrecord-daten.js"))], capture_output=True, text=True, check=True).stdout
     return json.loads(out)
 
@@ -154,6 +207,7 @@ def fussnote(data, von=None, bis=None):
     f = lambda x: f"{x[8:10]}.{x[5:7]}."
     return f"* {f(a)}–{f(b)}: Testphase, mit den Regeln vom 11.10.2026 berechnet."
 PFLICHT = "Alle Zahlen gelten bei gleichem Einsatz auf jede Live-Wette. Verlustserien gehören dazu."
+QUOTE_DEF = "Ø-Quote: Durchschnitt der Quoten aller gesetzten Live-Wetten im Zeitraum."
 
 
 def seit_start(t):
@@ -161,12 +215,23 @@ def seit_start(t):
     return t.get("seitStart") or t.get("seit_start") or t.get("seitstart")
 
 
-def homepage_eintrag(b, mit_monat=True):
+ALT_FELDER = ("rendite", "gewinn", "rueckgang", "besterTag", "schlechtesterTag")  # werden für Monate/Wochen nicht mehr veröffentlicht
+
+
+def zeitraum(b):
+    if "monat" in b and "von" not in b:
+        return b["monat"] + "-01", b["monat"] + "-31"
+    return b["von"], b["bis"]
+
+
+def homepage_eintrag(b, data):
     L, E = b["live"], b["einzelspiele"]
-    live = {"wetten": L["wetten"], "treffer": L["treffer"], "rendite": L["rendite"]}
-    for k in ("gewinn", "verlustserie", "rueckgang", "besterTag", "schlechtesterTag"):
-        if k in L:
-            live[k] = L[k]
+    live = {"wetten": L["wetten"], "treffer": L["treffer"]}
+    q = quote_block(data, b, *zeitraum(b))
+    if q is not None:
+        live["quote"] = q
+    if "verlustserie" in L:
+        live["verlustserie"] = L["verlustserie"]
     e = {}
     if "monat" in b:
         e["monat"] = b["monat"]
@@ -184,79 +249,123 @@ def gleich(a, b):
     for k in ("wetten", "treffer"):
         if a["live"].get(k) != b["live"].get(k):
             return False
-    if abs(a["live"].get("rendite", 0) - b["live"].get("rendite", 0)) > 0.05:
-        return False
     return a["einzelspiele"] == {"tipps": b["einzelspiele"]["tipps"], "treffer": b["einzelspiele"]["treffer"]}
 
 
-def ergaenze(alt, neu):
-    """Fehlende Felder (z. B. gewinn) aus den Bot-Daten ergänzen, nie vorhandene überschreiben."""
+def ergaenze(alt, neu, data):
+    """Bereinigt alte Felder (Einsätze/Rendite je Monat/Woche) und ergänzt Ø-Quote und Verlustserie, nie vorhandene Werte überschreiben."""
     geaendert = False
-    for k in ("gewinn", "verlustserie", "rueckgang", "besterTag", "schlechtesterTag"):
-        if k in neu["live"] and k not in alt["live"]:
-            alt["live"][k] = neu["live"][k]
+    for k in ALT_FELDER:
+        if k in alt["live"]:
+            del alt["live"][k]
             geaendert = True
+    if "verlustserie" in neu["live"] and "verlustserie" not in alt["live"]:
+        alt["live"]["verlustserie"] = neu["live"]["verlustserie"]
+        geaendert = True
+    q = quote_block(data, neu, *zeitraum(neu))
+    if q is not None and alt["live"].get("quote") != q:
+        alt["live"]["quote"] = q
+        geaendert = True
     return geaendert
 
 
-def baue_tage(data):
-    """Kurve (kumulierte Einsätze je Tag seit Start) und Stand "seit Start" aus ergebnisse.json.
-    Gibt (None, None) zurück, solange das erweiterte JSON (Tage ab 01.09. mit seitStart) fehlt."""
+def baue_jahre(data):
+    """Kurve (kumulierte Einsätze je Tag, je Kalenderjahr bei 0 beginnend) und Jahresblöcke aus ergebnisse.json.
+    Einsätze/Rendite und Kurve eines Jahres werden erst veröffentlicht, wenn das Jahr JAHR_MIN_WETTEN gewertete Live-Wetten hat.
+    Gibt (None, None) zurück, solange das erweiterte JSON (Tage mit seitStart) fehlt."""
     tl = sorted(data.get("tage", []), key=lambda x: x["datum"])
     if not tl or not all(isinstance(seit_start(t), dict) and isinstance(seit_start(t).get("gewinn"), (int, float)) for t in tl):
         return None, None
-    kurve = [{"d": t["datum"], "g": round(seit_start(t)["gewinn"], 1), "rr": bool(t.get("rueckrechnung"))} for t in tl]
-    z = seit_start(tl[-1])
-    start = {"stand": tl[-1]["datum"], "wetten": z["wetten"], "treffer": z["treffer"],
-             "gewinn": round(z["gewinn"], 1), "rendite": z["rendite"], "rueckrechnung": any(t.get("rueckrechnung") for t in tl)}
-    return kurve, start
+    kurve, jahre = [], []
+    for jahr in sorted({t["datum"][:4] for t in tl}):
+        tj = [t for t in tl if t["datum"][:4] == jahr]
+        vor = [t for t in tl if t["datum"][:4] < jahr]
+        v = seit_start(vor[-1]) if vor else {"wetten": 0, "treffer": 0, "gewinn": 0.0}
+        z = seit_start(tj[-1])
+        w, tr, g = z["wetten"] - v["wetten"], z["treffer"] - v["treffer"], round(z["gewinn"] - v["gewinn"], 1)
+        frei = w >= JAHR_MIN_WETTEN
+        rendite = z["rendite"] if not vor else (round(g / w * 100, 1) if w else 0.0)
+        j = {"jahr": int(jahr), "ab": tj[0]["datum"], "stand": tj[-1]["datum"], "wetten": w, "treffer": tr}
+        q = quote_zeitraum(data, tj[0]["datum"], tj[-1]["datum"])
+        if q is not None:
+            j["quote"] = q
+        j["gewinn"] = g if frei else None
+        j["rendite"] = rendite if frei else None
+        j["rueckrechnung"] = any(t.get("rueckrechnung") for t in tj)
+        jahre.append(j)
+        if frei:
+            kurve += [{"d": t["datum"], "g": round(seit_start(t)["gewinn"] - v["gewinn"], 1), "rr": bool(t.get("rueckrechnung"))} for t in tj]
+    return kurve, jahre
 
 
-def schreibe_homepage(hp, monate, wochen, hinweis, tage=None, start=None):
+KOPF = """/* =====================================================================
+   TRACKRECORD-DATEN  —  wird von tools/auto_ergebnisse.py aus daten/ergebnisse.json
+   (und daten/signale.json für die Ø-Quote) geschrieben. Nicht von Hand ändern.
+
+   Anzeige-Regeln (Daniel, 06.11.2026):
+   - Tage, Wochen, Monate: Wetten, Treffer (mit Prozent) und Ø-Quote. KEINE Einsätze, KEINE Rendite.
+   - Einsätze und Rendite nur je Kalenderjahr (TRACKRECORD_JAHRE) und erst ab 100 Live-Wetten im Jahr.
+   - Ø-Quote = Durchschnitt der Quoten aller gesetzten Live-Wetten des Zeitraums.
+   ===================================================================== */
+
+"""
+
+
+def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None):
     p = os.path.join(hp, "trackrecord-daten.js")
-    js = open(p, encoding="utf-8").read()
-    m = re.search(r"^window\.TRACKRECORD = \[", js, flags=re.M)
-    kopf = js[:m.start()]
     mon = ",\n\n".join(js_block(x) for x in sorted(monate, key=lambda x: x["monat"], reverse=True))
     wo = ",\n".join(js_block(x) for x in sorted(wochen, key=lambda x: x["von"]))
-    rest = js[m.start():]
-    wk = rest.find("/* Wochen.")
-    wochen_kommentar = rest[wk:rest.find("window.TRACKRECORD_WOCHEN")] if wk >= 0 else ""
-    neu = (kopf + "window.TRACKRECORD = [\n\n" + mon + "\n\n];\n\n" + wochen_kommentar +
+    neu = (KOPF + "window.TRACKRECORD = [\n\n" + mon + "\n\n];\n\n"
+           "/* Wochen (Mo–So). Der Monat ist der Mehrheitsmonat der Woche. */\n"
            "window.TRACKRECORD_WOCHEN = [\n" + wo + "\n];\n\n"
            "/* Hinweis, wenn für einen Monat keine Wochenwerte angezeigt werden können. */\n"
            "window.TRACKRECORD_WOCHEN_HINWEIS = " + json.dumps(hinweis, ensure_ascii=False) + ";\n\n"
-           "/* Kurve: kumulierte Einsätze je Tag seit Start (d = Datum, g = Stand am Tagesende, rr = nur Logik für Fußnote/Hinterlegung).\n"
-           "   Wird von tools/auto_ergebnisse.py aus ergebnisse.json geschrieben, nicht von Hand ändern. */\n"
-           "window.TRACKRECORD_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (tage or [])) + "\n];\n\n"
-           "/* Stand seit Start (Kennzahlen über der Kurve). */\n"
-           "window.TRACKRECORD_START = " + json.dumps(start, ensure_ascii=False) + ";\n")
+           "/* Kurve: kumulierte Einsätze je Tag, je Kalenderjahr bei 0 beginnend (d = Datum, g = Stand am Tagesende, rr = nur Logik für Fußnote/Hinterlegung).\n"
+           "   Ein Jahr erscheint erst ab 100 Live-Wetten. */\n"
+           "window.TRACKRECORD_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (kurve or [])) + "\n];\n\n"
+           "/* Kalenderjahre: Wetten, Treffer, Ø-Quote; gewinn (Einsätze) und rendite sind null, solange das Jahr unter 100 Live-Wetten hat. */\n"
+           "window.TRACKRECORD_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (jahre or [])) + "\n];\n")
     open(p, "w", encoding="utf-8").write(neu)
 
 
 # ---------------------------------------------------------------- Grafik für X
-def zeilen(L, klein=False):
-    """Kennzahlen jeweils in eigener Zeile. Reihenfolge (Daniel, 02.11.2026): Wetten, Treffer, Einsätze, Rendite."""
-    q = L["treffer"] / L["wetten"] * 100 if L["wetten"] else 0
-    G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
+def zeilen(L, quote=None, klein=False, stern=""):
+    """Tag/Woche/Monat (Daniel, 06.11.2026): "n von m Treffer", Trefferquote, Ø-Quote. Keine Einsätze, keine Rendite."""
     c = "z s" if klein else "z"
-    return (f'<div class="{c}"><b>{L["wetten"]}</b> Wetten</div>'
-            f'<div class="{c}"><b>{L["treffer"]}</b> Treffer ({de(q)} %)</div>'
-            f'<div class="{c} lead"><b>{signed(G)}</b> Einsätze</div>'
-            f'<div class="{c}">Rendite <b>{signed(L["rendite"])} %</b></div>')
+    if L["wetten"] == 0:
+        return f'<div class="{c}">Keine Live-Wetten</div>'
+    q = L["treffer"] / L["wetten"] * 100
+    out = (f'<div class="{c} lead"><b>{L["treffer"]} von {L["wetten"]}</b> Treffer{stern}</div>'
+           f'<div class="{c}">Trefferquote <b>{de(q)} %</b></div>')
+    if quote:
+        out += f'<div class="{c}">Ø-Quote <b>{de(quote, 2)}</b></div>'
+    return out
 
 
-def grafik(b, titel, kicker, ziel, hp, start=None, fuss_text=None):
+def jahr_card(J, stern=""):
+    """Jahresübersicht: Einsätze und Rendite nur hier, und erst ab JAHR_MIN_WETTEN Live-Wetten im Jahr."""
+    ab = "" if J["ab"][5:] == "01-01" else f" · ab {J['ab'][8:10]}.{J['ab'][5:7]}."
+    q = J["treffer"] / J["wetten"] * 100 if J["wetten"] else 0
+    z = f'<div class="z s"><b>{J["treffer"]} von {J["wetten"]}</b> Treffer ({de(q)} %)</div>'
+    if J.get("quote"):
+        z += f'<div class="z s">Ø-Quote <b>{de(J["quote"], 2)}</b></div>'
+    if J.get("gewinn") is not None:
+        z += (f'<div class="z s lead"><b>{signed(J["gewinn"])}</b> Einsätze{stern}</div>'
+              f'<div class="z s">Rendite <b>{signed(J["rendite"])} %</b></div>')
+    else:
+        z += f'<div class="z s">Einsätze und Rendite ab {JAHR_MIN_WETTEN} Wetten{stern}</div>'
+    return f'<div class="card"><div class="ct">Jahr {J["jahr"]}{ab}</div>{z}</div>'
+
+
+def grafik(b, titel, kicker, ziel, hp, jahr=None, fuss_text=None, quote=None):
     L, E = b["live"], b["einzelspiele"]
     eq = E["treffer"] / E["tipps"] * 100 if E["tipps"] else 0
     f = "file://" + os.path.join(os.path.abspath(hp), "assets/fonts/")
     logo = "file://" + os.path.join(os.path.abspath(hp), "assets/logo-icon.png")
     fuss = f'<div class="rr">{fuss_text}</div>' if fuss_text else ""
     stern_live = "*" if (fuss_text and b.get("rueckrechnung")) else ""
-    stern_seit = "*" if (fuss_text and start is not None) else ""
-    seit = ""
-    if start:
-        seit = (f'<div class="card"><div class="ct">Seit Start</div>{zeilen(start, klein=True)}</div>')
+    stern_jahr = "*" if (fuss_text and jahr and jahr.get("rueckrechnung")) else ""
+    jahr_html = jahr_card(jahr, stern_jahr) if jahr else ""
     einzel = (f'<div class="card"><div class="ct">Einzelspiele zum Kombinieren</div>'
               f'<div class="z s"><b>{E["treffer"]}</b> von {E["tipps"]} Tipps getroffen ({de(eq)} %)</div></div>') if E["tipps"] else ""
     html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
@@ -283,10 +392,10 @@ h1{{font-family:B;font-weight:800;font-size:88px;line-height:1.02;margin-top:10p
 </style></head><body>
 <div class="top"><img src="{logo}"><div>Sportwetten <span>Radar</span></div></div>
 <div class="k">{kicker}</div><h1>{titel}</h1>
-<div class="card"><div class="ct">Live-Wetten</div>{zeilen(L).replace('</b> Einsätze', '</b> Einsätze' + stern_live, 1)}</div>
-{seit.replace('Einsätze</div>', 'Einsätze' + stern_seit + '</div>', 1) if seit else ''}
+<div class="card"><div class="ct">Live-Wetten</div>{zeilen(L, quote, stern=stern_live)}</div>
+{jahr_html}
 {einzel}
-<div class="pf">{fuss}{'<br>' if fuss else ''}{PFLICHT}</div>
+<div class="pf">{fuss}{'<br>' if fuss else ''}{QUOTE_DEF}<br>{PFLICHT}</div>
 <div class="foot"><span>18+ · Keine Gewinngarantie</span><span>sportwetten-radar.net</span></div>
 </body></html>"""
     tmp = ziel + ".html"
@@ -318,6 +427,7 @@ def main():
     data = json.load(open(os.path.join(a.medien, "daten/ergebnisse.json"), encoding="utf-8"))
     res["fehler"] = pruefe(data)
 
+    lade_signale(a.medien)
     hp = lade_homepage(a.homepage)
     monate = {m["monat"]: m for m in hp["m"]}
     wochen = {w["von"]: w for w in hp["w"]}
@@ -327,26 +437,26 @@ def main():
         alt = monate.get(m["monat"])
         if alt and not gleich(alt, m):
             res["fehler"].append(f"Monat {m['monat']}: Bot-Zahlen weichen von der Homepage ab (Homepage {alt['live']}, Bot {m['live']})")
-        elif alt and ergaenze(alt, m):
-            res["aenderungen"].append(f"Monat {m['monat']} ergänzt")
+        elif alt and ergaenze(alt, m, data):
+            res["aenderungen"].append(f"Monat {m['monat']} ergänzt/bereinigt")
         elif not alt:
-            monate[m["monat"]] = homepage_eintrag(m)
+            monate[m["monat"]] = homepage_eintrag(m, data)
             res["aenderungen"].append(f"Monat {m['monat']} neu")
     for w in data.get("wochen", []):
         alt = wochen.get(w["von"])
         if alt and not gleich(alt, w):
             res["fehler"].append(f"Woche {w['von']}: Bot-Zahlen weichen von der Homepage ab")
-        elif alt and ergaenze(alt, w):
-            res["aenderungen"].append(f"Woche {w['von']}–{w['bis']} ergänzt")
+        elif alt and ergaenze(alt, w, data):
+            res["aenderungen"].append(f"Woche {w['von']}–{w['bis']} ergänzt/bereinigt")
         elif not alt:
-            wochen[w["von"]] = homepage_eintrag(w)
+            wochen[w["von"]] = homepage_eintrag(w, data)
             res["aenderungen"].append(f"Woche {w['von']}–{w['bis']} neu")
 
-    kurve, start = baue_tage(data)
-    if kurve is not None and (kurve != hp["t"] or start != hp["s"]):
-        res["aenderungen"].append("Kurve seit Start aktualisiert")
+    kurve, jahre = baue_jahre(data)
+    if kurve is not None and (kurve != hp["t"] or jahre != hp["j"]):
+        res["aenderungen"].append("Kurve/Jahresblock aktualisiert")
     if kurve is None:
-        kurve, start = hp["t"], hp["s"]
+        kurve, jahre = hp["t"], hp["j"]
 
     if res["fehler"]:
         res["status"] = "stopp"
@@ -354,7 +464,7 @@ def main():
         return 2
 
     if not a.trocken and res["aenderungen"]:
-        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"], kurve, start)
+        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"], kurve, jahre)
         ix = os.path.join(a.homepage, "index.html")
         h = open(ix, encoding="utf-8").read()
         h = re.sub(r"trackrecord-daten\.js\?v=[0-9a-z]+", "trackrecord-daten.js?v=" + dt.datetime.now().strftime("%Y%m%d%H%M"), h)
@@ -362,32 +472,52 @@ def main():
         gen = os.path.join(os.path.dirname(os.path.abspath(__file__)), "seiten_generator.py")
         subprocess.run([sys.executable, gen, a.homepage], check=True, capture_output=True)
 
-    # Grafik für X: neueste Woche bzw. neuester Monat
+    def jahr_von(datum):
+        return next((j for j in (jahre or []) if str(j["jahr"]) == datum[:4]), None)
+
+    def ausgabe(b, quote):
+        """Nur die erlaubten Zahlen weitergeben (Wetten, Treffer, Ø-Quote) — Einsätze/Rendite nie aus Tag/Woche/Monat."""
+        o = {"wetten": b["live"]["wetten"], "treffer": b["live"]["treffer"]}
+        if quote is not None:
+            o["quote"] = quote
+        return o
+
+    # Grafik für X: neuester Tag, neueste Woche bzw. neuester Monat
     ziel_dir = os.path.join(a.medien, "x")
     os.makedirs(ziel_dir, exist_ok=True)
     if a.modus == "tag" and data.get("tage"):
         t = max(data["tage"], key=lambda x: x["datum"])
         wt = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"][d(t["datum"]).weekday()]
         z = os.path.join(ziel_dir, f"{t['datum']}_tagesbilanz.png")
+        J = jahr_von(t["datum"])
+        q = quote_tag(t)[0]
+        q = round(q, 2) if q is not None else None
         if not a.trocken:
-            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, start=seit_start(t), fuss_text=(fussnote(data) if (seit_start(t) or t.get("rueckrechnung")) else None))
+            grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, jahr=J,
+                   fuss_text=(fussnote(data) if (J and J.get("rueckrechnung")) or t.get("rueckrechnung") else None), quote=q)
         res["grafiken"].append({"art": "tag", "datei": os.path.relpath(z, a.medien), "datum": t["datum"],
-                                "live": t["live"], "einzelspiele": t["einzelspiele"], "rueckrechnung": bool(t.get("rueckrechnung"))})
+                                "live": ausgabe(t, q), "jahr": J, "einzelspiele": t["einzelspiele"], "rueckrechnung": bool(t.get("rueckrechnung"))})
     if a.modus == "woche" and data.get("wochen"):
         w = max(data["wochen"], key=lambda x: x["von"])
         z = os.path.join(ziel_dir, f"{w['bis']}_wochenbilanz.png")
+        q = quote_block(data, w, w["von"], w["bis"])
         if not a.trocken:
-            grafik(w, f"{kurz(w['von'])}–{kurz(w['bis'])}", "Wochenbilanz", z, a.homepage, fuss_text=fussnote(data, w["von"], w["bis"]))
+            grafik(w, f"{kurz(w['von'])}–{kurz(w['bis'])}", "Wochenbilanz", z, a.homepage, fuss_text=fussnote(data, w["von"], w["bis"]), quote=q)
         res["grafiken"].append({"art": "woche", "datei": os.path.relpath(z, a.medien), "von": w["von"], "bis": w["bis"],
-                                "live": w["live"], "einzelspiele": w["einzelspiele"], "rueckrechnung": bool(w.get("rueckrechnung"))})
+                                "live": ausgabe(w, q), "jahr": jahr_von(w["bis"]), "verlustserie": w["live"].get("verlustserie"),
+                                "einzelspiele": w["einzelspiele"], "rueckrechnung": bool(w.get("rueckrechnung"))})
     if a.modus == "monat" and data.get("monate"):
         m = max(data["monate"], key=lambda x: x["monat"])
         y, mo = map(int, m["monat"].split("-"))
         z = os.path.join(ziel_dir, f"{m['monat']}_monatsbericht.png")
+        J = jahr_von(m["monat"] + "-01")
+        q = quote_block(data, m, m["monat"] + "-01", m["monat"] + "-31")
         if not a.trocken:
-            grafik(m, f"{MONATE[mo - 1]} {y}", "Monatsbericht", z, a.homepage, fuss_text=fussnote(data, m["monat"] + "-01", m["monat"] + "-31"))
+            grafik(m, f"{MONATE[mo - 1]} {y}", "Monatsbericht", z, a.homepage, jahr=J,
+                   fuss_text=(fussnote(data) if (J and J.get("rueckrechnung")) else fussnote(data, m["monat"] + "-01", m["monat"] + "-31")), quote=q)
         res["grafiken"].append({"art": "monat", "datei": os.path.relpath(z, a.medien), "monat": m["monat"],
-                                "live": m["live"], "einzelspiele": m["einzelspiele"], "rueckrechnung": bool(m.get("rueckrechnung"))})
+                                "live": ausgabe(m, q), "jahr": J, "verlustserie": m["live"].get("verlustserie"),
+                                "einzelspiele": m["einzelspiele"], "rueckrechnung": bool(m.get("rueckrechnung"))})
     print(json.dumps(res, ensure_ascii=False, indent=2))
     return 0
 

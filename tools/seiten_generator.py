@@ -11,7 +11,7 @@ import json, re, sys, os, datetime
 REPO = sys.argv[1] if len(sys.argv) > 1 else "."
 V = "20261021"
 BASE = "https://sportwetten-radar.net/"
-WISSEN_DATUM = "2026-10-20"  # bei inhaltlicher Änderung der Wissen-Seiten anpassen
+WISSEN_DATUM = "2026-11-06"  # bei inhaltlicher Änderung der Wissen-Seiten anpassen
 MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August",
           "September", "Oktober", "November", "Dezember"]
 
@@ -144,12 +144,13 @@ def month_pages(months):
         L, E = m["live"], m["einzelspiele"]
         q = L["treffer"] / L["wetten"] * 100 if L["wetten"] else 0
         eq = E["treffer"] / E["tipps"] * 100 if E["tipps"] else 0
-        G = L.get("gewinn", round(L["rendite"] * L["wetten"]) / 100)
+        qu = L.get("quote")
         name = mname(m["monat"])
         path = f"monatsbericht-{m['monat']}.html"
         title = f"Monatsbericht {name}: Live-Wetten und Einzelspiele — Sportwetten Radar"
-        desc = (f"Ergebnisse {name}: {L['wetten']} Live-Wetten, Trefferquote {de(q)} %, Rendite {signed(L['rendite'])} %, "
-                f"längste Verlustserie {L['verlustserie']}. Einzelspiele: {E['treffer']} von {E['tipps']} getroffen.")
+        desc = (f"Ergebnisse {name}: {L['wetten']} Live-Wetten, {L['treffer']} Treffer ({de(q)} %)"
+                + (f", Ø-Quote {de(qu, 2)}" if qu else "") +
+                f", längste Verlustserie {L['verlustserie']}. Einzelspiele: {E['treffer']} von {E['tipps']} getroffen.")
         nachbarn = []
         if i > 0:
             nachbarn.append(f'<a href="monatsbericht-{months[i-1]["monat"]}.html">← {mname(months[i-1]["monat"])}</a>')
@@ -166,14 +167,11 @@ def month_pages(months):
   <table class="kv">
     <tr><th>Wetten</th><td>{L['wetten']}</td></tr>
     <tr><th>Treffer</th><td>{L['treffer']} ({de(q)} %)</td></tr>
-    <tr><th>Einsätze</th><td>{signed(G)}</td></tr>
-    <tr><th>Rendite</th><td>{signed(L['rendite'])} %</td></tr>
+{('    <tr><th>Ø-Quote</th><td>' + de(qu, 2) + '</td></tr>') if qu else ''}
     <tr><th>Längste Verlustserie</th><td>{L['verlustserie']} in Folge</td></tr>
-    <tr><th>Größter Rückgang</th><td>{signed(L['rueckgang'])} Einsätze</td></tr>
-    <tr><th>Bester Tag</th><td>{signed(L['besterTag'])} Einsätze</td></tr>
-    <tr><th>Schlechtester Tag</th><td>{signed(L['schlechtesterTag'])} Einsätze</td></tr>
   </table>
-  <p>Alle Zahlen gelten bei gleichem Einsatz auf jede Live-Wette (1 Einsatz = dein Grundeinsatz pro Wette).
+  <p>Ø-Quote ist der Durchschnitt der Quoten aller gesetzten Live-Wetten des Monats. Einsätze und Rendite weisen wir je
+  Kalenderjahr aus, sobald 100 Live-Wetten vorliegen, nicht je Monat: Ein einzelner Monat ist zu stark vom Zufall abhängig.
   Verlustserien gehören dazu. Wie wir rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
 
@@ -188,7 +186,7 @@ def month_pages(months):
   <h2><span class="num">03</span>Einordnung</h2>
   <p>Ein einzelner Monat sagt wenig. Gute und schwache Monate wechseln sich ab, und auch bei hoher
   Trefferquote sind mehrere Fehlschläge in Folge normal (siehe <a href="verlustserien.html">Verlustserien</a>).
-  Den Verlauf aller Monate und das laufende Jahr findest du im <a href="index.html#trackrecord">Trackrecord</a>.</p>
+  Den Verlauf aller Monate und das laufende Jahr mit Einsätzen und Rendite findest du im <a href="index.html#trackrecord">Trackrecord</a>.</p>
 
   <p class="wissen-pager">{' · '.join(nachbarn)}</p>
 """
@@ -199,17 +197,17 @@ def month_pages(months):
     rows = "\n".join(
         f'    <tr><td><a href="monatsbericht-{m["monat"]}.html">{mname(m["monat"])}{"*" if m.get("rueckrechnung") else ""}</a></td>'
         f'<td>{m["live"]["wetten"]}</td><td>{m["live"]["treffer"]}</td>'
-        f'<td>{signed(m["live"].get("gewinn", round(m["live"]["rendite"] * m["live"]["wetten"]) / 100))}</td><td>{signed(m["live"]["rendite"])} %</td></tr>'
+        + (f'<td>{de(m["live"]["quote"], 2)}</td>' if m["live"].get("quote") else '<td>–</td>') + '</tr>'
         for m in reversed(months))
     fn = f"<p>{FUSSNOTE}</p>" if any(m.get("rueckrechnung") for m in months) else ""
-    fallback = ('<table class="kv"><tr><th>Monat</th><th>Wetten</th><th>Treffer</th><th>Einsätze</th><th>Rendite</th></tr>' + rows + "</table>" + fn)
+    fallback = ('<table class="kv"><tr><th>Monat</th><th>Wetten</th><th>Treffer</th><th>Ø-Quote</th></tr>' + rows + "</table>" + fn)
     inner = f"""
   <p>Jeden Monat veröffentlichen wir am 1. die Ergebnisse des Vormonats. Alle Berichte bleiben dauerhaft
   einsehbar — die starken wie die schwachen.</p>
   {tr_block(None, fallback)}
 """
     t = "Alle Monatsberichte — Sportwetten Radar"
-    d = "Alle Monatsberichte von Sportwetten Radar: Live-Wetten mit Trefferquote, Rendite und Verlustserien, Einzelspiele mit Trefferquote."
+    d = "Alle Monatsberichte von Sportwetten Radar: Live-Wetten mit Trefferquote, Ø-Quote und Verlustserien, Einzelspiele mit Trefferquote."
     paths.append((page("monatsberichte.html", t, d, "Trackrecord", "Alle Monatsberichte", inner), None))
     return paths
 
@@ -277,14 +275,14 @@ WISSEN = [
 
   <h2><span class="num">03</span>Die Formel</h2>
   <p>Rendite = (Summe aller Gewinne und Verluste in Einsätzen) ÷ (Anzahl der Wetten) × 100.
-  Der Gewinn in Einsätzen ist umgekehrt Rendite × Anzahl der Wetten ÷ 100. Bei 104 Live-Wetten und
-  +12,2 % Rendite sind das rund +12,7 Einsätze.</p>
+  Der Gewinn in Einsätzen ist umgekehrt Rendite × Anzahl der Wetten ÷ 100. Bei 200 Live-Wetten und
+  +5 % Rendite sind das +10 Einsätze.</p>
 
   <h2><span class="num">04</span>Warum die Trefferquote nicht reicht</h2>
   <p>Ab welcher Trefferquote du im Plus bist, hängt von der Quote ab: bei 1,60 ab 62,5 %, bei 1,80
   ab 55,6 %, bei 1,40 erst ab 71,4 %. Wer eine hohe Trefferquote mit niedrigen Quoten erreicht, kann
   trotzdem verlieren (wie eine Quote in eine Wahrscheinlichkeit übersetzt wird, steht unter
-  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten immer beides: Trefferquote und Rendite.
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten neben der Trefferquote immer die Durchschnittsquote (Ø-Quote). Mit beiden lässt sich die Trefferquote selbst einordnen: Die Gewinnschwelle liegt bei 1 ÷ Quote. Einsätze und Rendite weisen wir je Kalenderjahr aus, sobald 100 Live-Wetten vorliegen. Für Tage, Wochen und Monate nicht, weil kurze Zeiträume stark vom Zufall abhängen.
   Für <a href="index.html#produkt">Einzelspiele zum Kombinieren</a> zeigen wir nur die Trefferquote, weil
   jeder seinen Wettschein selbst zusammenstellt und es keine einheitliche Quote gibt.</p>
 
@@ -317,8 +315,8 @@ WISSEN = [
   voneinander unabhängig sind.</p>
 
   <h2><span class="num">02</span>Warum wir sie offen zeigen</h2>
-  <p>In jedem <a href="monatsberichte.html">Monatsbericht</a> stehen die längste Verlustserie und der größte
-  Rückgang. Wer nur Gewinne zeigt, verschweigt die Hälfte. Wer vorher weiß, wie tief es zwischendurch
+  <p>In jedem <a href="monatsberichte.html">Monatsbericht</a> steht die längste Verlustserie, und die Jahreskurve
+  im <a href="index.html#trackrecord">Trackrecord</a> zeigt, wie tief es zwischendurch ging. Wer nur Gewinne zeigt, verschweigt die Hälfte. Wer vorher weiß, wie tief es zwischendurch
   gehen kann, gerät nicht in Panik, wenn es passiert.</p>
 
   <h2><span class="num">03</span>Fester Einsatz statt Verdoppeln</h2>
@@ -387,7 +385,7 @@ WISSEN = [
   <ul>
     <li><strong>Erkennbarer Betreiber:</strong> Impressum mit ladungsfähiger Anschrift, Datenschutzerklärung und AGB.</li>
     <li><strong>Alle Ergebnisse, dauerhaft:</strong> Gewinne und Verluste bleiben sichtbar. Nichts wird gelöscht oder im Nachhinein geschönt.</li>
-    <li><strong>Rendite statt nur Trefferquote:</strong> Eine hohe Trefferquote allein sagt wenig – entscheidend ist, was bei gleichem Einsatz übrig bleibt (<a href="rendite-erklaert.html">Rendite erklärt</a>).</li>
+    <li><strong>Trefferquote und Quote zusammen:</strong> Eine hohe Trefferquote allein sagt wenig – entscheidend ist das Verhältnis zur Quote. Seriöse Anbieter nennen deshalb auch die Durchschnittsquote und die Rendite über einen längeren Zeitraum (<a href="rendite-erklaert.html">Rendite erklärt</a>).</li>
     <li><strong>Verlustserien werden genannt:</strong> Wer offenlegt, wie tief es zwischendurch ging, ist ehrlich (<a href="verlustserien.html">Verlustserien</a>).</li>
     <li><strong>Keine Gewinngarantie:</strong> Sportwetten sind mit einem Verlustrisiko verbunden. Wer etwas anderes verspricht, lügt.</li>
     <li><strong>Prüfbar vor dem Kauf:</strong> Ergebnisse lassen sich kostenlos verfolgen, bevor Geld fließt.</li>
@@ -633,7 +631,7 @@ WISSEN = [
   <h2><span class="num">05</span>Woran du eine ehrliche Bilanz erkennst</h2>
   <ul>
     <li>Alle Wetten sind enthalten, auch die verlorenen. Nichts wird nachträglich gelöscht.</li>
-    <li>Die Rendite wird zusammen mit der Trefferquote gezeigt, nicht nur die Trefferquote.</li>
+    <li>Die Trefferquote wird zusammen mit der Durchschnittsquote gezeigt, die Rendite über einen langen Zeitraum und nicht für einzelne Tage.</li>
     <li>Der Zeitraum ist klar, und es wird gesagt, welche Zahlen nachträglich nach den Regeln vom 11.10.2026 berechnet wurden.</li>
     <li>Es gibt keine Gewinnversprechen. Mehr dazu unter
     <a href="seriose-tippgeber-erkennen.html">Seriöse Tippgeber erkennen</a>.</li>
@@ -668,7 +666,7 @@ WISSEN_KAT = [
 
 def wissen_hub():
     info = {e[0]: (e[4], e[2]) for e in WISSEN}
-    info["monatsberichte.html"] = ("Alle Monatsberichte", "Live-Wetten mit Trefferquote, Rendite und Verlustserien, Einzelspiele mit Trefferquote.")
+    info["monatsberichte.html"] = ("Alle Monatsberichte", "Live-Wetten mit Trefferquote, Ø-Quote und Verlustserien, Einzelspiele mit Trefferquote.")
     teile = ["\n  <p>Alle Erklärseiten von Sportwetten Radar, nach Themen sortiert. Neue Seiten kommen in die passende Kategorie.</p>\n"]
     for i, (kid, name, kdesc, pages) in enumerate(WISSEN_KAT, 1):
         items = "\n".join(f'    <li><a href="{p}">{info[p][0]}</a><br><span class="wissen-note">{info[p][1]}</span></li>' for p in pages)

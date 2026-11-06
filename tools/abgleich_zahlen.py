@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Abgleich: alle Zahlen der Homepage gegen daten/ergebnisse.json (Tage, Wochen, Monate, Seit Start).
+"""Abgleich: alle Zahlen der Homepage gegen daten/ergebnisse.json und daten/signale.json (Tage, Wochen, Monate, Jahr, Ø-Quote).
 Aufruf: python3 abgleich_zahlen.py --medien <dir> --homepage <dir>
 Prüft trackrecord-daten.js, die statischen Monatsseiten und die gerenderte Startseite. Ausgabe: Liste der Abweichungen (leer = alles gleich).
 Exit-Code 0 = alles gleich, 1 = Abweichungen."""
@@ -38,15 +38,32 @@ def main():
         else:
             f.append(f"{name}: Homepage {a_} ≠ ergebnisse.json {b_}")
 
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import auto_ergebnisse as ae
+    ae.lade_signale(a.medien)
+    VERBOTEN = ("rendite", "gewinn", "rueckgang", "besterTag", "schlechtesterTag")  # nie in Monats-/Wochenblöcken der Homepage
+
+    def block_ok(name, h, x, von, bis):
+        for k in ("wetten", "treffer"):
+            cmp(f"{name} live.{k}", h["live"].get(k), x["live"][k], 0)
+        if "verlustserie" in x["live"]:
+            cmp(f"{name} live.verlustserie", h["live"].get("verlustserie"), x["live"]["verlustserie"], 0)
+        q = ae.quote_block(d, x, von, bis)
+        if q is not None:
+            cmp(f"{name} Ø-Quote", h["live"].get("quote"), q, 0.0051)
+        elif "quote" in h["live"]:
+            f.append(f"{name}: Ø-Quote {h['live']['quote']} auf der Homepage, aber nicht aus den Bot-Daten herleitbar")
+        for k in VERBOTEN:
+            if k in h["live"]:
+                f.append(f"{name}: Feld {k} darf auf der Homepage nicht stehen (nur Jahr)")
+
     hm = {m["monat"]: m for m in w.get("TRACKRECORD", [])}
     for m in d.get("monate", []):
         h = hm.get(m["monat"])
         if not h:
             f.append(f"Monat {m['monat']}: fehlt auf der Homepage")
             continue
-        for k in ("wetten", "treffer", "rendite", "gewinn", "verlustserie", "rueckgang", "besterTag", "schlechtesterTag"):
-            if k in m["live"]:
-                cmp(f"Monat {m['monat']} live.{k}", h["live"].get(k), m["live"][k])
+        block_ok(f"Monat {m['monat']}", h, m, m["monat"] + "-01", m["monat"] + "-31")
         for k in ("tipps", "treffer"):
             cmp(f"Monat {m['monat']} einzelspiele.{k}", h["einzelspiele"].get(k), m["einzelspiele"][k], 0)
         cmp(f"Monat {m['monat']} Markierung", bool(h.get("rueckrechnung")), bool(m.get("rueckrechnung")))
@@ -56,34 +73,44 @@ def main():
         if not h:
             f.append(f"Woche {x['von']}: fehlt auf der Homepage")
             continue
-        for k in ("wetten", "treffer", "rendite"):
-            cmp(f"Woche {x['von']} live.{k}", h["live"].get(k), x["live"][k])
-    ht = {t["d"]: t for t in w.get("TRACKRECORD_TAGE", [])}
+        block_ok(f"Woche {x['von']}", h, x, x["von"], x["bis"])
     tage = sorted(d.get("tage", []), key=lambda t: t["datum"])
     ss = lambda t: t.get("seitStart") or t.get("seit_start") or {}
-    for t in tage:
-        h = ht.get(t["datum"])
-        if not ss(t):
+    # Jahre: Wetten/Treffer/Einsätze/Rendite aus seitStart-Differenzen; unter 100 Wetten darf nichts davon veröffentlicht sein
+    ht = {t["d"]: t for t in w.get("TRACKRECORD_TAGE", [])}
+    hj = {j["jahr"]: j for j in w.get("TRACKRECORD_JAHRE", [])}
+    for jahr in sorted({t["datum"][:4] for t in tage if ss(t)}):
+        tj = [t for t in tage if t["datum"][:4] == jahr]
+        vor = [t for t in tage if t["datum"][:4] < jahr]
+        v = ss(vor[-1]) if vor else {"wetten": 0, "treffer": 0, "gewinn": 0.0}
+        z = ss(tj[-1])
+        H = hj.get(int(jahr))
+        if not H:
+            f.append(f"Jahr {jahr}: fehlt auf der Homepage")
             continue
-        if not h:
-            f.append(f"Tag {t['datum']}: fehlt in der Kurve")
-            continue
-        cmp(f"Tag {t['datum']} Stand seit Start", h["g"], ss(t)["gewinn"])
-        cmp(f"Tag {t['datum']} Markierung", bool(h["rr"]), bool(t.get("rueckrechnung")))
-    if tage and ss(tage[-1]):
-        S, z = w.get("TRACKRECORD_START") or {}, ss(tage[-1])
-        for k in ("wetten", "treffer", "rendite", "gewinn"):
-            cmp(f"Seit Start {k}", S.get(k), z[k])
-        cmp("Seit Start Stand", S.get("stand"), tage[-1]["datum"])
-        # Seit Start muss der Summe der Monate entsprechen, wenn die Monate lückenlos ab Start vorliegen
-        sw = sum(m["live"]["wetten"] for m in d.get("monate", []))
-        st = sum(m["live"]["treffer"] for m in d.get("monate", []))
-        sg_ = sum(m["live"].get("gewinn", 0) for m in d.get("monate", []))
-        if tage[-1]["datum"] == max(m["monat"] for m in d["monate"]) + "-" + str(__import__("calendar").monthrange(*map(int, max(m["monat"] for m in d["monate"]).split("-")))[1]):
-            cmp("Seit Start Wetten = Summe Monate", z["wetten"], sw, 0)
-            cmp("Seit Start Treffer = Summe Monate", z["treffer"], st, 0)
-            cmp("Seit Start Einsätze = Summe Monate", z["gewinn"], sg_, 0.11)
-    # Statische Monatsseiten
+        wj = z["wetten"] - v["wetten"]
+        cmp(f"Jahr {jahr} Wetten", H["wetten"], wj, 0)
+        cmp(f"Jahr {jahr} Treffer", H["treffer"], z["treffer"] - v["treffer"], 0)
+        cmp(f"Jahr {jahr} Stand", H["stand"], tj[-1]["datum"])
+        if wj >= ae.JAHR_MIN_WETTEN:
+            cmp(f"Jahr {jahr} Einsätze", H["gewinn"], round(z["gewinn"] - v["gewinn"], 1), 0.051)
+            cmp(f"Jahr {jahr} Rendite", H["rendite"], z["rendite"] if not vor else round((z["gewinn"] - v["gewinn"]) / wj * 100, 1), 0.051)
+            for t in tj:
+                hh = ht.get(t["datum"])
+                if not hh:
+                    f.append(f"Tag {t['datum']}: fehlt in der Kurve")
+                    continue
+                cmp(f"Tag {t['datum']} Kurve (Jahr ab 0)", hh["g"], ss(t)["gewinn"] - v["gewinn"])
+                cmp(f"Tag {t['datum']} Markierung", bool(hh["rr"]), bool(t.get("rueckrechnung")))
+        else:
+            if H.get("gewinn") is not None or H.get("rendite") is not None:
+                f.append(f"Jahr {jahr}: Einsätze/Rendite veröffentlicht, obwohl nur {wj} Wetten (< {ae.JAHR_MIN_WETTEN})")
+            if any(t["datum"][:4] == jahr for t in ht.values()):
+                f.append(f"Jahr {jahr}: Kurve veröffentlicht, obwohl nur {wj} Wetten (< {ae.JAHR_MIN_WETTEN})")
+        qj = ae.quote_zeitraum(d, tj[0]["datum"], tj[-1]["datum"])
+        if qj is not None:
+            cmp(f"Jahr {jahr} Ø-Quote", H.get("quote"), qj, 0.0051)
+    # Statische Monatsseiten: Wetten, Treffer, Ø-Quote, Verlustserie; keine Einsätze/Rendite
     for m in d.get("monate", []):
         p = os.path.join(hp, f"monatsbericht-{m['monat']}.html")
         if not os.path.exists(p):
@@ -92,13 +119,19 @@ def main():
         h = open(p, encoding="utf-8").read()
         L = m["live"]
         q = L["treffer"] / L["wetten"] * 100 if L["wetten"] else 0
-        for lab, val in (("Einsätze", sg(L.get("gewinn", 0))), ("Wetten", str(L["wetten"])), ("Treffer", f"{L['treffer']} ({de(q)} %)"),
-                         ("Rendite", sg(L["rendite"]) + " %")):
+        soll = [("Wetten", str(L["wetten"])), ("Treffer", f"{L['treffer']} ({de(q)} %)"), ("Längste Verlustserie", f"{L['verlustserie']} in Folge")]
+        qq = ae.quote_block(d, m, m["monat"] + "-01", m["monat"] + "-31")
+        if qq is not None:
+            soll.append(("Ø-Quote", de(qq, 2)))
+        for lab, val in soll:
             mm = re.search(rf"<th>{lab}</th><td>([^<]*)</td>", h)
             if mm and mm.group(1) == val:
                 ok += 1
             else:
                 f.append(f"Seite {m['monat']} {lab}: {mm.group(1) if mm else 'fehlt'} ≠ {val}")
+        for lab in ("Einsätze", "Rendite", "Größter Rückgang", "Bester Tag", "Schlechtester Tag"):
+            if re.search(rf"<th>{lab}</th>", h):
+                f.append(f"Seite {m['monat']}: Zeile {lab} darf nicht auf der Monatsseite stehen")
         for w_ in ("zurückgerechnet", "Rückrechnung", "rückgerechnet"):
             if w_.lower() in h.lower():
                 f.append(f"Seite {m['monat']}: enthält '{w_}'")
