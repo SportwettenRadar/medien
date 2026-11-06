@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-06T08:10:04+01:00",
+ "stand": "2026-11-06T23:57:23+01:00",
  "tage": [
   {
    "datum": "2026-09-01",
@@ -29,7 +29,8 @@
     "wetten": 3,
     "treffer": 3,
     "rendite": 57.2,
-    "gewinn": 1.7
+    "gewinn": 1.7,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 0,
@@ -49,7 +50,8 @@
     "wetten": 3,
     "treffer": 2,
     "rendite": 3.3,
-    "gewinn": 0.1
+    "gewinn": 0.1,
+    "quote": 1.6
    },
    "einzelspiele": {
     "tipps": 0,
@@ -69,7 +71,8 @@
     "wetten": 3,
     "treffer": 3,
     "rendite": 57.4,
-    "gewinn": 1.7
+    "gewinn": 1.7,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 0,
@@ -109,7 +112,8 @@
     "wetten": 14,
     "treffer": 7,
     "rendite": -19.0,
-    "gewinn": -2.7
+    "gewinn": -2.7,
+    "quote": 1.62
    },
    "einzelspiele": {
     "tipps": 0,
@@ -129,7 +133,8 @@
     "wetten": 7,
     "treffer": 7,
     "rendite": 59.2,
-    "gewinn": 4.1
+    "gewinn": 4.1,
+    "quote": 1.59
    },
    "einzelspiele": {
     "tipps": 0,
@@ -169,7 +174,8 @@
     "wetten": 4,
     "treffer": 2,
     "rendite": -21.4,
-    "gewinn": -0.9
+    "gewinn": -0.9,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 0,
@@ -209,7 +215,8 @@
     "wetten": 7,
     "treffer": 6,
     "rendite": 35.2,
-    "gewinn": 2.5
+    "gewinn": 2.5,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 0,
@@ -229,7 +236,8 @@
     "wetten": 11,
     "treffer": 8,
     "rendite": 18.2,
-    "gewinn": 2.0
+    "gewinn": 2.0,
+    "quote": 1.62
    },
    "einzelspiele": {
     "tipps": 0,
@@ -249,7 +257,8 @@
     "wetten": 12,
     "treffer": 6,
     "rendite": -19.0,
-    "gewinn": -2.3
+    "gewinn": -2.3,
+    "quote": 1.61
    },
    "einzelspiele": {
     "tipps": 0,
@@ -289,7 +298,8 @@
     "wetten": 1,
     "treffer": 0,
     "rendite": -100.0,
-    "gewinn": -1.0
+    "gewinn": -1.0,
+    "quote": 1.61
    },
    "einzelspiele": {
     "tipps": 5,
@@ -309,7 +319,8 @@
     "wetten": 1,
     "treffer": 1,
     "rendite": 60.0,
-    "gewinn": 0.6
+    "gewinn": 0.6,
+    "quote": 1.6
    },
    "einzelspiele": {
     "tipps": 4,
@@ -349,7 +360,8 @@
     "wetten": 6,
     "treffer": 4,
     "rendite": 5.3,
-    "gewinn": 0.3
+    "gewinn": 0.3,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -369,7 +381,8 @@
     "wetten": 18,
     "treffer": 13,
     "rendite": 14.5,
-    "gewinn": 2.6
+    "gewinn": 2.6,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -389,7 +402,8 @@
     "wetten": 12,
     "treffer": 9,
     "rendite": 20.9,
-    "gewinn": 2.5
+    "gewinn": 2.5,
+    "quote": 1.61
    },
    "einzelspiele": {
     "tipps": 5,
@@ -489,7 +503,8 @@
     "wetten": 1,
     "treffer": 1,
     "rendite": 67.5,
-    "gewinn": 0.7
+    "gewinn": 0.7,
+    "quote": 1.68
    },
    "einzelspiele": {
     "tipps": 2,
@@ -509,7 +524,8 @@
     "wetten": 1,
     "treffer": 1,
     "rendite": 60.0,
-    "gewinn": 0.6
+    "gewinn": 0.6,
+    "quote": 1.6
    },
    "einzelspiele": {
     "tipps": 5,
@@ -649,7 +665,8 @@
     "wetten": 2,
     "treffer": 2,
     "rendite": 57.5,
-    "gewinn": 1.2
+    "gewinn": 1.2,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -769,7 +786,8 @@
     "wetten": 8,
     "treffer": 4,
     "rendite": -21.3,
-    "gewinn": -1.7
+    "gewinn": -1.7,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -789,7 +807,8 @@
     "wetten": 18,
     "treffer": 13,
     "rendite": 13.8,
-    "gewinn": 2.5
+    "gewinn": 2.5,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -809,7 +828,8 @@
     "wetten": 16,
     "treffer": 12,
     "rendite": 17.4,
-    "gewinn": 2.8
+    "gewinn": 2.8,
+    "quote": 1.56
    },
    "einzelspiele": {
     "tipps": 5,
@@ -829,7 +849,8 @@
     "wetten": 1,
     "treffer": 0,
     "rendite": -100.0,
-    "gewinn": -1.0
+    "gewinn": -1.0,
+    "quote": 1.67
    },
    "einzelspiele": {
     "tipps": 5,
@@ -849,7 +870,8 @@
     "wetten": 8,
     "treffer": 7,
     "rendite": 38.5,
-    "gewinn": 3.1
+    "gewinn": 3.1,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -869,7 +891,8 @@
     "wetten": 2,
     "treffer": 0,
     "rendite": -100.0,
-    "gewinn": -2.0
+    "gewinn": -2.0,
+    "quote": 1.61
    },
    "einzelspiele": {
     "tipps": 5,
@@ -889,7 +912,8 @@
     "wetten": 13,
     "treffer": 8,
     "rendite": -1.9,
-    "gewinn": -0.2
+    "gewinn": -0.2,
+    "quote": 1.6
    },
    "einzelspiele": {
     "tipps": 5,
@@ -909,7 +933,8 @@
     "wetten": 10,
     "treffer": 7,
     "rendite": 10.4,
-    "gewinn": 1.0
+    "gewinn": 1.0,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 4,
@@ -929,7 +954,8 @@
     "wetten": 26,
     "treffer": 14,
     "rendite": -14.7,
-    "gewinn": -3.8
+    "gewinn": -3.8,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -949,7 +975,8 @@
     "wetten": 15,
     "treffer": 6,
     "rendite": -36.7,
-    "gewinn": -5.5
+    "gewinn": -5.5,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -969,7 +996,8 @@
     "wetten": 5,
     "treffer": 3,
     "rendite": -6.6,
-    "gewinn": -0.3
+    "gewinn": -0.3,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 4,
@@ -989,7 +1017,8 @@
     "wetten": 4,
     "treffer": 3,
     "rendite": 16.8,
-    "gewinn": 0.7
+    "gewinn": 0.7,
+    "quote": 1.56
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1009,7 +1038,8 @@
     "wetten": 4,
     "treffer": 3,
     "rendite": 19.4,
-    "gewinn": 0.8
+    "gewinn": 0.8,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1029,7 +1059,8 @@
     "wetten": 8,
     "treffer": 6,
     "rendite": 18.2,
-    "gewinn": 1.5
+    "gewinn": 1.5,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1049,7 +1080,8 @@
     "wetten": 7,
     "treffer": 4,
     "rendite": -9.8,
-    "gewinn": -0.7
+    "gewinn": -0.7,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1069,7 +1101,8 @@
     "wetten": 27,
     "treffer": 16,
     "rendite": -7.1,
-    "gewinn": -1.9
+    "gewinn": -1.9,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1089,7 +1122,8 @@
     "wetten": 16,
     "treffer": 12,
     "rendite": 17.3,
-    "gewinn": 2.8
+    "gewinn": 2.8,
+    "quote": 1.56
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1109,7 +1143,8 @@
     "wetten": 1,
     "treffer": 1,
     "rendite": 55.0,
-    "gewinn": 0.6
+    "gewinn": 0.6,
+    "quote": 1.55
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1129,7 +1164,8 @@
     "wetten": 10,
     "treffer": 8,
     "rendite": 25.8,
-    "gewinn": 2.6
+    "gewinn": 2.6,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1149,7 +1185,8 @@
     "wetten": 8,
     "treffer": 5,
     "rendite": -2.6,
-    "gewinn": -0.2
+    "gewinn": -0.2,
+    "quote": 1.56
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1169,7 +1206,8 @@
     "wetten": 2,
     "treffer": 2,
     "rendite": 63.5,
-    "gewinn": 1.3
+    "gewinn": 1.3,
+    "quote": 1.64
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1189,7 +1227,8 @@
     "wetten": 7,
     "treffer": 4,
     "rendite": -9.8,
-    "gewinn": -0.7
+    "gewinn": -0.7,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1209,7 +1248,8 @@
     "wetten": 29,
     "treffer": 14,
     "rendite": -24.2,
-    "gewinn": -7.0
+    "gewinn": -7.0,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1229,7 +1269,8 @@
     "wetten": 10,
     "treffer": 5,
     "rendite": -20.4,
-    "gewinn": -2.0
+    "gewinn": -2.0,
+    "quote": 1.59
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1249,7 +1290,8 @@
     "wetten": 4,
     "treffer": 2,
     "rendite": -21.4,
-    "gewinn": -0.9
+    "gewinn": -0.9,
+    "quote": 1.56
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1269,7 +1311,8 @@
     "wetten": 4,
     "treffer": 2,
     "rendite": -21.5,
-    "gewinn": -0.9
+    "gewinn": -0.9,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1289,7 +1332,8 @@
     "wetten": 1,
     "treffer": 1,
     "rendite": 40.0,
-    "gewinn": 0.4
+    "gewinn": 0.4,
+    "quote": 1.4
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1309,7 +1353,8 @@
     "wetten": 4,
     "treffer": 2,
     "rendite": -25.2,
-    "gewinn": -1.0
+    "gewinn": -1.0,
+    "quote": 1.48
    },
    "einzelspiele": {
     "tipps": 5,
@@ -1337,7 +1382,8 @@
     "verlustserie": 2,
     "rueckgang": -3.5,
     "besterTag": 1.7,
-    "schlechtesterTag": -2.7
+    "schlechtesterTag": -2.7,
+    "quote": 1.6
    },
    "einzelspiele": {
     "tipps": 0,
@@ -1357,7 +1403,8 @@
     "verlustserie": 3,
     "rueckgang": -4.2,
     "besterTag": 4.1,
-    "schlechtesterTag": -2.3
+    "schlechtesterTag": -2.3,
+    "quote": 1.6
    },
    "einzelspiele": {
     "tipps": 0,
@@ -1377,7 +1424,8 @@
     "verlustserie": 2,
     "rueckgang": -2.4,
     "besterTag": 2.6,
-    "schlechtesterTag": -1.0
+    "schlechtesterTag": -1.0,
+    "quote": 1.59
    },
    "einzelspiele": {
     "tipps": 29,
@@ -1397,7 +1445,8 @@
     "verlustserie": 0,
     "rueckgang": -0.0,
     "besterTag": 0.7,
-    "schlechtesterTag": 0.6
+    "schlechtesterTag": 0.6,
+    "quote": 1.64
    },
    "einzelspiele": {
     "tipps": 15,
@@ -1417,7 +1466,8 @@
     "verlustserie": 0,
     "rueckgang": -0.0,
     "besterTag": 1.2,
-    "schlechtesterTag": 1.2
+    "schlechtesterTag": 1.2,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 21,
@@ -1437,7 +1487,8 @@
     "verlustserie": 3,
     "rueckgang": -3.3,
     "besterTag": 2.8,
-    "schlechtesterTag": -1.7
+    "schlechtesterTag": -1.7,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 27,
@@ -1457,7 +1508,8 @@
     "verlustserie": 5,
     "rueckgang": -11.1,
     "besterTag": 3.1,
-    "schlechtesterTag": -5.5
+    "schlechtesterTag": -5.5,
+    "quote": 1.58
    },
    "einzelspiele": {
     "tipps": 34,
@@ -1477,7 +1529,8 @@
     "verlustserie": 4,
     "rueckgang": -5.6,
     "besterTag": 2.8,
-    "schlechtesterTag": -1.9
+    "schlechtesterTag": -1.9,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 34,
@@ -1497,7 +1550,8 @@
     "verlustserie": 5,
     "rueckgang": -10.9,
     "besterTag": 2.6,
-    "schlechtesterTag": -7.0
+    "schlechtesterTag": -7.0,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 35,
@@ -1517,7 +1571,8 @@
     "verlustserie": 3,
     "rueckgang": -5.0,
     "besterTag": 4.1,
-    "schlechtesterTag": -2.7
+    "schlechtesterTag": -2.7,
+    "quote": 1.6
    },
    "einzelspiele": {
     "tipps": 49,
@@ -1535,7 +1590,8 @@
     "verlustserie": 5,
     "rueckgang": -12.3,
     "besterTag": 3.1,
-    "schlechtesterTag": -7.0
+    "schlechtesterTag": -7.0,
+    "quote": 1.57
    },
    "einzelspiele": {
     "tipps": 141,
