@@ -1,0 +1,58 @@
+{
+ "titel": "Monatsbericht Oktober 2026: alle Live-Wetten, Treffer und Verluste",
+ "thumb": {
+  "eyebrow": "Monatsbericht",
+  "text": "Oktober 2026:\n[[154 von 247]] Treffer"
+ },
+ "folien": [
+  {
+   "typ": "hook",
+   "dauer": 2.6,
+   "text": "Oktober: [[154 von 247]] Treffer.\nUngefiltert."
+  },
+  {
+   "typ": "titel",
+   "dauer": 5,
+   "eyebrow": "Sportwetten Radar",
+   "text": "Monatsbericht\n[[Oktober 2026]]"
+  },
+  {
+   "typ": "liste",
+   "dauer": 12,
+   "eyebrow": "Live-Wetten",
+   "text": "Die Zahlen im Oktober",
+   "punkte": [
+    "<b>154 von 247</b> Live-Wetten waren Treffer.",
+    "Trefferquote: <b>62,3 %</b>."
+   ]
+  },
+  {
+   "typ": "liste",
+   "dauer": 9,
+   "eyebrow": "Verluste",
+   "text": "Auch das gehört dazu",
+   "punkte": [
+    "Längste Verlustserie: <b>5 in Folge</b>.",
+    "93 Live-Wetten im Oktober waren Verluste."
+   ]
+  },
+  {
+   "typ": "text",
+   "dauer": 8,
+   "eyebrow": "Einzelspiele zum Kombinieren",
+   "text": "Trefferquote 78,7 %",
+   "sub": "111 von 141 Tipps waren richtig."
+  },
+  {
+   "typ": "text",
+   "dauer": 10,
+   "eyebrow": "Wichtiger Hinweis",
+   "text": "Nicht alles war\nschon im Versand.",
+   "sub": "Verschickt seit dem 11.10. Der Zeitraum davor war Testphase, mit den Regeln vom 11.10.2026 berechnet."
+  },
+  {
+   "typ": "ende",
+   "dauer": 8
+  }
+ ]
+}
