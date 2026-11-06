@@ -1,14 +1,14 @@
 {
  "version": 1,
- "stand": "2026-11-06T08:10:12+01:00",
+ "stand": "2026-11-06T23:57:23+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
-   "spieltag": 8,
+   "spieltag": 9,
    "stand": {
     "datum": "2026-11-06",
-    "spieltage": 8,
-    "spiele": 72
+    "spieltage": 9,
+    "spiele": 73
    },
    "kennzahlen": {
     "heim_immer_getroffen": [
@@ -18,29 +18,23 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.5,
-     "spiele": 72
+     "wert": 3.51,
+     "spiele": 73
     },
     "ueber_2_5_anteil": {
-     "wert": 0.69,
-     "spiele": 72
+     "wert": 0.7,
+     "spiele": 73
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Hamburger SV",
-     "gast": "Borussia Mönchengladbach",
-     "anstoss": "20:30"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "2. Bundesliga",
-   "spieltag": 10,
+   "spieltag": 11,
    "stand": {
     "datum": "2026-11-06",
-    "spieltage": 10,
-    "spiele": 90
+    "spieltage": 11,
+    "spiele": 92
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -93,6 +87,10 @@
       "heimspiele": 5
      },
      {
+      "team": "Dynamo Dresden",
+      "heimspiele": 5
+     },
+     {
       "team": "Energie Cottbus",
       "heimspiele": 5
      },
@@ -108,34 +106,23 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.0,
-     "spiele": 90
+     "wert": 2.97,
+     "spiele": 92
     },
     "ueber_2_5_anteil": {
      "wert": 0.57,
-     "spiele": 90
+     "spiele": 92
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Dynamo Dresden",
-     "gast": "SpVgg Greuther Fürth",
-     "anstoss": "18:30"
-    },
-    {
-     "heim": "Eintracht Braunschweig",
-     "gast": "Energie Cottbus",
-     "anstoss": "18:30"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "Premier League",
-   "spieltag": 9,
+   "spieltag": 10,
    "stand": {
     "datum": "2026-11-06",
-    "spieltage": 9,
-    "spiele": 90
+    "spieltage": 10,
+    "spiele": 91
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -164,29 +151,23 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 2.7,
-     "spiele": 90
+     "wert": 2.71,
+     "spiele": 91
     },
     "ueber_2_5_anteil": {
      "wert": 0.47,
-     "spiele": 90
+     "spiele": 91
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Everton",
-     "gast": "Coventry",
-     "anstoss": "21:00"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "La Liga",
-   "spieltag": 11,
+   "spieltag": 12,
    "stand": {
     "datum": "2026-11-06",
-    "spieltage": 11,
-    "spiele": 109
+    "spieltage": 12,
+    "spiele": 110
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -250,10 +231,6 @@
      {
       "team": "Real Madrid",
       "heimspiele": 5
-     },
-     {
-      "team": "Sevilla",
-      "heimspiele": 5
      }
     ],
     "zu_null_serie": [
@@ -263,29 +240,23 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.01,
-     "spiele": 109
+     "wert": 2.98,
+     "spiele": 110
     },
     "ueber_2_5_anteil": {
-     "wert": 0.58,
-     "spiele": 109
+     "wert": 0.57,
+     "spiele": 110
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Sevilla",
-     "gast": "Alaves",
-     "anstoss": "21:00"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "Serie A",
-   "spieltag": 10,
+   "spieltag": 11,
    "stand": {
     "datum": "2026-11-06",
-    "spieltage": 10,
-    "spiele": 100
+    "spieltage": 11,
+    "spiele": 101
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -353,28 +324,22 @@
     ],
     "tore_schnitt": {
      "wert": 3.18,
-     "spiele": 100
+     "spiele": 101
     },
     "ueber_2_5_anteil": {
      "wert": 0.61,
-     "spiele": 100
+     "spiele": 101
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Venezia",
-     "gast": "Udinese",
-     "anstoss": "20:45"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "Ligue 1",
-   "spieltag": 9,
+   "spieltag": 10,
    "stand": {
     "datum": "2026-11-06",
-    "spieltage": 9,
-    "spiele": 81
+    "spieltage": 10,
+    "spiele": 82
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -447,21 +412,15 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.04,
-     "spiele": 81
+     "wert": 3.05,
+     "spiele": 82
     },
     "ueber_2_5_anteil": {
-     "wert": 0.59,
-     "spiele": 81
+     "wert": 0.6,
+     "spiele": 82
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Toulouse",
-     "gast": "Strasbourg",
-     "anstoss": "20:45"
-    }
-   ]
+   "spiele_heute": []
   }
  ]
 }
