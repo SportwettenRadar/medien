@@ -1,12 +1,12 @@
 {
  "version": 1,
- "stand": "2026-11-05T08:10:12+01:00",
+ "stand": "2026-11-06T08:10:12+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
    "spieltag": 8,
    "stand": {
-    "datum": "2026-11-05",
+    "datum": "2026-11-06",
     "spieltage": 8,
     "spiele": 72
    },
@@ -26,13 +26,19 @@
      "spiele": 72
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Hamburger SV",
+     "gast": "Borussia Mönchengladbach",
+     "anstoss": "20:30"
+    }
+   ]
   },
   {
    "liga": "2. Bundesliga",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-11-05",
+    "datum": "2026-11-06",
     "spieltage": 10,
     "spiele": 90
    },
@@ -110,13 +116,24 @@
      "spiele": 90
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Dynamo Dresden",
+     "gast": "SpVgg Greuther Fürth",
+     "anstoss": "18:30"
+    },
+    {
+     "heim": "Eintracht Braunschweig",
+     "gast": "Energie Cottbus",
+     "anstoss": "18:30"
+    }
+   ]
   },
   {
    "liga": "Premier League",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-11-05",
+    "datum": "2026-11-06",
     "spieltage": 9,
     "spiele": 90
    },
@@ -155,13 +172,19 @@
      "spiele": 90
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Everton",
+     "gast": "Coventry",
+     "anstoss": "21:00"
+    }
+   ]
   },
   {
    "liga": "La Liga",
    "spieltag": 11,
    "stand": {
-    "datum": "2026-11-05",
+    "datum": "2026-11-06",
     "spieltage": 11,
     "spiele": 109
    },
@@ -248,13 +271,19 @@
      "spiele": 109
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Sevilla",
+     "gast": "Alaves",
+     "anstoss": "21:00"
+    }
+   ]
   },
   {
    "liga": "Serie A",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-11-05",
+    "datum": "2026-11-06",
     "spieltage": 10,
     "spiele": 100
    },
@@ -331,13 +360,19 @@
      "spiele": 100
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Venezia",
+     "gast": "Udinese",
+     "anstoss": "20:45"
+    }
+   ]
   },
   {
    "liga": "Ligue 1",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-11-05",
+    "datum": "2026-11-06",
     "spieltage": 9,
     "spiele": 81
    },
@@ -420,161 +455,11 @@
      "spiele": 81
     }
    },
-   "spiele_heute": []
-  },
-  {
-   "liga": "Europa League",
-   "spieltag": 4,
-   "stand": {
-    "datum": "2026-11-05",
-    "spieltage": 4,
-    "spiele": 135
-   },
-   "kennzahlen": {
-    "heim_ungeschlagen": [
-     {
-      "team": "Ferencvarosi TC",
-      "heimspiele": 6,
-      "siege": 5,
-      "remis": 1,
-      "niederlagen": 0
-     },
-     {
-      "team": "Beşiktaş",
-      "heimspiele": 5,
-      "siege": 4,
-      "remis": 1,
-      "niederlagen": 0
-     }
-    ],
-    "auswaerts_immer_getroffen": [
-     {
-      "team": "Benfica",
-      "auswaertsspiele": 5
-     },
-     {
-      "team": "Ferencvarosi TC",
-      "auswaertsspiele": 5
-     }
-    ],
-    "heim_immer_getroffen": [
-     {
-      "team": "Ferencvarosi TC",
-      "heimspiele": 6
-     },
-     {
-      "team": "Beşiktaş",
-      "heimspiele": 5
-     }
-    ],
-    "zu_null_serie": [
-     {
-      "team": "Qarabag",
-      "serie": 4
-     },
-     {
-      "team": "Bayer Leverkusen",
-      "serie": 3
-     },
-     {
-      "team": "Olympiakos Piraeus",
-      "serie": 3
-     }
-    ],
-    "tore_schnitt": {
-     "wert": 2.84,
-     "spiele": 135
-    },
-    "ueber_2_5_anteil": {
-     "wert": 0.59,
-     "spiele": 135
-    }
-   },
    "spiele_heute": [
     {
-     "heim": "AC Milan",
-     "gast": "Ferencvarosi TC",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "Anderlecht",
-     "gast": "Red Bull Salzburg",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "Crystal Palace",
-     "gast": "1899 Hoffenheim",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "Levski Sofia",
-     "gast": "Jagiellonia",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "Lillestrom",
-     "gast": "Plzen",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "NEC Nijmegen",
-     "gast": "Omonia Nicosia",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "Real Sociedad",
-     "gast": "Lyon",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "Sparta Praha",
-     "gast": "Bournemouth",
-     "anstoss": "18:45"
-    },
-    {
-     "heim": "AZ Alkmaar",
-     "gast": "Juventus",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Bayer Leverkusen",
-     "gast": "Marseille",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Benfica",
-     "gast": "Lech Poznan",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Celta Vigo",
-     "gast": "Union St. Gilloise",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Celtic",
-     "gast": "Beşiktaş",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Hapoel Beer Sheva",
-     "gast": "OFI",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Sturm Graz",
-     "gast": "Celje",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Sunderland",
-     "gast": "Dinamo Zagreb",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Torreense",
-     "gast": "Ararat-Armenia",
-     "anstoss": "21:00"
+     "heim": "Toulouse",
+     "gast": "Strasbourg",
+     "anstoss": "20:45"
     }
    ]
   }
