@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-05T08:57:21+01:00",
+ "stand": "2026-11-06T08:15:49+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -3992,6 +3992,105 @@
    "quote": 1.4,
    "ergebnis": "gewonnen",
    "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-05-001",
+   "datum": "2026-11-05",
+   "art": "einzel",
+   "heim": "Crystal Palace",
+   "gast": "1899 Hoffenheim",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-05-002",
+   "datum": "2026-11-05",
+   "art": "einzel",
+   "heim": "Aarhus",
+   "gast": "SC Braga",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-05-003",
+   "datum": "2026-11-05",
+   "art": "einzel",
+   "heim": "Lillestrom",
+   "gast": "Plzen",
+   "markt": "X2",
+   "quote": 1.36,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-05-004",
+   "datum": "2026-11-05",
+   "art": "einzel",
+   "heim": "Trabzonspor",
+   "gast": "SC Freiburg",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-05-005",
+   "datum": "2026-11-05",
+   "art": "einzel",
+   "heim": "Torreense",
+   "gast": "Ararat-Armenia",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-11-05-006",
+   "datum": "2026-11-05",
+   "art": "live",
+   "heim": "KuPS",
+   "gast": "Gent",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.52,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-05-007",
+   "datum": "2026-11-05",
+   "art": "live",
+   "heim": "Levski Sofia",
+   "gast": "Jagiellonia",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-05-008",
+   "datum": "2026-11-05",
+   "art": "live",
+   "heim": "Aarhus",
+   "gast": "SC Braga",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-05-009",
+   "datum": "2026-11-05",
+   "art": "live",
+   "heim": "Getafe",
+   "gast": "Brighton",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
   }
  ]
 }
