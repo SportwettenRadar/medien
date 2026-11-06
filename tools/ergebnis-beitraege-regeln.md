@@ -7,7 +7,7 @@
 Die Ergebnis-Beiträge starten ab Di 03.11.2026 (vorgezogen auf Daniels Entscheidung vom 02.11. 21:36; zuvor geplant 14.11.) auf Instagram, TikTok und YouTube (Short). Die Regeln gelten ab dem ersten Post. Daniel, 02.11. 14:36: Rendite und sonstige Kennzahlen werden weggelassen, damit alles Instagram-konform ist, und das ist KEINE Ausnahmeregelung. Damit bleiben die bisherigen Instagram-Regeln (`instagram-neukonto-regeln.md`) unverändert in Kraft; die Kennzahl-Variante vom 02.11. 14:31 (Einsätze, Wetten, Treffer %, Rendite %) ist zurückgenommen.
 
 ## Regeln
-1. Das Wort "zurückgerechnet" bzw. "Rückrechnung" kommt nirgends vor. Zeiträume vor dem 11.10.2026 (Testphase) werden nicht als eigene Bilanz gezeigt; sollte eine "seit Start"-Angabe je vorkommen, steht EINE Fußnote: "Sept.–10.10.: Testphase, mit den Regeln vom 11.10.2026 berechnet."
+1. Das Wort "zurückgerechnet" bzw. "Rückrechnung" kommt nirgends vor. Zeiträume vor dem 11.10.2026 (Testphase) werden nicht als eigene Bilanz gezeigt; sollte eine Jahres-Angabe ("Jahr 2026 (ab 01.09.)") je vorkommen, steht EINE Fußnote: "01.09.–10.10.: Testphase, mit den Regeln vom 11.10.2026 berechnet."
 2. Keine Rendite, keine Trefferquote in Prozent, keine Einsätze/Gewinn-Summen, keine Euro-Beträge, keine Kurve mit Werten. Erlaubt: Auswertung der Einträge mit Spiel, Markt, Quote und gewonnen/verloren (Stufe 3, Regel 28.10.), Darstellung als Punkte je Eintrag.
 3. Wording "Auswertung", nicht "Signale". Alle Einträge zeigen, nichts aussortieren, Verluste gleichberechtigt, kein Ampel-/Rot-Großformat für einzelne Tage, schwache Wochen genauso posten.
 4. Pflichtangaben: "18+ · Keine Gewinngarantie", kein Link in der Caption (Link zum Telegram-Kanal in der Bio), keine Preise/Abo/Verkaufssprache.
