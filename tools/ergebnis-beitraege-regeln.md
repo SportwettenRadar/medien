@@ -1,5 +1,9 @@
 # Ergebnis-Beiträge Instagram (und TikTok): feste Vorgabe (Entscheidung Daniel, 02.11.2026, überarbeitet 14:36)
 
+> **STAND 06.11.2026 (Daniel):**
+> - **TikTok:** keine Ergebnis-, Auswertungs- oder Punkte-Videos mehr (zweiter Verstoß am 06.11.). TikTok läuft nur mit Stufe 1 und 2. Die tägliche Automatik (09:22) plant nur noch Instagram und YouTube. Wo unten "TikTok" im Zusammenhang mit Ergebnis-Beiträgen steht, ist das überholt.
+> - **Anzeigeregel 06.11.** (claude/anzeigeregel-rendite-0611.md) ersetzt die Kennzahl-Reihenfolge vom 02.11. Für Instagram und YouTube-Short-Ergebnisbeiträge bleibt es bei der Darstellung OHNE Zahlen (Entscheidung Daniel 06.11.): kein "n von m", keine Trefferquote in Prozent, keine Ø-Quote. Diese Zahlen gibt es nur auf Telegram, Homepage und X (X läuft aus) und im Jahresblock.
+
 Die Ergebnis-Beiträge starten ab Di 03.11.2026 (vorgezogen auf Daniels Entscheidung vom 02.11. 21:36; zuvor geplant 14.11.) auf Instagram, TikTok und YouTube (Short). Die Regeln gelten ab dem ersten Post. Daniel, 02.11. 14:36: Rendite und sonstige Kennzahlen werden weggelassen, damit alles Instagram-konform ist, und das ist KEINE Ausnahmeregelung. Damit bleiben die bisherigen Instagram-Regeln (`instagram-neukonto-regeln.md`) unverändert in Kraft; die Kennzahl-Variante vom 02.11. 14:31 (Einsätze, Wetten, Treffer %, Rendite %) ist zurückgenommen.
 
 ## Regeln
@@ -7,7 +11,7 @@ Die Ergebnis-Beiträge starten ab Di 03.11.2026 (vorgezogen auf Daniels Entschei
 2. Keine Rendite, keine Trefferquote in Prozent, keine Einsätze/Gewinn-Summen, keine Euro-Beträge, keine Kurve mit Werten. Erlaubt: Auswertung der Einträge mit Spiel, Markt, Quote und gewonnen/verloren (Stufe 3, Regel 28.10.), Darstellung als Punkte je Eintrag.
 3. Wording "Auswertung", nicht "Signale". Alle Einträge zeigen, nichts aussortieren, Verluste gleichberechtigt, kein Ampel-/Rot-Großformat für einzelne Tage, schwache Wochen genauso posten.
 4. Pflichtangaben: "18+ · Keine Gewinngarantie", kein Link in der Caption (Link zum Telegram-Kanal in der Bio), keine Preise/Abo/Verkaufssprache.
-5. Zahlen (Rendite, Trefferquote, Einsätze, Kurve) gibt es weiter nur im Telegram-Ergebniskanal und auf der Homepage.
+5. Zahlen (Rendite, Trefferquote, Einsätze, Kurve, auch "n von m" und Ø-Quote) gibt es weiter nur im Telegram-Ergebniskanal und auf der Homepage (Daniel 06.11.: gilt auch nach der neuen Anzeigeregel).
 
 ## Layouts (Beispiele mit erfundenen Daten, 02.11.2026)
 - Tagesauswertung: eine Karte je Spieltag, je Eintrag Spiel, Markt, Quote und "gewonnen"/"verloren".
@@ -24,17 +28,17 @@ Die Ergebnis-Beiträge starten ab Di 03.11.2026 (vorgezogen auf Daniels Entschei
 - Erledigt 02.11. (Daniel ok): Video 15 neu gerendert (Folie "Testphase", `out_v2/15_Trackrecord_lesen_v4.mp4`, Short `shorts2_v2/Short_15_Trackrecord_lesen_v2.mp4`) und in den Beiträgen 02.11. 16:00 (YouTube), 18:00 (YouTube Short), 19:00 (X) getauscht. Homepage (`trackrecord.js`, `trackrecord-daten.js`) und Generatoren (`seiten_generator.py`, `auto_ergebnisse.py`) auf die Fußnote "Sept.–10.10.: Testphase, mit den Regeln vom 11.10.2026 berechnet." umgestellt, Cache-Version angehoben.
 - TikTok: gleiche Regeln wie Instagram (Daniel, 02.11.).
 
-## Kennzahl-Reihenfolge (Entscheidung Daniel, 02.11. 14:39; am 15:48 bestätigt: "gilt überall")
-Wenn Kennzahlen gezeigt werden, jede in eigener Zeile, in dieser Reihenfolge (Beispielwerte Stand 31.10., "seit Start" ab 01.09.; aktuelle Werte aus `ergebnisse.json`):
+## Kennzahl-Format (Anzeigeregel 06.11.2026, ersetzt die Reihenfolge vom 02.11.)
+Gilt dort, wo Kennzahlen gezeigt werden (Telegram, Homepage, X; NICHT Instagram/TikTok/YouTube-Short-Ergebnisbeiträge):
 ```
-351 Wetten
-227 Treffer (64,7 %)
-+8,2 Einsätze
-Rendite +2,3 %
+Tag, Woche, Monat:   3 von 5 Treffer (60,0 %)
+                     Ø-Quote 1,58            (Zeile weglassen, wenn nicht vorhanden)
+Monat zusätzlich:    Längste Verlustserie
+Kalenderjahr:        Wetten, Treffer (%), Ø-Quote, Einsätze, Rendite (Einsätze/Rendite erst ab 100 Live-Wetten im Jahr)
 ```
-- Feste Vorgabe für alle künftigen Ergebnis-Beiträge und jede Stelle, an der Kennzahlen erscheinen (Telegram, Homepage, YouTube, X; Instagram/TikTok nur, falls dort später doch Kennzahlen kommen, siehe nächste Zeile). Sie ersetzt die frühere Reihenfolge (Einsätze zuerst).
-- ENTSCHIEDEN (Daniel, 02.11. 14:41): Auf Instagram/TikTok keine Kennzahlen; die drei Beispielkarten (Tagesauswertung, Wochenrückblick, Monatsbericht) werden so gepostet.
-- ENTSCHIEDEN (Daniel, 02.11. 14:41): Die Verlaufslinie (Gesamtverlauf) wird auf Instagram weggelassen.
+- KEINE Einsätze, KEINE Rendite, kein "Größter Rückgang", kein "Bester/Schlechtester Tag" für Tag/Woche/Monat. Keine Kumulativ-Zahl "Seit Start".
+- Die frühere Reihenfolge (Wetten / Treffer / Einsätze / Rendite je Zeitraum, Beispielwerte Stand 31.10.) ist ersetzt.
+- ENTSCHIEDEN (Daniel, 02.11. 14:41, weiter gültig): Auf Instagram/TikTok keine Kennzahlen; Verlaufslinie auf Instagram weggelassen.
 
 ## Produktion ab 03.11.2026 (Entscheidung Daniel, 02.11. 22:09, voll automatisch)
 - Täglich 10:00 (gleiche Zeit auf Instagram, TikTok, YouTube): Auswertung des Vortages. Instagram: Karussell + Stories; TikTok: Reel; YouTube: Short (gleicher Clip).
