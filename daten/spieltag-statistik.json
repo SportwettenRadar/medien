@@ -1,12 +1,12 @@
 {
  "version": 1,
- "stand": "2026-11-06T23:57:23+01:00",
+ "stand": "2026-11-07T08:10:15+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-11-06",
+    "datum": "2026-11-07",
     "spieltage": 9,
     "spiele": 73
    },
@@ -26,13 +26,39 @@
      "spiele": 73
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Borussia Dortmund",
+     "gast": "SV Elversberg",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "FSV Mainz 05",
+     "gast": "Bayern München",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "RB Leipzig",
+     "gast": "FC Augsburg",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "SC Paderborn 07",
+     "gast": "Eintracht Frankfurt",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "VfB Stuttgart",
+     "gast": "Werder Bremen",
+     "anstoss": "18:30"
+    }
+   ]
   },
   {
    "liga": "2. Bundesliga",
    "spieltag": 11,
    "stand": {
-    "datum": "2026-11-06",
+    "datum": "2026-11-07",
     "spieltage": 11,
     "spiele": 92
    },
@@ -114,13 +140,34 @@
      "spiele": 92
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "1. FC Nürnberg",
+     "gast": "SV Darmstadt 98",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "Holstein Kiel",
+     "gast": "Arminia Bielefeld",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "VfL Osnabrück",
+     "gast": "1. FC Kaiserslautern",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "Hertha BSC",
+     "gast": "VfL Wolfsburg",
+     "anstoss": "20:30"
+    }
+   ]
   },
   {
    "liga": "Premier League",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-11-06",
+    "datum": "2026-11-07",
     "spieltage": 10,
     "spiele": 91
    },
@@ -159,13 +206,34 @@
      "spiele": 91
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Leeds",
+     "gast": "Tottenham",
+     "anstoss": "13:30"
+    },
+    {
+     "heim": "Arsenal",
+     "gast": "Hull City",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Fulham",
+     "gast": "Newcastle",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Nottingham Forest",
+     "gast": "Manchester City",
+     "anstoss": "18:30"
+    }
+   ]
   },
   {
    "liga": "La Liga",
    "spieltag": 12,
    "stand": {
-    "datum": "2026-11-06",
+    "datum": "2026-11-07",
     "spieltage": 12,
     "spiele": 110
    },
@@ -248,13 +316,34 @@
      "spiele": 110
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Malaga",
+     "gast": "Racing Santander",
+     "anstoss": "14:00"
+    },
+    {
+     "heim": "Espanyol",
+     "gast": "Deportivo La Coruna",
+     "anstoss": "16:15"
+    },
+    {
+     "heim": "Osasuna",
+     "gast": "Athletic Club",
+     "anstoss": "18:30"
+    },
+    {
+     "heim": "Valencia",
+     "gast": "Real Madrid",
+     "anstoss": "21:00"
+    }
+   ]
   },
   {
    "liga": "Serie A",
    "spieltag": 11,
    "stand": {
-    "datum": "2026-11-06",
+    "datum": "2026-11-07",
     "spieltage": 11,
     "spiele": 101
    },
@@ -331,13 +420,34 @@
      "spiele": 101
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Cagliari",
+     "gast": "Frosinone",
+     "anstoss": "15:00"
+    },
+    {
+     "heim": "Torino",
+     "gast": "Lecce",
+     "anstoss": "15:00"
+    },
+    {
+     "heim": "Parma",
+     "gast": "Bologna",
+     "anstoss": "18:00"
+    },
+    {
+     "heim": "AS Roma",
+     "gast": "Sassuolo",
+     "anstoss": "20:45"
+    }
+   ]
   },
   {
    "liga": "Ligue 1",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-11-06",
+    "datum": "2026-11-07",
     "spieltage": 10,
     "spiele": 82
    },
@@ -420,7 +530,18 @@
      "spiele": 82
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Auxerre",
+     "gast": "Paris FC",
+     "anstoss": "19:00"
+    },
+    {
+     "heim": "Paris Saint Germain",
+     "gast": "Estac Troyes",
+     "anstoss": "21:05"
+    }
+   ]
   }
  ]
 }
