@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-06T08:15:49+01:00",
+ "stand": "2026-11-07T08:57:46+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -4091,6 +4091,127 @@
    "quote": 1.44,
    "ergebnis": "gewonnen",
    "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-06-001",
+   "datum": "2026-11-06",
+   "art": "einzel",
+   "heim": "Gaziantep FK",
+   "gast": "Kasımpaşa",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-06-002",
+   "datum": "2026-11-06",
+   "art": "einzel",
+   "heim": "Silkeborg",
+   "gast": "Lyngby",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-06-003",
+   "datum": "2026-11-06",
+   "art": "einzel",
+   "heim": "AVS",
+   "gast": "Vizela",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-06-004",
+   "datum": "2026-11-06",
+   "art": "einzel",
+   "heim": "FC OSS",
+   "gast": "Waalwijk",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-06-005",
+   "datum": "2026-11-06",
+   "art": "einzel",
+   "heim": "Toulouse",
+   "gast": "Strasbourg",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-06-006",
+   "datum": "2026-11-06",
+   "art": "live",
+   "heim": "Lamphun Warrior",
+   "gast": "Sukhothai FC",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-06-007",
+   "datum": "2026-11-06",
+   "art": "live",
+   "heim": "Uta Arad",
+   "gast": "Petrolul Ploiesti",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-06-008",
+   "datum": "2026-11-06",
+   "art": "live",
+   "heim": "NK Lokomotiva Zagreb",
+   "gast": "Rudes",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.48,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-06-009",
+   "datum": "2026-11-06",
+   "art": "live",
+   "heim": "Botev Plovdiv",
+   "gast": "Dunav Ruse",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-06-010",
+   "datum": "2026-11-06",
+   "art": "live",
+   "heim": "Eintracht Braunschweig",
+   "gast": "Energie Cottbus",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-06-011",
+   "datum": "2026-11-06",
+   "art": "live",
+   "heim": "Willem II",
+   "gast": "PEC Zwolle",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
   }
  ]
 }
