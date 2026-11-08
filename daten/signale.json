@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-07T08:57:46+01:00",
+ "stand": "2026-11-08T08:58:35+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -4212,6 +4212,270 @@
    "quote": 1.4,
    "ergebnis": "verloren",
    "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-07-001",
+   "datum": "2026-11-07",
+   "art": "einzel",
+   "heim": "Botev Vratsa",
+   "gast": "Lokomotiv Plovdiv",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-07-002",
+   "datum": "2026-11-07",
+   "art": "einzel",
+   "heim": "Wrexham",
+   "gast": "Wolves",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-07-003",
+   "datum": "2026-11-07",
+   "art": "einzel",
+   "heim": "Bristol City",
+   "gast": "Norwich",
+   "markt": "X2",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "0:5"
+  },
+  {
+   "id": "2026-11-07-004",
+   "datum": "2026-11-07",
+   "art": "einzel",
+   "heim": "Samsunspor",
+   "gast": "Konyaspor",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-07-005",
+   "datum": "2026-11-07",
+   "art": "einzel",
+   "heim": "Cardiff",
+   "gast": "Burnley",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "5:4"
+  },
+  {
+   "id": "2026-11-07-006",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Felgueiras 1932",
+   "gast": "Leixoes",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.5,
+   "ergebnis": "gewonnen",
+   "endstand": "3:3"
+  },
+  {
+   "id": "2026-11-07-007",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Korona Kielce",
+   "gast": "Radomiak Radom",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-07-008",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Wrexham",
+   "gast": "Wolves",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.52,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-07-009",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Paks",
+   "gast": "Zalaegerszegi TE",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-07-010",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Chelsea W",
+   "gast": "Everton W",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-07-011",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Slovan Liberec",
+   "gast": "Bohemians 1905",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-07-012",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Padova",
+   "gast": "Empoli",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-07-013",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Cagliari",
+   "gast": "Frosinone",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-07-014",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Watford",
+   "gast": "Middlesbrough",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-07-015",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Volos NFC",
+   "gast": "Kifisia",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.6,
+   "ergebnis": "gewonnen",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-11-07-016",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Dundee Utd",
+   "gast": "Motherwell",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-07-017",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Pendikspor",
+   "gast": "İstanbulspor",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-07-018",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Orgryte IS",
+   "gast": "Vasteras SK FK",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-07-019",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Forge",
+   "gast": "Atlético Ottawa",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:3"
+  },
+  {
+   "id": "2026-11-07-020",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "FCSB",
+   "gast": "Corvinul Hunedoara",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-07-021",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Grasshoppers",
+   "gast": "Lausanne",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-07-022",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Club Guarani",
+   "gast": "Olimpia",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-11-07-023",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Moghreb Tetouan",
+   "gast": "CODM Meknès",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.85,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-07-024",
+   "datum": "2026-11-07",
+   "art": "live",
+   "heim": "Boca Juniors",
+   "gast": "Defensa Y Justicia",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
   }
  ]
 }
