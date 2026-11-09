@@ -92,19 +92,25 @@ def main():
         cmp(f"Jahr {jahr} Wetten", H["wetten"], wj, 0)
         cmp(f"Jahr {jahr} Treffer", H["treffer"], z["treffer"] - v["treffer"], 0)
         cmp(f"Jahr {jahr} Stand", H["stand"], tj[-1]["datum"])
+        for k in ("gewinn", "rendite"):
+            if k in H:
+                f.append(f"Jahr {jahr}: Feld {k} darf auf der Homepage nicht stehen (Einsätze/Rendite nur in Telegram)")
         if wj >= ae.JAHR_MIN_WETTEN:
-            cmp(f"Jahr {jahr} Einsätze", H["gewinn"], round(z["gewinn"] - v["gewinn"], 1), 0.051)
-            cmp(f"Jahr {jahr} Rendite", H["rendite"], z["rendite"] if not vor else round((z["gewinn"] - v["gewinn"]) / wj * 100, 1), 0.051)
             for t in tj:
+                wt, tt = ss(t)["wetten"] - v["wetten"], ss(t)["treffer"] - v["treffer"]
                 hh = ht.get(t["datum"])
+                if wt < ae.KURVE_AB_WETTEN:
+                    if hh:
+                        f.append(f"Tag {t['datum']}: Kurve beginnt erst ab {ae.KURVE_AB_WETTEN} Wetten im Jahr")
+                    continue
                 if not hh:
                     f.append(f"Tag {t['datum']}: fehlt in der Kurve")
                     continue
-                cmp(f"Tag {t['datum']} Kurve (Jahr ab 0)", hh["g"], ss(t)["gewinn"] - v["gewinn"])
+                if "g" in hh:
+                    f.append(f"Tag {t['datum']}: altes Kurvenfeld g (Einsätze) darf nicht mehr stehen")
+                cmp(f"Tag {t['datum']} Kurve Trefferquote (Jahr)", hh.get("q"), round(tt / wt * 100, 1), 0.051)
                 cmp(f"Tag {t['datum']} Markierung", bool(hh["rr"]), bool(t.get("rueckrechnung")))
         else:
-            if H.get("gewinn") is not None or H.get("rendite") is not None:
-                f.append(f"Jahr {jahr}: Einsätze/Rendite veröffentlicht, obwohl nur {wj} Wetten (< {ae.JAHR_MIN_WETTEN})")
             if any(t["datum"][:4] == jahr for t in ht.values()):
                 f.append(f"Jahr {jahr}: Kurve veröffentlicht, obwohl nur {wj} Wetten (< {ae.JAHR_MIN_WETTEN})")
         qj = ae.quote_zeitraum(d, tj[0]["datum"], tj[-1]["datum"])

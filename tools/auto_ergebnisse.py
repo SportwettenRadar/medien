@@ -269,8 +269,11 @@ def ergaenze(alt, neu, data):
     return geaendert
 
 
+KURVE_AB_WETTEN = 20  # die Trefferquoten-Kurve beginnt erst, wenn das Jahr 20 Live-Wetten hat (davor springt sie zu stark)
+
+
 def baue_jahre(data):
-    """Kurve (kumulierte Einsätze je Tag, je Kalenderjahr bei 0 beginnend) und Jahresblöcke aus ergebnisse.json.
+    """Kurve (kumulierte Trefferquote in % je Tag, je Kalenderjahr neu beginnend) und Jahresblöcke aus ergebnisse.json.
     Einsätze/Rendite und Kurve eines Jahres werden erst veröffentlicht, wenn das Jahr JAHR_MIN_WETTEN gewertete Live-Wetten hat.
     Gibt (None, None) zurück, solange das erweiterte JSON (Tage mit seitStart) fehlt."""
     tl = sorted(data.get("tage", []), key=lambda x: x["datum"])
@@ -294,8 +297,17 @@ def baue_jahre(data):
         j["rueckrechnung"] = any(t.get("rueckrechnung") for t in tj)
         jahre.append(j)
         if frei:
-            kurve += [{"d": t["datum"], "g": round(seit_start(t)["gewinn"] - v["gewinn"], 1), "rr": bool(t.get("rueckrechnung"))} for t in tj]
+            for t in tj:
+                zt = seit_start(t)
+                wt, tt = zt["wetten"] - v["wetten"], zt["treffer"] - v["treffer"]
+                if wt >= KURVE_AB_WETTEN:
+                    kurve.append({"d": t["datum"], "q": round(tt / wt * 100, 1), "rr": bool(t.get("rueckrechnung"))})
     return kurve, jahre
+
+
+def jahre_homepage(jahre):
+    """Jahresblöcke für die Homepage: ohne Einsätze und Rendite (die gibt es nur in Telegram und auf den X-Grafiken)."""
+    return [{k: v for k, v in j.items() if k not in ("gewinn", "rendite")} for j in jahre]
 
 
 KOPF = """/* =====================================================================
@@ -304,7 +316,8 @@ KOPF = """/* ===================================================================
 
    Anzeige-Regeln (Daniel, 06.11.2026):
    - Tage, Wochen, Monate: Wetten, Treffer (mit Prozent) und Ø-Quote. KEINE Einsätze, KEINE Rendite.
-   - Einsätze und Rendite nur je Kalenderjahr (TRACKRECORD_JAHRE) und erst ab 100 Live-Wetten im Jahr.
+   - Einsätze und Rendite stehen NICHT auf der Homepage (nur in den Telegram-Kanälen und auf den X-Grafiken, je Kalenderjahr ab 100 Live-Wetten).
+   - Jahreskurve: kumulierte Trefferquote je Tag, erst ab 100 Live-Wetten im Jahr, Beginn ab 20 Wetten (Entscheidung 09.11.2026).
    - Ø-Quote = Durchschnitt der Quoten aller gesetzten Live-Wetten des Zeitraums.
    ===================================================================== */
 
@@ -320,10 +333,10 @@ def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None):
            "window.TRACKRECORD_WOCHEN = [\n" + wo + "\n];\n\n"
            "/* Hinweis, wenn für einen Monat keine Wochenwerte angezeigt werden können. */\n"
            "window.TRACKRECORD_WOCHEN_HINWEIS = " + json.dumps(hinweis, ensure_ascii=False) + ";\n\n"
-           "/* Kurve: kumulierte Einsätze je Tag, je Kalenderjahr bei 0 beginnend (d = Datum, g = Stand am Tagesende, rr = nur Logik für Fußnote/Hinterlegung).\n"
+           "/* Kurve: kumulierte Trefferquote in % je Tag, je Kalenderjahr neu beginnend (d = Datum, q = Stand am Tagesende, rr = nur Logik für Fußnote/Hinterlegung).\n"
            "   Ein Jahr erscheint erst ab 100 Live-Wetten. */\n"
            "window.TRACKRECORD_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (kurve or [])) + "\n];\n\n"
-           "/* Kalenderjahre: Wetten, Treffer, Ø-Quote; gewinn (Einsätze) und rendite sind null, solange das Jahr unter 100 Live-Wetten hat. */\n"
+           "/* Kalenderjahre: Wetten, Treffer, Ø-Quote; keine Einsätze/Rendite. */\n"
            "window.TRACKRECORD_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (jahre or [])) + "\n];\n")
     open(p, "w", encoding="utf-8").write(neu)
 
@@ -452,11 +465,12 @@ def main():
             wochen[w["von"]] = homepage_eintrag(w, data)
             res["aenderungen"].append(f"Woche {w['von']}–{w['bis']} neu")
 
-    kurve, jahre = baue_jahre(data)
-    if kurve is not None and (kurve != hp["t"] or jahre != hp["j"]):
-        res["aenderungen"].append("Kurve/Jahresblock aktualisiert")
+    kurve, jahre_voll = baue_jahre(data)
     if kurve is None:
-        kurve, jahre = hp["t"], hp["j"]
+        kurve, jahre_voll = hp["t"], hp["j"]
+    jahre = jahre_homepage(jahre_voll)
+    if kurve != hp["t"] or jahre != hp["j"]:
+        res["aenderungen"].append("Kurve/Jahresblock aktualisiert")
 
     if res["fehler"]:
         res["status"] = "stopp"
@@ -473,7 +487,7 @@ def main():
         subprocess.run([sys.executable, gen, a.homepage], check=True, capture_output=True)
 
     def jahr_von(datum):
-        return next((j for j in (jahre or []) if str(j["jahr"]) == datum[:4]), None)
+        return next((j for j in (jahre_voll or []) if str(j["jahr"]) == datum[:4]), None)
 
     def ausgabe(b, quote):
         """Nur die erlaubten Zahlen weitergeben (Wetten, Treffer, Ø-Quote) — Einsätze/Rendite nie aus Tag/Woche/Monat."""

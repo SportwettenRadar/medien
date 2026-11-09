@@ -28,3 +28,10 @@ Datenquelle: `daten/ergebnisse.json` (schreibt der Bot nach jedem Post im Ergebn
 - Tagesbilanz/Monatsbericht-Grafik: Karte „Live-Wetten“ (Tag/Monat) plus Karte „Jahr“ mit Einsätze/Rendite; Wochenbilanz nur die Wochenkarte. Skript-Ausgabe `grafiken[].live` enthält absichtlich nur wetten/treffer/quote, das Jahr steht in `grafiken[].jahr`.
 - Datenquelle Jahr: `tage[]` mit Feld `seitStart` {wetten, treffer, rendite, gewinn} (Stand am Tagesende).
 - Nach jeder Umstellung: `python3 tools/abgleich_zahlen.py --medien <medien> --homepage <homepage>` (Exit 0 = alle Zahlen gleich, keine verbotenen Felder/Wörter, Jahr-Schwelle eingehalten).
+
+
+## Änderung 09.11.2026: Homepage ohne Einsätze und Rendite
+- Auf der Homepage (trackrecord-daten.js, Seiten, AGB) stehen KEINE Einsätze und KEINE Rendite mehr, auch nicht im Jahr. `TRACKRECORD_JAHRE` enthält nur Wetten, Treffer, Ø-Quote, Stand, Markierung.
+- Jahreskurve = kumulierte Trefferquote in % je Tag (`TRACKRECORD_TAGE`: d, q, rr), Beginn ab 20 Wetten im Jahr, erst ab 100 Wetten im Jahr veröffentlicht. Break-even-Linie = 100 ÷ Jahres-Ø-Quote (wird im Browser gerechnet).
+- Einsätze/Rendite je Kalenderjahr (ab 100 Live-Wetten) bleiben in den Telegram-Kanälen und in den X-Grafiken (Block „Jahr“). Die X-Grafik rechnet weiter mit dem vollen Jahresblock (`jahre_voll`), die Homepage bekommt `jahre_homepage(...)`.
+- abgleich_zahlen.py prüft: kein gewinn/rendite im Jahr, Kurve q gegen seitStart, kein altes Feld g.

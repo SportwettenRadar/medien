@@ -11,7 +11,7 @@ import json, re, sys, os, datetime
 REPO = sys.argv[1] if len(sys.argv) > 1 else "."
 V = "20261021"
 BASE = "https://sportwetten-radar.net/"
-WISSEN_DATUM = "2026-11-06"  # bei inhaltlicher Änderung der Wissen-Seiten anpassen
+WISSEN_DATUM = "2026-11-09"  # bei inhaltlicher Änderung der Wissen-Seiten anpassen
 MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August",
           "September", "Oktober", "November", "Dezember"]
 
@@ -170,8 +170,8 @@ def month_pages(months):
 {('    <tr><th>Ø-Quote</th><td>' + de(qu, 2) + '</td></tr>') if qu else ''}
     <tr><th>Längste Verlustserie</th><td>{L['verlustserie']} in Folge</td></tr>
   </table>
-  <p>Ø-Quote ist der Durchschnitt der Quoten aller gesetzten Live-Wetten des Monats. Einsätze und Rendite weisen wir je
-  Kalenderjahr aus, sobald 100 Live-Wetten vorliegen, nicht je Monat: Ein einzelner Monat ist zu stark vom Zufall abhängig.
+  <p>Ø-Quote ist der Durchschnitt der Quoten aller gesetzten Live-Wetten des Monats. Einsätze und Rendite zeigen wir auf
+  dieser Webseite nicht. Wir weisen sie je Kalenderjahr in unseren Telegram-Kanälen aus, sobald 100 Live-Wetten vorliegen, nicht je Monat: Ein einzelner Monat ist zu stark vom Zufall abhängig.
   Verlustserien gehören dazu. Wie wir rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
 
@@ -186,7 +186,7 @@ def month_pages(months):
   <h2><span class="num">03</span>Einordnung</h2>
   <p>Ein einzelner Monat sagt wenig. Gute und schwache Monate wechseln sich ab, und auch bei hoher
   Trefferquote sind mehrere Fehlschläge in Folge normal (siehe <a href="verlustserien.html">Verlustserien</a>).
-  Den Verlauf aller Monate und das laufende Jahr mit Einsätzen und Rendite findest du im <a href="index.html#trackrecord">Trackrecord</a>.</p>
+  Den Verlauf aller Monate und die Jahreskurve der Trefferquote findest du im <a href="index.html#trackrecord">Trackrecord</a>.</p>
 
   <p class="wissen-pager">{' · '.join(nachbarn)}</p>
 """
@@ -282,7 +282,7 @@ WISSEN = [
   <p>Ab welcher Trefferquote du im Plus bist, hängt von der Quote ab: bei 1,60 ab 62,5 %, bei 1,80
   ab 55,6 %, bei 1,40 erst ab 71,4 %. Wer eine hohe Trefferquote mit niedrigen Quoten erreicht, kann
   trotzdem verlieren (wie eine Quote in eine Wahrscheinlichkeit übersetzt wird, steht unter
-  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten neben der Trefferquote immer die Durchschnittsquote (Ø-Quote). Mit beiden lässt sich die Trefferquote selbst einordnen: Die Gewinnschwelle liegt bei 1 ÷ Quote. Einsätze und Rendite weisen wir je Kalenderjahr aus, sobald 100 Live-Wetten vorliegen. Für Tage, Wochen und Monate nicht, weil kurze Zeiträume stark vom Zufall abhängen.
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten neben der Trefferquote immer die Durchschnittsquote (Ø-Quote). Mit beiden lässt sich die Trefferquote selbst einordnen: Die Gewinnschwelle liegt bei 1 ÷ Quote. Einsätze und Rendite weisen wir je Kalenderjahr in unseren Telegram-Kanälen aus, sobald 100 Live-Wetten vorliegen. Auf dieser Webseite zeigen wir sie nicht, und für Tage, Wochen und Monate gar nicht, weil kurze Zeiträume stark vom Zufall abhängen.
   Für <a href="index.html#produkt">Einzelspiele zum Kombinieren</a> zeigen wir nur die Trefferquote, weil
   jeder seinen Wettschein selbst zusammenstellt und es keine einheitliche Quote gibt.</p>
 
@@ -316,7 +316,7 @@ WISSEN = [
 
   <h2><span class="num">02</span>Warum wir sie offen zeigen</h2>
   <p>In jedem <a href="monatsberichte.html">Monatsbericht</a> steht die längste Verlustserie, und die Jahreskurve
-  im <a href="index.html#trackrecord">Trackrecord</a> zeigt, wie tief es zwischendurch ging. Wer nur Gewinne zeigt, verschweigt die Hälfte. Wer vorher weiß, wie tief es zwischendurch
+  der Trefferquote im <a href="index.html#trackrecord">Trackrecord</a> zeigt, wie sie zwischendurch schwankt. Wer nur Gewinne zeigt, verschweigt die Hälfte. Wer vorher weiß, wie tief es zwischendurch
   gehen kann, gerät nicht in Panik, wenn es passiert.</p>
 
   <h2><span class="num">03</span>Fester Einsatz statt Verdoppeln</h2>
