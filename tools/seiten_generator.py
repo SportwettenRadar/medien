@@ -125,12 +125,12 @@ def article_ld(title, desc, path, date):
 FUSSNOTE = "* 01.09.–10.10.: Testphase, mit den Regeln vom 11.10.2026 berechnet."
 
 
-def tr_block(monat=None, fallback=""):
+def tr_block(monat=None, fallback="", liste=False):
     """Gleiche Darstellung wie auf der Startseite (Kennzahlen, Linie, Monatstabelle), gerendert von trackrecord.js."""
     idx = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
     v1 = re.search(r"trackrecord-daten\.js\?v=([0-9a-z]+)", idx)
     v2 = re.search(r"trackrecord\.js\?v=([0-9a-z]+)", idx)
-    attr = f' data-tr-monat="{monat}"' if monat else ""
+    attr = f' data-tr-monat="{monat}"' if monat else (" data-tr-liste" if liste else "")
     return f"""<div class="trk" data-tr{attr}>
     <div data-tr-body><noscript>{fallback}</noscript></div>
   </div>
@@ -197,14 +197,15 @@ def month_pages(months):
     rows = "\n".join(
         f'    <tr><td><a href="monatsbericht-{m["monat"]}.html">{mname(m["monat"])}{"*" if m.get("rueckrechnung") else ""}</a></td>'
         f'<td>{m["live"]["wetten"]}</td><td>{m["live"]["treffer"]}</td>'
-        + (f'<td>{de(m["live"]["quote"], 2)}</td>' if m["live"].get("quote") else '<td>–</td>') + '</tr>'
+        + (f'<td>{de(m["live"]["quote"], 2)}</td>' if m["live"].get("quote") else '<td>–</td>')
+        + (f'<td>{m["live"]["verlustserie"]}</td>' if "verlustserie" in m["live"] else '<td>–</td>') + '</tr>'
         for m in reversed(months))
     fn = f"<p>{FUSSNOTE}</p>" if any(m.get("rueckrechnung") for m in months) else ""
-    fallback = ('<table class="kv"><tr><th>Monat</th><th>Wetten</th><th>Treffer</th><th>Ø-Quote</th></tr>' + rows + "</table>" + fn)
+    fallback = ('<table class="kv"><tr><th>Monat</th><th>Wetten</th><th>Treffer</th><th>Ø-Quote</th><th>Verlustserie</th></tr>' + rows + "</table>" + fn)
     inner = f"""
   <p>Jeden Monat veröffentlichen wir am 1. die Ergebnisse des Vormonats. Alle Berichte bleiben dauerhaft
   einsehbar — die starken wie die schwachen.</p>
-  {tr_block(None, fallback)}
+  {tr_block(None, fallback, liste=True)}
 """
     t = "Alle Monatsberichte — Sportwetten Radar"
     d = "Alle Monatsberichte von Sportwetten Radar: Live-Wetten mit Trefferquote, Ø-Quote und Verlustserien, Einzelspiele mit Trefferquote."
