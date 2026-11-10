@@ -1,4 +1,4 @@
-# YouTube-Grundstock: Erklärvideos (Plan, Stand 22.10.2026)
+# YouTube-Grundstock: Erklärvideos (Plan, Stand 22.10.2026; X-Bezug entfernt 10.11.2026)
 
 ## Ziel
 Wer über die Homepage auf den YouTube-Kanal kommt, findet sofort genug Videos. Er soll sehen, dass es uns gibt und dass wir offen arbeiten. Die Reichweite kommt weiter über die Shorts. Die Erklärvideos sorgen für Glaubwürdigkeit und für klickbare Links.
@@ -8,7 +8,7 @@ Wer über die Homepage auf den YouTube-Kanal kommt, findet sofort genug Videos. 
 - Shorts sind hochkant und höchstens 3 Minuten lang. Normale Videos sind quer (16:9). Querformat-Videos unter 60 Sekunden laufen als normale Videos, nicht als Shorts.
 - Höchstens 20 Posts in 24 Stunden (bezahlter Tarif). 2 Videos pro Tag plus Short liegen weit darunter.
 - Titel höchstens 100 Zeichen, Beschreibung höchstens 5.000 Zeichen.
-- Erster Kommentar, Playlist, Kategorie, „nicht für Kinder“, Tags und Sichtbarkeit lassen sich alle über Metricool setzen.
+- Erster Kommentar, Playlist, Kategorie, „nicht für Kinder“, Tags und Sichtbarkeit lassen sich alle über Metricool setzen (Playlist-ID nur teilweise, siehe Hinweis in routine-kanaele.md).
 - Eigenes Vorschaubild (1280 × 720) geht nur bei einem bestätigten Kanal (Telefonnummer).
 - Playlists muss Daniel in YouTube Studio anlegen. Metricool kann sie nur auswählen.
 - Links in der Beschreibung sind bei normalen Videos klickbar, bei Shorts nicht. Das ist der Hauptgrund für das Querformat.
@@ -24,8 +24,8 @@ Wer über die Homepage auf den YouTube-Kanal kommt, findet sofort genug Videos. 
   - keine Quoten-Screenshots
 - Ausgenommen sind Inhalte, die über Risiken aufklären. Spielerschutz-Videos sind daher unkritisch.
 - Keine Monetarisierung, keine Preise, kein Gewinnversprechen. Jedes Video enthält den Hinweis „18+ · Keine Gewinngarantie“.
-- Zahlen kommen nur aus dem Trackrecord. Die Rückrechnung bis 10.10. wird immer gekennzeichnet, ebenso der Stand („Stand: …“).
-- Countdown: nicht als „noch X Tage“ ins Video, weil das nach einer Woche falsch ist. Stattdessen das feste Datum „Start am 8. Januar 2027“. Der tägliche Countdown läuft weiter auf X.
+- Zahlen kommen nur aus dem Trackrecord. Die Rückrechnung bis 10.10. wird immer gekennzeichnet, ebenso der Stand („Stand: …“). (Wortlaut seit 06.11.: "Testphase, mit den Regeln vom 11.10.2026 berechnet", siehe `ergebnis-beitraege-regeln.md`.)
+- Countdown: nicht als „noch X Tage“ ins Video, weil das nach einer Woche falsch ist. Stattdessen das feste Datum „Start am 8. Januar 2027“. (Der frühere tägliche Countdown auf X entfällt, X gelöscht 10.11.2026.)
 
 ## Format
 - Querformat 1920 × 1080, 40–60 Sekunden, ein Thema pro Video. Gleiches Design wie die Shorts und die Homepage.

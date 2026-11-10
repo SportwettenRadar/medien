@@ -307,7 +307,7 @@ def baue_jahre(data):
 
 
 def jahre_homepage(jahre):
-    """Jahresblöcke für die Homepage: ohne Einsätze und Rendite (die gibt es nur in Telegram und auf den X-Grafiken)."""
+    """Jahresblöcke für die Homepage: ohne Einsätze und Rendite (die gibt es nur in Telegram)."""
     return [{k: v for k, v in j.items() if k not in ("gewinn", "rendite")} for j in jahre]
 
 
@@ -317,7 +317,7 @@ KOPF = """/* ===================================================================
 
    Anzeige-Regeln (Daniel, 06.11.2026):
    - Tage, Wochen, Monate: Wetten, Treffer (mit Prozent) und Ø-Quote. KEINE Einsätze, KEINE Rendite.
-   - Einsätze und Rendite stehen NICHT auf der Homepage (nur in den Telegram-Kanälen und auf den X-Grafiken, je Kalenderjahr ab 100 Live-Wetten).
+   - Einsätze und Rendite stehen NICHT auf der Homepage (nur in den Telegram-Kanälen, je Kalenderjahr ab 100 Live-Wetten).
    - Jahreskurve: kumulierte Trefferquote je Tag, erst ab 100 Live-Wetten im Jahr, Beginn ab 20 Wetten (Entscheidung 09.11.2026).
    - Ø-Quote = Durchschnitt der Quoten aller gesetzten Live-Wetten des Zeitraums.
    ===================================================================== */
