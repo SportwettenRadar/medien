@@ -35,3 +35,6 @@ Datenquelle: `daten/ergebnisse.json` (schreibt der Bot nach jedem Post im Ergebn
 - Jahreskurve = kumulierte Trefferquote in % je Tag (`TRACKRECORD_TAGE`: d, q, rr), Beginn ab 20 Wetten im Jahr, erst ab 100 Wetten im Jahr veröffentlicht. Break-even-Linie = 100 ÷ Jahres-Ø-Quote (wird im Browser gerechnet).
 - Einsätze/Rendite je Kalenderjahr (ab 100 Live-Wetten) bleiben in den Telegram-Kanälen und in den X-Grafiken (Block „Jahr“). Die X-Grafik rechnet weiter mit dem vollen Jahresblock (`jahre_voll`), die Homepage bekommt `jahre_homepage(...)`.
 - abgleich_zahlen.py prüft: kein gewinn/rendite im Jahr, Kurve q gegen seitStart, kein altes Feld g.
+
+## Änderung 10.11.2026: X-Konto gelöscht
+Das X-Konto ist gelöscht, die Metricool-Verbindung getrennt. Die geplanten Aufgaben (Tag 10:20, Woche Mo 10:50, Monat am 1. 10:55) aktualisieren nur noch die Homepage (auto_ergebnisse.py, abgleich_zahlen.py, commit/push). Die vom Skript weiter erzeugten Grafiken unter x/ werden nicht mehr committet oder gepostet. Footer, Menü, Datenschutz und strukturierte Daten der Homepage enthalten keinen X-Verweis mehr.
