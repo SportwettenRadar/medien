@@ -646,6 +646,68 @@ WISSEN = [
   bereit bist zu verlieren. Hilfe bei Spielproblemen:
   <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
 """, "2026-11-03"),
+    ("tore-zweite-halbzeit.html",
+     "Wie viele Tore fallen in der 2. Halbzeit? Chancen und Quoten erklärt — Sportwetten Radar",
+     "Fallen in der zweiten Halbzeit mehr Tore als in der ersten? Was dahintersteckt, wie sich die Chance auf ein weiteres Tor mit der Spielzeit verändert und was das für Live-Wetten bedeutet. Mit Rechenbeispiel.",
+     "Wissen", "Wie viele Tore fallen in der 2. Halbzeit?",
+     """
+  <p>Viele Fußballfans haben das Gefühl, dass nach der Pause mehr passiert. Stimmt das, und was bedeutet es für
+  Live-Wetten? Hier erklären wir, warum die zweite Halbzeit meist torreicher ist, wie sich die Chance auf ein
+  weiteres Tor mit jeder Minute verändert und wo die Grenzen einer einfachen Rechnung liegen.</p>
+
+  <h2><span class="num">01</span>Fallen nach der Pause mehr Tore?</h2>
+  <p>In den meisten Ligen fallen in der zweiten Halbzeit etwas mehr Tore als in der ersten. Wie groß der Unterschied
+  ist, hängt von Liga, Saison und Spielstil ab, deshalb nennen wir hier keine Pauschalzahl. Gründe, die häufig genannt werden:</p>
+  <ul>
+    <li>Die Kräfte lassen nach, Räume werden größer und Abwehrreihen verlieren an Ordnung.</li>
+    <li>Zurückliegende Teams gehen mehr Risiko, Führende lassen Konter zu.</li>
+    <li>Wechsel bringen frische Spieler, und gegen Ende kommt die Nachspielzeit dazu.</li>
+  </ul>
+  <p>Das sind Tendenzen, keine Regeln. Ein einzelnes Spiel kann ganz anders verlaufen.</p>
+
+  <h2><span class="num">02</span>Rechenbeispiel: Wie viele Tore sind zu erwarten?</h2>
+  <p>Angenommen, in einem Spiel fallen im Schnitt 2,7 Tore, davon 55 % nach der Pause. Dann sind das rund 1,2 Tore in
+  der ersten und rund 1,5 Tore in der zweiten Halbzeit. Die Chance, dass in der zweiten Halbzeit mindestens ein Tor fällt,
+  liegt mit dem einfachen Rechenmodell der Poisson-Verteilung bei rund 77 %. Anders gesagt: In etwa jedem vierten bis fünften
+  Spiel bleibt die zweite Halbzeit ohne Tor. Wie du eine Chance in eine Quote übersetzt, steht unter
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a></p>
+
+  <h2><span class="num">03</span>Wie ändert sich die Chance mit der Spielzeit?</h2>
+  <p>Mit jeder Minute ohne Tor bleibt weniger Zeit. Dasselbe Beispiel für die Chance auf mindestens ein weiteres Tor
+  bis zum Abpfiff, die „faire“ Quote ist wieder 1 ÷ Chance:</p>
+  <table class="kv">
+    <tr><th>Zeitpunkt</th><td>Chance auf mind. 1 weiteres Tor</td><td>faire Quote</td></tr>
+    <tr><th>Minute 46 (Anpfiff 2. Halbzeit)</th><td>77,3 %</td><td>1,29</td></tr>
+    <tr><th>Minute 60</th><td>62,8 %</td><td>1,59</td></tr>
+    <tr><th>Minute 75</th><td>39,0 %</td><td>2,56</td></tr>
+    <tr><th>Minute 85</th><td>15,2 %</td><td>6,57</td></tr>
+  </table>
+  <p class="wissen-note">Rechenbeispiel mit konstanter Torrate in der zweiten Halbzeit, ohne Nachspielzeit. Echte Quoten enthalten zusätzlich die Marge des Anbieters.</p>
+  <p>Die Chance sinkt nicht gleichmäßig in Prozentpunkten, die faire Quote steigt dagegen immer schneller. Wer spät im Spiel
+  auf ein weiteres Tor wettet, bekommt deshalb hohe Quoten, aber nur noch wenig Zeit. Das Beispiel zeigt auch, warum eine
+  Wette in Minute 85 etwas ganz anderes ist als dieselbe Wette in Minute 60.</p>
+
+  <h2><span class="num">04</span>Was die einfache Rechnung nicht kann</h2>
+  <ul>
+    <li>Die Torrate ist nicht konstant: Spielstand, Karten, Wechsel und Spielweise verändern sie laufend.</li>
+    <li>Jedes Spiel hat eine eigene erwartbare Torzahl. Die 2,7 Tore und die 55 % sind nur ein Beispiel.</li>
+    <li>Die Nachspielzeit ist unterschiedlich lang und in der Tabelle nicht enthalten.</li>
+    <li>Auch eine wahrscheinliche Wette geht manchmal verloren, oft mehrere hintereinander (<a href="verlustserien.html">Verlustserien</a>).</li>
+  </ul>
+
+  <h2><span class="num">05</span>Was das für Live-Wetten bedeutet</h2>
+  <p>Wetten wie <a href="ueber-1-5-tore.html">Über 1,5 Tore</a> oder auf weitere Tore werden in der zweiten Halbzeit
+  entschieden. Ob sie sich lohnen, hängt von Quote, Marge und Disziplin ab, nicht allein von der Torchance
+  (<a href="lohnen-sich-live-wetten.html">Lohnen sich Live-Wetten?</a>). Wie Über/Unter funktioniert, steht unter
+  <a href="live-wetten-ueber-unter.html">Live-Wetten auf Über/Unter Tore</a>.</p>
+
+  <h2><span class="num">06</span>Was Sportwetten Radar daraus macht</h2>
+  <p>Wir vergleichen den Spielverlauf mit der Einschätzung des Marktes und zeigen, welche Live-Wetten dabei auffallen.
+  Alle Ergebnisse stehen im <a href="index.html#trackrecord">Trackrecord</a>, die schwachen eingeschlossen.
+  Das Beispiel hier ist ein Rechenbeispiel, keine Empfehlung. Wetten kann Geld kosten. Setze nie mehr, als du bereit bist
+  zu verlieren. Hilfe bei Spielproblemen:
+  <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
+""", "2026-11-10"),
 ]
 
 
@@ -655,7 +717,7 @@ WISSEN_KAT = [
     ("quoten", "Quoten & Rendite", "Wie du eine Quote liest und wie Rendite und Trefferquote zusammenhängen.",
      ["quote-1-70-bedeutung.html", "rendite-erklaert.html"]),
     ("live", "Live-Wetten verstehen", "Wie Live-Wetten und Über/Unter funktionieren und was Spieldaten verraten.",
-     ["live-wetten-ueber-unter.html", "ueber-1-5-tore.html", "lohnen-sich-live-wetten.html", "live-wetten-analyse.html"]),
+     ["live-wetten-ueber-unter.html", "ueber-1-5-tore.html", "tore-zweite-halbzeit.html", "lohnen-sich-live-wetten.html", "live-wetten-analyse.html"]),
     ("risiko", "Risiko & Verantwortung", "Verlustserien, Einsatz und der verantwortungsvolle Umgang mit Sportwetten.",
      ["verlustserien.html"]),
     ("serioes", "Seriosität & Telegram", "Woran du seriöse Angebote erkennst und wie Wett-Analysen auf Telegram funktionieren.",
@@ -677,7 +739,7 @@ def wissen_hub():
     return page("wissen.html", t, d, "Wissen", "Wissen", "".join(teile), article_ld(t, d, "wissen.html", WISSEN_DATUM_HUB)), WISSEN_DATUM_HUB
 
 
-WISSEN_DATUM_HUB = "2026-11-03"
+WISSEN_DATUM_HUB = "2026-11-10"
 
 
 def wissen_pages(today):
