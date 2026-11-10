@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-09T08:31:15+01:00",
+ "stand": "2026-11-10T08:32:15+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -4749,6 +4749,50 @@
    "gast": "Marseille",
    "markt": "Über 2,5 Tore",
    "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-09-001",
+   "datum": "2026-11-09",
+   "art": "einzel",
+   "heim": "FC Botosani",
+   "gast": "Oţelul",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-09-002",
+   "datum": "2026-11-09",
+   "art": "einzel",
+   "heim": "Torreense",
+   "gast": "União de Leiria",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "2:3"
+  },
+  {
+   "id": "2026-11-09-003",
+   "datum": "2026-11-09",
+   "art": "live",
+   "heim": "Sabadell",
+   "gast": "Real Sociedad II",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-09-004",
+   "datum": "2026-11-09",
+   "art": "live",
+   "heim": "Tecnico Universitario",
+   "gast": "Manta FC",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.53,
    "ergebnis": "gewonnen",
    "endstand": "1:2"
   }
