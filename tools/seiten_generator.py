@@ -673,11 +673,11 @@ WISSEN = [
   <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a></p>
 
   <h2><span class="num">03</span>Wie ändert sich die Chance mit der Spielzeit?</h2>
-  <p>Mit jeder Minute ohne Tor bleibt weniger Zeit. Dasselbe Beispiel für die Chance auf mindestens ein weiteres Tor
-  bis zum Abpfiff, die „faire“ Quote ist wieder 1 ÷ Chance:</p>
+  <p>Mit jeder Minute ohne Tor bleibt weniger Zeit. Dasselbe Beispiel: die Chance auf mindestens ein weiteres Tor
+  bis zum Abpfiff (Minute 46 ist der Anpfiff der zweiten Halbzeit). Die „faire“ Quote ist wieder 1 ÷ Chance:</p>
   <table class="kv">
-    <tr><th>Zeitpunkt</th><td>Chance auf mind. 1 weiteres Tor</td><td>faire Quote</td></tr>
-    <tr><th>Minute 46 (Anpfiff 2. Halbzeit)</th><td>77,3 %</td><td>1,29</td></tr>
+    <tr><th>Zeit</th><td>Chance</td><td>faire Quote</td></tr>
+    <tr><th>Minute 46</th><td>77,3 %</td><td>1,29</td></tr>
     <tr><th>Minute 60</th><td>62,8 %</td><td>1,59</td></tr>
     <tr><th>Minute 75</th><td>39,0 %</td><td>2,56</td></tr>
     <tr><th>Minute 85</th><td>15,2 %</td><td>6,57</td></tr>
