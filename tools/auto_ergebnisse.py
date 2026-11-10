@@ -270,6 +270,7 @@ def ergaenze(alt, neu, data):
 
 
 KURVE_AB_WETTEN = 20  # die Trefferquoten-Kurve beginnt erst, wenn das Jahr 20 Live-Wetten hat (davor springt sie zu stark)
+X_GRAFIKEN = False  # X-Konto gelöscht (10.11.2026); True nur, wenn Grafiken wieder gebraucht werden
 
 
 def baue_jahre(data):
@@ -496,9 +497,8 @@ def main():
             o["quote"] = quote
         return o
 
-    # Grafik für X: neuester Tag, neueste Woche bzw. neuester Monat
+    # X-Konto gelöscht (10.11.2026): keine Grafiken mehr erzeugen. Die Ausgabe grafiken[] bleibt (Kennzahlen), Datei wird nicht geschrieben.
     ziel_dir = os.path.join(a.medien, "x")
-    os.makedirs(ziel_dir, exist_ok=True)
     if a.modus == "tag" and data.get("tage"):
         t = max(data["tage"], key=lambda x: x["datum"])
         wt = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"][d(t["datum"]).weekday()]
@@ -506,7 +506,8 @@ def main():
         J = jahr_von(t["datum"])
         q = quote_tag(t)[0]
         q = round(q, 2) if q is not None else None
-        if not a.trocken:
+        if X_GRAFIKEN and not a.trocken:
+            os.makedirs(ziel_dir, exist_ok=True)
             grafik(t, f"{wt} {kurz(t['datum'])}", "Tagesbilanz", z, a.homepage, jahr=J,
                    fuss_text=(fussnote(data) if (J and J.get("rueckrechnung")) or t.get("rueckrechnung") else None), quote=q)
         res["grafiken"].append({"art": "tag", "datei": os.path.relpath(z, a.medien), "datum": t["datum"],
@@ -515,7 +516,8 @@ def main():
         w = max(data["wochen"], key=lambda x: x["von"])
         z = os.path.join(ziel_dir, f"{w['bis']}_wochenbilanz.png")
         q = quote_block(data, w, w["von"], w["bis"])
-        if not a.trocken:
+        if X_GRAFIKEN and not a.trocken:
+            os.makedirs(ziel_dir, exist_ok=True)
             grafik(w, f"{kurz(w['von'])}–{kurz(w['bis'])}", "Wochenbilanz", z, a.homepage, fuss_text=fussnote(data, w["von"], w["bis"]), quote=q)
         res["grafiken"].append({"art": "woche", "datei": os.path.relpath(z, a.medien), "von": w["von"], "bis": w["bis"],
                                 "live": ausgabe(w, q), "jahr": jahr_von(w["bis"]), "verlustserie": w["live"].get("verlustserie"),
@@ -526,7 +528,8 @@ def main():
         z = os.path.join(ziel_dir, f"{m['monat']}_monatsbericht.png")
         J = jahr_von(m["monat"] + "-01")
         q = quote_block(data, m, m["monat"] + "-01", m["monat"] + "-31")
-        if not a.trocken:
+        if X_GRAFIKEN and not a.trocken:
+            os.makedirs(ziel_dir, exist_ok=True)
             grafik(m, f"{MONATE[mo - 1]} {y}", "Monatsbericht", z, a.homepage, jahr=J,
                    fuss_text=(fussnote(data) if (J and J.get("rueckrechnung")) else fussnote(data, m["monat"] + "-01", m["monat"] + "-31")), quote=q)
         res["grafiken"].append({"art": "monat", "datei": os.path.relpath(z, a.medien), "monat": m["monat"],

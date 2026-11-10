@@ -38,3 +38,4 @@ Datenquelle: `daten/ergebnisse.json` (schreibt der Bot nach jedem Post im Ergebn
 
 ## Änderung 10.11.2026: X-Konto gelöscht
 Das X-Konto ist gelöscht, die Metricool-Verbindung getrennt. Die geplanten Aufgaben (Tag 10:20, Woche Mo 10:50, Monat am 1. 10:55) aktualisieren nur noch die Homepage (auto_ergebnisse.py, abgleich_zahlen.py, commit/push). Die vom Skript weiter erzeugten Grafiken unter x/ werden nicht mehr committet oder gepostet. Footer, Menü, Datenschutz und strukturierte Daten der Homepage enthalten keinen X-Verweis mehr.
+Technik: In tools/auto_ergebnisse.py steht X_GRAFIKEN = False. Es werden keine PNG unter x/ mehr erzeugt; die Ausgabe grafiken[] (Kennzahlen) bleibt erhalten.
