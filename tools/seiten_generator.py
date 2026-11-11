@@ -11,7 +11,7 @@ import json, re, sys, os, datetime
 REPO = sys.argv[1] if len(sys.argv) > 1 else "."
 V = "20261021"
 BASE = "https://sportwetten-radar.net/"
-WISSEN_DATUM = "2026-11-09"  # bei inhaltlicher Änderung der Wissen-Seiten anpassen
+WISSEN_DATUM = "2026-11-11"  # bei inhaltlicher Änderung der Wissen-Seiten anpassen
 MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August",
           "September", "Oktober", "November", "Dezember"]
 
@@ -79,8 +79,17 @@ def nav_and_footer(repo_page="risikohinweis.html"):
     return nav, foot
 
 
+KANAL_ZEILE = """
+  <p class="wissen-kanal">Alle Live-Wetten und Ergebnisse stehen öffentlich im
+  <a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal auf Telegram</a>.
+  Wie das Ganze auf Telegram abläuft, erklärt die Seite <a href="sportwetten-telegram.html">Sportwetten auf Telegram</a>.</p>
+"""
+
+
 def page(path, title, desc, eyebrow, h1, inner, ld=None):
     nav, foot = nav_and_footer()
+    # Jede erzeugte Seite verlinkt einmal im Text auf den öffentlichen Ergebnis-Kanal (Auffindbarkeit, 11.11.2026)
+    kanal = "" if "t.me/sportwettenradar" in inner else KANAL_ZEILE
     ldjs = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n' if ld else ""
     html = (head(title, desc, path).replace("</head>", ldjs + "</head>") + "\n" + nav + f"""
 
@@ -93,7 +102,7 @@ def page(path, title, desc, eyebrow, h1, inner, ld=None):
 
 <article class="legal-doc legal-justify wissen">
   <a class="back-link" href="index.html">← Zurück zur Startseite</a>
-{inner}
+{inner}{kanal}
   <p class="wissen-foot">18+ · Sportwetten sind mit einem Verlustrisiko verbunden. Vergangene Ergebnisse sind kein Versprechen für zukünftige.
   Hilfe bei Glücksspielproblemen: <a href="tel:08001372700">0800 1 37 27 00</a> (kostenlos, anonym) · <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a></p>
 </article>
@@ -357,22 +366,31 @@ WISSEN = [
     <li><strong>Der Mitgliederkanal</strong> meldet Live-Wetten in Echtzeit, sobald die Analyse eines laufenden
     Spiels eine Gelegenheit zeigt, dazu bis zu 5 Einzelspiele pro Tag.</li>
     <li><strong>Der öffentliche Ergebnis-Kanal</strong>
-    (<a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">t.me/sportwettenradar</a>) zeigt kostenlos
+    (<a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal auf Telegram</a>) zeigt kostenlos
     jede Live-Wette nach ihrer Auswertung, die Einzelspiele des Tages sowie Tages-, Wochen- und Monatsbilanzen.
     So kannst du prüfen, wie es wirklich läuft, bevor du dich entscheidest.</li>
   </ul>
 
-  <h2><span class="num">03</span>Worauf du bei Telegram-Tipps achten solltest</h2>
+  <h2><span class="num">03</span>Der öffentliche Ergebnis-Kanal im Detail</h2>
+  <p>Der <a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal von Sportwetten Radar</a>
+  ist für alle offen, du brauchst dafür kein Abo. Dort steht jede Live-Wette im Fußball, nachdem das Spiel
+  ausgewertet ist, mit Ergebnis, Quote und Treffer oder Fehlschlag. Dazu kommen die Tages-, Wochen- und Monatsbilanzen.
+  So entsteht ein Trackrecord, den du selbst nachprüfen kannst, auch mit den schwachen Tagen. Die Zusammenfassung
+  pro Monat steht außerdem auf der Homepage unter <a href="monatsberichte.html">Monatsberichte</a>.
+  Der Kanal ist keine Wettempfehlung und enthält keine Gewinnversprechen. 18+, Hilfe bei Spielproblemen:
+  <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
+
+  <h2><span class="num">04</span>Worauf du bei Telegram-Tipps achten solltest</h2>
   <p>Auf Telegram gibt es viele Wett-Kanäle – leider auch viele, die mit „sicheren Tipps“ oder angeblich
   manipulierten Spielen werben. Seriöse Anbieter nennen einen Betreiber mit Impressum, zeigen alle Ergebnisse
   inklusive Verlusten und versprechen keine Gewinne. Eine ausführliche Checkliste findest du unter
   <a href="seriose-tippgeber-erkennen.html">Seriöse Tippgeber erkennen</a>.</p>
 
-  <h2><span class="num">04</span>Unsere Zahlen</h2>
+  <h2><span class="num">05</span>Unsere Zahlen</h2>
   <p>Alle Ergebnisse stehen im <a href="index.html#trackrecord">Trackrecord</a> und in den
   <a href="monatsberichte.html">Monatsberichten</a>, auch die schwachen Monate. Wie wir Rendite rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
-""", "2026-10-22"),
+""", "2026-11-11"),
     ("seriose-tippgeber-erkennen.html",
      "Telegram-Tippgruppen: So erkennst du seriöse Tippgeber — Sportwetten Radar",
      "Sind Wett-Tipps auf Telegram seriös? Checkliste mit 8 Merkmalen und den typischen Warnzeichen unseriöser Tippgruppen – von Gewinngarantien bis Krypto-Zahlung.",
@@ -739,7 +757,7 @@ def wissen_hub():
     return page("wissen.html", t, d, "Wissen", "Wissen", "".join(teile), article_ld(t, d, "wissen.html", WISSEN_DATUM_HUB)), WISSEN_DATUM_HUB
 
 
-WISSEN_DATUM_HUB = "2026-11-10"
+WISSEN_DATUM_HUB = "2026-11-11"
 
 
 def wissen_pages(today):
