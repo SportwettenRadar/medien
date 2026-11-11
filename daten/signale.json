@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-10T08:32:15+01:00",
+ "stand": "2026-11-11T08:33:02+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -4795,6 +4795,17 @@
    "quote": 1.53,
    "ergebnis": "gewonnen",
    "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-10-001",
+   "datum": "2026-11-10",
+   "art": "live",
+   "heim": "Plymouth",
+   "gast": "Swindon Town",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
   }
  ]
 }
