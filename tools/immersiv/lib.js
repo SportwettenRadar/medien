@@ -19,7 +19,7 @@ function bg(t){ctx.globalAlpha=1;ctx.fillStyle=C.bg;ctx.fillRect(0,0,W,H);
  ctx.restore();}
 function header(){if(logo.complete){ctx.save();rr(72,150,64,64,14);ctx.clip();ctx.drawImage(logo,72,150,64,64);ctx.restore();}
  T('Sportwetten Radar',156,196,'700 38px B',C.text);}
-function footer(extra){T('18+ · Keine Gewinngarantie',72,1450,'400 25px M',C.faint);T('@sportwetten.radar',1008,1450,'400 25px M',C.faint,'right');}
+function footer(extra){const fy=window.FY||1450;T('18+ · Keine Gewinngarantie',72,fy,'400 25px M',C.faint);T('@sportwetten.radar',1008,fy,'400 25px M',C.faint,'right');}
 function title(eb,l1,l2,a=1){T(eb,72,290,'500 27px M',C.accent,'left',a,4);T(l1,72,352,'800 62px B',C.text,'left',a);if(l2)T(l2,72,416,'800 62px B',C.text,'left',a);}
 function glow(x,y,r,col,al=1){const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,col);g.addColorStop(1,'rgba(0,0,0,0)');ctx.save();ctx.globalAlpha*=al;ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();ctx.restore();}
 function pill(x,y,w,h,fill,stroke){rr(x,y,w,h,h/2);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke();}}
