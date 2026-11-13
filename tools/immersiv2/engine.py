@@ -43,7 +43,8 @@ def riser(d=1.0,g=.35,lo=300,hi=6000):
 def tapestop(d=.7,g=.35): return sweep(900,60,d,g,.005,.08)
 def whistle(d=.5,g=.25):
     x=tt(d); f=2900+60*np.sin(2*np.pi*28*x); return np.sin(2*np.pi*np.cumsum(f)/SR)*env(len(x),.01,.05,1)*g
-def kick(g=.8): return thud(g,130,.25)+hp(noise(.1),1500)*np.exp(-tt(.1)*40)*.2*g
+def kick(g=.8):
+    a=thud(g,130,.25); b=hp(noise(.1),1500)*np.exp(-tt(.1)*40)*.2*g; a[:len(b)]+=b; return a
 def chord(freqs,d=2.2,g=.18,a=.3,r=1.0):
     x=tt(d); s=0
     for f in freqs:

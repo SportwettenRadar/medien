@@ -1,2 +1,25 @@
 /home/claude/medien/immersiv/2026-11-15_budget.mp4
 /home/claude/medien/immersiv/2026-11-16_quote-in-chance.mp4
+/home/claude/medien/immersiv/2026-11-19_verzoegerung.mp4
+/home/claude/medien/immersiv/2026-11-18_marge.mp4
+/home/claude/medien/immersiv/2026-11-21_nachspielzeit.mp4
+/home/claude/medien/immersiv/2026-11-20_zehn-tipps.mp4
+/home/claude/medien/immersiv/2026-11-22_verluste.mp4
+Traceback (most recent call last):
+  File "/home/claude/medien/tools/immersiv2/topics_all.py", line 463, in <module>
+    else: print(video(cfg,'/home/claude/medien/immersiv'))
+                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/medien/tools/immersiv2/engine.py", line 149, in video
+    name=cfg['name']; page=render_video(cfg); wav=f'{OUT}/{name}.wav'; finish(audio(cfg),wav)
+                                                                              ~~~~~^^^^^
+  File "/home/claude/medien/tools/immersiv2/engine.py", line 124, in audio
+    put(m,f(),t0+u)
+          ~^^
+  File "/home/claude/medien/tools/immersiv2/engine.py", line 123, in <lambda>
+    f={'pass':lambda:tick(.4,2000),'kick':lambda:kick(.9),'whistle':lambda:whistle(.5,.22),'pop':lambda:pop(660,.4),'ding':lambda:ding(784,.35,1.2),'thud':lambda:thud(.8,100,.5),'whoosh':lambda:whoosh(.5,.35,True,400,3500)}[k]
+                                                 ~~~~^^^^
+  File "/home/claude/medien/tools/immersiv2/engine.py", line 46, in kick
+    def kick(g=.8): return thud(g,130,.25)+hp(noise(.1),1500)*np.exp(-tt(.1)*40)*.2*g
+                           ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ValueError: operands could not be broadcast together with shapes (11025,) (4410,) 
+/home/claude/medien/immersiv/2026-11-23_breakeven.mp4
