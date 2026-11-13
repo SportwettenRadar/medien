@@ -39,3 +39,4 @@ FERTIG bis 08.01. ALLE 56 Tage geplant.
 13.11. Zusatz: quote-lesen + verlustaversion gebaut, Posts TT 408737911 / IG 407609430 umzustellen
 13.11. Verlustaversion neu (Live-Kurve, 35 s) gepusht um 12:53:55; raw-Cache ~5 Min, dann IG 407609430 neu setzen
 13:43 RENDER-NEU Layout gestartet (58)
+14:33 NEU-RENDER fertig+gepusht (58+Ueber35). Metricool-Austausch der Video-Posts offen; API liefert 503 beim Abruf. Bereits erledigt: Mi-Links raus, 28.11./09.01. Entwurf. 05.12.=ueber35 (Story+4 Posts noch tauschen)
