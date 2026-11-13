@@ -52,3 +52,5 @@ FERTIG bis 08.01. ALLE 56 Tage geplant.
 METRICOOL-AUSTAUSCH: komplett erledigt (13.11.-08.01., 16:28). 05.12. neues Thema, Mi-Links entfernt, Drafts gesetzt.
 COVER-FIX: IG-Reels 14.11.-08.01. videoCoverMilliseconds=3000 gesetzt (19:44). TikTok/YT-Short ohne Cover (API-Limit).
 21:40 RENDER2 gestartet: Endszene ohne 2. Hintergrund, Titel ab Frame 0 gross
+22:15 RENDER2 V-ENGINE FERTIG
+22:17 RENDER2 komplett (58 inkl. v1/v2/v3 Altengine). Push folgt, danach Metricool-Austausch.

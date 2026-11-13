@@ -1,0 +1,59 @@
+/home/claude/medien/immersiv/2026-11-19_verzoegerung.mp4
+/home/claude/medien/immersiv/2026-11-18_marge.mp4
+/home/claude/medien/immersiv/2026-11-20_zehn-tipps.mp4
+/home/claude/medien/immersiv/2026-11-21_nachspielzeit.mp4
+/home/claude/medien/immersiv/2026-11-22_verluste.mp4
+/home/claude/medien/immersiv/2026-11-23_breakeven.mp4
+/home/claude/medien/immersiv/2026-11-25_clv.mp4
+/home/claude/medien/immersiv/2026-11-24_elfmeter.mp4
+/home/claude/medien/immersiv/2026-11-26_uhrzeiten.mp4
+/home/claude/medien/immersiv/2026-11-27_pechserien.mp4
+/home/claude/medien/immersiv/2026-11-28_nach-dem-1-0.mp4
+/home/claude/medien/immersiv/2026-11-29_limits.mp4
+/home/claude/medien/immersiv/2026-11-30_kombi.mp4
+/home/claude/medien/immersiv/2026-12-03_oeffentlich.mp4
+/home/claude/medien/immersiv/2026-12-02_spielstand.mp4
+/home/claude/medien/immersiv/2026-12-01_abseits.mp4
+/home/claude/medien/immersiv/2026-12-04_nullnull.mp4
+/home/claude/medien/immersiv/2026-12-06_warnsignale.mp4
+/home/claude/medien/immersiv/2026-12-07_erwartungswert.mp4
+/home/claude/medien/immersiv/2026-12-05_ueber35.mp4
+Traceback (most recent call last):
+  File "/home/claude/medien/tools/immersiv2/topics_all.py", line 485, in <module>
+    else: print(video(cfg,'/home/claude/medien/immersiv'))
+                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/medien/tools/immersiv2/engine.py", line 150, in video
+    name=cfg['name']; page=render_video(cfg); wav=f'{OUT}/{name}.wav'; finish(audio(cfg),wav)
+         ~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+/home/claude/medien/immersiv/2026-12-08_torwart-winkel.mp4
+/home/claude/medien/immersiv/2026-12-11_fuenf-tore.mp4
+/home/claude/medien/immersiv/2026-12-12_fahrstuhl.mp4
+/home/claude/medien/immersiv/2026-12-10_nie.mp4
+/home/claude/medien/immersiv/2026-12-13_treppe.mp4
+/home/claude/medien/immersiv/2026-12-14_torverteilung.mp4
+/home/claude/medien/immersiv/2026-12-15_mauer.mp4
+/home/claude/medien/immersiv/2026-12-16_oasis.mp4
+/home/claude/medien/immersiv/2026-12-17_testphase.mp4
+/home/claude/medien/immersiv/2026-12-18_ueber25.mp4
+/home/claude/medien/immersiv/2026-12-20_vorsaetze.mp4
+/home/claude/medien/immersiv/2026-12-19_modellgrenzen.mp4
+/home/claude/medien/immersiv/2026-12-21_ueber25-rechnung.mp4
+/home/claude/medien/immersiv/2026-12-23_schwache-tage.mp4
+/home/claude/medien/immersiv/2026-12-24_auswertung.mp4
+/home/claude/medien/immersiv/2026-12-22_konter.mp4
+/home/claude/medien/immersiv/2026-12-25_zufall-tippen.mp4
+/home/claude/medien/immersiv/2026-12-26_hz2.mp4
+/home/claude/medien/immersiv/2026-12-27_selbsttest.mp4
+/home/claude/medien/immersiv/2026-12-28_beide-treffen.mp4
+/home/claude/medien/immersiv/2026-12-29_eckball.mp4
+/home/claude/medien/immersiv/2026-12-30_spielerfehlschluss.mp4
+/home/claude/medien/immersiv/2026-12-31_rueckblick.mp4
+/home/claude/medien/immersiv/2027-01-01_fehlerspanne.mp4
+/home/claude/medien/immersiv/2027-01-02_zwei-tore-in-zehn.mp4
+/home/claude/medien/immersiv/2027-01-03_hilfe.mp4
+/home/claude/medien/immersiv/2027-01-04_doppelte-chance.mp4
+/home/claude/medien/immersiv/2027-01-05_strafraum.mp4
+/home/claude/medien/immersiv/2027-01-06_ueberanpassung.mp4
+/home/claude/medien/immersiv/2027-01-07_start.mp4
+/home/claude/medien/immersiv/2027-01-08_drei-zahlen.mp4

@@ -5,7 +5,7 @@ function nAt(t){if(t<=NK[0][0])return 0;for(let i=1;i<NK.length;i++){if(t<=NK[i]
 const CX0=120,CX1=990,CY0=900,CY1=570;const cx=n=>CX0+(CX1-CX0)*n/100,cy=r=>CY0-(CY0-CY1)*r;
 const run=n=>{let h=0;for(let i=0;i<n;i++)h+=SEQ[i];return n?h/n:0;};
 const band=n=>1.96*Math.sqrt(P*(1-P)/n);
-window.render=function(t){
+window.render=function(t){window.CT=t;
  bg(t);header();const intro=eo(seg(t,0,.7));ctx.save();ctx.translate(0,150);
  title('STICHPROBE · SIMULATION','Gleiche Chance.','Ganz anderes Bild.',intro);
  ctx.save();ctx.globalAlpha=intro;
@@ -39,7 +39,7 @@ window.render=function(t){
    rr(90,436,900,92,26);ctx.fillStyle='rgba(10,19,29,.96)';ctx.fill();ctx.strokeStyle=C.accent;ctx.lineWidth=3;ctx.stroke();T(c[2],540,488,'800 42px B',C.text,'center');T(c[3],540,516,'400 24px I',C.muted,'center');ctx.restore();}});
  ctx.restore();
  const ea=seg(t,21.0,21.8);
- if(ea>0){ctx.save();ctx.globalAlpha=ea;ctx.beginPath();ctx.rect(0,420,W,1500);ctx.clip();ctx.clearRect(0,420,W,1500);bg(t);ctx.restore();
+ if(ea>0){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=ea;ctx.beginPath();ctx.rect(0,570,W,1350);ctx.clip();ctx.clearRect(0,570,W,1350);bg(t);ctx.restore();
   T('Kurze Serien täuschen.',540,830,'800 76px B',C.text,'center',eo(seg(t,21.0,21.8)));T('Erst viele Versuche',540,940,'800 56px B',C.accent,'center',eo(seg(t,21.5,22.3)));T('zeigen die Wahrheit.',540,1010,'800 56px B',C.accent,'center',eo(seg(t,21.8,22.6)));
   T('Simulation mit fester Trefferchance von 55 %',540,1300,'400 22px M',C.faint,'center',eo(seg(t,22.0,22.8)));}
  ctx.restore();window.FY=1745;footer();window.FY=0;
