@@ -62,3 +62,4 @@ COVER-FIX: IG-Reels 14.11.-08.01. videoCoverMilliseconds=3000 gesetzt (19:44). T
 METRICOOL-AUSTAUSCH 3: erledigt 07.12.-08.01. Alles getauscht (TT/YT 18:00, IG-Reel 19:30). Mi 19:30 YT-Langvideos und 12:00-Shorts unberuehrt.
 22:44 4 defekte mp4 (13.11. x2, 15.11., 16.11.; abgeschnitten, parallele Renderlaeufe) neu gerendert, voll dekodiert, alle 58 geprueft. Metricool: 13.11. IG-Reel neu 22:43, 15.11./16.11. TT/YT/IG getauscht.
 13.11. 22:58 TEASER-LAYOUT D2 (Daniel freigegeben): 56 Hook-PNGs neu, gen.js renderHook = D2 (balWrap/hookFit, Footer y=1660); alte PNGs Backup /tmp/hk/old
+13.11. 23:02 TEASER D2: alle 56 Stories 14.11.-08.01. in Metricool getauscht (Raw-GitHub-PNG). X-Altposts 15.11.-29.11. (12) auf Entwurf.
