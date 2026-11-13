@@ -30,3 +30,4 @@ FERTIG bis 20.12. Naechste: 21.+22.12.
 FERTIG bis 22.12. Naechste: 23.+24.12.
 FERTIG bis 24.12. Naechste: 25.+26.12. (Hinweis: pushready danach git pull --rebase falls push abgelehnt; erst 200 per curl abwarten)
 FERTIG bis 26.12. Naechste: 27.+28.12.
+FERTIG bis 28.12. Naechste: 29.+30.12.
