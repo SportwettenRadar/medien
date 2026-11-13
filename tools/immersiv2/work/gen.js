@@ -111,10 +111,18 @@ window.render=function(t){const Q=window.CFG;bg(t);header();const intro=eo(seg(t
   if(E.l2){wrap(E.l2,'400 38px I',880).forEach((l,j)=>T(l,540,950+j*52,'400 38px I',C.muted,'center',eo(seg(t,E.t0+.6,E.t0+1.4))));}
   if(E.n)T(E.n,540,1300,'400 22px M',C.faint,'center',eo(seg(t,E.t0+.6,E.t0+1.4)));}
  ctx.restore();window.FY=1745;footer();window.FY=0;};
+function balWrap(s,font,maxW){const ws=s.split(' '),n=ws.length;const w=(i,j)=>TW(ws.slice(i,j).join(' '),font);
+ const g=wrap(s,font,maxW).length;const memo={};
+ function f(i,k){const key=i+','+k;if(memo[key])return memo[key];if(k===1){const ww=w(i,n);return memo[key]=ww<=maxW?{c:ww*ww,b:[n]}:{c:1e18,b:[n]};}
+  let bc=1e18,bb=null;for(let j=i+1;j<=n-(k-1);j++){const ww=w(i,j);if(ww>maxW)break;const r=f(j,k-1);const c=ww*ww+r.c;if(c<bc){bc=c;bb=[j].concat(r.b);}}return memo[key]={c:bc,b:bb};}
+ const r=f(0,g);if(!r.b||r.c>=1e18)return wrap(s,font,maxW);const out=[];let p=0;for(const j of r.b){out.push(ws.slice(p,j).join(' '));p=j;}return out;}
+function hookFit(h){let pick=null;for(const fs of [104,90,80]){const L=balWrap(h,`800 ${fs}px B`,860);const mw=Math.max(...L.map(l=>TW(l,`800 ${fs}px B`)));const orph=L.length>1&&(L[0].length<=4||L[L.length-1].length<=4);
+  pick={fs,L,lh:Math.round(fs*1.2)};if(L.length<=3&&mw<=860&&!orph)return pick;}return pick;}
+// Teaser-Layout D2 (13.11.2026 von Daniel freigegeben): Block im oberen Drittel, Frage mit Leiste, Button direkt darunter
 window.renderHook=function(){const Q=window.CFG;bg(1.5);header();
- T(Q.eb,72,330,'500 28px M',C.accent,'left',1,4);
- fitT(Q.t1,72,470,100,800,C.text,'left',936);if(Q.t2)fitT(Q.t2,72,578,100,800,C.text,'left',936);
- ctx.save();rr(72,700,936,330,34);ctx.fillStyle='rgba(15,31,48,.94)';ctx.fill();ctx.strokeStyle=C.accent;ctx.lineWidth=3;ctx.stroke();ctx.restore();
- wrap(Q.hook,'800 62px B',840).forEach((l,i,a)=>T(l,540,865+(i-(a.length-1)/2)*78,'800 62px B',C.text,'center'));
- pill(72,1090,500,70,'rgba(46,219,153,.16)',C.accent);T('Heute Abend als Video',322,1136,'600 30px I',C.accent,'center');
- footer();};
+ const ty=470;T(Q.eb,72,ty,'500 28px M',C.accent,'left',1,4);T(Q.t1+(Q.t2?' '+Q.t2:''),72,ty+66,'700 40px B',C.muted,'left');
+ const {fs,L,lh}=hookFit(Q.hook),y0=ty+66+80+fs;
+ ctx.save();rr(72,y0-fs*0.8,10,(L.length-1)*lh+fs,5);ctx.fillStyle=C.accent;ctx.fill();ctx.restore();
+ L.forEach((l,i)=>T(l,122,y0+i*lh,`800 ${fs}px B`,C.text,'left'));
+ const by=y0+(L.length-1)*lh+90;pill(122,by,500,84,'rgba(46,219,153,.16)',C.accent);T('Heute Abend als Video',372,by+84/2+11,'600 32px I',C.accent,'center');
+ window.FY=1660;footer();window.FY=0;};
