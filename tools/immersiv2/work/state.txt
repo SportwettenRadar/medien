@@ -34,3 +34,4 @@ FERTIG bis 28.12. Naechste: 29.+30.12.
 FERTIG bis 30.12. Naechste: 31.12.+01.01.
 FERTIG bis 01.01. Naechste: 02.+03.01.
 FERTIG bis 03.01. Naechste: 04.+05.01. (ab 02.01 existieren IG/Story oft nicht -> createScheduledPost)
+FERTIG bis 05.01. Naechste: 06.+07.01., dann 08.01. Render ALLDONE
