@@ -1,0 +1,1 @@
+window.CFG={"eb": "ZAHL DER WOCHE · START", "t1": "Drei Zahlen", "t2": "zum Start", "hook": "Drei Zahlen zum Start", "scenes": [], "punch": {"t0": 0, "lines": []}, "end": {"t0": 0}, "name": "2027-01-08_drei-zahlen", "dur": 1};
