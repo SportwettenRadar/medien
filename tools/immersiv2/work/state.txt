@@ -1,2 +1,5 @@
 Metricool fertig (Story 17:30 + TikTok 18:00 + YT-Short 18:00 + IG-Reel 19:30): 14.11., 15.11., 16.11., 17.11. Naechste: 18.11. (IDs: Story 417527279 uuid -7822703208626303764; TikTok 408652488 uuid -7384886746389066956; IG 407609919 uuid -5641912652367183351; Mi hat zusaetzlich YT-Short 12:00 und YT-Langvideo 19:30, unveraendert lassen). Regeln: Captions einzeln schreiben, gleicher Text fuer TT/IG/YT, 18+ Zeile; Fenster je 2 Tage per getScheduledPosts holen. X-Posts (twitter) bleiben, Daniel informieren.
 FERTIG in Metricool: 14.-20.11. (inkl. YT-Short). Regel: wo YT-Short 18:00 existiert -> updaten (Do/Fr etc.), sonst create. Naechste: 21.11.+22.11.
+FERTIG in Metricool: 14.-22.11. Naechste: 23.+24.11. (24.11. elfmeter neu rendern)
+FERTIG in Metricool: 14.-22.11. Naechste: 23.+24.11. (24.11. elfmeter neu rendern)
+FERTIG 23.11. (24.11: IDs story 417527458 uuid -4816982929139151553, tiktok 408652861 uuid 8973435079551960747, IG 407610340 uuid -1057446101773434550, YT 405245302 uuid 4731334328289282045; wartet auf elfmeter-Render)
