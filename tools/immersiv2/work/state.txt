@@ -50,3 +50,4 @@ FERTIG bis 08.01. ALLE 56 Tage geplant.
 16:25 METRICOOL-AUSTAUSCH: erledigt bis 22.12. Naechstes: 23.12.ff
 16:25 METRICOOL-AUSTAUSCH: erledigt bis 26.12. Naechstes: 27.12.ff
 METRICOOL-AUSTAUSCH: komplett erledigt (13.11.-08.01., 16:28). 05.12. neues Thema, Mi-Links entfernt, Drafts gesetzt.
+COVER-FIX: IG-Reels 14.11.-08.01. videoCoverMilliseconds=3000 gesetzt (19:44). TikTok/YT-Short ohne Cover (API-Limit).
