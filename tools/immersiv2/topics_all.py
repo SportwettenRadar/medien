@@ -458,8 +458,18 @@ def _():
     return B('2026-11-13_quote-lesen','MATHE · QUOTE','So liest man','eine Quote',[sc1,sc2],pun('Eine Quote ist',['eine Schätzung.','a'],['Keine Vorhersage.','w']),END('Erst umrechnen,','dann einschätzen.',NOTE_M))
 @reg('2026-11-13_verlustaversion')
 def _():
-    it=[dict(h='Ein Verlust schmerzt mehr',s='Als ein gleich großer Gewinn Freude macht.',b='1'),dict(h='Das verleitet zu Risiko',s='Zum Beispiel, um Verluste auszugleichen.',b='2'),dict(h='Gegenmittel: Regeln vorher',s='Grenze und Einsatz festlegen, bevor es losgeht.',b='3')]
-    return B('2026-11-13_verlustaversion','VERANTWORTUNG · VERLUSTAVERSION','Warum Verluste','schwerer wiegen',[steps('Verlustaversion in drei Schritten',it,d=15.5)],pun('Vorher entscheiden.',['Nicht hinterher.','a']),END('Klare Regeln helfen.','Hilfe: check-dein-spiel.de',NOTE_V),note=NOTE_V)
+    for sd in range(1,2000):
+        r=random.Random(sd); seq=[1 if r.random()<.5 else 0 for _ in range(40)]
+        if sum(seq)!=20: continue
+        real=[0];fel=[0]
+        for x in seq: real.append(real[-1]+(1 if x else -1)); fel.append(fel[-1]+(1 if x else -2.25))
+        if min(real)>=-4 and max(real)<=4 and abs(real[10])<=2 and abs(real[20])<=2: break
+    xs=list(range(41))
+    ser=[dict(xs=xs,ys=real,c='b',n='Tatsächliche Bilanz'),dict(xs=xs,ys=[round(v,2) for v in fel],c='w',n='Gefühlte Bilanz')]
+    sc1=live_curve('Faire Münze, 40 Wetten. Gefühlt zählt ein Verlust 2,25-mal',None,None,40,[-30,-20,-10,0,10],[0,10,20,30,40],[0,10,20,40],'Wette','',cm='multi',series=ser,xmin=0,ymin=-32,ymax=12,yfmt='raw',labels=['Start','Nach 10 Wetten','Nach 20 Wetten','Nach 40 Wetten'])
+    it=[dict(h='Grenze vorher festlegen',s='Einsatz und Limit stehen vor der ersten Wette.',b='1'),dict(h='Gleicher Einsatz. Immer.',s='Nach einem Verlust nicht erhöhen.',b='2'),dict(h='Pause statt Aufholjagd',s='Nach einer Serie bewusst aufhören.',b='3')]
+    sc2=steps('Drei Regeln gegen den Reflex',it,d=10.5)
+    return B('2026-11-13_verlustaversion','VERANTWORTUNG · VERLUSTAVERSION','Warum Verluste','schwerer wiegen',[sc1,sc2],pun('Rechnerisch ±0.',['Gefühlt im Minus.','w']),END('Vorher entscheiden.','Hilfe: check-dein-spiel.de',NOTE_V),note='Faktor 2,25: Tversky & Kahneman (1992) · check-dein-spiel.de')
 if __name__=='__main__':
     import sys
     mode,name=sys.argv[1],sys.argv[2]; cfg=V[name]()
