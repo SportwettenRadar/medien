@@ -40,3 +40,13 @@ FERTIG bis 08.01. ALLE 56 Tage geplant.
 13.11. Verlustaversion neu (Live-Kurve, 35 s) gepusht um 12:53:55; raw-Cache ~5 Min, dann IG 407609430 neu setzen
 13:43 RENDER-NEU Layout gestartet (58)
 14:33 NEU-RENDER fertig+gepusht (58+Ueber35). Metricool-Austausch der Video-Posts offen; API liefert 503 beim Abruf. Bereits erledigt: Mi-Links raus, 28.11./09.01. Entwurf. 05.12.=ueber35 (Story+4 Posts noch tauschen)
+16:19 METRICOOL-AUSTAUSCH: erledigt 13.11.(TT+IG) bis 18.11. (alle 3 Netzwerke). Naechstes: 19.11.ff. Tool-Skript: scratchpad/gen_upd.py <getScheduledPosts-Datei> [tage]
+16:21 METRICOOL-AUSTAUSCH: erledigt bis 27.11. Naechstes: 28.11.ff (05.12. neues Thema ueber35)
+16:22 METRICOOL-AUSTAUSCH: erledigt bis 02.12. Naechstes: 03.12.ff
+16:23 METRICOOL-AUSTAUSCH: erledigt bis 06.12. inkl. 05.12. neues Thema (Story+3). Naechstes: 07.12.ff
+16:23 METRICOOL-AUSTAUSCH: erledigt bis 10.12. Naechstes: 11.12.ff
+16:24 METRICOOL-AUSTAUSCH: erledigt bis 14.12. Naechstes: 15.12.ff
+16:24 METRICOOL-AUSTAUSCH: erledigt bis 18.12. Naechstes: 19.12.ff
+16:25 METRICOOL-AUSTAUSCH: erledigt bis 22.12. Naechstes: 23.12.ff
+16:25 METRICOOL-AUSTAUSCH: erledigt bis 26.12. Naechstes: 27.12.ff
+METRICOOL-AUSTAUSCH: komplett erledigt (13.11.-08.01., 16:28). 05.12. neues Thema, Mi-Links entfernt, Drafts gesetzt.
