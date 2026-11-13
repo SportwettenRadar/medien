@@ -1,0 +1,20 @@
+/home/claude/medien/immersiv/2026-11-13_quote-lesen.mp4
+Traceback (most recent call last):
+  File "/home/claude/medien/tools/immersiv2/topics_all.py", line 475, in <module>
+    mode,name=sys.argv[1],sys.argv[2]; cfg=V[name]()
+                                           ~^^^^^^
+KeyError: '2026-11-14_restzeit'
+FAIL 2026-11-14_restzeit
+/home/claude/medien/immersiv/2026-11-13_verlustaversion.mp4
+/home/claude/medien/immersiv/2026-11-15_budget.mp4
+Traceback (most recent call last):
+  File "/home/claude/medien/tools/immersiv2/topics_all.py", line 475, in <module>
+    mode,name=sys.argv[1],sys.argv[2]; cfg=V[name]()
+                                           ~^^^^^^
+KeyError: '2026-11-17_torchance'
+FAIL 2026-11-17_torchance
+/home/claude/medien/immersiv/2026-11-16_quote-in-chance.mp4
+/home/claude/medien/immersiv/2026-11-18_marge.mp4
+/home/claude/medien/immersiv/2026-11-19_verzoegerung.mp4
+/home/claude/medien/immersiv/2026-11-21_nachspielzeit.mp4
+/home/claude/medien/immersiv/2026-11-20_zehn-tipps.mp4

@@ -80,10 +80,10 @@ window.render=function(t){
  const sa=fade(t,18.4,18.8,19.4,19.8);
  if(sa>0){ctx.save();ctx.globalAlpha*=sa;card(120,1110,840,170);T('Gehalten.',540,1186,'800 64px B',C.text,'center');T('Bei 16 % der Normalfall.',540,1246,'600 34px I',C.muted,'center');ctx.restore();}
  ctx.restore();
- if(endA>0){ctx.save();ctx.globalAlpha=endA*.86;ctx.fillStyle=C.bg;ctx.fillRect(0,440,W,1000);ctx.restore();
+ if(endA>0){ctx.save();ctx.globalAlpha=endA;ctx.beginPath();ctx.rect(0,420,W,1500);ctx.clip();ctx.clearRect(0,420,W,1500);bg(t);ctx.restore();
   const e2=eo(seg(t,20.0,20.9)),e3=eo(seg(t,20.9,21.8));
   T('Aus einer Szene',540,830,'800 84px B',C.text,'center',e2);T('wird eine Zahl.',540,930,'800 84px B',C.accent,'center',e2);
   T('Wahrscheinlichkeit statt Bauchgefühl.',540,1030,'400 38px I',C.muted,'center',e3);
   T('Nachgestellte Szene · Beispielwerte, vereinfachtes Modell',540,1300,'400 22px M',C.faint,'center',e3);}
- footer();
+ ctx.restore();window.FY=1745;footer();window.FY=0;
 };

@@ -38,3 +38,4 @@ FERTIG bis 05.01. Naechste: 06.+07.01., dann 08.01. Render ALLDONE
 FERTIG bis 08.01. ALLE 56 Tage geplant.
 13.11. Zusatz: quote-lesen + verlustaversion gebaut, Posts TT 408737911 / IG 407609430 umzustellen
 13.11. Verlustaversion neu (Live-Kurve, 35 s) gepusht um 12:53:55; raw-Cache ~5 Min, dann IG 407609430 neu setzen
+13:43 RENDER-NEU Layout gestartet (58)

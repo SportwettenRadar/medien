@@ -192,13 +192,15 @@ def _():
     it=[dict(l=f"{n} Spiel{'e' if n>1 else ''}",v=round(v,1),dec=1,suf=' %',c='a' if n<9 else 'y',n='mindestens ein 0:0') for n,v in zip(ns,vals)]
     sc=bars('Chance auf mindestens ein 0:0 (Modell: 6,7 % je Spiel)',it,60,d=13,start=.9,tail=1.8)
     return B('2026-12-04_nullnull','ZAHL DER WOCHE · 0:0','Neun Spiele:','ein 0:0 ist normal',[sc],pun('Selten pro Spiel,',['häufig pro Spieltag.','a']),END('Kleine Chance,','viele Versuche.',NOTE_M))
-@reg('2026-12-05_nullnull-modell')
+@reg('2026-12-05_ueber35')
 def _():
-    f=lambda l: math.exp(-l); xs=[1.5+i*.1 for i in range(26)]; ys=[f(x) for x in xs]; assert abs(f(2.7)-.0672)<.0005
-    sc=live_curve('Chance auf ein 0:0 – je nach Torschnitt pro Spiel',xs,ys,4.0,[0,.1,.2],[1.5,2.0,2.5,3.0,3.5,4.0],[2.0,2.7,3.5],'Tore je Spiel','',xmin=1.5,ymax=.25,cm=None,labels=['2,0 Tore','2,7 Tore','3,5 Tore'])
-    sc['xu']='';
-    for c,x in zip(sc['calls'],[2.0,2.7,3.5]): pass
-    return B('2026-12-05_nullnull-modell','LIVE-RECHNUNG · 0:0','Wie oft endet ein','Spiel 0:0?',[sc],pun('Bei 2,7 Toren:',['6,7 Prozent.','a']),END('Das Modell gibt',"einen Richtwert.",'Konstante Torrate, vereinfachtes Modell'),note=NOTE_M)
+    l=2.7; c=lambda k:1-sum(math.exp(-l)*l**i/math.factorial(i) for i in range(k))
+    P=[c(k)*100 for k in range(1,6)]; assert abs(P[3]-28.6)<.06 and abs(P[2]-50.6)<.06
+    labs=['Über 0,5','Über 1,5','Über 2,5','Über 3,5','Über 4,5']; cols=['a','a','a','y','a']
+    items=[dict(l=lb,v=round(p,1),dec=1,suf=' %',c=cc,n='Faire Quote '+fm(100/p,2)) for lb,p,cc in zip(labs,P,cols)]
+    sc1=bars('Torlinien im Modell: 2,7 Tore je Spiel',items,100,d=12)
+    sc2=big('Über 3,5 Tore',round(P[3],1),1,' %',c='y',top='VIER ODER MEHR TORE',sub='Etwa jedes dritte bis vierte Spiel. Faire Quote 3,50, ohne Marge.',d=8)
+    return B('2026-12-05_ueber35','LIVE-RECHNUNG · TORLINIEN','Je höher die Linie,','desto teurer die Quote',[sc1,sc2],pun('Hohe Linie,',['seltenes Ereignis.','y']),END('Die Linie bestimmt','den Preis.',NOTE_M),note=NOTE_M)
 @reg('2026-12-06_warnsignale')
 def _():
     it=[dict(h='Du wettest mit Geld für Rechnungen',s='Miete und Alltag sind keine Wetteinsätze.',b='x',c='w'),dict(h='Du jagst Verlusten hinterher',s='Mehr Einsatz, um aufzuholen.',b='x',c='w'),dict(h='Du verheimlichst dein Wetten',s='Vor Familie, Freunden, Partner.',b='x',c='w'),
