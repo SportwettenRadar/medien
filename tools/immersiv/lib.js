@@ -20,7 +20,7 @@ function bg(t){ctx.globalAlpha=1;ctx.fillStyle=C.bg;ctx.fillRect(0,0,W,H);
 function header(){if(logo.complete){ctx.save();rr(72,150,64,64,14);ctx.clip();ctx.drawImage(logo,72,150,64,64);ctx.restore();}
  T('Sportwetten Radar',156,196,'700 38px B',C.text);}
 function footer(extra){const fy=window.FY||1450;T('18+ · Keine Gewinngarantie',72,fy,'400 25px M',C.faint);T('@sportwetten.radar',1008,fy,'400 25px M',C.faint,'right');}
-function title(eb,l1,l2,a=1){T(eb,72,290,'500 27px M',C.accent,'left',a,4);T(l1,72,352,'800 62px B',C.text,'left',a);if(l2)T(l2,72,416,'800 62px B',C.text,'left',a);}
+function title(eb,l1,l2,a=1){const t=window.CT==null?99:window.CT;const tw=Math.max(TW(eb,'500 27px M',4),TW(l1,'800 62px B'),l2?TW(l2,'800 62px B'):0);const kmax=clamp(960/tw,1,1.25),k=lerp(kmax,1,eio(seg(t,.3,.9)));ctx.save();ctx.translate(72,290);ctx.scale(k,k);ctx.translate(-72,-290);T(eb,72,290,'500 27px M',C.accent,'left',1,4);T(l1,72,352,'800 62px B',C.text,'left',1);if(l2)T(l2,72,416,'800 62px B',C.text,'left',1);ctx.restore();}
 function glow(x,y,r,col,al=1){const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,col);g.addColorStop(1,'rgba(0,0,0,0)');ctx.save();ctx.globalAlpha*=al;ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();ctx.restore();}
 function pill(x,y,w,h,fill,stroke){rr(x,y,w,h,h/2);ctx.fillStyle=fill;ctx.fill();if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.stroke();}}
 function card(x,y,w,h,al=1){ctx.save();ctx.globalAlpha*=al;rr(x,y,w,h,26);ctx.fillStyle='rgba(15,31,48,.94)';ctx.fill();ctx.strokeStyle='#1e3448';ctx.lineWidth=2;ctx.stroke();ctx.restore();}

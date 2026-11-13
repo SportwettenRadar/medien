@@ -9,7 +9,7 @@ const cx=m=>CX0+(CX1-CX0)*m/90,cy=p=>CY0-(CY0-CY1)*p/PMAX;
 const COLS=[[0,[46,219,153]],[.5,[242,193,78]],[1,[239,106,92]]];
 function colAt(u){u=clamp(u);let a=COLS[0],b=COLS[1];if(u>.5){a=COLS[1];b=COLS[2];}const k=(u-a[0])/(b[0]-a[0]);const c=a[1].map((v,i)=>Math.round(lerp(v,b[1][i],k)));return `rgb(${c[0]},${c[1]},${c[2]})`;}
 const CALL=[{s:7.6,e:8.8,m:45,l1:'Halbzeit',},{s:13.0,e:14.2,m:70,l1:'Minute 70'},{s:15.4,e:16.8,m:80,l1:'Minute 80'}];
-window.render=function(t){
+window.render=function(t){window.CT=t;
  bg(t);header();const intro=eo(seg(t,0,.7));ctx.save();ctx.translate(0,150);
  title('LIVE · ÜBER 1,5 TORE','Die Restzeit bestimmt','den Preis',intro);
  ctx.save();ctx.globalAlpha=intro;
@@ -47,7 +47,7 @@ window.render=function(t){
  if(fa>0){ctx.save();ctx.globalAlpha=fa;ctx.fillStyle='rgba(10,19,29,.88)';rr(70,640,940,420,34);ctx.fill();ctx.restore();
   L.forEach((l,i)=>{const k=eob(seg(t,l[1],l[1]+.45));ctx.save();ctx.globalAlpha=fa*clamp(k);ctx.translate(540,740+i*110);ctx.scale(.9+.1*k,.9+.1*k);T(l[0],0,0,'800 70px B',l[2],'center');ctx.restore();});}
  const ea=seg(t,21.0,21.8);
- if(ea>0){ctx.save();ctx.globalAlpha=ea;ctx.beginPath();ctx.rect(0,420,W,1500);ctx.clip();ctx.clearRect(0,420,W,1500);bg(t);ctx.restore();
+ if(ea>0){ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.globalAlpha=ea;ctx.beginPath();ctx.rect(0,570,W,1350);ctx.clip();ctx.clearRect(0,570,W,1350);bg(t);ctx.restore();
   T('Jede Minute zählt.',540,850,'800 80px B',C.text,'center',eo(seg(t,21.0,21.8)));T('Restzeit gehört in jede Rechnung.',540,950,'400 38px I',C.muted,'center',eo(seg(t,21.6,22.4)));
   T('Rechenbeispiel, vereinfachtes Modell',540,1300,'400 22px M',C.faint,'center',eo(seg(t,21.6,22.4)));}
  ctx.restore();window.FY=1745;footer();window.FY=0;

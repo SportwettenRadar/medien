@@ -34,7 +34,7 @@ function pitch(a){ctx.save();ctx.globalAlpha=a;
 function player(x,y,fill,ring,r=14,rot=0,sq=1){ctx.save();ctx.translate(sx(x),sy(y));ctx.rotate(rot);ctx.scale(1,sq);ctx.fillStyle=fill;ctx.strokeStyle=ring;ctx.lineWidth=3;ctx.beginPath();ctx.arc(0,0,r,0,7);ctx.fill();ctx.stroke();ctx.restore();}
 function bubble(x,y,txt,al,col=C.accent,left=false){ctx.save();ctx.globalAlpha*=al;const f='800 36px B';const w=TW(txt,f)+36;const px=left?sx(x)-22-w:sx(x)+22,py=left?sy(y)-26:sy(y)-58;pill(px,py,w,52,'rgba(10,19,29,.95)',col);T(txt,px+w/2,py+39,f,col,'center');ctx.restore();}
 function cone(from,al,g,fillA){const L=pos(from,POSTL,g),R=pos(from,POSTR,g);ctx.save();ctx.globalAlpha*=al;ctx.fillStyle=`rgba(46,219,153,${fillA})`;ctx.beginPath();ctx.moveTo(sx(from[0]),sy(from[1]));ctx.lineTo(sx(L[0]),sy(L[1]));ctx.lineTo(sx(R[0]),sy(R[1]));ctx.closePath();ctx.fill();ctx.strokeStyle='rgba(46,219,153,.8)';ctx.lineWidth=2.5;ctx.stroke();ctx.restore();}
-window.render=function(t){
+window.render=function(t){window.CT=t;
  bg(t);header();
  const intro=eo(seg(t,0,.7));
  title('TORCHANCE · NACHGESTELLT','Wie wahrscheinlich','ist dieses Tor?',intro);

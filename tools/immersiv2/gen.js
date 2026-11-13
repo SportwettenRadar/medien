@@ -98,14 +98,15 @@ function sPitch(S,t){const u=t-S.t0;cap(S.cap,u,PY-82);pitchBase(eo(seg(u,0,.5))
  (S.labels||[]).forEach(b=>{const al=fade(u,b.s,b.s+.35,b.e==null?999:b.e-.3,b.e==null?1000:b.e);if(al>0)T(b.txt,psx(b.x),psy(b.y),'600 28px I',colv(b.c||'t'),'center',al);});}
 const SC_={bars:sBars,vbars:sVbars,steps:sSteps,big:sBig,curve:sCurve,dots:sDots,pitch:sPitch};
 window.render=function(t){const Q=window.CFG;bg(t);header();const intro=eo(seg(t,0,.7));
- ctx.save();ctx.translate(0,70);T(Q.eb,72,290,'500 27px M',C.accent,'left',intro,4);fitT(Q.t1,72,352,62,800,C.text,'left',936,intro);if(Q.t2)fitT(Q.t2,72,416,62,800,C.text,'left',936,intro);ctx.restore();ctx.save();ctx.translate(0,170);
+ const tw=Math.max(TW(Q.eb,'500 27px M',4),TW(Q.t1,'800 62px B'),Q.t2?TW(Q.t2,'800 62px B'):0);const kmax=clamp(960/tw,1,1.5),kt=lerp(kmax,1,eio(seg(t,.9,1.7)));
+ ctx.save();ctx.translate(0,70);ctx.translate(72,290);ctx.scale(kt,kt);ctx.translate(-72,-290);T(Q.eb,72,290,'500 27px M',C.accent,'left',1,4);fitT(Q.t1,72,352,62,800,C.text,'left',936,1);if(Q.t2)fitT(Q.t2,72,416,62,800,C.text,'left',936,1);ctx.restore();ctx.save();ctx.translate(0,170);
  Q.scenes.forEach(S=>{const al=vis(t,S.t0,S.t1);if(al<=0)return;ctx.save();ctx.globalAlpha=al*intro;SC_[S.type](S,t);ctx.restore();});
- if(Q.note){T(Q.note,540,1415,'400 21px M',C.faint,'center',intro);}
+ if(Q.note){T(Q.note,540,1415,'400 21px M',C.faint,'center',intro*(1-seg(t,Q.end.t0-.1,Q.end.t0+.3)));}
  const P=Q.punch;const fa=seg(t,P.t0,P.t0+.4)*(1-seg(t,Q.end.t0-.4,Q.end.t0));
  if(fa>0){ctx.save();ctx.globalAlpha=fa;ctx.fillStyle='rgba(10,19,29,.90)';const hh=P.lines.length*110+50;rr(70,760-hh/2+40,940,hh,34);ctx.fill();ctx.restore();
   P.lines.forEach((l,i)=>{const s=P.t0+.3+i*P.step,k=eob(seg(t,s,s+.45));ctx.save();ctx.globalAlpha=fa*clamp(k);ctx.translate(540,760-hh/2+40+95+i*110);ctx.scale(.9+.1*k,.9+.1*k);fitT(l[0],0,0,70,800,colv(l[1]||'t'),'center',880);ctx.restore();});}
  const E=Q.end,ea=seg(t,E.t0,E.t0+.8);
- if(ea>0){ctx.save();ctx.globalAlpha=ea;ctx.beginPath();ctx.rect(0,370,W,1500);ctx.clip();ctx.clearRect(0,370,W,1500);bg(t);ctx.restore();
+ if(ea>0){
   fitT(E.l1,540,850,80,800,C.text,'center',900,eo(seg(t,E.t0,E.t0+.8)));
   if(E.l2){wrap(E.l2,'400 38px I',880).forEach((l,j)=>T(l,540,950+j*52,'400 38px I',C.muted,'center',eo(seg(t,E.t0+.6,E.t0+1.4))));}
   if(E.n)T(E.n,540,1300,'400 22px M',C.faint,'center',eo(seg(t,E.t0+.6,E.t0+1.4)));}
