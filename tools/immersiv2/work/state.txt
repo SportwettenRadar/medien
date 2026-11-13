@@ -54,3 +54,9 @@ COVER-FIX: IG-Reels 14.11.-08.01. videoCoverMilliseconds=3000 gesetzt (19:44). T
 21:40 RENDER2 gestartet: Endszene ohne 2. Hintergrund, Titel ab Frame 0 gross
 22:15 RENDER2 V-ENGINE FERTIG
 22:17 RENDER2 komplett (58 inkl. v1/v2/v3 Altengine). Push folgt, danach Metricool-Austausch.
+22:19 METRICOOL-AUSTAUSCH 2 (neue Videos): 13.11. IG neu gepostet 22:24; erledigt 14.-17.11. Naechstes: 18.11.ff (Mi 19:30 = YT-Langvideo nicht tauschen)
+22:20 METRICOOL-AUSTAUSCH 2: erledigt 14.-24.11. Naechstes: 25.11.ff
+22:21 METRICOOL-AUSTAUSCH 2: erledigt 14.-28.11. Naechstes: 29.11.ff
+22:22 METRICOOL-AUSTAUSCH 2: erledigt 14.11.-02.12. Naechstes: 03.12.ff
+22:22 METRICOOL-AUSTAUSCH 2: erledigt 14.11.-06.12. Naechstes: 07.12.ff
+METRICOOL-AUSTAUSCH 3: erledigt 07.12.-08.01. Alles getauscht (TT/YT 18:00, IG-Reel 19:30). Mi 19:30 YT-Langvideos und 12:00-Shorts unberuehrt.
