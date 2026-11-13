@@ -450,6 +450,16 @@ def _():
     a=Pge(2,L)*100; b=Pge(3,L)*100; c=Pk(0,L)*100
     it=[dict(h=f"{fm(c,1)} %",s='Chance auf ein 0:0 (Modell, 2,7 Tore je Spiel)',b='1'),dict(h=f"{fm(a,1)} %",s='Chance auf Über 1,5 Tore',b='2'),dict(h=f"{fm(b,1)} %",s='Chance auf Über 2,5 Tore',b='3')]
     return B('2027-01-08_drei-zahlen','ZAHL DER WOCHE · START','Drei Zahlen','zum Start',[steps('Das Modell in drei Zeilen',it,d=15)],pun('Drei Zahlen.',['Ein Modell.','a']),END('Grundlagen zuerst.','Dann die Details.',NOTE_M))
+@reg('2026-11-13_quote-lesen')
+def _():
+    q=[1.25,2.00,3.00]; it=[dict(l=f"Quote {fm(x,2)}",v=round(100/x,1),dec=1,suf=' %',c=c,n=f"1 ÷ {fm(x,2)}") for x,c in zip(q,'abw')]
+    sc1=bars('Quote in Chance umgerechnet: 1 ÷ Quote',it,100,d=10.5,start=.9,tail=1.8)
+    sc2=big('Quote 2,00',50,0,' %',ring=.5,c='a',top='SO SCHÄTZT DER ANBIETER',bot='= 1 ÷ 2,00',sub='Je niedriger die Quote, desto wahrscheinlicher hält der Anbieter das Ereignis.',d=8)
+    return B('2026-11-13_quote-lesen','MATHE · QUOTE','So liest man','eine Quote',[sc1,sc2],pun('Eine Quote ist',['eine Schätzung.','a'],['Keine Vorhersage.','w']),END('Erst umrechnen,','dann einschätzen.',NOTE_M))
+@reg('2026-11-13_verlustaversion')
+def _():
+    it=[dict(h='Ein Verlust schmerzt mehr',s='Als ein gleich großer Gewinn Freude macht.',b='1'),dict(h='Das verleitet zu Risiko',s='Zum Beispiel, um Verluste auszugleichen.',b='2'),dict(h='Gegenmittel: Regeln vorher',s='Grenze und Einsatz festlegen, bevor es losgeht.',b='3')]
+    return B('2026-11-13_verlustaversion','VERANTWORTUNG · VERLUSTAVERSION','Warum Verluste','schwerer wiegen',[steps('Verlustaversion in drei Schritten',it,d=15.5)],pun('Vorher entscheiden.',['Nicht hinterher.','a']),END('Klare Regeln helfen.','Hilfe: check-dein-spiel.de',NOTE_V),note=NOTE_V)
 if __name__=='__main__':
     import sys
     mode,name=sys.argv[1],sys.argv[2]; cfg=V[name]()
