@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-13T08:10:01+01:00",
+ "stand": "2026-11-14T08:10:01+01:00",
  "tage": [
   {
    "datum": "2026-09-01",
@@ -1511,6 +1511,27 @@
     "treffer": 272,
     "rendite": 0.6,
     "gewinn": 2.5
+   }
+  },
+  {
+   "datum": "2026-11-13",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 2,
+    "treffer": 1,
+    "rendite": -21.3,
+    "gewinn": -0.4,
+    "quote": 1.56
+   },
+   "einzelspiele": {
+    "tipps": 0,
+    "treffer": 0
+   },
+   "seitStart": {
+    "wetten": 425,
+    "treffer": 273,
+    "rendite": 0.5,
+    "gewinn": 2.1
    }
   }
  ],
