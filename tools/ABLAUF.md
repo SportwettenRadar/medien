@@ -36,3 +36,6 @@ Datenquelle: `daten/ergebnisse.json` (schreibt der Bot nach jedem Post im Ergebn
 ## Änderung 10.11.2026: X-Konto gelöscht
 Das X-Konto ist gelöscht, die Metricool-Verbindung getrennt. Die geplanten Aufgaben (Tag 10:20, Woche Mo 10:50, Monat am 1. 10:55) aktualisieren nur noch die Homepage (auto_ergebnisse.py, abgleich_zahlen.py, commit/push). Die vom Skript weiter erzeugten Grafiken unter x/ werden nicht mehr committet oder gepostet. Footer, Menü, Datenschutz und strukturierte Daten der Homepage enthalten keinen X-Verweis mehr.
 Technik: In tools/auto_ergebnisse.py steht X_GRAFIKEN = False. Es werden keine PNG unter x/ mehr erzeugt; die Ausgabe grafiken[] (Kennzahlen) bleibt erhalten.
+
+## Änderung 14.11.2026: Einzelspiele-Kurve auf der Homepage
+Die Startseite hat im Trackrecord-Bereich den Reiter "Einzelspiele" neben "Live-Wetten": kumulierte Trefferquote je Tag, ohne Quote und ohne Break-even, gleiche Schwellen (Beginn ab 20, Anzeige ab 100 Tipps im Jahr). Die Automatik (`auto_ergebnisse.py`, `baue_einzel()`) schreibt `TRACKRECORD_EINZEL_TAGE` und `TRACKRECORD_EINZEL_JAHRE` in `trackrecord-daten.js`; Anzeige in `trackrecord.js`. Der Abgleich bleibt unverändert (prüft die Live-Daten).
