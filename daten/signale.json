@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-14T07:26:36+01:00",
+ "stand": "2026-11-14T08:26:37+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -4817,6 +4817,28 @@
    "quote": 1.4,
    "ergebnis": "gewonnen",
    "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-13-001",
+   "datum": "2026-11-13",
+   "art": "live",
+   "heim": "Mozambique",
+   "gast": "Ethiopia",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-13-002",
+   "datum": "2026-11-13",
+   "art": "live",
+   "heim": "Slovenia",
+   "gast": "Switzerland",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.55,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
   }
  ]
 }
