@@ -181,7 +181,7 @@ def pruefe(data):
 # ---------------------------------------------------------------- Homepage-Daten
 def lade_homepage(hp):
     out = subprocess.run(["node", "-e",
-        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||'',t:window.TRACKRECORD_TAGE||[],j:window.TRACKRECORD_JAHRE||[]}))",
+        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||'',t:window.TRACKRECORD_TAGE||[],j:window.TRACKRECORD_JAHRE||[],et:window.TRACKRECORD_EINZEL_TAGE||[],ej:window.TRACKRECORD_EINZEL_JAHRE||[]}))",
         os.path.abspath(os.path.join(hp, "trackrecord-daten.js"))], capture_output=True, text=True, check=True).stdout
     return json.loads(out)
 
@@ -306,6 +306,32 @@ def baue_jahre(data):
     return kurve, jahre
 
 
+EINZEL_MIN_TIPPS = 100  # Einzelspiel-Kurve (Trefferquote, ohne Break-even) erst ab so vielen Tipps im Jahr, Beginn ab KURVE_AB_WETTEN
+
+
+def baue_einzel(data):
+    """Einzelspiele zum Kombinieren (Daniel, 14.11.2026): kumulierte Trefferquote je Tag, je Kalenderjahr neu beginnend,
+    gleiche Schwellen wie bei den Live-Wetten (Beginn ab 20, Veröffentlichung ab 100 Tipps im Jahr). Keine Quote, kein Break-even."""
+    tl = sorted(data.get("tage", []), key=lambda x: x["datum"])
+    kurve, jahre = [], []
+    for jahr in sorted({t["datum"][:4] for t in tl}):
+        tj = [t for t in tl if t["datum"][:4] == jahr]
+        tipps = sum(t["einzelspiele"]["tipps"] for t in tj)
+        treffer = sum(t["einzelspiele"]["treffer"] for t in tj)
+        if tipps < EINZEL_MIN_TIPPS:
+            continue
+        ersten = next((t["datum"] for t in tj if t["einzelspiele"]["tipps"] > 0), tj[0]["datum"])
+        jahre.append({"jahr": int(jahr), "ab": ersten, "stand": tj[-1]["datum"], "tipps": tipps, "treffer": treffer,
+                      "rueckrechnung": any(t.get("rueckrechnung") for t in tj)})
+        ct = cr = 0
+        for t in tj:
+            ct += t["einzelspiele"]["tipps"]
+            cr += t["einzelspiele"]["treffer"]
+            if ct >= KURVE_AB_WETTEN:
+                kurve.append({"d": t["datum"], "q": round(cr / ct * 100, 1), "rr": bool(t.get("rueckrechnung"))})
+    return kurve, jahre
+
+
 def jahre_homepage(jahre):
     """Jahresblöcke für die Homepage: ohne Einsätze und Rendite (die gibt es nur in Telegram)."""
     return [{k: v for k, v in j.items() if k not in ("gewinn", "rendite")} for j in jahre]
@@ -320,12 +346,13 @@ KOPF = """/* ===================================================================
    - Einsätze und Rendite stehen NICHT auf der Homepage (nur in den Telegram-Kanälen, je Kalenderjahr ab 100 Live-Wetten).
    - Jahreskurve: kumulierte Trefferquote je Tag, erst ab 100 Live-Wetten im Jahr, Beginn ab 20 Wetten (Entscheidung 09.11.2026).
    - Ø-Quote = Durchschnitt der Quoten aller gesetzten Live-Wetten des Zeitraums.
+   - Einzelspiele (Daniel, 14.11.2026): eigene Kurve der kumulierten Trefferquote (ohne Quote, ohne Break-even), gleiche Schwellen (Beginn ab 20, Veröffentlichung ab 100 Tipps im Jahr).
    ===================================================================== */
 
 """
 
 
-def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None):
+def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None, e_kurve=None, e_jahre=None):
     p = os.path.join(hp, "trackrecord-daten.js")
     mon = ",\n\n".join(js_block(x) for x in sorted(monate, key=lambda x: x["monat"], reverse=True))
     wo = ",\n".join(js_block(x) for x in sorted(wochen, key=lambda x: x["von"]))
@@ -338,7 +365,10 @@ def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None):
            "   Ein Jahr erscheint erst ab 100 Live-Wetten. */\n"
            "window.TRACKRECORD_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (kurve or [])) + "\n];\n\n"
            "/* Kalenderjahre: Wetten, Treffer, Ø-Quote; keine Einsätze/Rendite. */\n"
-           "window.TRACKRECORD_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (jahre or [])) + "\n];\n")
+           "window.TRACKRECORD_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (jahre or [])) + "\n];\n\n"
+           "/* Einzelspiele zum Kombinieren: kumulierte Trefferquote je Tag (ohne Quote, ohne Break-even) und Kalenderjahre (Tipps, Treffer). Ein Jahr erscheint erst ab 100 Tipps. */\n"
+           "window.TRACKRECORD_EINZEL_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (e_kurve or [])) + "\n];\n"
+           "window.TRACKRECORD_EINZEL_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (e_jahre or [])) + "\n];\n")
     open(p, "w", encoding="utf-8").write(neu)
 
 
@@ -470,7 +500,8 @@ def main():
     if kurve is None:
         kurve, jahre_voll = hp["t"], hp["j"]
     jahre = jahre_homepage(jahre_voll)
-    if kurve != hp["t"] or jahre != hp["j"]:
+    e_kurve, e_jahre = baue_einzel(data)
+    if kurve != hp["t"] or jahre != hp["j"] or e_kurve != hp.get("et", []) or e_jahre != hp.get("ej", []):
         res["aenderungen"].append("Kurve/Jahresblock aktualisiert")
 
     if res["fehler"]:
@@ -479,7 +510,7 @@ def main():
         return 2
 
     if not a.trocken and res["aenderungen"]:
-        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"], kurve, jahre)
+        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"], kurve, jahre, e_kurve, e_jahre)
         ix = os.path.join(a.homepage, "index.html")
         h = open(ix, encoding="utf-8").read()
         h = re.sub(r"trackrecord-daten\.js\?v=[0-9a-z]+", "trackrecord-daten.js?v=" + dt.datetime.now().strftime("%Y%m%d%H%M"), h)
