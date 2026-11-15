@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-15T07:27:15+01:00",
+ "stand": "2026-11-15T08:27:18+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -4839,6 +4839,149 @@
    "quote": 1.55,
    "ergebnis": "verloren",
    "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-14-001",
+   "datum": "2026-11-14",
+   "art": "einzel",
+   "heim": "Exeter City",
+   "gast": "Cheltenham",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-14-002",
+   "datum": "2026-11-14",
+   "art": "einzel",
+   "heim": "Stockport County",
+   "gast": "Reading",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-14-003",
+   "datum": "2026-11-14",
+   "art": "einzel",
+   "heim": "Swindon Town",
+   "gast": "Grimsby",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:4"
+  },
+  {
+   "id": "2026-11-14-004",
+   "datum": "2026-11-14",
+   "art": "einzel",
+   "heim": "Shrewsbury",
+   "gast": "Oldham",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-14-005",
+   "datum": "2026-11-14",
+   "art": "einzel",
+   "heim": "Oviedo",
+   "gast": "Girona",
+   "markt": "1X",
+   "quote": 1.36,
+   "ergebnis": "verloren",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-14-006",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "Kosovo",
+   "gast": "Israel",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-14-007",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "Roda",
+   "gast": "FC Volendam",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-14-008",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "Algeria",
+   "gast": "Togo",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-14-009",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "VVV Venlo",
+   "gast": "FC Eindhoven",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-14-010",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "Fortaleza EC",
+   "gast": "Vila Nova",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-14-011",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "Austria",
+   "gast": "Rep. Of Ireland",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.5,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-14-012",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "Northern Ireland",
+   "gast": "Ukraine",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.7,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-14-013",
+   "datum": "2026-11-14",
+   "art": "live",
+   "heim": "Bucaramanga",
+   "gast": "Fortaleza FC",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.57,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
   }
  ]
 }
