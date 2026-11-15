@@ -1,5 +1,7 @@
 # Ergebnis-Beiträge Instagram (und TikTok): feste Vorgabe (Entscheidung Daniel, 02.11.2026, überarbeitet 14:36)
 
+> **TECHNIK-HINWEIS 15.11.2026 (Logo/Schriften):** `tools/ig_spezial.py` findet Logo und Schriften selbst: zuerst `assets_home/` im medien-Repo (gebündelt, keine externe Abhängigkeit), dann `SWR_HOME`, bekannte Pfade, sonst Shallow-Clone der Homepage; findet es nichts, bricht es ab (nichts einplanen). Nicht auf einen festen Pfad umbauen. Die Dateien in `assets_home/` nur ändern, wenn sich Logo/Schriften der Marke ändern.
+
 > **STAND 06.11.2026 (Daniel):**
 > - **TikTok:** keine Ergebnis-, Auswertungs- oder Punkte-Videos mehr (zweiter Verstoß am 06.11.). TikTok läuft nur mit Stufe 1 und 2. Die tägliche Automatik (09:22) plant nur noch Instagram und YouTube. Wo unten "TikTok" im Zusammenhang mit Ergebnis-Beiträgen steht, ist das überholt.
 > - **Anzeigeregel 06.11.** (claude/anzeigeregel-rendite-0611.md) ersetzt die Kennzahl-Reihenfolge vom 02.11. Für Instagram und YouTube-Short-Ergebnisbeiträge bleibt es bei der Darstellung OHNE Zahlen (Entscheidung Daniel 06.11.): kein "n von m", keine Trefferquote in Prozent, keine Ø-Quote. Diese Zahlen gibt es nur auf Telegram, Homepage und X (X läuft aus) und im Jahresblock.
