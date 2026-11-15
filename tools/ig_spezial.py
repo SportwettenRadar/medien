@@ -12,6 +12,7 @@ def _finde_home():
     """Homepage-Repo (Logo, Schriften): Umgebungsvariable, bekannte Pfade, sonst Shallow-Clone."""
     import subprocess, tempfile
     kandidaten = [os.environ.get("SWR_HOME", ""),
+                  os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets_home"),  # im medien-Repo gebündelt, keine externe Abhängigkeit
                   "/home/claude/sportwettenradar/sportwetten-radar.net",
                   "/home/claude/sportwetten-radar.net",
                   os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "sportwetten-radar.net")]
