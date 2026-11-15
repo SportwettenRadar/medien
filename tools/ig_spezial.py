@@ -8,7 +8,23 @@ Instagram-Regeln: keine Links/Homepage im Bild, keine Trefferquoten-Prozente zu 
 """
 import json, os, sys, tempfile, html, glob
 
-HOME = "/home/claude/sportwettenradar/sportwetten-radar.net"
+def _finde_home():
+    """Homepage-Repo (Logo, Schriften): Umgebungsvariable, bekannte Pfade, sonst Shallow-Clone."""
+    import subprocess, tempfile
+    kandidaten = [os.environ.get("SWR_HOME", ""),
+                  "/home/claude/sportwettenradar/sportwetten-radar.net",
+                  "/home/claude/sportwetten-radar.net",
+                  os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "sportwetten-radar.net")]
+    for k in kandidaten:
+        if k and os.path.isfile(os.path.join(k, "logo-icon.png")) and os.path.isdir(os.path.join(k, "assets", "fonts")):
+            return os.path.abspath(k)
+    ziel = os.path.join(tempfile.gettempdir(), "swr_home")
+    if not os.path.isfile(os.path.join(ziel, "logo-icon.png")):
+        subprocess.run(["git", "clone", "--depth", "1", "https://github.com/sportwettenradar/sportwetten-radar.net", ziel], check=False)
+    if os.path.isfile(os.path.join(ziel, "logo-icon.png")):
+        return ziel
+    raise SystemExit("FEHLER: Homepage-Repo (Logo/Schriften) nicht gefunden; SWR_HOME setzen. Nichts einplanen.")
+HOME = _finde_home()
 HERE = os.path.dirname(os.path.abspath(__file__))
 SPECS = os.path.join(HERE, "..", "youtube", "erklaer", "specs")
 
