@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-16T07:27:55+01:00",
+ "stand": "2026-11-16T08:27:57+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -4982,6 +4982,94 @@
    "quote": 1.57,
    "ergebnis": "gewonnen",
    "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-15-001",
+   "datum": "2026-11-15",
+   "art": "einzel",
+   "heim": "Amarante",
+   "gast": "Felgueiras 1932",
+   "markt": "1X",
+   "quote": 1.36,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-15-002",
+   "datum": "2026-11-15",
+   "art": "einzel",
+   "heim": "MVV",
+   "gast": "Vitesse",
+   "markt": "X2",
+   "quote": 1.36,
+   "ergebnis": "verloren",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-15-003",
+   "datum": "2026-11-15",
+   "art": "einzel",
+   "heim": "Granada CF",
+   "gast": "Las Palmas",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-15-004",
+   "datum": "2026-11-15",
+   "art": "einzel",
+   "heim": "Eldense",
+   "gast": "Sabadell",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-15-005",
+   "datum": "2026-11-15",
+   "art": "einzel",
+   "heim": "Juan Pablo II College",
+   "gast": "Deportivo Garcilaso",
+   "markt": "X2",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-15-006",
+   "datum": "2026-11-15",
+   "art": "live",
+   "heim": "MVV",
+   "gast": "Vitesse",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-15-007",
+   "datum": "2026-11-15",
+   "art": "live",
+   "heim": "Portimonense",
+   "gast": "Academica",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.5,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-15-008",
+   "datum": "2026-11-15",
+   "art": "live",
+   "heim": "Leones Negros UDG",
+   "gast": "Monarcas",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
   }
  ]
 }
