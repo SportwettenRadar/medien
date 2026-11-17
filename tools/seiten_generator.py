@@ -110,7 +110,7 @@ def page(path, title, desc, eyebrow, h1, inner, ld=None):
 """ + foot + """
 
 <script src="start.js"></script>
-<script src="menu.js?v=3"></script>
+<script src="menu.js?v=4"></script>
 </body>
 </html>
 """)
@@ -843,9 +843,26 @@ def sitemap(extra):
     open(sm, "w", encoding="utf-8").write(s)
 
 
+def menu_neu():
+    """Trägt die neueste Erklärseite (jüngstes Datum, bei Gleichstand die letzte) in menu.js ein.
+    Nur das Menü-Dropdown zeigt den Eintrag „Neu“, Footer und Startseite bleiben unberührt."""
+    neu = None
+    for e in WISSEN:
+        d = e[6] if len(e) > 6 else WISSEN_DATUM
+        if neu is None or d >= neu[0]:
+            neu = (d, e[0], e[4])
+    mj = os.path.join(REPO, "menu.js")
+    s = open(mj, encoding="utf-8").read()
+    blk = "/*NEU-START*/ var NEU_SEITE = " + json.dumps({"href": neu[1], "text": neu[2]}, ensure_ascii=False) + "; /*NEU-ENDE*/"
+    s2 = re.sub(r"/\*NEU-START\*/.*?/\*NEU-ENDE\*/", lambda m: blk, s, flags=re.S)
+    if s2 != s:
+        open(mj, "w", encoding="utf-8").write(s2)
+
+
 if __name__ == "__main__":
     today = datetime.date.today().isoformat()
     months = load_months()
     made = month_pages(months) + wissen_pages(today) + [wissen_hub()]
     sitemap(made)
+    menu_neu()
     print("\n".join(p for p, _ in made))
