@@ -726,6 +726,67 @@ WISSEN = [
   zu verlieren. Hilfe bei Spielproblemen:
   <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
 """, "2026-11-10"),
+    ("einzelwette-oder-kombiwette.html",
+     "Einzelwette oder Kombiwette? Chance, Quote und Risiko erklärt — Sportwetten Radar",
+     "Was ist der Unterschied zwischen Einzelwette und Kombiwette? Wie sich Quoten multiplizieren, warum die Trefferchance schneller sinkt und was das für dein Risiko bedeutet. Mit Rechenbeispiel.",
+     "Wissen", "Einzelwette oder Kombiwette?",
+     """
+  <p>Bei einer Einzelwette setzt du auf ein Ereignis. Bei einer Kombiwette (auch Kombi oder Mehrfachwette) verbindest du
+  mehrere Tipps zu einem Schein. Sie gewinnt nur, wenn alle Tipps treffen. Dafür werden die Quoten
+  multipliziert. Hier erklären wir, was das für Chance und Risiko bedeutet.</p>
+
+  <h2><span class="num">01</span>Der Unterschied in kurz</h2>
+  <ul>
+    <li><strong>Einzelwette:</strong> ein Tipp, eine Quote. Verliert er, ist der Einsatz weg, gewinnt er, bekommst du Einsatz mal Quote.</li>
+    <li><strong>Kombiwette:</strong> mehrere Tipps auf einem Schein. Die Gesamtquote ist das Produkt der Einzelquoten. Ein einziger Fehlschlag macht den ganzen Schein zum Verlust.</li>
+  </ul>
+
+  <h2><span class="num">02</span>Quoten multiplizieren sich, Chancen auch</h2>
+  <p>Drei Tipps mit je 1,40 ergeben eine Kombi-Quote von 1,40 × 1,40 × 1,40 = 2,74. Das wirkt attraktiv, aber auch
+  die Chancen werden multipliziert. Wenn jeder Tipp mit 75 % trifft, trifft die Kombi nur mit 0,75 × 0,75 × 0,75 = rund 42 %.
+  Mit jedem zusätzlichen Tipp sinkt die Chance deutlich schneller, als die Quote steigt.</p>
+
+  <h2><span class="num">03</span>Rechenbeispiel: Was kostet jeder weitere Tipp?</h2>
+  <p>Angenommen, jeder Tipp trifft mit 75 % und der Anbieter schlägt auf jede Quote 5 % Marge auf (die Quote ist also
+  um diesen Anteil niedriger als die faire Quote). Dann ergibt sich:</p>
+  <table class="kv">
+    <tr><th>Tipps</th><td>Trefferchance</td><td>Rückfluss je 100 €</td></tr>
+    <tr><th>1</th><td>75,0 %</td><td>95,2 €</td></tr>
+    <tr><th>2</th><td>56,3 %</td><td>90,7 €</td></tr>
+    <tr><th>3</th><td>42,2 %</td><td>86,4 €</td></tr>
+    <tr><th>4</th><td>31,6 %</td><td>82,3 €</td></tr>
+    <tr><th>5</th><td>23,7 %</td><td>78,4 €</td></tr>
+  </table>
+  <p class="wissen-note">Rechenbeispiel mit gleich großer Trefferchance und gleicher Marge je Tipp, Durchschnitt über viele Scheine. Echte Margen und Chancen weichen ab.</p>
+  <p>Die Marge des Anbieters wird bei jedem Tipp mitgerechnet, bei einer Kombi also mehrfach. Dadurch sinkt der
+  durchschnittliche Rückfluss mit jedem weiteren Tipp. Das ist der Grund, warum Kombis für den Anbieter besonders
+  lukrativ sind.</p>
+
+  <h2><span class="num">04</span>Warum Kombis trotzdem beliebt sind</h2>
+  <ul>
+    <li>Niedrige Einzelquoten (zum Beispiel 1,30) lohnen sich einzeln kaum, zusammen ergeben sie eine höhere Quote.</li>
+    <li>Ein kleiner Einsatz kann einen größeren Gewinn bringen. Dafür sind Verluste häufiger, als es sich anfühlt.</li>
+    <li>Ein Schein mit mehreren Spielen macht Spaß. Wer Kombis spielt, sollte sie als Unterhaltung mit kleinem Einsatz sehen.</li>
+  </ul>
+
+  <h2><span class="num">05</span>Worauf du bei Kombis achten solltest</h2>
+  <ul>
+    <li>Jeder zusätzliche Tipp senkt die Trefferchance. Weniger Tipps heißt meist weniger Risiko.</li>
+    <li>Tipps in demselben Spiel hängen oft zusammen. Die einfache Multiplikation stimmt dann nicht mehr.</li>
+    <li>Lege den Einsatz vorher fest und erhöhe ihn nicht nach Verlusten (<a href="verlustserien.html">Verlustserien</a>).</li>
+    <li>Eine hohe Trefferquote einzelner Tipps sagt nichts darüber, wie oft eine Kombi aufgeht. Wie Trefferquote und Quote zusammenhängen, steht unter
+    <a href="rendite-erklaert.html">Rendite erklärt</a>.</li>
+  </ul>
+
+  <h2><span class="num">06</span>Was Sportwetten Radar daraus macht</h2>
+  <p>Neben den <a href="live-wetten-ueber-unter.html">Live-Wetten</a> liefern wir bis zu fünf Einzelspiele pro Tag, die du
+  selbst kombinieren kannst, wenn du möchtest. Wir vermitteln keine Wetten und nennen keine Einsätze. Weil jeder seinen Schein
+  selbst zusammenstellt, gibt es keine einheitliche Quote. Deshalb zeigen wir bei den Einzelspielen nur die Trefferquote je Tipp,
+  im <a href="index.html#trackrecord">Trackrecord</a> mit den schwachen Phasen. Eine Kombi trifft nur, wenn alle Tipps treffen.
+  Das Beispiel hier ist ein Rechenbeispiel, keine Empfehlung. Wetten kann Geld kosten. Setze nie mehr, als du bereit bist
+  zu verlieren. Hilfe bei Spielproblemen:
+  <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
+""", "2026-11-17"),
 ]
 
 
@@ -733,7 +794,7 @@ WISSEN = [
 # nie als neuen Footer-Eintrag. Reihenfolge je Kategorie = Reihenfolge auf der Seite.
 WISSEN_KAT = [
     ("quoten", "Quoten & Rendite", "Wie du eine Quote liest und wie Rendite und Trefferquote zusammenhängen.",
-     ["quote-1-70-bedeutung.html", "rendite-erklaert.html"]),
+     ["quote-1-70-bedeutung.html", "rendite-erklaert.html", "einzelwette-oder-kombiwette.html"]),
     ("live", "Live-Wetten verstehen", "Wie Live-Wetten und Über/Unter funktionieren und was Spieldaten verraten.",
      ["live-wetten-ueber-unter.html", "ueber-1-5-tore.html", "tore-zweite-halbzeit.html", "lohnen-sich-live-wetten.html", "live-wetten-analyse.html"]),
     ("risiko", "Risiko & Verantwortung", "Verlustserien, Einsatz und der verantwortungsvolle Umgang mit Sportwetten.",
@@ -757,7 +818,7 @@ def wissen_hub():
     return page("wissen.html", t, d, "Wissen", "Wissen", "".join(teile), article_ld(t, d, "wissen.html", WISSEN_DATUM_HUB)), WISSEN_DATUM_HUB
 
 
-WISSEN_DATUM_HUB = "2026-11-11"
+WISSEN_DATUM_HUB = "2026-11-17"
 
 
 def wissen_pages(today):
