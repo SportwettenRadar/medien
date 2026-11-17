@@ -8,7 +8,7 @@ Reihenfolge laut Auftrag. Erledigt = auf der Homepage veröffentlicht.
 | 2 | Was ist Über 1,5 Tore? | ueber-1-5-tore.html | veröffentlicht 02.11.2026, Indexierung beantragt 02.11., Video 11.11. nach Veröffentlichung einbetten |
 | 3 | Lohnen sich Live-Wetten? | lohnen-sich-live-wetten.html | veröffentlicht 03.11.2026, Indexierung beantragt 03.11., Video 18.11. nach Veröffentlichung einbetten |
 | 4 | Wie viele Tore fallen in der 2. Halbzeit? | tore-zweite-halbzeit.html | veröffentlicht 10.11.2026, Indexierung beantragen (Daniel); kein Video vorhanden; Kategorie Live-Wetten verstehen |
-| 5 | Einzelwette oder Kombiwette? | | offen |
+| 5 | Einzelwette oder Kombiwette? | | veröffentlicht 17.11.2026, Indexierung beantragen (Daniel) |
 | 6 | Erwartungswert bei Sportwetten | | offen |
 | 7 | Budget für Sportwetten festlegen | | offen |
 | 8 | Warnsignale Spielsucht | | offen |
