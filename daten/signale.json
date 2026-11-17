@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-17T07:28:50+01:00",
+ "stand": "2026-11-17T08:28:53+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -5070,6 +5070,50 @@
    "quote": 1.4,
    "ergebnis": "verloren",
    "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-16-001",
+   "datum": "2026-11-16",
+   "art": "einzel",
+   "heim": "UTC Cajamarca",
+   "gast": "Club Deportivo Los Chankas",
+   "markt": "X2",
+   "quote": 1.36,
+   "ergebnis": "verloren",
+   "endstand": "5:3"
+  },
+  {
+   "id": "2026-11-16-002",
+   "datum": "2026-11-16",
+   "art": "einzel",
+   "heim": "Wanderers",
+   "gast": "Juventud",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-16-003",
+   "datum": "2026-11-16",
+   "art": "live",
+   "heim": "Greece",
+   "gast": "Serbia",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-16-004",
+   "datum": "2026-11-16",
+   "art": "live",
+   "heim": "Cusco",
+   "gast": "ADT",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
   }
  ]
 }
