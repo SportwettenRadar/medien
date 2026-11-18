@@ -1,5 +1,308 @@
 {
  "version": 1,
- "stand": "2026-11-17T08:10:20+01:00",
- "ligen": []
+ "stand": "2026-11-18T08:10:18+01:00",
+ "ligen": [
+  {
+   "liga": "Bundesliga",
+   "spieltag": 9,
+   "stand": {
+    "datum": "2026-11-18",
+    "spieltage": 9,
+    "spiele": 81
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "Borussia Dortmund",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     },
+     {
+      "team": "RB Leipzig",
+      "heimspiele": 5,
+      "siege": 5,
+      "remis": 0,
+      "niederlagen": 0
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "1899 Hoffenheim",
+      "heimspiele": 5
+     },
+     {
+      "team": "Borussia Dortmund",
+      "heimspiele": 5
+     },
+     {
+      "team": "FC Augsburg",
+      "heimspiele": 5
+     },
+     {
+      "team": "RB Leipzig",
+      "heimspiele": 5
+     },
+     {
+      "team": "SC Freiburg",
+      "heimspiele": 5
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 3.48,
+     "spiele": 81
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.7,
+     "spiele": 81
+    }
+   },
+   "spiele_heute": []
+  },
+  {
+   "liga": "2. Bundesliga",
+   "spieltag": 11,
+   "stand": {
+    "datum": "2026-11-18",
+    "spieltage": 11,
+    "spiele": 99
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "1. FC Heidenheim",
+      "heimspiele": 6,
+      "siege": 3,
+      "remis": 3,
+      "niederlagen": 0
+     },
+     {
+      "team": "Arminia Bielefeld",
+      "heimspiele": 5,
+      "siege": 3,
+      "remis": 2,
+      "niederlagen": 0
+     },
+     {
+      "team": "Hertha BSC",
+      "heimspiele": 5,
+      "siege": 5,
+      "remis": 0,
+      "niederlagen": 0
+     },
+     {
+      "team": "VfL Wolfsburg",
+      "heimspiele": 5,
+      "siege": 3,
+      "remis": 2,
+      "niederlagen": 0
+     }
+    ],
+    "auswaerts_immer_getroffen": [
+     {
+      "team": "1. FC Heidenheim",
+      "auswaertsspiele": 5
+     },
+     {
+      "team": "1. FC Nürnberg",
+      "auswaertsspiele": 5
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "1. FC Magdeburg",
+      "heimspiele": 6
+     },
+     {
+      "team": "Arminia Bielefeld",
+      "heimspiele": 5
+     },
+     {
+      "team": "Dynamo Dresden",
+      "heimspiele": 5
+     },
+     {
+      "team": "Energie Cottbus",
+      "heimspiele": 5
+     },
+     {
+      "team": "FC St. Pauli",
+      "heimspiele": 5
+     },
+     {
+      "team": "Hertha BSC",
+      "heimspiele": 5
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 2.99,
+     "spiele": 99
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.58,
+     "spiele": 99
+    }
+   },
+   "spiele_heute": []
+  },
+  {
+   "liga": "La Liga",
+   "spieltag": 12,
+   "stand": {
+    "datum": "2026-11-18",
+    "spieltage": 12,
+    "spiele": 119
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "Getafe",
+      "heimspiele": 6,
+      "siege": 3,
+      "remis": 3,
+      "niederlagen": 0
+     },
+     {
+      "team": "Real Madrid",
+      "heimspiele": 5,
+      "siege": 5,
+      "remis": 0,
+      "niederlagen": 0
+     }
+    ],
+    "auswaerts_immer_getroffen": [
+     {
+      "team": "Barcelona",
+      "auswaertsspiele": 6
+     },
+     {
+      "team": "Espanyol",
+      "auswaertsspiele": 6
+     },
+     {
+      "team": "Sevilla",
+      "auswaertsspiele": 6
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "Atletico Madrid",
+      "heimspiele": 6
+     },
+     {
+      "team": "Barcelona",
+      "heimspiele": 6
+     },
+     {
+      "team": "Getafe",
+      "heimspiele": 6
+     },
+     {
+      "team": "Real Betis",
+      "heimspiele": 6
+     },
+     {
+      "team": "Real Madrid",
+      "heimspiele": 5
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 2.89,
+     "spiele": 119
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.55,
+     "spiele": 119
+    }
+   },
+   "spiele_heute": []
+  },
+  {
+   "liga": "Ligue 1",
+   "spieltag": 10,
+   "stand": {
+    "datum": "2026-11-18",
+    "spieltage": 10,
+    "spiele": 90
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "Lille",
+      "heimspiele": 5,
+      "siege": 3,
+      "remis": 2,
+      "niederlagen": 0
+     },
+     {
+      "team": "Lyon",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     },
+     {
+      "team": "Nice",
+      "heimspiele": 5,
+      "siege": 3,
+      "remis": 2,
+      "niederlagen": 0
+     },
+     {
+      "team": "Paris FC",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     }
+    ],
+    "auswaerts_immer_getroffen": [
+     {
+      "team": "Paris Saint Germain",
+      "auswaertsspiele": 6
+     },
+     {
+      "team": "Auxerre",
+      "auswaertsspiele": 5
+     },
+     {
+      "team": "Lille",
+      "auswaertsspiele": 5
+     },
+     {
+      "team": "Stade Brestois 29",
+      "auswaertsspiele": 5
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "Rennes",
+      "heimspiele": 6
+     },
+     {
+      "team": "Lille",
+      "heimspiele": 5
+     },
+     {
+      "team": "Lyon",
+      "heimspiele": 5
+     },
+     {
+      "team": "Marseille",
+      "heimspiele": 5
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 2.96,
+     "spiele": 90
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.57,
+     "spiele": 90
+    }
+   },
+   "spiele_heute": []
+  }
+ ]
 }
