@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-18T07:29:34+01:00",
+ "stand": "2026-11-18T08:29:39+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -5114,6 +5114,72 @@
    "quote": 1.4,
    "ergebnis": "gewonnen",
    "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-17-001",
+   "datum": "2026-11-17",
+   "art": "live",
+   "heim": "Burundi",
+   "gast": "Zambia",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.65,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-17-002",
+   "datum": "2026-11-17",
+   "art": "live",
+   "heim": "Tanzania",
+   "gast": "Nigeria",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-17-003",
+   "datum": "2026-11-17",
+   "art": "live",
+   "heim": "Kenya",
+   "gast": "South Africa",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.62,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-17-004",
+   "datum": "2026-11-17",
+   "art": "live",
+   "heim": "Liberia",
+   "gast": "Cape Verde Islands",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-17-005",
+   "datum": "2026-11-17",
+   "art": "live",
+   "heim": "Ukraine",
+   "gast": "Georgia",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.53,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-17-006",
+   "datum": "2026-11-17",
+   "art": "live",
+   "heim": "Denmark",
+   "gast": "Norway",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:3"
   }
  ]
 }
