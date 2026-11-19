@@ -1,12 +1,12 @@
 {
  "version": 1,
- "stand": "2026-11-18T08:10:18+01:00",
+ "stand": "2026-11-19T08:10:15+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
    "spieltag": 9,
    "stand": {
-    "datum": "2026-11-18",
+    "datum": "2026-11-19",
     "spieltage": 9,
     "spiele": 81
    },
@@ -64,7 +64,7 @@
    "liga": "2. Bundesliga",
    "spieltag": 11,
    "stand": {
-    "datum": "2026-11-18",
+    "datum": "2026-11-19",
     "spieltage": 11,
     "spiele": 99
    },
@@ -147,10 +147,102 @@
    "spiele_heute": []
   },
   {
+   "liga": "Premier League",
+   "spieltag": 10,
+   "stand": {
+    "datum": "2026-11-19",
+    "spieltage": 10,
+    "spiele": 100
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "Arsenal",
+      "heimspiele": 5,
+      "siege": 5,
+      "remis": 0,
+      "niederlagen": 0
+     },
+     {
+      "team": "Brighton",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     },
+     {
+      "team": "Hull City",
+      "heimspiele": 5,
+      "siege": 1,
+      "remis": 4,
+      "niederlagen": 0
+     },
+     {
+      "team": "Leeds",
+      "heimspiele": 5,
+      "siege": 2,
+      "remis": 3,
+      "niederlagen": 0
+     }
+    ],
+    "auswaerts_immer_getroffen": [
+     {
+      "team": "Bournemouth",
+      "auswaertsspiele": 5
+     },
+     {
+      "team": "Liverpool",
+      "auswaertsspiele": 5
+     },
+     {
+      "team": "Manchester City",
+      "auswaertsspiele": 5
+     },
+     {
+      "team": "Newcastle",
+      "auswaertsspiele": 5
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "Arsenal",
+      "heimspiele": 5
+     },
+     {
+      "team": "Brentford",
+      "heimspiele": 5
+     },
+     {
+      "team": "Brighton",
+      "heimspiele": 5
+     },
+     {
+      "team": "Fulham",
+      "heimspiele": 5
+     }
+    ],
+    "zu_null_serie": [
+     {
+      "team": "Arsenal",
+      "serie": 4
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 2.73,
+     "spiele": 100
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.47,
+     "spiele": 100
+    }
+   },
+   "spiele_heute": []
+  },
+  {
    "liga": "La Liga",
    "spieltag": 12,
    "stand": {
-    "datum": "2026-11-18",
+    "datum": "2026-11-19",
     "spieltage": 12,
     "spiele": 119
    },
@@ -219,10 +311,97 @@
    "spiele_heute": []
   },
   {
+   "liga": "Serie A",
+   "spieltag": 11,
+   "stand": {
+    "datum": "2026-11-19",
+    "spieltage": 11,
+    "spiele": 110
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "AS Roma",
+      "heimspiele": 6,
+      "siege": 5,
+      "remis": 1,
+      "niederlagen": 0
+     },
+     {
+      "team": "Inter",
+      "heimspiele": 6,
+      "siege": 6,
+      "remis": 0,
+      "niederlagen": 0
+     },
+     {
+      "team": "Lazio",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     }
+    ],
+    "auswaerts_immer_getroffen": [
+     {
+      "team": "AC Milan",
+      "auswaertsspiele": 6
+     },
+     {
+      "team": "Lazio",
+      "auswaertsspiele": 6
+     },
+     {
+      "team": "Monza",
+      "auswaertsspiele": 6
+     },
+     {
+      "team": "Inter",
+      "auswaertsspiele": 5
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "AS Roma",
+      "heimspiele": 6
+     },
+     {
+      "team": "Inter",
+      "heimspiele": 6
+     },
+     {
+      "team": "AC Milan",
+      "heimspiele": 5
+     },
+     {
+      "team": "Lazio",
+      "heimspiele": 5
+     },
+     {
+      "team": "Napoli",
+      "heimspiele": 5
+     },
+     {
+      "team": "Sassuolo",
+      "heimspiele": 5
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 3.11,
+     "spiele": 110
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.6,
+     "spiele": 110
+    }
+   },
+   "spiele_heute": []
+  },
+  {
    "liga": "Ligue 1",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-11-18",
+    "datum": "2026-11-19",
     "spieltage": 10,
     "spiele": 90
    },
