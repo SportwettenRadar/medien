@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-19T07:30:15+01:00",
+ "stand": "2026-11-19T08:30:18+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -5180,6 +5180,17 @@
    "quote": 1.4,
    "ergebnis": "gewonnen",
    "endstand": "2:3"
+  },
+  {
+   "id": "2026-11-18-001",
+   "datum": "2026-11-18",
+   "art": "einzel",
+   "heim": "Coritiba",
+   "gast": "Santos",
+   "markt": "X2",
+   "quote": 1.28,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
   }
  ]
 }
