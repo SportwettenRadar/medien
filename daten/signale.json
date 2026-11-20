@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-20T07:36:42+01:00",
+ "stand": "2026-11-20T08:36:45+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -5191,6 +5191,28 @@
    "quote": 1.28,
    "ergebnis": "gewonnen",
    "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-19-001",
+   "datum": "2026-11-19",
+   "art": "einzel",
+   "heim": "Arsenal W",
+   "gast": "Lyon W",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-19-002",
+   "datum": "2026-11-19",
+   "art": "einzel",
+   "heim": "SL Benfica W",
+   "gast": "Roma W",
+   "markt": "1X",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "2:3"
   }
  ]
 }
