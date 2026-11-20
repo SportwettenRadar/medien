@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-20T10:44:09+01:00",
+ "stand": "2026-11-20T20:49:21+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
@@ -58,21 +58,15 @@
      "spiele": 81
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Bayern München",
-     "gast": "1. FC Köln",
-     "anstoss": "20:30"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "2. Bundesliga",
-   "spieltag": 11,
+   "spieltag": 12,
    "stand": {
     "datum": "2026-11-20",
-    "spieltage": 11,
-    "spiele": 99
+    "spieltage": 12,
+    "spiele": 101
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -81,13 +75,6 @@
       "heimspiele": 6,
       "siege": 3,
       "remis": 3,
-      "niederlagen": 0
-     },
-     {
-      "team": "Arminia Bielefeld",
-      "heimspiele": 5,
-      "siege": 3,
-      "remis": 2,
       "niederlagen": 0
      },
      {
@@ -108,7 +95,7 @@
     "auswaerts_immer_getroffen": [
      {
       "team": "1. FC Heidenheim",
-      "auswaertsspiele": 5
+      "auswaertsspiele": 6
      },
      {
       "team": "1. FC Nürnberg",
@@ -122,7 +109,7 @@
      },
      {
       "team": "Arminia Bielefeld",
-      "heimspiele": 5
+      "heimspiele": 6
      },
      {
       "team": "Dynamo Dresden",
@@ -142,26 +129,15 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 2.99,
-     "spiele": 99
+     "wert": 3.0,
+     "spiele": 101
     },
     "ueber_2_5_anteil": {
      "wert": 0.58,
-     "spiele": 99
+     "spiele": 101
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Arminia Bielefeld",
-     "gast": "1. FC Magdeburg",
-     "anstoss": "18:30"
-    },
-    {
-     "heim": "SV Darmstadt 98",
-     "gast": "1. FC Heidenheim",
-     "anstoss": "18:30"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "Premier League",
@@ -504,13 +480,7 @@
      "spiele": 90
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Estac Troyes",
-     "gast": "Le Havre",
-     "anstoss": "20:45"
-    }
-   ]
+   "spiele_heute": []
   }
  ]
 }
