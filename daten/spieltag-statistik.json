@@ -1,17 +1,24 @@
 {
  "version": 1,
- "stand": "2026-11-20T20:49:21+01:00",
+ "stand": "2026-11-21T08:10:14+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
-   "spieltag": 9,
+   "spieltag": 10,
    "stand": {
-    "datum": "2026-11-20",
-    "spieltage": 9,
-    "spiele": 81
+    "datum": "2026-11-21",
+    "spieltage": 10,
+    "spiele": 82
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
+     {
+      "team": "Bayern München",
+      "heimspiele": 5,
+      "siege": 3,
+      "remis": 2,
+      "niederlagen": 0
+     },
      {
       "team": "Borussia Dortmund",
       "heimspiele": 5,
@@ -33,6 +40,10 @@
       "heimspiele": 5
      },
      {
+      "team": "Bayern München",
+      "heimspiele": 5
+     },
+     {
       "team": "Borussia Dortmund",
       "heimspiele": 5
      },
@@ -50,21 +61,52 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.48,
-     "spiele": 81
+     "wert": 3.46,
+     "spiele": 82
     },
     "ueber_2_5_anteil": {
      "wert": 0.7,
-     "spiele": 81
+     "spiele": 82
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Bayer Leverkusen",
+     "gast": "SC Paderborn 07",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "Borussia Mönchengladbach",
+     "gast": "Borussia Dortmund",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "Eintracht Frankfurt",
+     "gast": "1899 Hoffenheim",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "SV Elversberg",
+     "gast": "SC Freiburg",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "Union Berlin",
+     "gast": "RB Leipzig",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "FC Schalke 04",
+     "gast": "VfB Stuttgart",
+     "anstoss": "18:30"
+    }
+   ]
   },
   {
    "liga": "2. Bundesliga",
    "spieltag": 12,
    "stand": {
-    "datum": "2026-11-20",
+    "datum": "2026-11-21",
     "spieltage": 12,
     "spiele": 101
    },
@@ -137,13 +179,34 @@
      "spiele": 101
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "1. FC Nürnberg",
+     "gast": "Eintracht Braunschweig",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "Hannover 96",
+     "gast": "SpVgg Greuther Fürth",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "VfL Wolfsburg",
+     "gast": "Holstein Kiel",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "FC St. Pauli",
+     "gast": "VfL Bochum",
+     "anstoss": "20:30"
+    }
+   ]
   },
   {
    "liga": "Premier League",
    "spieltag": 10,
    "stand": {
-    "datum": "2026-11-20",
+    "datum": "2026-11-21",
     "spieltage": 10,
     "spiele": 100
    },
@@ -229,15 +292,51 @@
      "spiele": 100
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Manchester City",
+     "gast": "Fulham",
+     "anstoss": "13:30"
+    },
+    {
+     "heim": "Aston Villa",
+     "gast": "Sunderland",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Bournemouth",
+     "gast": "Nottingham Forest",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Chelsea",
+     "gast": "Leeds",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Coventry",
+     "gast": "Crystal Palace",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Tottenham",
+     "gast": "Ipswich",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Newcastle",
+     "gast": "Arsenal",
+     "anstoss": "18:30"
+    }
+   ]
   },
   {
    "liga": "La Liga",
-   "spieltag": 12,
+   "spieltag": 13,
    "stand": {
-    "datum": "2026-11-20",
-    "spieltage": 12,
-    "spiele": 119
+    "datum": "2026-11-21",
+    "spieltage": 13,
+    "spiele": 120
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -258,11 +357,11 @@
     ],
     "auswaerts_immer_getroffen": [
      {
-      "team": "Barcelona",
-      "auswaertsspiele": 6
+      "team": "Espanyol",
+      "auswaertsspiele": 7
      },
      {
-      "team": "Espanyol",
+      "team": "Barcelona",
       "auswaertsspiele": 6
      },
      {
@@ -292,19 +391,40 @@
       "heimspiele": 5
      }
     ],
+    "zu_null_serie": [
+     {
+      "team": "Espanyol",
+      "serie": 3
+     }
+    ],
     "tore_schnitt": {
-     "wert": 2.89,
-     "spiele": 119
+     "wert": 2.88,
+     "spiele": 120
     },
     "ueber_2_5_anteil": {
      "wert": 0.55,
-     "spiele": 119
+     "spiele": 120
     }
    },
    "spiele_heute": [
     {
-     "heim": "Athletic Club",
-     "gast": "Espanyol",
+     "heim": "Alaves",
+     "gast": "Deportivo La Coruna",
+     "anstoss": "14:00"
+    },
+    {
+     "heim": "Rayo Vallecano",
+     "gast": "Valencia",
+     "anstoss": "16:15"
+    },
+    {
+     "heim": "Sevilla",
+     "gast": "Real Betis",
+     "anstoss": "18:30"
+    },
+    {
+     "heim": "Real Madrid",
+     "gast": "Celta Vigo",
      "anstoss": "21:00"
     }
    ]
@@ -313,7 +433,7 @@
    "liga": "Serie A",
    "spieltag": 11,
    "stand": {
-    "datum": "2026-11-20",
+    "datum": "2026-11-21",
     "spieltage": 11,
     "spiele": 110
    },
@@ -394,15 +514,36 @@
      "spiele": 110
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Como",
+     "gast": "Cagliari",
+     "anstoss": "15:00"
+    },
+    {
+     "heim": "Lazio",
+     "gast": "Lecce",
+     "anstoss": "15:00"
+    },
+    {
+     "heim": "Parma",
+     "gast": "AS Roma",
+     "anstoss": "18:00"
+    },
+    {
+     "heim": "Napoli",
+     "gast": "Torino",
+     "anstoss": "20:45"
+    }
+   ]
   },
   {
    "liga": "Ligue 1",
-   "spieltag": 10,
+   "spieltag": 11,
    "stand": {
-    "datum": "2026-11-20",
-    "spieltage": 10,
-    "spiele": 90
+    "datum": "2026-11-21",
+    "spieltage": 11,
+    "spiele": 91
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -472,15 +613,41 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 2.96,
-     "spiele": 90
+     "wert": 2.97,
+     "spiele": 91
     },
     "ueber_2_5_anteil": {
      "wert": 0.57,
-     "spiele": 90
+     "spiele": 91
     }
    },
-   "spiele_heute": []
+   "spiele_heute": [
+    {
+     "heim": "Nice",
+     "gast": "Paris Saint Germain",
+     "anstoss": "17:15"
+    },
+    {
+     "heim": "Lens",
+     "gast": "Toulouse",
+     "anstoss": "20:45"
+    },
+    {
+     "heim": "Lille",
+     "gast": "Lyon",
+     "anstoss": "20:45"
+    },
+    {
+     "heim": "Monaco",
+     "gast": "Auxerre",
+     "anstoss": "20:45"
+    },
+    {
+     "heim": "Strasbourg",
+     "gast": "Stade Brestois 29",
+     "anstoss": "20:45"
+    }
+   ]
   }
  ]
 }
