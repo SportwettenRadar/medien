@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-22T07:13:20+01:00",
+ "stand": "2026-11-22T08:13:22+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -5378,6 +5378,237 @@
    "quote": 1.5,
    "ergebnis": "gewonnen",
    "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-21-001",
+   "datum": "2026-11-21",
+   "art": "einzel",
+   "heim": "Newport County",
+   "gast": "Swindon Town",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-21-002",
+   "datum": "2026-11-21",
+   "art": "einzel",
+   "heim": "Tromso",
+   "gast": "Viking",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-11-21-003",
+   "datum": "2026-11-21",
+   "art": "einzel",
+   "heim": "Mjallby AIF",
+   "gast": "Malmo FF",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-21-004",
+   "datum": "2026-11-21",
+   "art": "einzel",
+   "heim": "Hibernian",
+   "gast": "Dundee Utd",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "0:4"
+  },
+  {
+   "id": "2026-11-21-005",
+   "datum": "2026-11-21",
+   "art": "einzel",
+   "heim": "Lincoln",
+   "gast": "Wrexham",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-21-006",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Central Coast Mariners",
+   "gast": "Perth Glory",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-21-007",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Kolos Kovalivka",
+   "gast": "FC Kharkiv",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.5,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-21-008",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Blackpool",
+   "gast": "Wigan",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-21-009",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Newport County",
+   "gast": "Swindon Town",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-21-010",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Sampdoria",
+   "gast": "Benevento",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-21-011",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Modena",
+   "gast": "Juve Stabia",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-21-012",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Aston Villa",
+   "gast": "Sunderland",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.43,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-21-013",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Tranmere",
+   "gast": "Colchester",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-21-014",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "OFK Beograd",
+   "gast": "Novi Pazar",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-21-015",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Catanzaro",
+   "gast": "Palermo",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-21-016",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Bohemians 1905",
+   "gast": "Plzen",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-21-017",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Rudes",
+   "gast": "NK Varazdin",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.5,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-21-018",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Sevilla",
+   "gast": "Real Betis",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-21-019",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "New England Revolution",
+   "gast": "Philadelphia Union",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-21-020",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Palmeiras",
+   "gast": "Flamengo",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-21-021",
+   "datum": "2026-11-21",
+   "art": "live",
+   "heim": "Strasbourg",
+   "gast": "Stade Brestois 29",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
   }
  ]
 }
