@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-23T07:14:09+01:00",
+ "stand": "2026-11-23T08:14:13+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -5609,6 +5609,204 @@
    "quote": 1.4,
    "ergebnis": "verloren",
    "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-22-001",
+   "datum": "2026-11-22",
+   "art": "einzel",
+   "heim": "SK Beveren",
+   "gast": "Gent",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-22-002",
+   "datum": "2026-11-22",
+   "art": "einzel",
+   "heim": "BK Hacken",
+   "gast": "IF Elfsborg",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-22-003",
+   "datum": "2026-11-22",
+   "art": "einzel",
+   "heim": "FC Zurich",
+   "gast": "FC ST. Gallen",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-22-004",
+   "datum": "2026-11-22",
+   "art": "einzel",
+   "heim": "Sassuolo",
+   "gast": "Genoa",
+   "markt": "X2",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-22-005",
+   "datum": "2026-11-22",
+   "art": "einzel",
+   "heim": "Racing Santander",
+   "gast": "Real Sociedad",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-11-22-006",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Botev Vratsa",
+   "gast": "CSKA 1948",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.65,
+   "ergebnis": "verloren",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-22-007",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Radnicki 1923",
+   "gast": "Cukaricki",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:3"
+  },
+  {
+   "id": "2026-11-22-008",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Karlsruher SC",
+   "gast": "VfL Osnabrück",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-22-009",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Sirius",
+   "gast": "Djurgardens IF",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-22-010",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Avellino",
+   "gast": "Mantova",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "4:1"
+  },
+  {
+   "id": "2026-11-22-011",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Vizela",
+   "gast": "Feirense",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.5,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-22-012",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Sonderjyske",
+   "gast": "Odense",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-22-013",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "FC Saarbrücken",
+   "gast": "SV Wehen",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-22-014",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "GO Ahead Eagles",
+   "gast": "Fortuna Sittard",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-22-015",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Arezzo",
+   "gast": "Padova",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-22-016",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Anderlecht",
+   "gast": "OH Leuven",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-22-017",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Sarpsborg 08 FF",
+   "gast": "Lillestrom",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-22-018",
+   "datum": "2026-11-22",
+   "art": "live",
+   "heim": "Marseille",
+   "gast": "Le Mans",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:3"
   }
  ]
 }
