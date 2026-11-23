@@ -1,0 +1,30 @@
+{
+ "modus": "tag",
+ "datum": "2026-11-23",
+ "stand": "2026-11-23T09:14:13+01:00",
+ "status": "ok",
+ "fehler": [],
+ "karussell": [
+  "k1.png",
+  "k2.png",
+  "k3.png",
+  "k4.png"
+ ],
+ "stories": [
+  "s1.png",
+  "s2.png",
+  "s3.png"
+ ],
+ "reel_sekunden": 18.3,
+ "reel": "reel.mp4",
+ "texte": {
+  "instagram": "Auswertung vom Sonntag, 22.11.2026: alle Einträge, gewonnen wie verloren. Nichts wird aussortiert.\n\nAlle Auswertungen öffentlich im Ergebnis-Kanal. Link in der Bio.\n\n18+ · Keine Gewinngarantie · Glücksspiel kann süchtig machen · check-dein-spiel.de\n\n#Fußball #Statistik #Analyse",
+  "tiktok": "Auswertung vom Sonntag, 22.11.2026: alle Einträge, gewonnen wie verloren. Link in der Bio. 18+ · Keine Gewinngarantie · Glücksspiel kann süchtig machen · check-dein-spiel.de #Fußball #Statistik",
+  "youtube_titel": "Auswertung So 22.11.: alle Einträge",
+  "youtube": "Auswertung vom Sonntag, 22.11.2026: alle Live-Wetten und Einzelspiele, gewonnen wie verloren. Nichts wird aussortiert oder nachträglich geändert.\nAlle Auswertungen öffentlich im Ergebnis-Kanal, Link in der Kanalbeschreibung.\n\n18+ · Keine Gewinngarantie · Glücksspiel kann süchtig machen · check-dein-spiel.de"
+ },
+ "anzahl": {
+  "live": 13,
+  "einzel": 5
+ }
+}
