@@ -804,7 +804,7 @@ WISSEN = [
   <p>Bei Quote 1,60 liegt die Gewinnschwelle bei 1 ÷ 1,60 = 62,5 %. Das ist die Trefferchance, ab der sich die Wette
   im Durchschnitt nicht mehr verliert. Hier steht, was bei verschiedenen Trefferchancen im Durchschnitt zurückkommt:</p>
   <table class="kv">
-    <tr><th>Trefferchance</th><td>Erwartungswert je 1 €</td><td>Rückfluss je 100 € Einsatz</td></tr>
+    <tr><th>Chance</th><td>Wert je 1 €</td><td>Zurück je 100 €</td></tr>
     <tr><th>55 %</th><td>−0,12 €</td><td>88 €</td></tr>
     <tr><th>60 %</th><td>−0,04 €</td><td>96 €</td></tr>
     <tr><th>62,5 %</th><td>0,00 €</td><td>100 €</td></tr>
