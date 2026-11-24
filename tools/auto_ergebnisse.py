@@ -124,6 +124,16 @@ def pruefe_mr(data, fehler):
             fehler.append(f"Tag {tag}: moneyrace tipps/treffer unplausibel")
         if m.get("tipps", 0) > 0 and not (1.25 <= m.get("quote", 0) < 2.0):
             fehler.append(f"Tag {tag}: moneyrace quote {m.get('quote')} außerhalb 1,25 bis <2,00")
+    tl_ = sorted(tmr)
+    for bj in data.get("jahre", []):
+        if not tl_ or bj.get("bis") != tl_[-1]:
+            continue  # Jahresblock und Tageseinträge werden gleichzeitig fortgeschrieben; bei Versatz nicht prüfen
+        sel = [tmr[x] for x in tmr if x[:4] == str(bj.get("jahr")) and bj.get("ab", "") <= x <= bj["bis"]]
+        for k in ("tipps", "treffer", "abgebrochen"):
+            if k in bj and sum(t.get(k, 0) for t in sel) != bj[k]:
+                fehler.append(f"Jahr {bj.get('jahr')}: Summe Tage moneyrace.{k}={sum(t.get(k, 0) for t in sel)} ≠ Jahresblock {bj[k]}")
+        if sel and isinstance(bj.get("verlustserie"), int) and bj["verlustserie"] < max(t.get("verlustserie", 0) for t in sel):
+            fehler.append(f"Jahr {bj.get('jahr')}: Verlustserie {bj['verlustserie']} kleiner als größte Tages-Serie")
     for name, b in [("Woche " + w["von"], w) for w in data.get("wochen", [])] + [("Monat " + m["monat"], m) for m in data.get("monate", [])]:
         m = b.get("moneyrace")
         if not isinstance(m, dict):
@@ -393,8 +403,13 @@ def baue_mr(data):
             continue
         qs = sum(t["moneyrace"].get("quote", 0) * t["moneyrace"]["tipps"] for t in tj)
         ersten = next((t["datum"] for t in tj if t["moneyrace"]["tipps"] > 0), tj[0]["datum"])
-        jahre.append({"jahr": int(jahr), "ab": ersten, "stand": tj[-1]["datum"], "tipps": tipps, "treffer": treffer,
-                      "quote": round(qs / tipps, 2)})
+        eintrag = {"jahr": int(jahr), "ab": ersten, "stand": tj[-1]["datum"], "tipps": tipps, "treffer": treffer,
+                   "quote": round(qs / tipps, 2)}
+        # Längste Verlustserie über Tagesgrenzen: nur der Jahresblock des Bots kennt sie (nicht aus Tageswerten ableitbar)
+        bj = next((x for x in data.get("jahre", []) if str(x.get("jahr")) == jahr and x.get("bis") == tj[-1]["datum"]), None)
+        if bj and isinstance(bj.get("verlustserie"), int):
+            eintrag["verlustserie"] = bj["verlustserie"]
+        jahre.append(eintrag)
         ct = cr = 0
         for t in tj:
             ct += t["moneyrace"]["tipps"]
