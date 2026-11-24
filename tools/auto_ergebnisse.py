@@ -116,6 +116,28 @@ def pruefe_block(name, b, fehler, voll=False):
                 fehler.append(f"{name}: live.{k} fehlt")
 
 
+def pruefe_mr(data, fehler):
+    """Money-Race-Block: Plausibilität und Summenprobe (Tage ergeben Woche und Monat, ab 'ab' angeschnitten)."""
+    tmr = {t["datum"]: t["moneyrace"] for t in data.get("tage", []) if isinstance(t.get("moneyrace"), dict)}
+    for tag, m in tmr.items():
+        if not (isinstance(m.get("tipps"), int) and isinstance(m.get("treffer"), int) and 0 <= m["treffer"] <= m["tipps"]):
+            fehler.append(f"Tag {tag}: moneyrace tipps/treffer unplausibel")
+        if m.get("tipps", 0) > 0 and not (1.25 <= m.get("quote", 0) < 2.0):
+            fehler.append(f"Tag {tag}: moneyrace quote {m.get('quote')} außerhalb 1,25 bis <2,00")
+    for name, b in [("Woche " + w["von"], w) for w in data.get("wochen", [])] + [("Monat " + m["monat"], m) for m in data.get("monate", [])]:
+        m = b.get("moneyrace")
+        if not isinstance(m, dict):
+            continue
+        von, bis = zeitraum(b)
+        von = max(von, m.get("ab", von))
+        if "monat" in b and "von" not in b:
+            bis = b["monat"] + "-31"
+        tl = [tmr[x] for x in tmr if von <= x <= bis]
+        for k in ("tipps", "treffer", "abgebrochen"):
+            if k in m and sum(t.get(k, 0) for t in tl) != m[k]:
+                fehler.append(f"{name}: Summe Tage moneyrace.{k}={sum(t.get(k, 0) for t in tl)} ≠ {m[k]}")
+
+
 def pruefe(data):
     fehler = []
     if data.get("version") != 1:
@@ -123,6 +145,7 @@ def pruefe(data):
     tage = {t["datum"]: t for t in data.get("tage", [])}
     for t in tage.values():
         pruefe_block("Tag " + t["datum"], t, fehler)
+    pruefe_mr(data, fehler)
     prev = None
     for t in sorted(data.get("tage", []), key=lambda x: x["datum"]):
         z = seit_start(t)
@@ -181,7 +204,7 @@ def pruefe(data):
 # ---------------------------------------------------------------- Homepage-Daten
 def lade_homepage(hp):
     out = subprocess.run(["node", "-e",
-        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||'',t:window.TRACKRECORD_TAGE||[],j:window.TRACKRECORD_JAHRE||[],et:window.TRACKRECORD_EINZEL_TAGE||[],ej:window.TRACKRECORD_EINZEL_JAHRE||[]}))",
+        "global.window={};require(process.argv[1]);console.log(JSON.stringify({m:window.TRACKRECORD,w:window.TRACKRECORD_WOCHEN||[],h:window.TRACKRECORD_WOCHEN_HINWEIS||'',t:window.TRACKRECORD_TAGE||[],j:window.TRACKRECORD_JAHRE||[],et:window.TRACKRECORD_EINZEL_TAGE||[],ej:window.TRACKRECORD_EINZEL_JAHRE||[],mt:window.TRACKRECORD_MR_TAGE||[],mj:window.TRACKRECORD_MR_JAHRE||[]}))",
         os.path.abspath(os.path.join(hp, "trackrecord-daten.js"))], capture_output=True, text=True, check=True).stdout
     return json.loads(out)
 
@@ -224,6 +247,17 @@ def zeitraum(b):
     return b["von"], b["bis"]
 
 
+MR_FELDER = ("tipps", "treffer", "quote", "verlustserie", "abgebrochen", "serien", "ab")
+
+
+def mr_oeffentlich(b):
+    """Money-Race-Block für die Homepage: nur Zahlen, die auch in den Telegram-Kanälen stehen (keine Euro, keine Rendite, kein Step-Verlauf)."""
+    m = b.get("moneyrace")
+    if not isinstance(m, dict):
+        return None
+    return {k: m[k] for k in MR_FELDER if k in m}
+
+
 def homepage_eintrag(b, data):
     L, E = b["live"], b["einzelspiele"]
     live = {"wetten": L["wetten"], "treffer": L["treffer"]}
@@ -241,6 +275,9 @@ def homepage_eintrag(b, data):
         e["rueckrechnung"] = True
     e["live"] = live
     e["einzelspiele"] = {"tipps": E["tipps"], "treffer": E["treffer"]}
+    mr = mr_oeffentlich(b)
+    if mr:
+        e["moneyrace"] = mr
     return e
 
 
@@ -249,12 +286,20 @@ def gleich(a, b):
     for k in ("wetten", "treffer"):
         if a["live"].get(k) != b["live"].get(k):
             return False
+    if a.get("moneyrace") and b.get("moneyrace"):
+        for k in ("tipps", "treffer"):
+            if a["moneyrace"].get(k) != b["moneyrace"].get(k):
+                return False
     return a["einzelspiele"] == {"tipps": b["einzelspiele"]["tipps"], "treffer": b["einzelspiele"]["treffer"]}
 
 
 def ergaenze(alt, neu, data):
     """Bereinigt alte Felder (Einsätze/Rendite je Monat/Woche) und ergänzt Ø-Quote und Verlustserie, nie vorhandene Werte überschreiben."""
     geaendert = False
+    mr = mr_oeffentlich(neu)
+    if mr and "moneyrace" not in alt:
+        alt["moneyrace"] = mr
+        geaendert = True
     for k in ALT_FELDER:
         if k in alt["live"]:
             del alt["live"][k]
@@ -332,6 +377,33 @@ def baue_einzel(data):
     return kurve, jahre
 
 
+MR_MIN_TIPPS = 100  # Jahresblock und Kurve erst ab 100 Money-Race-Tipps im Kalenderjahr (Daniel, 24.11.2026); Kurve beginnt ab 20
+
+
+def baue_mr(data):
+    """Money Race: kumulierte Trefferquote je Tag (Kalendertag), je Kalenderjahr neu beginnend. Jahr: Tipps, Treffer, Ø-Quote
+    (Ø der Tagesquoten, gewichtet mit den Tipps). Keine Euro, keine Rendite, kein Step-Verlauf."""
+    tl = sorted((t for t in data.get("tage", []) if isinstance(t.get("moneyrace"), dict)), key=lambda x: x["datum"])
+    kurve, jahre = [], []
+    for jahr in sorted({t["datum"][:4] for t in tl}):
+        tj = [t for t in tl if t["datum"][:4] == jahr]
+        tipps = sum(t["moneyrace"]["tipps"] for t in tj)
+        treffer = sum(t["moneyrace"]["treffer"] for t in tj)
+        if tipps < MR_MIN_TIPPS:
+            continue
+        qs = sum(t["moneyrace"].get("quote", 0) * t["moneyrace"]["tipps"] for t in tj)
+        ersten = next((t["datum"] for t in tj if t["moneyrace"]["tipps"] > 0), tj[0]["datum"])
+        jahre.append({"jahr": int(jahr), "ab": ersten, "stand": tj[-1]["datum"], "tipps": tipps, "treffer": treffer,
+                      "quote": round(qs / tipps, 2)})
+        ct = cr = 0
+        for t in tj:
+            ct += t["moneyrace"]["tipps"]
+            cr += t["moneyrace"]["treffer"]
+            if ct >= KURVE_AB_WETTEN:
+                kurve.append({"d": t["datum"], "q": round(cr / ct * 100, 1)})
+    return kurve, jahre
+
+
 def jahre_homepage(jahre):
     """Jahresblöcke für die Homepage: ohne Einsätze und Rendite (die gibt es nur in Telegram)."""
     return [{k: v for k, v in j.items() if k not in ("gewinn", "rendite")} for j in jahre]
@@ -352,7 +424,7 @@ KOPF = """/* ===================================================================
 """
 
 
-def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None, e_kurve=None, e_jahre=None):
+def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None, e_kurve=None, e_jahre=None, m_kurve=None, m_jahre=None):
     p = os.path.join(hp, "trackrecord-daten.js")
     mon = ",\n\n".join(js_block(x) for x in sorted(monate, key=lambda x: x["monat"], reverse=True))
     wo = ",\n".join(js_block(x) for x in sorted(wochen, key=lambda x: x["von"]))
@@ -368,7 +440,10 @@ def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None, e_kur
            "window.TRACKRECORD_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (jahre or [])) + "\n];\n\n"
            "/* Einzelspiele zum Kombinieren: kumulierte Trefferquote je Tag (ohne Quote, ohne Break-even) und Kalenderjahre (Tipps, Treffer). Ein Jahr erscheint erst ab 100 Tipps. */\n"
            "window.TRACKRECORD_EINZEL_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (e_kurve or [])) + "\n];\n"
-           "window.TRACKRECORD_EINZEL_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (e_jahre or [])) + "\n];\n")
+           "window.TRACKRECORD_EINZEL_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (e_jahre or [])) + "\n];\n\n"
+           "/* Money Race (Kalendertag): kumulierte Trefferquote je Tag und Kalenderjahre (Tipps, Treffer, Ø-Quote). Ein Jahr erscheint erst ab 100 Tipps. Keine Euro, keine Rendite. */\n"
+           "window.TRACKRECORD_MR_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (m_kurve or [])) + "\n];\n"
+           "window.TRACKRECORD_MR_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (m_jahre or [])) + "\n];\n")
     open(p, "w", encoding="utf-8").write(neu)
 
 
@@ -501,7 +576,9 @@ def main():
         kurve, jahre_voll = hp["t"], hp["j"]
     jahre = jahre_homepage(jahre_voll)
     e_kurve, e_jahre = baue_einzel(data)
-    if kurve != hp["t"] or jahre != hp["j"] or e_kurve != hp.get("et", []) or e_jahre != hp.get("ej", []):
+    m_kurve, m_jahre = baue_mr(data)
+    if (kurve != hp["t"] or jahre != hp["j"] or e_kurve != hp.get("et", []) or e_jahre != hp.get("ej", [])
+            or m_kurve != hp.get("mt", []) or m_jahre != hp.get("mj", [])):
         res["aenderungen"].append("Kurve/Jahresblock aktualisiert")
 
     if res["fehler"]:
@@ -510,7 +587,7 @@ def main():
         return 2
 
     if not a.trocken and res["aenderungen"]:
-        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"], kurve, jahre, e_kurve, e_jahre)
+        schreibe_homepage(a.homepage, list(monate.values()), list(wochen.values()), hp["h"], kurve, jahre, e_kurve, e_jahre, m_kurve, m_jahre)
         ix = os.path.join(a.homepage, "index.html")
         h = open(ix, encoding="utf-8").read()
         h = re.sub(r"trackrecord-daten\.js\?v=[0-9a-z]+", "trackrecord-daten.js?v=" + dt.datetime.now().strftime("%Y%m%d%H%M"), h)

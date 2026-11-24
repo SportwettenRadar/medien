@@ -156,7 +156,7 @@ def month_pages(months):
         mr_teil = ""
         if MR and MR.get("tipps"):
             mr_teil = f"""
-  <h2><span class="num">02</span>Money Race{" (ab 21.11.)" if m["monat"] == "2026-11" else ""}</h2>
+  <h2><span class="num">02</span>Money Race{(" (ab " + MR["ab"][8:10] + "." + MR["ab"][5:7] + ".)") if MR.get("ab") else ""}</h2>
   <table class="kv">
     <tr><th>Tipps</th><td>{MR['tipps']}</td></tr>
     <tr><th>Treffer</th><td>{MR['treffer']} ({de(mq)} %)</td></tr>

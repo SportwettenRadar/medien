@@ -74,6 +74,33 @@ def main():
             f.append(f"Woche {x['von']}: fehlt auf der Homepage")
             continue
         block_ok(f"Woche {x['von']}", h, x, x["von"], x["bis"])
+    # Money Race: Wochen/Monate gegen den Bot-Block, nur Zahlen ohne Euro/Rendite; Jahr erst ab 100 Tipps
+    def mr_ok(name, h, x):
+        mb, mh = x.get("moneyrace"), h.get("moneyrace")
+        if not mb:
+            return
+        if not mh:
+            f.append(f"{name}: moneyrace fehlt auf der Homepage")
+            return
+        for k in ("tipps", "treffer", "verlustserie", "abgebrochen"):
+            if k in mb:
+                cmp(f"{name} moneyrace.{k}", mh.get(k), mb[k], 0)
+        if "quote" in mb:
+            cmp(f"{name} moneyrace.quote", mh.get("quote"), mb["quote"], 0.0051)
+        if "serien" in mb:
+            cmp(f"{name} moneyrace.serien", mh.get("serien"), mb["serien"])
+        for k in mh:
+            if k.lower() in ("euro", "rendite", "gewinn", "einsatz", "steps"):
+                f.append(f"{name}: moneyrace.{k} darf nicht auf der Homepage stehen")
+    for m in d.get("monate", []):
+        if hm.get(m["monat"]):
+            mr_ok(f"Monat {m['monat']}", hm[m["monat"]], m)
+    for x in d.get("wochen", []):
+        if hw.get(x["von"]):
+            mr_ok(f"Woche {x['von']}", hw[x["von"]], x)
+    mk, mjs = ae.baue_mr(d)
+    cmp("Money Race Jahre", w.get("TRACKRECORD_MR_JAHRE", []), mjs)
+    cmp("Money Race Kurve", w.get("TRACKRECORD_MR_TAGE", []), mk)
     tage = sorted(d.get("tage", []), key=lambda t: t["datum"])
     ss = lambda t: t.get("seitStart") or t.get("seit_start") or {}
     # Jahre: Wetten/Treffer/Einsätze/Rendite aus seitStart-Differenzen; unter 100 Wetten darf nichts davon veröffentlicht sein
