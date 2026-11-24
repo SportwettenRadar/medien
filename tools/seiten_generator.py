@@ -386,7 +386,7 @@ WISSEN = [
     ist dein Zugang: Warteliste, Buchung, Abo-Übersicht und Kündigung laufen über ihn.</li>
     <li><strong>Der Mitgliederkanal</strong> meldet Live-Wetten in Echtzeit, sobald die Analyse eines laufenden
     Spiels eine Gelegenheit zeigt, dazu bis zu 5 Einzelspiele pro Tag.</li>
-    <li><strong>Der Money-Race-Kanal</strong> (im Abo enthalten) meldet Live-Tipps auf „Über x,5 Tore“ in der zweiten Halbzeit,
+    <li><strong>Der Money-Race-Kanal</strong> (im Abo enthalten) meldet Live-Tipps auf <span style="white-space:nowrap">„Über x,5 Tore“</span> in der zweiten Halbzeit,
     immer nur einen Tipp zur selben Zeit. Passt kein Spiel, gibt es keinen Tipp.</li>
     <li><strong>Der öffentliche Ergebnis-Kanal</strong>
     (<a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal auf Telegram</a>) zeigt kostenlos
