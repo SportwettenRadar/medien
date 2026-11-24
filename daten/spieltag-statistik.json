@@ -1,14 +1,14 @@
 {
  "version": 1,
- "stand": "2026-11-24T19:11:23+01:00",
+ "stand": "2026-11-24T21:55:17+01:00",
  "ligen": [
   {
    "liga": "Champions League",
-   "spieltag": 4,
+   "spieltag": 5,
    "stand": {
     "datum": "2026-11-24",
-    "spieltage": 4,
-    "spiele": 162
+    "spieltage": 5,
+    "spiele": 164
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -17,6 +17,13 @@
       "heimspiele": 6,
       "siege": 3,
       "remis": 3,
+      "niederlagen": 0
+     },
+     {
+      "team": "Bodo/Glimt",
+      "heimspiele": 5,
+      "siege": 3,
+      "remis": 2,
       "niederlagen": 0
      }
     ],
@@ -31,51 +38,15 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.34,
-     "spiele": 162
+     "wert": 3.31,
+     "spiele": 164
     },
     "ueber_2_5_anteil": {
-     "wert": 0.62,
-     "spiele": 162
+     "wert": 0.61,
+     "spiele": 164
     }
    },
-   "spiele_heute": [
-    {
-     "heim": "Arsenal",
-     "gast": "Borussia Dortmund",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Como",
-     "gast": "AEK Athens FC",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Feyenoord",
-     "gast": "FC Porto",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Manchester City",
-     "gast": "Napoli",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "RB Leipzig",
-     "gast": "Lens",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Real Madrid",
-     "gast": "PSV Eindhoven",
-     "anstoss": "21:00"
-    },
-    {
-     "heim": "Slovan Bratislava",
-     "gast": "Real Betis",
-     "anstoss": "21:00"
-    }
-   ]
+   "spiele_heute": []
   },
   {
    "liga": "Europa League",
