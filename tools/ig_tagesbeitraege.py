@@ -337,7 +337,9 @@ def main():
     if a.modus == "tag":
         tag = heute - dt.timedelta(days=1)
         live, ein = eintraege(sig, tag, tag, "live"), eintraege(sig, tag, tag, "einzel")
-        mr = eintraege(sig, tag, tag, "moneyrace")
+        # Notbremse (Entscheidung Daniel 24.11.2026): Datei tools/IG_MONEYRACE_AUS schaltet alle Money-Race-Karten ab
+        notbremse = os.path.exists(os.path.join(a.medien, "tools", "IG_MONEYRACE_AUS"))
+        mr = [] if notbremse else eintraege(sig, tag, tag, "moneyrace")
         if not live and not ein and not mr: man["status"] = "stopp"; man["fehler"].append(f"keine Einträge für {tag}")
         elif any(x["ergebnis"] not in STATUS_OK for x in live + ein + mr): man["status"] = "stopp"; man["fehler"].append("Einträge ohne Ergebnis")
         elif stand[:10] != a.datum: man["status"] = "stopp"; man["fehler"].append(f"signale.json Stand {stand}, erwartet {a.datum}")
@@ -357,7 +359,7 @@ def main():
                    "Ein einzelner Tag sagt wenig. Die komplette Auswertung steht im Ergebnis-Kanal, Link in der Bio."]))
         gruppen = {"live": live, "einzel": ein, "moneyrace": mr}
         abdat, abwarn = abschluss_daten(a.medien, tag, gruppen)
-        man["warnungen"] = abwarn + ([] if mrr else [f"Money Race: keine Einträge für {tag} in signale.json (Betriebstag evtl. noch nicht freigegeben)"])
+        man["warnungen"] = abwarn + ([] if (mrr or notbremse) else [f"Money Race: keine Einträge für {tag} in signale.json (Betriebstag evtl. noch nicht freigegeben)"])
         if abdat: ks.append(abschluss_seite(wt, abdat))
         ns = []
         if lr:
@@ -372,7 +374,7 @@ def main():
             man["reel_sekunden"] = round(reel(lr, er, WT[tag.weekday()], os.path.join(a.out, "reel.mp4")), 1); man["reel"] = "reel.mp4"
         long = f"{WT[tag.weekday()]}, {tag.strftime('%d.%m.%Y')}"
         man["texte"] = {
-            "instagram": f"Auswertung vom {long}: alle Einträge von Live-Wetten, Einzelspielen und Money Race, gewonnen wie verloren. Nichts wird aussortiert.\n\nAlle Auswertungen öffentlich im Ergebnis-Kanal. Link in der Bio.\n\n{PFLICHT}\n\n{HASH}",
+            "instagram": f"Auswertung vom {long}: alle Einträge von {'Live-Wetten, Einzelspielen und Money Race' if mrr else 'Live-Wetten und Einzelspielen'}, gewonnen wie verloren. Nichts wird aussortiert.\n\nAlle Auswertungen öffentlich im Ergebnis-Kanal. Link in der Bio.\n\n{PFLICHT}\n\n{HASH}",
             "tiktok": f"Auswertung vom {long}: alle Einträge, gewonnen wie verloren. Link in der Bio. {PFLICHT} #Fußball #Statistik",
             "youtube_titel": f"Auswertung {WK[tag.weekday()]} {dm(tag)}: alle Einträge",
             "youtube": f"Auswertung vom {long}: alle Live-Wetten und Einzelspiele, gewonnen wie verloren. Nichts wird aussortiert oder nachträglich geändert.\nAlle Auswertungen öffentlich im Ergebnis-Kanal, Link in der Kanalbeschreibung.\n\n{PFLICHT}"}
