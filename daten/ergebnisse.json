@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-24T08:10:02+01:00",
+ "stand": "2026-11-24T15:53:49+01:00",
  "tage": [
   {
    "datum": "2026-09-01",
@@ -1698,6 +1698,25 @@
     "treffer": 304,
     "rendite": 0.4,
     "gewinn": 2.1
+   },
+   "moneyrace": {
+    "basis": "kalendertag",
+    "tipps": 28,
+    "treffer": 21,
+    "quote": 1.31,
+    "verlustserie": 3,
+    "abgebrochen": 0,
+    "serien": {
+     "gestartet": 7,
+     "beendet_step1": 3,
+     "beendet_step2": 0,
+     "beendet_step3_4": 2,
+     "beendet_ab5": 2,
+     "erreicht5": 2,
+     "erreicht10": 1,
+     "erreicht15": 0,
+     "erreicht20": 0
+    }
    }
   },
   {
@@ -1719,6 +1738,25 @@
     "treffer": 313,
     "rendite": 0.4,
     "gewinn": 1.8
+   },
+   "moneyrace": {
+    "basis": "kalendertag",
+    "tipps": 23,
+    "treffer": 19,
+    "quote": 1.28,
+    "verlustserie": 2,
+    "abgebrochen": 0,
+    "serien": {
+     "gestartet": 4,
+     "beendet_step1": 1,
+     "beendet_step2": 0,
+     "beendet_step3_4": 1,
+     "beendet_ab5": 2,
+     "erreicht5": 1,
+     "erreicht10": 1,
+     "erreicht15": 0,
+     "erreicht20": 0
+    }
    }
   },
   {
@@ -1740,6 +1778,25 @@
     "treffer": 314,
     "rendite": 0.1,
     "gewinn": 0.3
+   },
+   "moneyrace": {
+    "basis": "kalendertag",
+    "tipps": 17,
+    "treffer": 13,
+    "quote": 1.29,
+    "verlustserie": 2,
+    "abgebrochen": 0,
+    "serien": {
+     "gestartet": 4,
+     "beendet_step1": 1,
+     "beendet_step2": 1,
+     "beendet_step3_4": 1,
+     "beendet_ab5": 1,
+     "erreicht5": 2,
+     "erreicht10": 0,
+     "erreicht15": 0,
+     "erreicht20": 0
+    }
    }
   }
  ],
@@ -1994,6 +2051,26 @@
    "einzelspiele": {
     "tipps": 20,
     "treffer": 13
+   },
+   "moneyrace": {
+    "basis": "kalendertag",
+    "tipps": 51,
+    "treffer": 40,
+    "quote": 1.3,
+    "verlustserie": 3,
+    "abgebrochen": 0,
+    "serien": {
+     "gestartet": 11,
+     "beendet_step1": 4,
+     "beendet_step2": 0,
+     "beendet_step3_4": 3,
+     "beendet_ab5": 4,
+     "erreicht5": 3,
+     "erreicht10": 2,
+     "erreicht15": 0,
+     "erreicht20": 0
+    },
+    "ab": "2026-11-21"
    }
   }
  ],
