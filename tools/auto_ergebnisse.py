@@ -369,7 +369,7 @@ def baue_jahre(data):
     return kurve, jahre
 
 
-EINZEL_MIN_TIPPS = 100  # Einzelspiel-Kurve (Trefferquote, ohne Break-even) erst ab so vielen Tipps im Jahr, Beginn ab KURVE_AB_WETTEN
+EINZEL_MIN_TIPPS = 100  # Einzelspiel-Kurve (Trefferquote) erst ab so vielen Tipps im Jahr, Beginn ab KURVE_AB_WETTEN
 
 
 def baue_einzel(data):
@@ -441,7 +441,7 @@ KOPF = """/* ===================================================================
    - Einsätze und Rendite stehen NICHT auf der Homepage (nur in den Telegram-Kanälen, je Kalenderjahr ab 100 Live-Wetten).
    - Jahreskurve: kumulierte Trefferquote je Tag, erst ab 100 Live-Wetten im Jahr, Beginn ab 20 Wetten (Entscheidung 09.11.2026).
    - Ø-Quote = Durchschnitt der Quoten aller gesetzten Live-Wetten des Zeitraums.
-   - Einzelspiele (Daniel, 14.11.2026): eigene Kurve der kumulierten Trefferquote (ohne Quote, ohne Break-even), gleiche Schwellen (Beginn ab 20, Veröffentlichung ab 100 Tipps im Jahr).
+   - Einzelspiele (Daniel, 14.11.2026): eigene Kurve der kumulierten Trefferquote (ohne Quote), gleiche Schwellen (Beginn ab 20, Veröffentlichung ab 100 Tipps im Jahr).
    ===================================================================== */
 
 """
@@ -461,7 +461,7 @@ def schreibe_homepage(hp, monate, wochen, hinweis, kurve=None, jahre=None, e_kur
            "window.TRACKRECORD_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (kurve or [])) + "\n];\n\n"
            "/* Kalenderjahre: Wetten, Treffer, Ø-Quote; keine Einsätze/Rendite. */\n"
            "window.TRACKRECORD_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (jahre or [])) + "\n];\n\n"
-           "/* Einzelspiele zum Kombinieren: kumulierte Trefferquote je Tag (ohne Quote, ohne Break-even) und Kalenderjahre (Tipps, Treffer). Ein Jahr erscheint erst ab 100 Tipps. */\n"
+           "/* Einzelspiele zum Kombinieren: kumulierte Trefferquote je Tag (ohne Quote) und Kalenderjahre (Tipps, Treffer). Ein Jahr erscheint erst ab 100 Tipps. */\n"
            "window.TRACKRECORD_EINZEL_TAGE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (e_kurve or [])) + "\n];\n"
            "window.TRACKRECORD_EINZEL_JAHRE = [\n" + ",\n".join("  " + json.dumps(x, ensure_ascii=False) for x in (e_jahre or [])) + "\n];\n\n"
            "/* Money Race (Kalendertag): kumulierte Trefferquote je Tag und Kalenderjahre (Tipps, Treffer, Ø-Quote). Ein Jahr erscheint erst ab 100 Tipps. Keine Euro, keine Rendite. */\n"
