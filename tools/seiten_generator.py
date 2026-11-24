@@ -151,15 +151,35 @@ def month_pages(months):
     paths = []
     for i, m in enumerate(months):
         L, E = m["live"], m["einzelspiele"]
+        MR = m.get("moneyrace")
+        mq = (MR["treffer"] / MR["tipps"] * 100) if MR and MR.get("tipps") else 0
+        mr_teil = ""
+        if MR and MR.get("tipps"):
+            mr_teil = f"""
+  <h2><span class="num">02</span>Money Race{" (ab 21.11.)" if m["monat"] == "2026-11" else ""}</h2>
+  <table class="kv">
+    <tr><th>Tipps</th><td>{MR['tipps']}</td></tr>
+    <tr><th>Treffer</th><td>{MR['treffer']} ({de(mq)} %)</td></tr>
+{('    <tr><th>Ø-Quote</th><td>' + de(MR['quote'], 2) + '</td></tr>') if MR.get('quote') else ''}
+{('    <tr><th>Längste Verlustserie</th><td>' + str(MR['verlustserie']) + ' in Folge</td></tr>') if 'verlustserie' in MR else ''}
+{('    <tr><th>Abgebrochen oder verschoben</th><td>' + str(MR['abgebrochen']) + '</td></tr>') if MR.get('abgebrochen') is not None else ''}
+  </table>
+  <p>Money Race meldet immer nur einen Tipp zur selben Zeit. Die Trefferquote gilt je Tipp, abgebrochene oder verschobene Tipps
+  zählen wir getrennt und nicht als Treffer. Einsätze, Euro-Beträge und Rendite zeigen wir nicht. Die Statistik ist von der der Live-Wetten getrennt.</p>
+"""
+        n_ein = "03" if mr_teil else "02"
+        n_ord = "04" if mr_teil else "03"
         q = L["treffer"] / L["wetten"] * 100 if L["wetten"] else 0
         eq = E["treffer"] / E["tipps"] * 100 if E["tipps"] else 0
         qu = L.get("quote")
         name = mname(m["monat"])
         path = f"monatsbericht-{m['monat']}.html"
-        title = f"Monatsbericht {name}: Live-Wetten und Einzelspiele — Sportwetten Radar"
+        title = f"Monatsbericht {name}: Live-Wetten, " + ("Money Race und " if MR and MR.get("tipps") else "") + "Einzelspiele — Sportwetten Radar"
         desc = (f"Ergebnisse {name}: {L['wetten']} Live-Wetten, {L['treffer']} Treffer ({de(q)} %)"
                 + (f", Ø-Quote {de(qu, 2)}" if qu else "") +
-                f", längste Verlustserie {L['verlustserie']}. Einzelspiele: {E['treffer']} von {E['tipps']} getroffen.")
+                f", längste Verlustserie {L['verlustserie']}."
+                + (f" Money Race: {MR['treffer']} von {MR['tipps']} Tipps ({de(mq)} %)." if MR and MR.get("tipps") else "")
+                + f" Einzelspiele: {E['treffer']} von {E['tipps']} getroffen.")
         nachbarn = []
         if i > 0:
             nachbarn.append(f'<a href="monatsbericht-{months[i-1]["monat"]}.html">← {mname(months[i-1]["monat"])}</a>')
@@ -184,7 +204,8 @@ def month_pages(months):
   Verlustserien gehören dazu. Wie wir rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
 
-  <h2><span class="num">02</span>Einzelspiele zum Kombinieren</h2>
+{mr_teil}
+  <h2><span class="num">{n_ein}</span>Einzelspiele zum Kombinieren</h2>
   <table class="kv">
     <tr><th>Tipps</th><td>{E['tipps']}</td></tr>
     <tr><th>Treffer</th><td>{E['treffer']} ({de(eq)} %)</td></tr>
@@ -192,7 +213,7 @@ def month_pages(months):
   <p>Für Einzelspiele zeigen wir nur die Trefferquote. Da jeder seinen Wettschein selbst zusammenstellt,
   gibt es keine einheitliche Quote, auf die sich eine Rendite seriös rechnen ließe.</p>
 
-  <h2><span class="num">03</span>Einordnung</h2>
+  <h2><span class="num">{n_ord}</span>Einordnung</h2>
   <p>Ein einzelner Monat sagt wenig. Gute und schwache Monate wechseln sich ab, und auch bei hoher
   Trefferquote sind mehrere Fehlschläge in Folge normal (siehe <a href="verlustserien.html">Verlustserien</a>).
   Den Verlauf aller Monate und die Jahreskurve der Trefferquote findest du im <a href="index.html#trackrecord">Trackrecord</a>.</p>
@@ -217,7 +238,7 @@ def month_pages(months):
   {tr_block(None, fallback, liste=True)}
 """
     t = "Alle Monatsberichte — Sportwetten Radar"
-    d = "Alle Monatsberichte von Sportwetten Radar: Live-Wetten mit Trefferquote, Ø-Quote und Verlustserien, Einzelspiele mit Trefferquote."
+    d = "Alle Monatsberichte von Sportwetten Radar: Live-Wetten und Money Race mit Trefferquote, Ø-Quote und Verlustserien, Einzelspiele mit Trefferquote."
     paths.append((page("monatsberichte.html", t, d, "Trackrecord", "Alle Monatsberichte", inner), None))
     return paths
 
@@ -365,6 +386,8 @@ WISSEN = [
     ist dein Zugang: Warteliste, Buchung, Abo-Übersicht und Kündigung laufen über ihn.</li>
     <li><strong>Der Mitgliederkanal</strong> meldet Live-Wetten in Echtzeit, sobald die Analyse eines laufenden
     Spiels eine Gelegenheit zeigt, dazu bis zu 5 Einzelspiele pro Tag.</li>
+    <li><strong>Der Money-Race-Kanal</strong> (im Abo enthalten) meldet Live-Tipps auf „Über x,5 Tore“ in der zweiten Halbzeit,
+    immer nur einen Tipp zur selben Zeit. Passt kein Spiel, gibt es keinen Tipp.</li>
     <li><strong>Der öffentliche Ergebnis-Kanal</strong>
     (<a href="https://t.me/sportwettenradar" target="_blank" rel="noopener">Ergebnis-Kanal auf Telegram</a>) zeigt kostenlos
     jede Live-Wette nach ihrer Auswertung, die Einzelspiele des Tages sowie Tages-, Wochen- und Monatsbilanzen.
@@ -866,7 +889,7 @@ WISSEN_KAT = [
 
 def wissen_hub():
     info = {e[0]: (e[4], e[2]) for e in WISSEN}
-    info["monatsberichte.html"] = ("Alle Monatsberichte", "Live-Wetten mit Trefferquote, Ø-Quote und Verlustserien, Einzelspiele mit Trefferquote.")
+    info["monatsberichte.html"] = ("Alle Monatsberichte", "Live-Wetten und Money Race mit Trefferquote, Ø-Quote und Verlustserien, Einzelspiele mit Trefferquote.")
     teile = ["\n  <p>Alle Erklärseiten von Sportwetten Radar, nach Themen sortiert. Neue Seiten kommen in die passende Kategorie.</p>\n"]
     for i, (kid, name, kdesc, pages) in enumerate(WISSEN_KAT, 1):
         items = "\n".join(f'    <li><a href="{p}">{info[p][0]}</a><br><span class="wissen-note">{info[p][1]}</span></li>' for p in pages)
