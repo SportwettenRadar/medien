@@ -787,6 +787,64 @@ WISSEN = [
   zu verlieren. Hilfe bei Spielproblemen:
   <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
 """, "2026-11-17"),
+    ("erwartungswert-sportwetten.html",
+     "Erwartungswert bei Sportwetten einfach erklärt — Sportwetten Radar",
+     "Was ist der Erwartungswert bei Sportwetten, wie rechnest du ihn aus und warum sagt er nichts über die nächste Wette? Mit Rechenbeispiel zu Quote und Trefferquote.",
+     "Wissen", "Erwartungswert bei Sportwetten",
+     """
+  <p>Der Erwartungswert zeigt, was eine Wette im Durchschnitt bringt, wenn du sie sehr oft spielst. Er sagt nicht,
+  wie die nächste Wette ausgeht. Er hilft aber zu verstehen, warum eine hohe Trefferquote allein noch keine gute Wette macht.</p>
+
+  <h2><span class="num">01</span>Die Rechnung in einem Satz</h2>
+  <p>Erwartungswert je 1 € Einsatz = Trefferchance × Quote − 1. Ist das Ergebnis über null, bringt die Wette
+  im Durchschnitt mehr zurück, als sie kostet. Bei null ist sie neutral, darunter verlierst du im Durchschnitt.
+  Als Prozentwert gelesen ist das dasselbe wie die <a href="rendite-erklaert.html">Rendite</a> je Einsatz.</p>
+
+  <h2><span class="num">02</span>Rechenbeispiel mit Quote 1,60</h2>
+  <p>Bei Quote 1,60 liegt die Gewinnschwelle bei 1 ÷ 1,60 = 62,5 %. Das ist die Trefferchance, ab der sich die Wette
+  im Durchschnitt nicht mehr verliert. Hier steht, was bei verschiedenen Trefferchancen im Durchschnitt zurückkommt:</p>
+  <table class="kv">
+    <tr><th>Trefferchance</th><td>Erwartungswert je 1 €</td><td>Rückfluss je 100 € Einsatz</td></tr>
+    <tr><th>55 %</th><td>−0,12 €</td><td>88 €</td></tr>
+    <tr><th>60 %</th><td>−0,04 €</td><td>96 €</td></tr>
+    <tr><th>62,5 %</th><td>0,00 €</td><td>100 €</td></tr>
+    <tr><th>65 %</th><td>+0,04 €</td><td>104 €</td></tr>
+    <tr><th>70 %</th><td>+0,12 €</td><td>112 €</td></tr>
+  </table>
+  <p class="wissen-note">Rechenbeispiel, Durchschnitt über sehr viele gleichartige Wetten. Keine Prognose und keine Empfehlung.</p>
+  <p>Auffällig: Schon bei 60 % Trefferchance, was sich nach viel anhört, ist der Erwartungswert bei dieser Quote negativ.
+  Welche Trefferquote „gut“ ist, hängt immer von der Quote ab. Mehr dazu unter
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a></p>
+
+  <h2><span class="num">03</span>Das Problem: Die echte Trefferchance kennst du nicht</h2>
+  <p>Im Beispiel steht die Trefferchance fest. In der Praxis musst du sie schätzen, und dort liegt die Schwierigkeit.
+  Die Quote des Anbieters enthält eine Marge: Die Wahrscheinlichkeiten aller Ausgänge ergeben zusammen mehr als 100 %.
+  Eine Wette hat deshalb nur dann einen positiven Erwartungswert, wenn deine Einschätzung besser ist als die des Marktes.
+  Eine Schätzung, die nur auf Bauchgefühl beruht, ist dafür kein verlässlicher Maßstab.</p>
+
+  <h2><span class="num">04</span>Der Erwartungswert sagt nichts über die nächste Wette</h2>
+  <p>Auch eine Wette mit positivem Erwartungswert verliert oft. Bei 65 % Trefferchance gehen 35 von 100 Wetten verloren, und
+  mehrere Verluste hintereinander sind normal (<a href="verlustserien.html">Verlustserien</a>). Dazu kommt die Streuung:
+  Bei 100 Wetten mit einer echten Trefferchance von 65 % liegt die tatsächliche Trefferquote in etwa neun von zehn
+  Fällen zwischen rund 57 % und 73 %. Ein paar Dutzend Wetten sagen also wenig darüber, ob jemand wirklich einen Vorteil hat.</p>
+
+  <h2><span class="num">05</span>Woran du das prüfen kannst</h2>
+  <ul>
+    <li>Rechne bei jeder Quote die Gewinnschwelle aus (1 ÷ Quote) und vergleiche sie ehrlich mit der Trefferquote, die du wirklich nachweisen kannst.</li>
+    <li>Zähle alle Wetten, nicht nur die gewonnenen. Fehlende Verlierer verzerren jede Statistik.</li>
+    <li>Vertraue keiner Quote aus wenigen Wetten. Je kleiner die Stichprobe, desto größer der Zufall.</li>
+    <li>Vorsicht bei Versprechen wie „sichere Gewinne“. Einen sicheren Gewinn gibt es bei Sportwetten nicht.
+    Woran du unseriöse Angebote erkennst, steht unter <a href="seriose-tippgeber-erkennen.html">Seriöse Tippgeber erkennen</a>.</li>
+  </ul>
+
+  <h2><span class="num">06</span>Was Sportwetten Radar daraus macht</h2>
+  <p>Wir zeigen im <a href="index.html#trackrecord">Trackrecord</a> die Trefferquote zusammen mit der Durchschnittsquote
+  und der daraus folgenden Gewinnschwelle, auch in schwachen Phasen. Erst ab einer größeren Zahl gewerteter Wetten
+  zeigen wir eine Kurve, weil kleine Stichproben vom Zufall bestimmt werden. Wir vermitteln keine Wetten und nennen keine
+  Einsätze. Das Rechenbeispiel hier ist keine Empfehlung. Wetten kann Geld kosten. Setze nie mehr, als du bereit bist zu verlieren.
+  Ab 18. Hilfe bei Spielproblemen:
+  <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
+""", "2026-11-24"),
 ]
 
 
@@ -794,7 +852,7 @@ WISSEN = [
 # nie als neuen Footer-Eintrag. Reihenfolge je Kategorie = Reihenfolge auf der Seite.
 WISSEN_KAT = [
     ("quoten", "Quoten & Rendite", "Wie du eine Quote liest und wie Rendite und Trefferquote zusammenhängen.",
-     ["quote-1-70-bedeutung.html", "rendite-erklaert.html", "einzelwette-oder-kombiwette.html"]),
+     ["quote-1-70-bedeutung.html", "rendite-erklaert.html", "einzelwette-oder-kombiwette.html", "erwartungswert-sportwetten.html"]),
     ("live", "Live-Wetten verstehen", "Wie Live-Wetten und Über/Unter funktionieren und was Spieldaten verraten.",
      ["live-wetten-ueber-unter.html", "ueber-1-5-tore.html", "tore-zweite-halbzeit.html", "lohnen-sich-live-wetten.html", "live-wetten-analyse.html"]),
     ("risiko", "Risiko & Verantwortung", "Verlustserien, Einsatz und der verantwortungsvolle Umgang mit Sportwetten.",
@@ -818,7 +876,7 @@ def wissen_hub():
     return page("wissen.html", t, d, "Wissen", "Wissen", "".join(teile), article_ld(t, d, "wissen.html", WISSEN_DATUM_HUB)), WISSEN_DATUM_HUB
 
 
-WISSEN_DATUM_HUB = "2026-11-17"
+WISSEN_DATUM_HUB = "2026-11-24"
 
 
 def wissen_pages(today):
