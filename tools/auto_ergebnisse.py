@@ -119,6 +119,8 @@ def pruefe_block(name, b, fehler, voll=False):
 def pruefe_mr(data, fehler):
     """Money-Race-Block: Plausibilität und Summenprobe (Tage ergeben Woche und Monat, ab 'ab' angeschnitten)."""
     tmr = {t["datum"]: t["moneyrace"] for t in data.get("tage", []) if isinstance(t.get("moneyrace"), dict)}
+    if len({m.get("basis") for m in tmr.values()}) > 1:
+        fehler.append("moneyrace: Tage mit gemischter Zählbasis (Kalendertag und Betriebstag) — Umstellung noch nicht vollständig")
     for tag, m in tmr.items():
         if not (isinstance(m.get("tipps"), int) and isinstance(m.get("treffer"), int) and 0 <= m["treffer"] <= m["tipps"]):
             fehler.append(f"Tag {tag}: moneyrace tipps/treffer unplausibel")
@@ -257,7 +259,7 @@ def zeitraum(b):
     return b["von"], b["bis"]
 
 
-MR_FELDER = ("tipps", "treffer", "quote", "verlustserie", "abgebrochen", "serien", "ab")
+MR_FELDER = ("basis", "tipps", "treffer", "quote", "verlustserie", "abgebrochen", "serien", "ab")
 
 
 def mr_oeffentlich(b):
@@ -291,12 +293,17 @@ def homepage_eintrag(b, data):
     return e
 
 
+def mr_basis(e):
+    """Zählbasis des Money-Race-Blocks. Alte Einträge ohne Feld wurden im Kalendertag gezählt (bis Bot 2411d)."""
+    return (e.get("moneyrace") or {}).get("basis", "kalendertag")
+
+
 def gleich(a, b):
     """Vergleicht Homepage-Eintrag mit Bot-Eintrag auf den Kernzahlen."""
     for k in ("wetten", "treffer"):
         if a["live"].get(k) != b["live"].get(k):
             return False
-    if a.get("moneyrace") and b.get("moneyrace"):
+    if a.get("moneyrace") and b.get("moneyrace") and mr_basis(a) == mr_basis(b):
         for k in ("tipps", "treffer"):
             if a["moneyrace"].get(k) != b["moneyrace"].get(k):
                 return False
@@ -307,7 +314,8 @@ def ergaenze(alt, neu, data):
     """Bereinigt alte Felder (Einsätze/Rendite je Monat/Woche) und ergänzt Ø-Quote und Verlustserie, nie vorhandene Werte überschreiben."""
     geaendert = False
     mr = mr_oeffentlich(neu)
-    if mr and "moneyrace" not in alt:
+    if mr and ("moneyrace" not in alt or mr_basis(alt) != mr_basis(neu)):
+        # einmalige Ausnahme (Daniel/Code 3, 24.11.2026): Money Race wechselt vom Kalendertag auf den Betriebstag, die Historie wird neu berechnet
         alt["moneyrace"] = mr
         geaendert = True
     for k in ALT_FELDER:

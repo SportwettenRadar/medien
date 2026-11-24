@@ -165,7 +165,7 @@ def month_pages(months):
 {('    <tr><th>Abgebrochen oder verschoben</th><td>' + str(MR['abgebrochen']) + '</td></tr>') if MR.get('abgebrochen') is not None else ''}
   </table>
   <p>Money Race meldet immer nur einen Tipp zur selben Zeit. Die Trefferquote gilt je Tipp, abgebrochene oder verschobene Tipps
-  zählen wir getrennt und nicht als Treffer. Einsätze, Euro-Beträge und Rendite zeigen wir nicht. Die Statistik ist von der der Live-Wetten getrennt.</p>
+  zählen wir getrennt und nicht als Treffer. Ein Tag läuft wie bei den Live-Wetten von 08:00 bis 08:00 Uhr. Einsätze, Euro-Beträge und Rendite zeigen wir nicht. Die Statistik ist von der der Live-Wetten getrennt.</p>
 """
         n_ein = "03" if mr_teil else "02"
         n_ord = "04" if mr_teil else "03"
