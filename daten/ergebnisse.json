@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-24T15:53:49+01:00",
+ "stand": "2026-11-24T16:36:33+01:00",
  "tage": [
   {
    "datum": "2026-09-01",
@@ -1677,6 +1677,25 @@
     "treffer": 294,
     "rendite": 0.8,
     "gewinn": 3.8
+   },
+   "moneyrace": {
+    "basis": "kalendertag",
+    "tipps": 10,
+    "treffer": 8,
+    "quote": 1.31,
+    "verlustserie": 1,
+    "abgebrochen": 0,
+    "serien": {
+     "gestartet": 3,
+     "beendet_step1": 0,
+     "beendet_step2": 1,
+     "beendet_step3_4": 1,
+     "beendet_ab5": 0,
+     "erreicht5": 0,
+     "erreicht10": 0,
+     "erreicht15": 0,
+     "erreicht20": 0
+    }
    }
   },
   {
@@ -2054,23 +2073,23 @@
    },
    "moneyrace": {
     "basis": "kalendertag",
-    "tipps": 51,
-    "treffer": 40,
+    "tipps": 61,
+    "treffer": 48,
     "quote": 1.3,
     "verlustserie": 3,
     "abgebrochen": 0,
     "serien": {
-     "gestartet": 11,
+     "gestartet": 14,
      "beendet_step1": 4,
-     "beendet_step2": 0,
-     "beendet_step3_4": 3,
+     "beendet_step2": 1,
+     "beendet_step3_4": 4,
      "beendet_ab5": 4,
      "erreicht5": 3,
      "erreicht10": 2,
      "erreicht15": 0,
      "erreicht20": 0
     },
-    "ab": "2026-11-21"
+    "ab": "2026-11-20"
    }
   }
  ],
