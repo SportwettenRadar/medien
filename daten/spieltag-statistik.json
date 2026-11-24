@@ -1,273 +1,12 @@
 {
  "version": 1,
- "stand": "2026-11-23T08:10:27+01:00",
+ "stand": "2026-11-24T08:10:24+01:00",
  "ligen": [
-  {
-   "liga": "Premier League",
-   "spieltag": 11,
-   "stand": {
-    "datum": "2026-11-23",
-    "spieltage": 11,
-    "spiele": 109
-   },
-   "kennzahlen": {
-    "heim_ungeschlagen": [
-     {
-      "team": "Hull City",
-      "heimspiele": 6,
-      "siege": 2,
-      "remis": 4,
-      "niederlagen": 0
-     },
-     {
-      "team": "Arsenal",
-      "heimspiele": 5,
-      "siege": 5,
-      "remis": 0,
-      "niederlagen": 0
-     },
-     {
-      "team": "Brighton",
-      "heimspiele": 5,
-      "siege": 4,
-      "remis": 1,
-      "niederlagen": 0
-     },
-     {
-      "team": "Leeds",
-      "heimspiele": 5,
-      "siege": 2,
-      "remis": 3,
-      "niederlagen": 0
-     }
-    ],
-    "auswaerts_immer_getroffen": [
-     {
-      "team": "Bournemouth",
-      "auswaertsspiele": 5
-     },
-     {
-      "team": "Liverpool",
-      "auswaertsspiele": 5
-     },
-     {
-      "team": "Manchester City",
-      "auswaertsspiele": 5
-     },
-     {
-      "team": "Newcastle",
-      "auswaertsspiele": 5
-     }
-    ],
-    "heim_immer_getroffen": [
-     {
-      "team": "Arsenal",
-      "heimspiele": 5
-     },
-     {
-      "team": "Brentford",
-      "heimspiele": 5
-     },
-     {
-      "team": "Brighton",
-      "heimspiele": 5
-     },
-     {
-      "team": "Fulham",
-      "heimspiele": 5
-     }
-    ],
-    "tore_schnitt": {
-     "wert": 2.74,
-     "spiele": 109
-    },
-    "ueber_2_5_anteil": {
-     "wert": 0.47,
-     "spiele": 109
-    }
-   },
-   "spiele_heute": [
-    {
-     "heim": "Brentford",
-     "gast": "Everton",
-     "anstoss": "21:00"
-    }
-   ]
-  },
-  {
-   "liga": "La Liga",
-   "spieltag": 13,
-   "stand": {
-    "datum": "2026-11-23",
-    "spieltage": 13,
-    "spiele": 128
-   },
-   "kennzahlen": {
-    "heim_ungeschlagen": [
-     {
-      "team": "Real Madrid",
-      "heimspiele": 6,
-      "siege": 6,
-      "remis": 0,
-      "niederlagen": 0
-     }
-    ],
-    "auswaerts_immer_getroffen": [
-     {
-      "team": "Espanyol",
-      "auswaertsspiele": 7
-     },
-     {
-      "team": "Barcelona",
-      "auswaertsspiele": 6
-     },
-     {
-      "team": "Sevilla",
-      "auswaertsspiele": 6
-     }
-    ],
-    "heim_immer_getroffen": [
-     {
-      "team": "Barcelona",
-      "heimspiele": 7
-     },
-     {
-      "team": "Atletico Madrid",
-      "heimspiele": 6
-     },
-     {
-      "team": "Real Betis",
-      "heimspiele": 6
-     },
-     {
-      "team": "Real Madrid",
-      "heimspiele": 6
-     }
-    ],
-    "zu_null_serie": [
-     {
-      "team": "Espanyol",
-      "serie": 3
-     }
-    ],
-    "tore_schnitt": {
-     "wert": 2.88,
-     "spiele": 128
-    },
-    "ueber_2_5_anteil": {
-     "wert": 0.55,
-     "spiele": 128
-    }
-   },
-   "spiele_heute": [
-    {
-     "heim": "Levante",
-     "gast": "Elche",
-     "anstoss": "21:00"
-    }
-   ]
-  },
-  {
-   "liga": "Serie A",
-   "spieltag": 12,
-   "stand": {
-    "datum": "2026-11-23",
-    "spieltage": 12,
-    "spiele": 119
-   },
-   "kennzahlen": {
-    "heim_ungeschlagen": [
-     {
-      "team": "AS Roma",
-      "heimspiele": 6,
-      "siege": 5,
-      "remis": 1,
-      "niederlagen": 0
-     },
-     {
-      "team": "Inter",
-      "heimspiele": 6,
-      "siege": 6,
-      "remis": 0,
-      "niederlagen": 0
-     },
-     {
-      "team": "Lazio",
-      "heimspiele": 6,
-      "siege": 5,
-      "remis": 1,
-      "niederlagen": 0
-     },
-     {
-      "team": "Como",
-      "heimspiele": 5,
-      "siege": 4,
-      "remis": 1,
-      "niederlagen": 0
-     }
-    ],
-    "auswaerts_immer_getroffen": [
-     {
-      "team": "AC Milan",
-      "auswaertsspiele": 6
-     },
-     {
-      "team": "Inter",
-      "auswaertsspiele": 6
-     },
-     {
-      "team": "Lazio",
-      "auswaertsspiele": 6
-     },
-     {
-      "team": "Monza",
-      "auswaertsspiele": 6
-     }
-    ],
-    "heim_immer_getroffen": [
-     {
-      "team": "AC Milan",
-      "heimspiele": 6
-     },
-     {
-      "team": "AS Roma",
-      "heimspiele": 6
-     },
-     {
-      "team": "Inter",
-      "heimspiele": 6
-     },
-     {
-      "team": "Lazio",
-      "heimspiele": 6
-     },
-     {
-      "team": "Napoli",
-      "heimspiele": 6
-     }
-    ],
-    "tore_schnitt": {
-     "wert": 3.16,
-     "spiele": 119
-    },
-    "ueber_2_5_anteil": {
-     "wert": 0.6,
-     "spiele": 119
-    }
-   },
-   "spiele_heute": [
-    {
-     "heim": "Monza",
-     "gast": "Fiorentina",
-     "anstoss": "20:45"
-    }
-   ]
-  },
   {
    "liga": "Champions League",
    "spieltag": 4,
    "stand": {
-    "datum": "2026-11-23",
+    "datum": "2026-11-24",
     "spieltage": 4,
     "spiele": 162
    },
@@ -298,6 +37,133 @@
     "ueber_2_5_anteil": {
      "wert": 0.62,
      "spiele": 162
+    }
+   },
+   "spiele_heute": [
+    {
+     "heim": "Bodo/Glimt",
+     "gast": "Lask Linz",
+     "anstoss": "18:45"
+    },
+    {
+     "heim": "Galatasaray",
+     "gast": "Aston Villa",
+     "anstoss": "18:45"
+    },
+    {
+     "heim": "Arsenal",
+     "gast": "Borussia Dortmund",
+     "anstoss": "21:00"
+    },
+    {
+     "heim": "Como",
+     "gast": "AEK Athens FC",
+     "anstoss": "21:00"
+    },
+    {
+     "heim": "Feyenoord",
+     "gast": "FC Porto",
+     "anstoss": "21:00"
+    },
+    {
+     "heim": "Manchester City",
+     "gast": "Napoli",
+     "anstoss": "21:00"
+    },
+    {
+     "heim": "RB Leipzig",
+     "gast": "Lens",
+     "anstoss": "21:00"
+    },
+    {
+     "heim": "Real Madrid",
+     "gast": "PSV Eindhoven",
+     "anstoss": "21:00"
+    },
+    {
+     "heim": "Slovan Bratislava",
+     "gast": "Real Betis",
+     "anstoss": "21:00"
+    }
+   ]
+  },
+  {
+   "liga": "Europa League",
+   "spieltag": 4,
+   "stand": {
+    "datum": "2026-11-24",
+    "spieltage": 4,
+    "spiele": 152
+   },
+   "kennzahlen": {
+    "heim_ungeschlagen": [
+     {
+      "team": "Ferencvarosi TC",
+      "heimspiele": 6,
+      "siege": 5,
+      "remis": 1,
+      "niederlagen": 0
+     },
+     {
+      "team": "Benfica",
+      "heimspiele": 5,
+      "siege": 5,
+      "remis": 0,
+      "niederlagen": 0
+     },
+     {
+      "team": "Beşiktaş",
+      "heimspiele": 5,
+      "siege": 4,
+      "remis": 1,
+      "niederlagen": 0
+     }
+    ],
+    "auswaerts_immer_getroffen": [
+     {
+      "team": "Ferencvarosi TC",
+      "auswaertsspiele": 6
+     },
+     {
+      "team": "Benfica",
+      "auswaertsspiele": 5
+     }
+    ],
+    "heim_immer_getroffen": [
+     {
+      "team": "Ferencvarosi TC",
+      "heimspiele": 6
+     },
+     {
+      "team": "Anderlecht",
+      "heimspiele": 5
+     },
+     {
+      "team": "Benfica",
+      "heimspiele": 5
+     },
+     {
+      "team": "Beşiktaş",
+      "heimspiele": 5
+     }
+    ],
+    "zu_null_serie": [
+     {
+      "team": "Qarabag",
+      "serie": 4
+     },
+     {
+      "team": "Olympiakos Piraeus",
+      "serie": 3
+     }
+    ],
+    "tore_schnitt": {
+     "wert": 2.84,
+     "spiele": 152
+    },
+    "ueber_2_5_anteil": {
+     "wert": 0.58,
+     "spiele": 152
     }
    },
    "spiele_heute": []
