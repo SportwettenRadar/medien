@@ -127,6 +127,108 @@ def skal_k(seiten, ns):
     return res
 
 
+# ---- Money Race (Entscheidung Daniel 24.11.2026): gleiche Tabelle wie Live, aber kompakter; Abschlusskarte "n von m" ----
+MR_MAX = 12   # max. Zeilen je Karussellkarte bzw. Story-Seite (gleichmäßig verteilt)
+BLOCKS = [("live", "Live-Wetten"), ("einzel", "Einzelspiele"), ("moneyrace", "Money Race")]  # feste Reihenfolge überall
+
+
+def teilen(rs, mx):
+    n = max(1, -(-len(rs) // mx)); per = -(-len(rs) // n)
+    return [rs[i * per:(i + 1) * per] for i in range(n)]
+
+
+EX4 = """
+.ab{display:block}
+.ab .bk{background:#0f1d2c;border:2px solid #1b2c40;border-radius:26px;padding:26px 34px 24px;margin-top:20px}
+.ab .bl{font-family:M;font-size:25px;letter-spacing:.16em;color:#8aa0b5;text-transform:uppercase}
+.ab .bn{font-family:B;font-weight:800;font-size:92px;line-height:1.05;margin-top:6px;color:#eef3f8}
+.ab .bn i{font-style:normal;color:#2edb99}.ab .bn s{text-decoration:none;font-size:48px;font-weight:600;color:#a9b8c8;margin-left:12px}
+.ab .bs{font-family:M;font-size:23px;color:#6f8399;margin-top:8px}
+.ab .nl{font-size:27px;line-height:1.4;color:#a9b8c8;margin-top:26px}
+.story .ab{top:392px}.story .ab .bk{padding:38px 44px 34px;margin-top:30px;border-radius:30px}
+.story .ab .bl{font-size:31px}.story .ab .bn{font-size:128px;margin-top:10px}.story .ab .bn s{font-size:66px}.story .ab .bs{font-size:28px;margin-top:12px}
+.story .ab .nl{font-size:32px;margin-top:34px}
+"""
+
+
+def mr_style(n, story):
+    avail = 1010 if story else 700
+    hh = min(72 if story else 62, avail / n - 8)
+    pre = "body>div.story .mr" if story else "body>div:not(.story) .mr"
+    f = hh / 62.0
+    return (f"<style>{pre} .tr{{height:{hh:.0f}px;margin-top:7px;border-radius:{max(12,hh/3):.0f}px;padding:0 22px;font-size:{hh*0.5:.0f}px}}"
+            f"{pre} .tr div{{white-space:nowrap;font-size:{hh*0.5:.0f}px}}"
+            f"{pre} .tr em{{font-size:{hh*0.38:.0f}px;width:50px}}"
+            f"{pre} .tr span{{font-size:{hh*0.42:.0f}px;width:{128*max(f,0.95):.0f}px}}"
+            f"{pre} .tr b{{font-size:{hh*0.5:.0f}px;width:{104*max(f,0.95):.0f}px}}"
+            f"{pre} .tr u{{width:{hh*0.78:.0f}px;height:{hh*0.78:.0f}px;font-size:{hh*0.5:.0f}px;margin-left:16px}}"
+            f"{pre} .th{{font-size:{20 if not story else 24}px;padding:0 22px 6px}}"
+            f"{pre} .th span:nth-child(1){{width:50px}}{pre} .th span:nth-child(3){{width:{128*max(f,0.95):.0f}px}}"
+            f"{pre} .th span:nth-child(4){{width:{104*max(f,0.95):.0f}px}}{pre} .th span:nth-child(5){{width:{hh*0.78+16:.0f}px}}"
+            f"{pre} .leg{{margin-top:18px;font-size:{24 if not story else 28}px}}</style>")
+
+
+def mr_rows(rs, k0, hh):
+    """Wie rows(), aber lange Spielnamen werden verkleinert statt in die Marktspalte zu laufen."""
+    o = ""
+    for i, (sp, mk, q, st) in enumerate(rs):
+        t, c = sym(st); fs = hh * 0.5
+        lim = 27 if hh >= 66 else 30 if hh >= 58 else 34
+        if len(sp) > lim: fs = max(hh * 0.5 * lim / len(sp), hh * 0.3)
+        o += (f'<div class="tr"><em>{k0+i+1}</em><div style="flex:1;min-width:0;overflow:hidden;font-size:{fs:.1f}px;margin-right:12px">{sp}</div>'
+              f'<span>{mk}</span><b>{q}</b><u class="{c}">{t}</u></div>')
+    return o
+
+
+def mr_seiten(titel, rs, story=False, hinweis=None):
+    teile = teilen(rs, MR_MAX); out = []; k0 = 0
+    for i, ch in enumerate(teile):
+        suf = f" · {k0+1}–{k0+len(ch)}" if len(teile) > 1 else ""
+        note = f'<div class="nl">{hinweis}</div>' if (hinweis and i == len(teile) - 1) else ""
+        hh = min(72 if story else 62, (1010 if story else 700) / len(ch) - 8)
+        h = page(titel + suf, '<div class="tb mr">' + HEAD + mr_rows(ch, k0, hh) + LEG + note + '</div>', story)
+        tag_open = '<div class="story">' if story else '<div class="">'
+        out.append(h.replace(tag_open, tag_open + mr_style(len(ch), story), 1)); k0 += len(ch)
+    return out
+
+
+def tag_zahlen(medien, tag):
+    """Tageswerte aus ergebnisse.json (gleiche Quelle wie Telegram und Homepage)."""
+    try:
+        e = json.load(open(os.path.join(medien, "daten", "ergebnisse.json"), encoding="utf-8"))
+    except Exception:
+        return None
+    for x in e.get("tage", []):
+        if x.get("datum") == tag.isoformat(): return x
+    return None
+
+
+def abschluss_daten(medien, tag, gruppen):
+    """Liefert ([(label, treffer, gesamt, basis)], warnungen). Nur Blöcke, die mit den Einträgen übereinstimmen."""
+    z = tag_zahlen(medien, tag); warn = []; out = []
+    if not z: return [], ["Abschlusskarte ausgelassen: kein Tageseintrag in ergebnisse.json"]
+    feld = {"live": ("live", "wetten"), "einzel": ("einzelspiele", "tipps"), "moneyrace": ("moneyrace", "tipps")}
+    basis = {"live": "", "einzel": "", "moneyrace": ""}
+    for art, lab in BLOCKS:
+        es = [x for x in gruppen.get(art, []) if x["ergebnis"] in ("gewonnen", "verloren")]
+        if not es and not gruppen.get(art): continue
+        blk = z.get(feld[art][0])
+        if not blk: warn.append(f"Abschlusskarte ausgelassen: Block {lab} fehlt in ergebnisse.json"); return [], warn
+        ges, tr = blk.get(feld[art][1]), blk.get("treffer")
+        mine = (sum(1 for x in es if x["ergebnis"] == "gewonnen"), len(es))
+        if (tr, ges) != mine:
+            warn.append(f"Abschlusskarte ausgelassen: {lab} ergebnisse.json {tr}/{ges} gegen Einträge {mine[0]}/{mine[1]}"); return [], warn
+        out.append((lab, tr, ges, basis[art]))
+    return out, warn
+
+
+def abschluss_seite(wt, daten, story=False):
+    bl = "".join(f'<div class="bk"><div class="bl">{lab}</div><div class="bn"><i>{tr}</i> von {ges}<s>Treffer</s></div>' +
+                 (f'<div class="bs">{bas}</div>' if bas else '<div class="bs">&nbsp;</div>') + '</div>' for lab, tr, ges, bas in daten)
+    note = '<div class="nl">Alle Auswertungen im Ergebnis-Kanal. Link in der Bio.</div>'
+    return page(f"Auswertung · {wt}", '<div class="tb ab">' + bl + note + '</div>', story)
+
+
 def page(eb, inner, story=False):
     return (f'<div class="{"story" if story else ""}">' + s.RINGS + '<div class="top"><img src="LOGO"><span>Sportwetten Radar</span></div>'
             f'<div class="eb">{eb}</div>{inner}<div class="foot"><span>18+ · Keine Gewinngarantie</span><span>@sportwetten_radar</span></div></div>')
@@ -230,16 +332,17 @@ def main():
     a = ap.parse_args()
     sig, stand = lade(a.medien); os.makedirs(a.out, exist_ok=True)
     heute = D(a.datum)
-    css = s.CSS.replace("FONTS", "file://" + os.path.join(s.HOME, "assets/fonts")) + C.BASE + C.TAB + C.WOCHE + EXTRA + EX2 + EX3
+    css = s.CSS.replace("FONTS", "file://" + os.path.join(s.HOME, "assets/fonts")) + C.BASE + C.TAB + C.WOCHE + EXTRA + EX2 + EX3 + EX4
     man = {"modus": a.modus, "datum": a.datum, "stand": stand, "status": "ok", "fehler": []}
     if a.modus == "tag":
         tag = heute - dt.timedelta(days=1)
         live, ein = eintraege(sig, tag, tag, "live"), eintraege(sig, tag, tag, "einzel")
-        if not live and not ein: man["status"] = "stopp"; man["fehler"].append(f"keine Einträge für {tag}")
-        elif any(x["ergebnis"] not in STATUS_OK for x in live + ein): man["status"] = "stopp"; man["fehler"].append("Einträge ohne Ergebnis")
+        mr = eintraege(sig, tag, tag, "moneyrace")
+        if not live and not ein and not mr: man["status"] = "stopp"; man["fehler"].append(f"keine Einträge für {tag}")
+        elif any(x["ergebnis"] not in STATUS_OK for x in live + ein + mr): man["status"] = "stopp"; man["fehler"].append("Einträge ohne Ergebnis")
         elif stand[:10] != a.datum: man["status"] = "stopp"; man["fehler"].append(f"signale.json Stand {stand}, erwartet {a.datum}")
         if man["status"] != "ok": json.dump(man, open(os.path.join(a.out, "manifest.json"), "w"), ensure_ascii=False, indent=1); print(json.dumps(man, ensure_ascii=False)); return 3
-        lr, er = [zeile(x) for x in live], [zeile(x) for x in ein]
+        lr, er, mrr = [zeile(x) for x in live], [zeile(x) for x in ein], [zeile(x) for x in mr]
         wt = f"{WK[tag.weekday()]} {dm(tag)}"; HW = "Alle Auswertungen im Ergebnis-Kanal. Link in der Bio."
         ks, ss = [], []
         nk = []
@@ -248,25 +351,32 @@ def main():
         if er: ks.append(einzel_seite(f"Einzelspiele · {wt}", er)); nk.append(len(er))
         nh = len(ks) - len(nk)
         ks = skal_k(ks, nk)
+        if mrr: ks += mr_seiten(f"Money Race · {wt}", mrr)
         ks.append(hinweis_seite("So lesen", "Gewonnen und verloren stehen nebeneinander.",
                   ["Jeder Eintrag wird ausgewertet, auch die verlorenen. Nichts wird nachträglich geändert.",
                    "Ein einzelner Tag sagt wenig. Die komplette Auswertung steht im Ergebnis-Kanal, Link in der Bio."]))
+        gruppen = {"live": live, "einzel": ein, "moneyrace": mr}
+        abdat, abwarn = abschluss_daten(a.medien, tag, gruppen)
+        man["warnungen"] = abwarn + ([] if mrr else [f"Money Race: keine Einträge für {tag} in signale.json (Betriebstag evtl. noch nicht freigegeben)"])
+        if abdat: ks.append(abschluss_seite(wt, abdat))
         ns = []
         if lr:
             sl = tabellen(f"Live-Wetten · {wt}", lr, k0_max=STORY_MAX, story=True, hinweis=None if er else HW)
             ss += sl; ns += [len(lr[i:i + STORY_MAX]) for i in range(0, len(lr), STORY_MAX)]
         if er: ss.append(einzel_seite(f"Einzelspiele · {wt}", er, story=True, hinweis=HW)); ns.append(len(er))
         ss = skal(ss, ns)
+        if mrr: ss += mr_seiten(f"Money Race · {wt}", mrr, story=True)
+        if abdat: ss.append(abschluss_seite(wt, abdat, story=True))
         man["karussell"] = render_html(ks, css, 1350, a.out, "k"); man["stories"] = render_html(ss, css, 1920, a.out, "s")
         if not a.ohne_reel and (lr or er):
             man["reel_sekunden"] = round(reel(lr, er, WT[tag.weekday()], os.path.join(a.out, "reel.mp4")), 1); man["reel"] = "reel.mp4"
         long = f"{WT[tag.weekday()]}, {tag.strftime('%d.%m.%Y')}"
         man["texte"] = {
-            "instagram": f"Auswertung vom {long}: alle Einträge, gewonnen wie verloren. Nichts wird aussortiert.\n\nAlle Auswertungen öffentlich im Ergebnis-Kanal. Link in der Bio.\n\n{PFLICHT}\n\n{HASH}",
+            "instagram": f"Auswertung vom {long}: alle Einträge von Live-Wetten, Einzelspielen und Money Race, gewonnen wie verloren. Nichts wird aussortiert.\n\nAlle Auswertungen öffentlich im Ergebnis-Kanal. Link in der Bio.\n\n{PFLICHT}\n\n{HASH}",
             "tiktok": f"Auswertung vom {long}: alle Einträge, gewonnen wie verloren. Link in der Bio. {PFLICHT} #Fußball #Statistik",
             "youtube_titel": f"Auswertung {WK[tag.weekday()]} {dm(tag)}: alle Einträge",
             "youtube": f"Auswertung vom {long}: alle Live-Wetten und Einzelspiele, gewonnen wie verloren. Nichts wird aussortiert oder nachträglich geändert.\nAlle Auswertungen öffentlich im Ergebnis-Kanal, Link in der Kanalbeschreibung.\n\n{PFLICHT}"}
-        man["anzahl"] = {"live": len(lr), "einzel": len(er)}
+        man["anzahl"] = {"live": len(lr), "einzel": len(er), "moneyrace": len(mrr)}
     else:
         if a.modus == "woche":
             bis = heute - dt.timedelta(days=1); von = bis - dt.timedelta(days=6); eb = f"Woche {dm(von)}–{dm(bis)}"
