@@ -329,7 +329,7 @@ WISSEN = [
   <h2><span class="num">06</span>Einsatzmodelle und Progression</h2>
   <p>Im Mitgliederkanal zeigen wir zusätzlich ein Rechenbeispiel, bei dem der Einsatz nach Verlusten steigt (Progression),
   immer im Vergleich „ohne Progression“. Das ist keine Einsatzempfehlung, die Nutzung erfolgt eigenverantwortlich.
-  Progressionsmodelle können schneller zu hohen Verlusten führen und brauchen mehr Kapital. Vergangene Ergebnisse sind kein
+  Progressionsmodelle können schneller zu hohen Verlusten führen und brauchen mehr Kapital. Weder die Analyse noch ein Einsatzmodell verändert die Wahrscheinlichkeit, dass eine Wette gewinnt. Vergangene Ergebnisse sind kein
   Versprechen für die Zukunft.</p>
 """, "2026-10-27"),
     ("verlustserien.html",
@@ -479,7 +479,7 @@ WISSEN = [
   <h2><span class="num">02</span>Warum Markt und Spielverlauf auseinanderlaufen können</h2>
   <p>Live-Quoten reagieren stark auf Spielstand und verbleibende Zeit. Ob eine Mannschaft gerade Druck macht
   und Chancen herausspielt, fließt nicht immer sofort ein. In solchen Momenten kann die Quote vom tatsächlichen
-  Spielgeschehen abweichen. Eine datenbasierte Analyse sucht genau diese Momente.</p>
+  Spielgeschehen abweichen. Eine datenbasierte Analyse macht solche Abweichungen sichtbar; ob eine Wette gewinnt, sagt sie nicht voraus.</p>
 
   <h2><span class="num">03</span>Die Grenzen</h2>
   <ul>
@@ -643,8 +643,8 @@ WISSEN = [
     <li>Quoten reagieren auf Stand und Spielzeit, nicht immer auf alles, was auf dem Platz passiert. Daten über den
     Spielverlauf können deshalb eine Abweichung zeigen (mehr dazu unter
     <a href="live-wetten-analyse.html">Live-Wetten und Spieldaten</a>).</li>
-    <li>Wetten wie <a href="ueber-1-5-tore.html">Über 1,5 Tore</a> lassen sich in der Restzeit genauer einschätzen
-    als vor dem Spiel.</li>
+    <li>Wetten wie <a href="ueber-1-5-tore.html">Über 1,5 Tore</a> werden in der Restzeit mit mehr Spieldaten betrachtet
+    als vor dem Spiel, ohne dass das den Ausgang vorhersagbar macht.</li>
   </ul>
 
   <h2><span class="num">02</span>Was dagegen spricht</h2>
