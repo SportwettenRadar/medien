@@ -17,3 +17,11 @@ OFFEN: Speicherung einer Kopie der Mail? Dauer? (Code 3 fragen)
 Nutzen Sie die Widerrufsfunktion auf unserer Website, verarbeiten wir Ihren Namen, die Bezeichnung des Vertrags, Ihre E-Mail-Adresse und den Zeitpunkt des Eingangs, um Ihren Widerruf zuzuordnen, auszuführen und den Eingang zu bestätigen. Die Angaben werden beim Absenden an unsere Anwendung bei PythonAnywhere (Ziffer 3.4) übermittelt und dort als Nachweis gespeichert. Die Eingangsbestätigung senden wir Ihnen per E-Mail über unser Postfach bei STRATO (Ziffer 4); eine Kopie geht an support@sportwetten-radar.net. Die Widerrufserklärung wird bis zum Ablauf der gesetzlichen Verjährungsfristen aufbewahrt. Rechtsgrundlagen: Art. 6 Abs. 1 lit. b und lit. c DS-GVO (§ 356a BGB).
 OFFEN: Verarbeitet /widerrufen die IP-Adresse wie /kuendigen (Rate-Limit)? Wenn ja, den IP-Absatz aus 3.6 übernehmen. Telegram-Nachricht als zusätzliche Bestätigung? (Code 3 fragen)
 Nummerierung: neue Abschnitte als 3.7 und 3.8, bisherige 3.7–3.9 rücken auf 3.9–3.11; Querverweise prüfen.
+
+## Grundsatz (Daniel, 25.11. 16:02): Minimallinie
+Nur das gesetzlich Notwendige, nirgends Werbung mit dem Widerruf. Pflicht-Bausteine (mehr nicht):
+1. Widerrufsbelehrung mit Muster-Formular in den AGB, vor der Zahlung im Bestellprozess verlinkt.
+2. Checkbox: ausdrückliches Verlangen auf sofortigen Beginn + Kenntnis vom anteiligen Wertersatz.
+3. Vertragsbestätigung per E-Mail nach der Buchung (Belehrung, Muster-Formular, Link zur Widerrufsfunktion).
+4. Widerrufsfunktion: widerrufen.html, ein Footer-Link „Vertrag widerrufen“, Hinweis in der Belehrung, Eingangsbestätigung per E-Mail.
+Nicht tun: Widerruf auf Startseite, Preisen, FAQ, Kanaltexten, Begrüßung oder Erinnerungen erwähnen. Nicht verstecken oder erschweren (Dark Patterns): die Funktion muss während der 14 Tage leicht auffindbar und ohne Login bedienbar sein.
