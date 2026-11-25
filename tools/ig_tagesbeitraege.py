@@ -133,8 +133,12 @@ BLOCKS = [("live", "Live-Wetten"), ("einzel", "Einzelspiele"), ("moneyrace", "Mo
 
 
 def teilen(rs, mx):
-    n = max(1, -(-len(rs) // mx)); per = -(-len(rs) // n)
-    return [rs[i * per:(i + 1) * per] for i in range(n)]
+    """Seiten bis zum Maximum füllen (Daniel 25.11.: 12 pro Seite). Blieben nur 1-2 Zeilen übrig, bekommt die letzte Seite 3 (von der vorletzten)."""
+    if len(rs) <= mx: return [rs]
+    gr = [list(rs[i:i + mx]) for i in range(0, len(rs), mx)]
+    if len(gr[-1]) < 3:
+        fehlt = 3 - len(gr[-1]); gr[-1] = gr[-2][-fehlt:] + gr[-1]; gr[-2] = gr[-2][:-fehlt]
+    return gr
 
 
 EX4 = """
