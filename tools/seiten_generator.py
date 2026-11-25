@@ -64,7 +64,7 @@ def head(title, desc, path):
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/logo-icon-small.png" type="image/png">
+<link rel="icon" href="assets/logo-ring-small.png" type="image/png">
 <link rel="stylesheet" href="style.css?v={V}">
 <script>function loadScript(a){{var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}}loadScript(function(){{beTracker.t({{hash:"e60965c637f67cfd464d124c72f26885"}})}});</script>
 </head>
