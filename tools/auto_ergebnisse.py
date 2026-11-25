@@ -438,7 +438,7 @@ KOPF = """/* ===================================================================
 
    Anzeige-Regeln (Daniel, 06.11.2026):
    - Tage, Wochen, Monate: Wetten, Treffer (mit Prozent) und Ø-Quote. KEINE Einsätze, KEINE Rendite.
-   - Einsätze und Rendite stehen NICHT auf der Homepage (nur in den Telegram-Kanälen, je Kalenderjahr ab 100 Live-Wetten).
+   - Einsätze und Rendite stehen NICHT auf der Homepage (nur im Mitgliederkanal).
    - Jahreskurve: kumulierte Trefferquote je Tag, erst ab 100 Live-Wetten im Jahr, Beginn ab 20 Wetten (Entscheidung 09.11.2026).
    - Ø-Quote = Durchschnitt der Quoten aller gesetzten Live-Wetten des Zeitraums.
    - Einzelspiele (Daniel, 14.11.2026): eigene Kurve der kumulierten Trefferquote (ohne Quote), gleiche Schwellen (Beginn ab 20, Veröffentlichung ab 100 Tipps im Jahr).

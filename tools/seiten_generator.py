@@ -165,7 +165,7 @@ def month_pages(months):
 {('    <tr><th>Abgebrochen oder verschoben</th><td>' + str(MR['abgebrochen']) + '</td></tr>') if MR.get('abgebrochen') is not None else ''}
   </table>
   <p>Money Race meldet immer nur einen Tipp zur selben Zeit. Die Trefferquote gilt je Tipp, abgebrochene oder verschobene Tipps
-  zählen wir getrennt und nicht als Treffer. Ein Tag läuft wie bei den Live-Wetten von 08:00 bis 08:00 Uhr. Einsätze, Euro-Beträge und Rendite zeigen wir nicht. Die Statistik ist von der der Live-Wetten getrennt.</p>
+  zählen wir getrennt und nicht als Treffer. Ein Tag läuft wie bei den Live-Wetten von 08:00 bis 08:00 Uhr. Einsätze und Rendite: im Mitgliederkanal. Die Statistik ist von der der Live-Wetten getrennt.</p>
 """
         n_ein = "03" if mr_teil else "02"
         n_ord = "04" if mr_teil else "03"
@@ -199,8 +199,7 @@ def month_pages(months):
 {('    <tr><th>Ø-Quote</th><td>' + de(qu, 2) + '</td></tr>') if qu else ''}
     <tr><th>Längste Verlustserie</th><td>{L['verlustserie']} in Folge</td></tr>
   </table>
-  <p>Ø-Quote ist der Durchschnitt der Quoten aller gesetzten Live-Wetten des Monats. Einsätze und Rendite zeigen wir auf
-  dieser Webseite nicht. Die ausführliche Auswertung mit Rendite in Prozent und gewonnenen Einheiten findest du je Kalenderjahr in unseren Telegram-Kanälen, sobald 100 Live-Wetten vorliegen, nicht je Monat: Ein einzelner Monat ist zu stark vom Zufall abhängig.
+  <p>Ø-Quote ist der Durchschnitt der Quoten aller gesetzten Live-Wetten des Monats. Einsätze und Rendite: im Mitgliederkanal. Auf dieser Webseite zeigen wir sie nicht, auch nicht je Monat: Ein einzelner Monat ist zu stark vom Zufall abhängig.
   Verlustserien gehören dazu. Wie wir rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
 
@@ -278,7 +277,7 @@ WISSEN = [
   <h2><span class="num">04</span>Was Sportwetten Radar macht</h2>
   <p>Sportwetten Radar wertet laufende Spiele in Echtzeit aus und meldet per Telegram eine Live-Wette,
   sobald die Spieldaten eine Gelegenheit zeigen, die der Wettmarkt noch nicht abbildet. Wir vermitteln
-  keine Wetten und nennen keine Einsätze. Die Entscheidung bleibt bei dir. Wie es bisher gelaufen ist,
+  keine Wetten und geben keine Einsatzempfehlung. Die Entscheidung bleibt bei dir. Wie es bisher gelaufen ist,
   steht im <a href="index.html#trackrecord">Trackrecord</a> und in den <a href="monatsberichte.html">Monatsberichten</a>.</p>
 """, "2026-10-27"),
     ("rendite-erklaert.html",
@@ -291,8 +290,7 @@ WISSEN = [
 
   <h2><span class="num">01</span>Gleicher Einsatz pro Wette</h2>
   <p>Wir rechnen so, als wäre jede Live-Wette mit demselben Einsatz gespielt worden. Diesen Grundeinsatz
-  nennen wir „1 Einsatz“. Ob das bei dir 5 € oder 50 € sind, entscheidest du selbst. Wir nennen keine
-  Beträge. So bleiben die Zahlen für jeden vergleichbar.</p>
+  nennen wir „1 Einsatz“. Wie viel du einsetzt, entscheidest du eigenverantwortlich. Wir geben keine Einsatzempfehlung. Beträge nennen wir nur als Rechenbeispiel. So bleiben die Zahlen für jeden vergleichbar.</p>
 
   <h2><span class="num">02</span>Rechenbeispiel</h2>
   <p>Angenommen, du spielst 10 Wetten mit je 1 Einsatz zu einer Quote von 1,60:</p>
@@ -313,15 +311,20 @@ WISSEN = [
   <p>Ab welcher Trefferquote du im Plus bist, hängt von der Quote ab: bei 1,60 ab 62,5 %, bei 1,80
   ab 55,6 %, bei 1,40 erst ab 71,4 %. Wer eine hohe Trefferquote mit niedrigen Quoten erreicht, kann
   trotzdem verlieren (wie eine Quote in eine Wahrscheinlichkeit übersetzt wird, steht unter
-  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten neben der Trefferquote immer die Durchschnittsquote (Ø-Quote). Mit beiden kannst du selbst nachrechnen, ob die Treffer reichen: Die Gewinnschwelle liegt bei 1 ÷ Quote. Rendite in Prozent und gewonnene Einheiten weisen wir je Kalenderjahr in unseren Telegram-Kanälen aus, sobald 100 Live-Wetten vorliegen. Auf dieser Webseite zeigen wir sie nicht, und für Tage, Wochen und Monate gar nicht, weil kurze Zeiträume stark vom Zufall abhängen.
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten neben der Trefferquote immer die Durchschnittsquote (Ø-Quote). Mit beiden kannst du selbst nachrechnen, ob die Treffer reichen: Die Gewinnschwelle liegt bei 1 ÷ Quote. Einsätze und Rendite: im Mitgliederkanal. Die Jahres-Rendite gilt ohne Progression, also bei gleichem Einsatz auf jede Live-Wette. Auf dieser Webseite zeigen wir sie nicht, und für Tage, Wochen und Monate gar nicht, weil kurze Zeiträume stark vom Zufall abhängen.
   Für <a href="index.html#produkt">Einzelspiele zum Kombinieren</a> zeigen wir nur die Trefferquote, weil
   jeder seinen Wettschein selbst zusammenstellt und es keine einheitliche Quote gibt.</p>
 
   <h2><span class="num">05</span>Was die Rendite nicht ist</h2>
-  <p>Die Rendite beschreibt die Vergangenheit, nicht die Zukunft. Sie gilt nur, wenn wirklich jede Live-Wette
-  mit gleichem Einsatz mitgespielt wurde. Deine Quote beim Buchmacher kann leicht von der Quote zum
+  <p>Die Rendite beschreibt die Vergangenheit, nicht die Zukunft. Sie gilt ohne Progression, also nur, wenn wirklich jede Live-Wette mit gleichem Einsatz mitgespielt wurde. Deine Quote beim Buchmacher kann leicht von der Quote zum
   Zeitpunkt unserer Analyse abweichen. Und auch ein starker Zeitraum schützt nicht vor schwachen Wochen,
   siehe <a href="verlustserien.html">Verlustserien</a>.</p>
+
+  <h2><span class="num">06</span>Einsatzmodelle und Progression</h2>
+  <p>Im Mitgliederkanal zeigen wir zusätzlich ein Rechenbeispiel, bei dem der Einsatz nach Verlusten steigt (Progression),
+  immer im Vergleich „ohne Progression“. Das ist keine Einsatzempfehlung, die Nutzung erfolgt eigenverantwortlich.
+  Progressionsmodelle können schneller zu hohen Verlusten führen und brauchen mehr Kapital. Vergangene Ergebnisse sind kein
+  Versprechen für die Zukunft.</p>
 """, "2026-10-27"),
     ("verlustserien.html",
      "Verlustserien bei Sportwetten: Warum sie normal sind — Sportwetten Radar",
@@ -350,11 +353,9 @@ WISSEN = [
   der Trefferquote im <a href="index.html#trackrecord">Trackrecord</a> zeigt, wie sie zwischendurch schwankt. Wer nur Gewinne zeigt, verschweigt die Hälfte. Wer vorher weiß, wie tief es zwischendurch
   gehen kann, gerät nicht in Panik, wenn es passiert.</p>
 
-  <h2><span class="num">03</span>Fester Einsatz statt Verdoppeln</h2>
+  <h2><span class="num">03</span>Einsatz und Verlustserien</h2>
   <p>Nach einer Serie ist die Versuchung groß, den Einsatz zu erhöhen, um Verluste „zurückzuholen“.
-  Genau das macht aus einer normalen Serie einen großen Verlust. Unsere Zahlen gelten für einen festen
-  Einsatz pro Wette. Setze nur, was du bereit bist zu verlieren, und erhöhe den Einsatz nicht nach
-  Verlusten.</p>
+  Genau das kann aus einer normalen Serie einen großen Verlust machen. Unsere Jahres-Rendite gilt ohne Progression, also für einen gleichen Einsatz pro Wette. Wir geben keine Einsatzempfehlung: Wie viel du einsetzt, entscheidest du eigenverantwortlich. Ein Modell mit steigenden Einsätzen nach Verlusten (Progression) kann Verluste schneller vergrößern und braucht mehr Kapital. Setze nur, was du bereit bist zu verlieren.</p>
 
   <h2><span class="num">04</span>Wenn es sich nicht mehr gut anfühlt</h2>
   <p>Wenn du merkst, dass du Verlusten hinterherjagst oder mehr setzt als geplant, mach eine Pause.
@@ -411,7 +412,7 @@ WISSEN = [
 
   <h2><span class="num">05</span>Unsere Zahlen</h2>
   <p>Alle Ergebnisse stehen im <a href="index.html#trackrecord">Trackrecord</a> und in den
-  <a href="monatsberichte.html">Monatsberichten</a>, auch die schwachen Monate. Wie wir Rendite rechnen, erklären wir unter
+  <a href="monatsberichte.html">Monatsberichten</a>, auch die schwachen Monate. Einsätze und Rendite: im Mitgliederkanal, auf der Webseite zeigen wir sie nicht. Wie wir Rendite rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
 """, "2026-11-11"),
     ("seriose-tippgeber-erkennen.html",
@@ -437,7 +438,7 @@ WISSEN = [
 
   <h2><span class="num">02</span>Typische Warnzeichen</h2>
   <ul>
-    <li>„100 % sicher“, „Fixed Matches“, „garantierter Gewinn“ oder „Verluste zurückholen“</li>
+    <li>„100 % sicher“, „Fixed Matches“, „garantierter Gewinn“ oder das Versprechen, Verluste mit höheren Einsätzen sicher „zurückzuholen“</li>
     <li>Screenshots von Wettscheinen mit hohen Gewinnen, aber keine vollständige Bilanz</li>
     <li>Zeitdruck: „Nur heute“, „Letzte Plätze“, „Jetzt oder nie“</li>
     <li>Zahlung per Krypto, Gutscheinkarte oder an private Konten</li>
@@ -681,7 +682,7 @@ WISSEN = [
 
   <h2><span class="num">06</span>Unser Ansatz</h2>
   <p>Sportwetten Radar wertet laufende Spiele aus und zeigt, welche Live-Wetten dabei auffallen. Wir vermitteln
-  keine Wetten und nennen keine Einsätze. Wie es bisher lief, steht im
+  keine Wetten und geben keine Einsatzempfehlung. Wie es bisher lief, steht im
   <a href="index.html#trackrecord">Trackrecord</a> und in den <a href="monatsberichte.html">Monatsberichten</a>,
   mit den schwachen Phasen. Das ist kein Versprechen für die Zukunft. Wetten kann Geld kosten. Setze nie mehr, als du
   bereit bist zu verlieren. Hilfe bei Spielproblemen:
@@ -803,7 +804,7 @@ WISSEN = [
 
   <h2><span class="num">06</span>Was Sportwetten Radar daraus macht</h2>
   <p>Neben den <a href="live-wetten-ueber-unter.html">Live-Wetten</a> liefern wir bis zu fünf Einzelspiele pro Tag, die du
-  selbst kombinieren kannst, wenn du möchtest. Wir vermitteln keine Wetten und nennen keine Einsätze. Weil jeder seinen Schein
+  selbst kombinieren kannst, wenn du möchtest. Wir vermitteln keine Wetten und geben keine Einsatzempfehlung. Weil jeder seinen Schein
   selbst zusammenstellt, gibt es keine einheitliche Quote. Deshalb zeigen wir bei den Einzelspielen nur die Trefferquote je Tipp,
   im <a href="index.html#trackrecord">Trackrecord</a> mit den schwachen Phasen. Eine Kombi trifft nur, wenn alle Tipps treffen.
   Das Beispiel hier ist ein Rechenbeispiel, keine Empfehlung. Wetten kann Geld kosten. Setze nie mehr, als du bereit bist
@@ -863,8 +864,7 @@ WISSEN = [
   <h2><span class="num">06</span>Was Sportwetten Radar daraus macht</h2>
   <p>Wir zeigen im <a href="index.html#trackrecord">Trackrecord</a> die Trefferquote zusammen mit der Durchschnittsquote
   und der daraus folgenden Gewinnschwelle, auch in schwachen Phasen. Erst ab einer größeren Zahl gewerteter Wetten
-  zeigen wir eine Kurve, weil kleine Stichproben vom Zufall bestimmt werden. Wir vermitteln keine Wetten und nennen keine
-  Einsätze. Das Rechenbeispiel hier ist keine Empfehlung. Wetten kann Geld kosten. Setze nie mehr, als du bereit bist zu verlieren.
+  zeigen wir eine Kurve, weil kleine Stichproben vom Zufall bestimmt werden. Wir vermitteln keine Wetten und geben keine Einsatzempfehlung. Das Rechenbeispiel hier ist keine Empfehlung. Wetten kann Geld kosten. Setze nie mehr, als du bereit bist zu verlieren.
   Ab 18. Hilfe bei Spielproblemen:
   <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
 """, "2026-11-24"),
