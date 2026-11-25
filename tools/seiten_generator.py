@@ -186,9 +186,15 @@ def month_pages(months):
         nachbarn.append('<a href="monatsberichte.html">Alle Monatsberichte</a>')
         if i < len(months) - 1:
             nachbarn.append(f'<a href="monatsbericht-{months[i+1]["monat"]}.html">{mname(months[i+1]["monat"])} →</a>')
+        if m.get("rueckrechnung"):
+            testsatz = (" Der ganze Monat war Testphase und ist mit den Regeln vom 11.10.2026 berechnet."
+                        if m["monat"] == "2026-09" else
+                        " Die Zeit bis 10.10. war Testphase und ist mit den Regeln vom 11.10.2026 berechnet; ab 11.10. zählt jede verschickte Live-Wette.")
+        else:
+            testsatz = ""
         inner = f"""
   <p>Am 1. jedes Monats veröffentlichen wir den Monatsbericht für den Vormonat. Hier stehen alle Zahlen für
-  {name} — auch die unangenehmen. Nichts wird im Nachhinein aussortiert.</p>
+  {name} — auch die unangenehmen. Nichts wird im Nachhinein aussortiert.{testsatz}</p>
 
   {tr_block(m["monat"])}
 
@@ -276,7 +282,7 @@ WISSEN = [
 
   <h2><span class="num">04</span>Was Sportwetten Radar macht</h2>
   <p>Sportwetten Radar wertet laufende Spiele in Echtzeit aus und meldet per Telegram eine Live-Wette,
-  sobald die Spieldaten eine Gelegenheit zeigen, die der Wettmarkt noch nicht abbildet. Wir vermitteln
+  sobald die Spieldaten eine Abweichung zeigen, die unser Modell als auffällig einstuft. Wir vermitteln
   keine Wetten und geben keine Einsatzempfehlung. Die Entscheidung bleibt bei dir. Wie es bisher gelaufen ist,
   steht im <a href="index.html#trackrecord">Trackrecord</a> und in den <a href="monatsberichte.html">Monatsberichten</a>.</p>
 """, "2026-10-27"),
@@ -401,7 +407,7 @@ WISSEN = [
   ausgewertet ist, mit Ergebnis, Quote und Treffer oder Fehlschlag. Dazu kommen die Tages-, Wochen- und Monatsbilanzen.
   So entsteht ein Trackrecord, den du selbst nachprüfen kannst, auch mit den schwachen Tagen. Die Zusammenfassung
   pro Monat steht außerdem auf der Homepage unter <a href="monatsberichte.html">Monatsberichte</a>.
-  Der Kanal ist keine Wettempfehlung und enthält keine Gewinnversprechen. 18+, Hilfe bei Spielproblemen:
+  Der Kanal enthält keine Gewinnversprechen, keine Einsatzempfehlung und keine individuelle Beratung. 18+, Hilfe bei Spielproblemen:
   <a href="https://www.check-dein-spiel.de" target="_blank" rel="noopener">check-dein-spiel.de</a>.</p>
 
   <h2><span class="num">04</span>Worauf du bei Telegram-Tipps achten solltest</h2>
@@ -427,10 +433,10 @@ WISSEN = [
   <h2><span class="num">01</span>8 Merkmale seriöser Tippgeber</h2>
   <ul>
     <li><strong>Erkennbarer Betreiber:</strong> Impressum mit ladungsfähiger Anschrift, Datenschutzerklärung und AGB.</li>
-    <li><strong>Alle Ergebnisse, dauerhaft:</strong> Gewinne und Verluste bleiben sichtbar. Nichts wird gelöscht oder im Nachhinein geschönt.</li>
-    <li><strong>Trefferquote und Quote zusammen:</strong> Eine hohe Trefferquote allein sagt wenig – entscheidend ist das Verhältnis zur Quote. Seriöse Anbieter nennen deshalb auch die Durchschnittsquote und die Rendite über einen längeren Zeitraum (<a href="rendite-erklaert.html">Rendite erklärt</a>).</li>
+    <li><strong>Alle Ergebnisse, dauerhaft:</strong> Gewinne und Verluste bleiben sichtbar. Nichts wird gelöscht. Zeiträume der Testphase sind als solche gekennzeichnet.</li>
+    <li><strong>Trefferquote und Quote zusammen:</strong> Eine hohe Trefferquote allein sagt wenig – entscheidend ist das Verhältnis zur Quote. Seriöse Anbieter nennen deshalb auch die Durchschnittsquote und legen offen, wie sie die Rendite rechnen (<a href="rendite-erklaert.html">Rendite erklärt</a>).</li>
     <li><strong>Verlustserien werden genannt:</strong> Wer offenlegt, wie tief es zwischendurch ging, ist ehrlich (<a href="verlustserien.html">Verlustserien</a>).</li>
-    <li><strong>Keine Gewinngarantie:</strong> Sportwetten sind mit einem Verlustrisiko verbunden. Wer etwas anderes verspricht, lügt.</li>
+    <li><strong>Keine Gewinngarantie:</strong> Sportwetten sind mit einem Verlustrisiko verbunden. Wer etwas anderes verspricht, ist unseriös.</li>
     <li><strong>Prüfbar vor dem Kauf:</strong> Ergebnisse lassen sich kostenlos verfolgen, bevor Geld fließt.</li>
     <li><strong>Normale Zahlungswege:</strong> Zahlung über bekannte Anbieter mit Beleg, keine Überweisung an Privatpersonen oder in Kryptowährung.</li>
     <li><strong>Einfache Kündigung:</strong> Klare Laufzeiten und ein Kündigungsweg, der ohne Hürden funktioniert.</li>
@@ -674,7 +680,7 @@ WISSEN = [
   <h2><span class="num">05</span>Woran du eine ehrliche Bilanz erkennst</h2>
   <ul>
     <li>Alle Wetten sind enthalten, auch die verlorenen. Nichts wird nachträglich gelöscht.</li>
-    <li>Die Trefferquote wird zusammen mit der Durchschnittsquote gezeigt, die Rendite über einen langen Zeitraum und nicht für einzelne Tage.</li>
+    <li>Die Trefferquote wird zusammen mit der Durchschnittsquote gezeigt, die Rendite mit offengelegter Rechenweise, über einen langen Zeitraum und nicht für einzelne Tage.</li>
     <li>Der Zeitraum ist klar, und es wird gesagt, welche Zahlen nachträglich nach den Regeln vom 11.10.2026 berechnet wurden.</li>
     <li>Es gibt keine Gewinnversprechen. Mehr dazu unter
     <a href="seriose-tippgeber-erkennen.html">Seriöse Tippgeber erkennen</a>.</li>
