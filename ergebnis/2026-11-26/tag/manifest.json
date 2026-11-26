@@ -1,0 +1,36 @@
+{
+ "modus": "tag",
+ "datum": "2026-11-26",
+ "stand": "2026-11-26T09:18:42+01:00",
+ "status": "ok",
+ "fehler": [],
+ "warnungen": [],
+ "karussell": [
+  "k1.png",
+  "k2.png",
+  "k3.png",
+  "k4.png",
+  "k5.png",
+  "k6.png"
+ ],
+ "stories": [
+  "s1.png",
+  "s2.png",
+  "s3.png",
+  "s4.png",
+  "s5.png"
+ ],
+ "reel_sekunden": 14.2,
+ "reel": "reel.mp4",
+ "texte": {
+  "instagram": "Auswertung vom Mittwoch, 25.11.2026: alle Einträge von Live-Wetten, Einzelspielen und Money Race, gewonnen wie verloren. Nichts wird aussortiert.\n\nAlle Auswertungen öffentlich im Ergebnis-Kanal. Link in der Bio.\n\n18+ · Keine Gewinngarantie · Glücksspiel kann süchtig machen · check-dein-spiel.de\n\n#Fußball #Statistik #Analyse",
+  "tiktok": "Auswertung vom Mittwoch, 25.11.2026: alle Einträge, gewonnen wie verloren. Link in der Bio. 18+ · Keine Gewinngarantie · Glücksspiel kann süchtig machen · check-dein-spiel.de #Fußball #Statistik",
+  "youtube_titel": "Auswertung Mi 25.11.: alle Einträge",
+  "youtube": "Auswertung vom Mittwoch, 25.11.2026: alle Live-Wetten und Einzelspiele, gewonnen wie verloren. Nichts wird aussortiert oder nachträglich geändert.\nAlle Auswertungen öffentlich im Ergebnis-Kanal, Link in der Kanalbeschreibung.\n\n18+ · Keine Gewinngarantie · Glücksspiel kann süchtig machen · check-dein-spiel.de"
+ },
+ "anzahl": {
+  "live": 6,
+  "einzel": 5,
+  "moneyrace": 15
+ }
+}
