@@ -270,6 +270,7 @@ def dots_row(lab, sub, ds):
 EX5 = """
 .mrp .dt{flex-wrap:wrap;gap:6px;align-content:center}.mrp .dt i{width:19px;height:19px}.mrp.m .dt i{width:15px;height:15px}.mrp.m .dt{gap:5px}
 .mrp .wr{padding:14px 28px;margin-top:9px}.mrp .wr b{width:190px}
+.mrp.mt .dt{flex-wrap:nowrap;gap:4px}.mrp.mt .dt i{width:17px;height:17px}.mrp.mt .wr{padding:3px 28px;margin-top:5px;align-items:center}.mrp.mt .wr b{font-size:28px;width:150px;display:flex;gap:12px;align-items:baseline}.mrp.mt .wr b small{font-size:20px;margin:0}
 """
 
 
@@ -404,12 +405,13 @@ def main():
             gruppen = []; cur = von
             while cur <= bis:
                 ende = min(cur + dt.timedelta(days=6 - cur.weekday()), bis)
-                lab = f"KW {cur.isocalendar()[1]}"; gruppen.append((lab, f"{dm(cur)}–{dm(ende)}", cur, ende)); cur = ende + dt.timedelta(days=1)
+                lab = f"KW {cur.isocalendar()[1]}"; gruppen.append((lab, dm(cur) if cur == ende else f"{dm(cur)}–{dm(ende)}", cur, ende)); cur = ende + dt.timedelta(days=1)
         if stand[:10] != a.datum: man["status"] = "stopp"; man["fehler"].append(f"signale.json Stand {stand}, erwartet {a.datum}")
         live, ein = eintraege(sig, von, bis, "live"), eintraege(sig, von, bis, "einzel")
         notbremse = os.path.exists(os.path.join(a.medien, "tools", "IG_MONEYRACE_AUS"))
         mr_all = [] if notbremse else eintraege(sig, von, bis, "moneyrace")
         mr_start = min([dt.date.fromisoformat(x["datum"]) for x in sig if x["art"] == "moneyrace"] or [bis + dt.timedelta(days=1)])
+        if not (live or ein or mr_all): man["status"] = "stopp"; man["fehler"].append("keine Einträge im Zeitraum")
         if any(x["ergebnis"] not in STATUS_OK for x in live + ein + mr_all): man["status"] = "stopp"; man["fehler"].append("Einträge ohne Ergebnis")
         if man["status"] != "ok": json.dump(man, open(os.path.join(a.out, "manifest.json"), "w"), ensure_ascii=False, indent=1); print(json.dumps(man, ensure_ascii=False)); return 3
         cls = "" if a.modus == "woche" else "m"
@@ -417,11 +419,21 @@ def main():
             r = "".join(dots_row(l, sb, [x["ergebnis"] for x in eintraege(sig, v, b2, art)]) for l, sb, v, b2 in gruppen)
             extra = '<div class="note">Bis zu fünf ausgewählte Einzelspiele pro Spieltag.</div>' if (art == "einzel" and a.modus == "monat") else ""
             return page(titel, f'<div class="tb {cls} {big}">{r}{LEG}{extra}</div>')
-        ks = [kart("live", f"{eb} · Live-Wetten", ""), kart("einzel", f"{eb} · Einzelspiele", "big w2" if a.modus == "woche" else "big")]
-        gr_mr = [g for g in gruppen if a.modus == "woche" or g[3] >= mr_start]  # Monat: Wochen vor dem Start weglassen
+        ks = ([kart("live", f"{eb} · Live-Wetten", "")] if live else []) + ([kart("einzel", f"{eb} · Einzelspiele", "big w2" if a.modus == "woche" else "big")] if ein else [])
+        if a.modus == "woche": gr_mr = gruppen
+        else:
+            tage = [von + dt.timedelta(days=i) for i in range((bis - von).days + 1)]
+            gr_mr = [(WK[d.weekday()], dm(d), d, d) for d in tage if d >= mr_start]
         if mr_all:
             rm = "".join(mr_dots_row(l, sb, [x["ergebnis"] for x in eintraege(sig, v, b2, "moneyrace")], b2 < mr_start) for l, sb, v, b2 in gr_mr)
-            ks.append(page(f"{eb} · Money Race", f'<div class="tb {cls} mrp">{rm}{LEG}</div>'))
+            mx = max([len(eintraege(sig, v, b2, "moneyrace")) for l, sb, v, b2 in gr_mr] + [1]); pt = max(10, min(19, int(690 / mx) - 6))
+            dst = f'<style>.mrp .dt i{{width:{pt}px;height:{pt}px}}.mrp .dt{{gap:6px}}</style>'
+            if a.modus == "woche": ks.append(page(f"{eb} · Money Race", f'{dst}<div class="tb {cls} mrp">{rm}{LEG}</div>'))
+            else:
+                n = -(-len(gr_mr) // 15); per = -(-len(gr_mr) // n)
+                for i in range(n):
+                    tl = "".join(mr_dots_row(l, sb, [x["ergebnis"] for x in eintraege(sig, v, b2, "moneyrace")], False) for l, sb, v, b2 in gr_mr[i * per:(i + 1) * per])
+                    ks.append(page(f"{eb.replace('Monatsbericht', 'Monat')} · Money Race" + (f" · {i+1}/{n}" if n > 1 else ""), f'<div class="tb mrp mt">{tl}{LEG}</div>'))
         else: man.setdefault("warnungen", []).append("Money Race: keine Einträge im Zeitraum" if not notbremse else "Money Race per Notbremse abgeschaltet")
         kopf = "Gute und schwache Tage stehen nebeneinander." if a.modus == "woche" else "Ein Monat. Jeder Tag öffentlich."
         absatz = (["Jeder Eintrag der Woche wird ausgewertet, nichts wird nachträglich geändert. Die Einzelergebnisse aller Tage stehen im Ergebnis-Kanal, Link in der Bio."] if a.modus == "woche" else
@@ -432,10 +444,15 @@ def main():
         # Story: Live-Karte der Woche/des Monats im Story-Format
         r = "".join(dots_row(l, sb, [x["ergebnis"] for x in eintraege(sig, v, b2, "live")]) for l, sb, v, b2 in gruppen)
         st = page(f"{eb} · Live-Wetten", f'<div class="tb {cls}">{r}{LEG}<div class="nl">Alle Auswertungen im Ergebnis-Kanal. Link in der Bio.</div></div>', True)
-        sts = [st]
+        sts = [st] if live else []
         if mr_all:
             rm = "".join(mr_dots_row(l, sb, [x["ergebnis"] for x in eintraege(sig, v, b2, "moneyrace")], b2 < mr_start) for l, sb, v, b2 in gr_mr)
-            sts.append(page(f"{eb} · Money Race", f'<div class="tb {cls} mrp">{rm}{LEG}<div class="nl">Alle Auswertungen im Ergebnis-Kanal. Link in der Bio.</div></div>', True))
+            if a.modus == "woche": sts.append(page(f"{eb} · Money Race", f'{dst}<div class="tb {cls} mrp">{rm}{LEG}<div class="nl">Alle Auswertungen im Ergebnis-Kanal. Link in der Bio.</div></div>', True))
+            else:
+                n = -(-len(gr_mr) // 15); per = -(-len(gr_mr) // n)
+                for i in range(n):
+                    tl = "".join(mr_dots_row(l, sb, [x["ergebnis"] for x in eintraege(sig, v, b2, "moneyrace")], False) for l, sb, v, b2 in gr_mr[i * per:(i + 1) * per])
+                    sts.append(page(f"{eb.replace('Monatsbericht', 'Monat')} · Money Race" + (f" · {i+1}/{n}" if n > 1 else ""), f'<div class="tb mrp mt">{tl}{LEG}<div class="nl">Alle Auswertungen im Ergebnis-Kanal. Link in der Bio.</div></div>', True))
         man["stories"] = render_html(sts, css, 1920, a.out, "s")
         txt = (f"{eb.replace('Woche', 'Wochenauswertung')}: jeder Eintrag der Woche als Punkt, gewonnen wie verloren{' (Live-Wetten, Einzelspiele, Money Race)' if mr_all else ''}." if a.modus == "woche" else
                f"Monatsbericht {MON[bis.month-1]} {bis.year}: jeder Eintrag des Monats als Punkt, gewonnen wie verloren{' (Live-Wetten, Einzelspiele, Money Race)' if mr_all else ''}.")
