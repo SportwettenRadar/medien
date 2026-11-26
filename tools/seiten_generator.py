@@ -205,7 +205,7 @@ def month_pages(months):
 {('    <tr><th>Ø-Quote</th><td>' + de(qu, 2) + '</td></tr>') if qu else ''}
     <tr><th>Längste Verlustserie</th><td>{L['verlustserie']} in Folge</td></tr>
   </table>
-  <p>Ø-Quote ist der Durchschnitt der Quoten aller gesetzten Live-Wetten des Monats. Einsätze und Rendite: im Mitgliederkanal. Auf dieser Webseite zeigen wir sie nicht, auch nicht je Monat: Ein einzelner Monat ist zu stark vom Zufall abhängig.
+  <p>Ø-Quote ist der Durchschnitt der Quoten aller gesetzten Live-Wetten des Monats. Einsätze und Rendite: im Mitgliederkanal. Auf dieser Webseite zeigen wir sie nicht. Im Mitgliederkanal steht der Monat zusätzlich im Monatsbericht; ein einzelner Monat ist stark vom Zufall abhängig.
   Verlustserien gehören dazu. Wie wir rechnen, erklären wir unter
   <a href="rendite-erklaert.html">Rendite erklärt</a>.</p>
 
@@ -317,7 +317,7 @@ WISSEN = [
   <p>Ab welcher Trefferquote du im Plus bist, hängt von der Quote ab: bei 1,60 ab 62,5 %, bei 1,80
   ab 55,6 %, bei 1,40 erst ab 71,4 %. Wer eine hohe Trefferquote mit niedrigen Quoten erreicht, kann
   trotzdem verlieren (wie eine Quote in eine Wahrscheinlichkeit übersetzt wird, steht unter
-  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten neben der Trefferquote immer die Durchschnittsquote (Ø-Quote). Mit beiden kannst du selbst nachrechnen, ob die Treffer reichen: Die Gewinnschwelle liegt bei 1 ÷ Quote. Einsätze und Rendite: im Mitgliederkanal. Die Jahres-Rendite gilt ohne Progression, also bei gleichem Einsatz auf jede Live-Wette. Auf dieser Webseite zeigen wir sie nicht, und für Tage, Wochen und Monate gar nicht, weil kurze Zeiträume stark vom Zufall abhängen.
+  <a href="quote-1-70-bedeutung.html">Was bedeutet Quote 1,70?</a>). Deshalb zeigen wir für Live-Wetten neben der Trefferquote immer die Durchschnittsquote (Ø-Quote). Mit beiden kannst du selbst nachrechnen, ob die Treffer reichen: Die Gewinnschwelle liegt bei 1 ÷ Quote. Einsätze und Rendite: im Mitgliederkanal. Die Jahres-Rendite gilt ohne Progression, also bei gleichem Einsatz auf jede Live-Wette. Auf dieser Webseite zeigen wir sie nicht. Für Tage und Wochen zeigen wir sie nirgends, weil kurze Zeiträume stark vom Zufall abhängen. Im Monatsbericht des Mitgliederkanals steht zusätzlich der Monat.
   Für <a href="index.html#produkt">Einzelspiele zum Kombinieren</a> zeigen wir nur die Trefferquote, weil
   jeder seinen Wettschein selbst zusammenstellt und es keine einheitliche Quote gibt.</p>
 
