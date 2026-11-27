@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-27T07:28:20+01:00",
+ "stand": "2026-11-27T08:10:16+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -7336,6 +7336,226 @@
    "quote": 1.25,
    "ergebnis": "verloren",
    "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-26-001",
+   "datum": "2026-11-26",
+   "art": "einzel",
+   "heim": "Abha",
+   "gast": "Al Shabab",
+   "markt": "X2",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-26-002",
+   "datum": "2026-11-26",
+   "art": "einzel",
+   "heim": "Kairat Almaty",
+   "gast": "Mjallby AIF",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-26-003",
+   "datum": "2026-11-26",
+   "art": "einzel",
+   "heim": "Olympiakos Piraeus",
+   "gast": "AC Milan",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:4"
+  },
+  {
+   "id": "2026-11-26-004",
+   "datum": "2026-11-26",
+   "art": "einzel",
+   "heim": "FK Jablonec",
+   "gast": "FC Lugano",
+   "markt": "X2",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-26-005",
+   "datum": "2026-11-26",
+   "art": "einzel",
+   "heim": "FC Nordsjaelland",
+   "gast": "Panathinaikos",
+   "markt": "1X",
+   "quote": 1.5,
+   "ergebnis": "gewonnen",
+   "endstand": "3:2"
+  },
+  {
+   "id": "2026-11-26-006",
+   "datum": "2026-11-26",
+   "art": "live",
+   "heim": "Al-Fateh",
+   "gast": "Al Riyadh",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-26-007",
+   "datum": "2026-11-26",
+   "art": "live",
+   "heim": "Al-Faisaly FC",
+   "gast": "Al Diriyah",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-26-008",
+   "datum": "2026-11-26",
+   "art": "live",
+   "heim": "FC Iberia 1999",
+   "gast": "Getafe",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.53,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-26-009",
+   "datum": "2026-11-26",
+   "art": "live",
+   "heim": "Beşiktaş",
+   "gast": "Hapoel Beer Sheva",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-26-010",
+   "datum": "2026-11-26",
+   "art": "live",
+   "heim": "Gent",
+   "gast": "FK Crvena Zvezda",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-26-011",
+   "datum": "2026-11-26",
+   "art": "live",
+   "heim": "Lyon",
+   "gast": "Lillestrom",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-26-mr-001",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Gangwon FC",
+   "gast": "Kitchee",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-26-mr-002",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "BG Pathum United",
+   "gast": "Home United",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:2"
+  },
+  {
+   "id": "2026-11-26-mr-003",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Al-Fateh",
+   "gast": "Al Riyadh",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-26-mr-004",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Abha",
+   "gast": "Al Shabab",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.28,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-26-mr-005",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Al-Faisaly FC",
+   "gast": "Al Diriyah",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-26-mr-006",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Kauno Žalgiris",
+   "gast": "Riga",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-26-mr-007",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Beşiktaş",
+   "gast": "Hapoel Beer Sheva",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-26-mr-008",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Gent",
+   "gast": "FK Crvena Zvezda",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-26-mr-009",
+   "datum": "2026-11-26",
+   "art": "moneyrace",
+   "heim": "Sao Paulo",
+   "gast": "Remo",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
   }
  ]
 }
