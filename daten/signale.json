@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-28T07:10:54+01:00",
+ "stand": "2026-11-28T08:10:16+01:00",
  "signale": [
   {
    "id": "2026-10-11-001",
@@ -7556,6 +7556,369 @@
    "quote": 1.33,
    "ergebnis": "gewonnen",
    "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-27-001",
+   "datum": "2026-11-27",
+   "art": "einzel",
+   "heim": "Al Kholood",
+   "gast": "Al Khaleej Saihat",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-27-002",
+   "datum": "2026-11-27",
+   "art": "einzel",
+   "heim": "Lokomotiv Sofia",
+   "gast": "Slavia Sofia",
+   "markt": "1X",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:0"
+  },
+  {
+   "id": "2026-11-27-003",
+   "datum": "2026-11-27",
+   "art": "einzel",
+   "heim": "Artis",
+   "gast": "Slovácko",
+   "markt": "Über 1.5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "4:1"
+  },
+  {
+   "id": "2026-11-27-004",
+   "datum": "2026-11-27",
+   "art": "einzel",
+   "heim": "Ümraniyespor",
+   "gast": "Manisa F.K.",
+   "markt": "1X",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-27-005",
+   "datum": "2026-11-27",
+   "art": "einzel",
+   "heim": "Istra 1961",
+   "gast": "NK Varazdin",
+   "markt": "1X",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-27-006",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Maccabi Petah Tikva",
+   "gast": "Hapoel Tel Aviv",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-27-007",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Azam",
+   "gast": "Al Ahli Tripoli",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.52,
+   "ergebnis": "verloren",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-27-008",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Al-Qadisiyah FC",
+   "gast": "Al-Fayha",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-27-009",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Lusail City",
+   "gast": "Al-Arabi SC",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-27-010",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "IMT Novi Beograd",
+   "gast": "Macva",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-27-011",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Sarıyer",
+   "gast": "İstanbulspor",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-012",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Al-Ittihad FC",
+   "gast": "NEOM",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-013",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Feirense",
+   "gast": "Portimonense",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.68,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-27-014",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Francs Borains",
+   "gast": "AS Eupen",
+   "markt": "Über 4,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "verloren",
+   "endstand": "2:2"
+  },
+  {
+   "id": "2026-11-27-015",
+   "datum": "2026-11-27",
+   "art": "live",
+   "heim": "Groningen",
+   "gast": "Willem II",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.4,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-27-mr-001",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Macarthur",
+   "gast": "Melbourne City",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-27-mr-002",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Livyi Bereh",
+   "gast": "Kolos Kovalivka",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.36,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-mr-003",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Maccabi Petah Tikva",
+   "gast": "Hapoel Tel Aviv",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:0"
+  },
+  {
+   "id": "2026-11-27-mr-004",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Azam",
+   "gast": "Al Ahli Tripoli",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.3,
+   "ergebnis": "verloren",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-27-mr-005",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Al-Qadisiyah FC",
+   "gast": "Al-Fayha",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-mr-006",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Universitatea Cluj",
+   "gast": "Sepsi OSK Sfantu Gheorghe",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-27-mr-007",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "IMT Novi Beograd",
+   "gast": "Macva",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "2:1"
+  },
+  {
+   "id": "2026-11-27-mr-008",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Alanyaspor",
+   "gast": "Konyaspor",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.3,
+   "ergebnis": "gewonnen",
+   "endstand": "1:2"
+  },
+  {
+   "id": "2026-11-27-mr-009",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Amal Tiznit",
+   "gast": "Moghreb Tetouan",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.52,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-27-mr-010",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Petrolul Ploiesti",
+   "gast": "Arges Pitesti",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.3,
+   "ergebnis": "verloren",
+   "endstand": "0:1"
+  },
+  {
+   "id": "2026-11-27-mr-011",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Delfin SC",
+   "gast": "Orense SC",
+   "markt": "Über 2,5 Tore",
+   "quote": 1.44,
+   "ergebnis": "gewonnen",
+   "endstand": "0:3"
+  },
+  {
+   "id": "2026-11-27-mr-012",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Stade Brestois 29",
+   "gast": "Paris FC",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.33,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-mr-013",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Nacional Asuncion",
+   "gast": "Rubio NU",
+   "markt": "Über 3,5 Tore",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "3:1"
+  },
+  {
+   "id": "2026-11-27-mr-014",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Vila Nova",
+   "gast": "Atletico Goianiense",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.28,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-mr-015",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Deportivo Cali",
+   "gast": "Bucaramanga",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.3,
+   "ergebnis": "gewonnen",
+   "endstand": "1:1"
+  },
+  {
+   "id": "2026-11-27-mr-016",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Columbus Crew",
+   "gast": "Inter Miami",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-mr-017",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "ABB",
+   "gast": "Real Tomayapo",
+   "markt": "Über 1,5 Tore",
+   "quote": 1.25,
+   "ergebnis": "verloren",
+   "endstand": "1:0"
+  },
+  {
+   "id": "2026-11-27-mr-018",
+   "datum": "2026-11-27",
+   "art": "moneyrace",
+   "heim": "Shimizu S-pulse",
+   "gast": "Urawa",
+   "markt": "Über 0,5 Tore",
+   "quote": 1.33,
+   "ergebnis": "gewonnen",
+   "endstand": "1:0"
   }
  ]
 }
