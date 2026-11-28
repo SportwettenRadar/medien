@@ -1,6 +1,6 @@
 {
  "version": 1,
- "stand": "2026-11-27T08:10:00+01:00",
+ "stand": "2026-11-28T08:10:01+01:00",
  "tage": [
   {
    "datum": "2026-09-01",
@@ -1937,6 +1937,46 @@
     "rendite": 0.4,
     "gewinn": 2.0
    }
+  },
+  {
+   "datum": "2026-11-27",
+   "rueckrechnung": false,
+   "live": {
+    "wetten": 10,
+    "treffer": 7,
+    "rendite": 1.2,
+    "gewinn": 0.1,
+    "quote": 1.45
+   },
+   "einzelspiele": {
+    "tipps": 5,
+    "treffer": 5
+   },
+   "moneyrace": {
+    "basis": "betriebstag",
+    "tipps": 18,
+    "treffer": 13,
+    "quote": 1.31,
+    "verlustserie": 1,
+    "abgebrochen": 0,
+    "serien": {
+     "gestartet": 5,
+     "beendet_step1": 0,
+     "beendet_step2": 1,
+     "beendet_step3_4": 1,
+     "beendet_ab5": 3,
+     "erreicht5": 1,
+     "erreicht10": 0,
+     "erreicht15": 0,
+     "erreicht20": 0
+    }
+   },
+   "seitStart": {
+    "wetten": 513,
+    "treffer": 334,
+    "rendite": 0.4,
+    "gewinn": 2.1
+   }
   }
  ],
  "wochen": [
@@ -2258,10 +2298,10 @@
    "jahr": 2026,
    "basis": "betriebstag",
    "ab": "2026-11-20",
-   "bis": "2026-11-26",
-   "tipps": 119,
-   "treffer": 95,
-   "quote": 1.29,
+   "bis": "2026-11-27",
+   "tipps": 137,
+   "treffer": 108,
+   "quote": 1.3,
    "verlustserie": 3,
    "abgebrochen": 0
   }
