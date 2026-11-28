@@ -1,17 +1,24 @@
 {
  "version": 1,
- "stand": "2026-11-27T08:10:16+01:00",
+ "stand": "2026-11-28T08:10:16+01:00",
  "ligen": [
   {
    "liga": "Bundesliga",
-   "spieltag": 10,
+   "spieltag": 11,
    "stand": {
-    "datum": "2026-11-27",
-    "spieltage": 10,
-    "spiele": 90
+    "datum": "2026-11-28",
+    "spieltage": 11,
+    "spiele": 91
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
+     {
+      "team": "Werder Bremen",
+      "heimspiele": 6,
+      "siege": 4,
+      "remis": 2,
+      "niederlagen": 0
+     },
      {
       "team": "Bayern München",
       "heimspiele": 5,
@@ -32,13 +39,6 @@
       "siege": 5,
       "remis": 0,
       "niederlagen": 0
-     },
-     {
-      "team": "Werder Bremen",
-      "heimspiele": 5,
-      "siege": 4,
-      "remis": 1,
-      "niederlagen": 0
      }
     ],
     "auswaerts_immer_getroffen": [
@@ -54,6 +54,10 @@
     "heim_immer_getroffen": [
      {
       "team": "FC Augsburg",
+      "heimspiele": 6
+     },
+     {
+      "team": "Werder Bremen",
       "heimspiele": 6
      },
      {
@@ -83,43 +87,59 @@
      {
       "team": "SC Freiburg",
       "heimspiele": 5
-     },
-     {
-      "team": "Werder Bremen",
-      "heimspiele": 5
      }
     ],
     "tore_schnitt": {
-     "wert": 3.39,
-     "spiele": 90
+     "wert": 3.42,
+     "spiele": 91
     },
     "ueber_2_5_anteil": {
      "wert": 0.68,
-     "spiele": 90
+     "spiele": 91
     }
    },
    "spiele_heute": [
     {
-     "heim": "Werder Bremen",
-     "gast": "Borussia Mönchengladbach",
-     "anstoss": "20:30"
+     "heim": "1. FC Köln",
+     "gast": "SV Elversberg",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "FSV Mainz 05",
+     "gast": "Union Berlin",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "Hamburger SV",
+     "gast": "Bayern München",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "SC Paderborn 07",
+     "gast": "FC Schalke 04",
+     "anstoss": "15:30"
+    },
+    {
+     "heim": "VfB Stuttgart",
+     "gast": "Eintracht Frankfurt",
+     "anstoss": "18:30"
     }
    ]
   },
   {
    "liga": "2. Bundesliga",
-   "spieltag": 12,
+   "spieltag": 13,
    "stand": {
-    "datum": "2026-11-27",
-    "spieltage": 12,
-    "spiele": 108
+    "datum": "2026-11-28",
+    "spieltage": 13,
+    "spiele": 110
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
      {
       "team": "1. FC Heidenheim",
-      "heimspiele": 6,
-      "siege": 3,
+      "heimspiele": 7,
+      "siege": 4,
       "remis": 3,
       "niederlagen": 0
      },
@@ -145,7 +165,7 @@
      },
      {
       "team": "1. FC Nürnberg",
-      "auswaertsspiele": 5
+      "auswaertsspiele": 6
      }
     ],
     "heim_immer_getroffen": [
@@ -172,33 +192,43 @@
     ],
     "tore_schnitt": {
      "wert": 2.98,
-     "spiele": 108
+     "spiele": 110
     },
     "ueber_2_5_anteil": {
      "wert": 0.59,
-     "spiele": 108
+     "spiele": 110
     }
    },
    "spiele_heute": [
     {
-     "heim": "1. FC Heidenheim",
-     "gast": "1. FC Nürnberg",
-     "anstoss": "18:30"
+     "heim": "Dynamo Dresden",
+     "gast": "FC St. Pauli",
+     "anstoss": "13:00"
     },
     {
-     "heim": "VfL Bochum",
-     "gast": "SV Darmstadt 98",
-     "anstoss": "18:30"
+     "heim": "Hertha BSC",
+     "gast": "Karlsruher SC",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "Holstein Kiel",
+     "gast": "1. FC Kaiserslautern",
+     "anstoss": "13:00"
+    },
+    {
+     "heim": "VfL Osnabrück",
+     "gast": "Hannover 96",
+     "anstoss": "20:30"
     }
    ]
   },
   {
    "liga": "Premier League",
-   "spieltag": 11,
+   "spieltag": 12,
    "stand": {
-    "datum": "2026-11-27",
-    "spieltage": 11,
-    "spiele": 110
+    "datum": "2026-11-28",
+    "spieltage": 12,
+    "spiele": 111
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -268,29 +298,39 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 2.75,
-     "spiele": 110
+     "wert": 2.77,
+     "spiele": 111
     },
     "ueber_2_5_anteil": {
-     "wert": 0.47,
-     "spiele": 110
+     "wert": 0.48,
+     "spiele": 111
     }
    },
    "spiele_heute": [
     {
-     "heim": "Nottingham Forest",
-     "gast": "Chelsea",
-     "anstoss": "21:00"
+     "heim": "Leeds",
+     "gast": "Coventry",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Manchester United",
+     "gast": "Brentford",
+     "anstoss": "16:00"
+    },
+    {
+     "heim": "Ipswich",
+     "gast": "Aston Villa",
+     "anstoss": "18:30"
     }
    ]
   },
   {
    "liga": "La Liga",
-   "spieltag": 13,
+   "spieltag": 14,
    "stand": {
-    "datum": "2026-11-27",
-    "spieltage": 13,
-    "spiele": 129
+    "datum": "2026-11-28",
+    "spieltage": 14,
+    "spiele": 130
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -342,28 +382,43 @@
     ],
     "tore_schnitt": {
      "wert": 2.88,
-     "spiele": 129
+     "spiele": 130
     },
     "ueber_2_5_anteil": {
      "wert": 0.55,
-     "spiele": 129
+     "spiele": 130
     }
    },
    "spiele_heute": [
     {
-     "heim": "Levante",
-     "gast": "Racing Santander",
+     "heim": "Real Betis",
+     "gast": "Rayo Vallecano",
+     "anstoss": "14:00"
+    },
+    {
+     "heim": "Malaga",
+     "gast": "Athletic Club",
+     "anstoss": "16:15"
+    },
+    {
+     "heim": "Elche",
+     "gast": "Atletico Madrid",
+     "anstoss": "18:30"
+    },
+    {
+     "heim": "Real Madrid",
+     "gast": "Alaves",
      "anstoss": "21:00"
     }
    ]
   },
   {
    "liga": "Serie A",
-   "spieltag": 12,
+   "spieltag": 13,
    "stand": {
-    "datum": "2026-11-27",
-    "spieltage": 12,
-    "spiele": 120
+    "datum": "2026-11-28",
+    "spieltage": 13,
+    "spiele": 121
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -437,29 +492,39 @@
      }
     ],
     "tore_schnitt": {
-     "wert": 3.16,
-     "spiele": 120
+     "wert": 3.13,
+     "spiele": 121
     },
     "ueber_2_5_anteil": {
      "wert": 0.6,
-     "spiele": 120
+     "spiele": 121
     }
    },
    "spiele_heute": [
     {
-     "heim": "Venezia",
-     "gast": "Bologna",
+     "heim": "Frosinone",
+     "gast": "Parma",
+     "anstoss": "15:00"
+    },
+    {
+     "heim": "Torino",
+     "gast": "Lazio",
+     "anstoss": "18:00"
+    },
+    {
+     "heim": "Inter",
+     "gast": "Genoa",
      "anstoss": "20:45"
     }
    ]
   },
   {
    "liga": "Ligue 1",
-   "spieltag": 11,
+   "spieltag": 12,
    "stand": {
-    "datum": "2026-11-27",
-    "spieltage": 11,
-    "spiele": 99
+    "datum": "2026-11-28",
+    "spieltage": 12,
+    "spiele": 100
    },
    "kennzahlen": {
     "heim_ungeschlagen": [
@@ -524,22 +589,42 @@
     "zu_null_serie": [
      {
       "team": "Stade Brestois 29",
-      "serie": 3
+      "serie": 4
      }
     ],
     "tore_schnitt": {
-     "wert": 2.95,
-     "spiele": 99
+     "wert": 2.93,
+     "spiele": 100
     },
     "ueber_2_5_anteil": {
-     "wert": 0.56,
-     "spiele": 99
+     "wert": 0.55,
+     "spiele": 100
     }
    },
    "spiele_heute": [
     {
-     "heim": "Stade Brestois 29",
-     "gast": "Paris FC",
+     "heim": "Angers",
+     "gast": "Lens",
+     "anstoss": "17:15"
+    },
+    {
+     "heim": "Le Havre",
+     "gast": "Strasbourg",
+     "anstoss": "20:45"
+    },
+    {
+     "heim": "Le Mans",
+     "gast": "Lille",
+     "anstoss": "20:45"
+    },
+    {
+     "heim": "Nice",
+     "gast": "Estac Troyes",
+     "anstoss": "20:45"
+    },
+    {
+     "heim": "Paris Saint Germain",
+     "gast": "Lorient",
      "anstoss": "20:45"
     }
    ]
